@@ -51,6 +51,13 @@ code {
   padding-left: 0.4rem;
   border-radius: 0.2rem;
 }
+hr {
+  background-color: #eee;
+  border: none;
+  display: block;
+  height: 1px;
+  margin: 1rem 0;
+}
 .pt-b-red-0 {
   background-color: #fef2f2;
 }
@@ -410,5 +417,28 @@ code {
 }
 .pt-t-pink-9 {
   color: #831843;
+}
+.pt-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pt-col {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.center {
+  text-align: center;
+}
+.pt-block {
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+}
+.pt-c-1 {
+  width: 4.16666667%;
+}
+.pt-c-2 {
+  width: 8.33333333%;
 }
 /*# sourceMappingURL=ptlib.css.map */

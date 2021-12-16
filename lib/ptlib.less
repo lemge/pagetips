@@ -114,6 +114,13 @@ code{background-color: #cccccc;
     padding-left: 0.4rem;
     border-radius: 0.2rem;
 }
+hr{
+    background-color: #eee;
+    border: none;
+    display: block;
+    height: 1px;
+    margin: 1rem 0;
+}
 
 .pt-b-red-0{background-color:@pt-red-0;}
 .pt-b-red-1{background-color:@pt-red-1;}
@@ -249,3 +256,38 @@ code{background-color: #cccccc;
 .pt-t-pink-8{color:@pt-pink-8;}
 .pt-t-pink-9{color:@pt-pink-9;}
 
+//栅格系统
+.pt-row{
+      display: flex;
+    flex-wrap: wrap;
+}
+.pt-col{
+      display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.center{
+  text-align: center;
+}
+.pt-block{
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+}
+
+//普通
+.pt-c-1{width: (1/24)*100%}
+.pt-c-2{width: (2/24)*100%}
+//栅格与响应
+//sm 大于640的宽度
+@media (min-width: 640px) {
+
+}
+//md 大于768
+@media (min-width: 768px) {  }
+//lg 大于1024
+@media (min-width: 1024px) {  }
+//xl 大于1280
+@media (min-width: 1280px) {  }
+//2xl 大于1536
+@media (min-width: 1536px) {  }
