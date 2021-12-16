@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>PtLib 一个开箱即用的css模板</title>
+</head>
+<body>
+<div class="pt-container">
+    <div class="pt-b3"></div>
+    <h1>PtLib</h1>
+    <div class="pt-panel">
+        <div class="pt-panel-title">
+            Panel样式
+        </div>
+        <div class="pt-panel-body">
+
+            <div class="pt-panel">
+                <div class="pt-panel-title">完整的Panel</div>
+                <div class="pt-panel-body">完整的Panel包含标题，内容，尾部备注</div>
+                <div class="pt-panel-bot">Panel尾部备注</div>
+            </div>
+            <div class="pt-panel">
+                <div class="pt-panel-title">含有标题与内容的Panel</div>
+                <div class="pt-panel-body">这个Panel只有标题与内容，没有尾部备注</div>
+            </div>
+
+
+            <div class="pt-panel">
+                <div class="pt-panel-body">这个Panel没有标题，但有内容与尾部备注</div>
+                <div class="pt-panel-bot">Panel尾部备注</div>
+            </div>
+
+
+            <div class="pt-panel">
+                <div class="pt-panel-body">这个是只有内容的Panel，这里的内容包含在<code>pt-panel-body</code>中</div>
+            </div>
+
+            <div class="pt-panel">
+                <p>这些内容直接存在与一个panel中</p>
+                <p>没有二层的包裹。</p>
+                <p>非常不建议这样使用。</p>
+            </div>
+
+        </div>
+        <div class="pt-panel-bot">
+            Panel承载内容的基本单位
+        </div>
+    </div>
+</div>
+</body>
+<link rel="stylesheet" href="../lib/ptlib.css">
+</html>
