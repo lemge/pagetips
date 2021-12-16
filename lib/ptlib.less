@@ -86,15 +86,18 @@
 .pt-b5{height: 5rem;}
 
 .panel-lr{
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  //padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 1em 1.5rem 1em 1.5rem;
 
 }
 .pt-panel{
     border: 1px solid #eeeeee;
     border-radius: 0.5rem;
     //box-shadow: #0000001a 0px 4px 6px -1px, #0000000f 0px 2px 4px -1px;
-    margin-bottom: 1.5rem;
-  box-shadow: #000000 0px 1px 4px -2px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+    margin-bottom: 2rem;
+    //box-shadow: #000000 0px 1px 4px -2px;
+    overflow: hidden;
 }
 .pt-panel-title{
   .panel-lr;
@@ -106,8 +109,8 @@
 }
 .pt-panel-bot{
   border-top: 1px solid #eeeeee;
+  font-size: 0.7rem;
   .panel-lr;
-      font-size: 0.7rem;
 }
 code{background-color: #cccccc;
     padding-right: 0.4rem;
@@ -121,7 +124,10 @@ hr{
     height: 1px;
     margin: 1rem 0;
 }
-
+p{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .pt-b-red-0{background-color:@pt-red-0;}
 .pt-b-red-1{background-color:@pt-red-1;}
 .pt-b-red-2{background-color:@pt-red-2;}
@@ -263,21 +269,68 @@ hr{
 }
 .pt-col{
       display: block;
-    flex-basis: 0;
+    flex-basis:0;
     flex-grow: 1;
     flex-shrink: 1;
 }
 .center{
   text-align: center;
 }
-.pt-block{
+.pt-box{
+  display: block;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
 }
 
 //普通
-.pt-c-1{width: (1/24)*100%}
-.pt-c-2{width: (2/24)*100%}
+.pt-c-1{  width: (1/24)*100%};
+.pt-c-2{  width: (2/24)*100%};
+.pt-c-3{  width: (3/24)*100%};
+.pt-c-4{  width: (4/24)*100%};
+.pt-c-5{  width: (5/24)*100%};
+.pt-c-6{  width: (6/24)*100%};
+.pt-c-7{  width: (7/24)*100%};
+.pt-c-8{  width: (8/24)*100%};
+.pt-c-9{  width: (9/24)*100%};
+.pt-c-10{  width: (10/24)*100%};
+.pt-c-11{  width: (11/24)*100%};
+.pt-c-12{  width: (12/24)*100%};
+.pt-c-13{  width: (13/24)*100%};
+.pt-c-14{  width: (14/24)*100%};
+.pt-c-15{  width: (15/24)*100%};
+.pt-c-16{  width: (16/24)*100%};
+.pt-c-17{  width: (17/24)*100%};
+.pt-c-18{  width: (18/24)*100%};
+.pt-c-19{  width: (19/24)*100%};
+.pt-c-20{  width: (20/24)*100%};
+.pt-c-21{  width: (21/24)*100%};
+.pt-c-22{  width: (22/24)*100%};
+.pt-c-23{  width: (23/24)*100%};
+.pt-c-24{  width: (24/24)*100%};
+.pt-co-1{ margin-left: (1/24)*100%};
+.pt-co-2{ margin-left: (2/24)*100%};
+.pt-co-3{ margin-left: (3/24)*100%};
+.pt-co-4{ margin-left: (4/24)*100%};
+.pt-co-5{ margin-left: (5/24)*100%};
+.pt-co-6{ margin-left: (6/24)*100%};
+.pt-co-7{ margin-left: (7/24)*100%};
+.pt-co-8{ margin-left: (8/24)*100%};
+.pt-co-9{ margin-left: (9/24)*100%};
+.pt-co-10{ margin-left: (10/24)*100%};
+.pt-co-11{ margin-left: (11/24)*100%};
+.pt-co-12{ margin-left: (12/24)*100%};
+.pt-co-13{ margin-left: (13/24)*100%};
+.pt-co-14{ margin-left: (14/24)*100%};
+.pt-co-15{ margin-left: (15/24)*100%};
+.pt-co-16{ margin-left: (16/24)*100%};
+.pt-co-17{ margin-left: (17/24)*100%};
+.pt-co-18{ margin-left: (18/24)*100%};
+.pt-co-19{ margin-left: (19/24)*100%};
+.pt-co-20{ margin-left: (20/24)*100%};
+.pt-co-21{ margin-left: (21/24)*100%};
+.pt-co-22{ margin-left: (22/24)*100%};
+.pt-co-23{ margin-left: (23/24)*100%};
+.pt-co-24{ margin-left: (24/24)*100%};
 //栅格与响应
 //sm 大于640的宽度
 @media (min-width: 640px) {
