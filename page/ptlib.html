@@ -172,6 +172,45 @@
         </div>
     </div>
 <!--    响应-->
+    <div class="pt-panel">
+        <div class="pt-panel-title">响应式</div>
+        <div class="pt-panel-body">
+
+        <div>
+            <p>当前宽度：
+            <span id="now-width"></span>
+            </p>
+            <script type="text/javascript">
+                function setNowWidth(){
+                    nw=document.querySelector("#now-width")
+                    nw.innerHTML=window.innerWidth
+                }
+                window.onresize=function (){
+                    setNowWidth()
+                }
+                window.onload=function (){
+                    setNowWidth()
+                }
+            </script>
+        </div>
+            <hr>
+            <h3>可见性</h3>
+            <div class="xs-v">小于640显示</div>
+            <div class="sm-v">640-768显示</div>
+            <div class="md-v">768-1024显示</div>
+            <div class="lg-v">1024-1280显示</div>
+            <div class="xl-v">1280-1536显示</div>
+            <div class="xxl-v">大于1536显示</div>
+            <hr>
+            <h3>隐藏</h3>
+            <div class="xs-h">小于640隐藏</div>
+            <div class="sm-h">640-768隐藏</div>
+            <div class="md-h">768-1024隐藏</div>
+            <div class="lg-h">1024-1280隐藏</div>
+            <div class="xl-h">1280-1536隐藏</div>
+            <div class="xxl-h">大于1536隐藏</div>
+        </div>
+    </div>
 <!--    色彩-->
     <div class="pt-panel">
         <div class="pt-panel-title">色彩</div>

@@ -585,4 +585,146 @@ p {
 .pt-co-24 {
   margin-left: 100%;
 }
+.xs-v,
+.sm-v,
+.md-v,
+.lg-v,
+.xl-v,
+.xxl-v {
+  display: none;
+}
+.xs-v {
+  display: block;
+}
+.xs-h,
+.sm-h,
+.md-h,
+.lg-h,
+.xl-h,
+.xxl-h {
+  display: block;
+}
+.xs-h {
+  display: none;
+}
+@media (min-width: 640px) {
+  .xs-v,
+  .sm-v,
+  .md-v,
+  .lg-v,
+  .xl-v,
+  .xxl-v {
+    display: none;
+  }
+  .sm-v {
+    display: block;
+  }
+  .xs-h,
+  .sm-h,
+  .md-h,
+  .lg-h,
+  .xl-h,
+  .xxl-h {
+    display: block;
+  }
+  .sm-h {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .xs-v,
+  .sm-v,
+  .md-v,
+  .lg-v,
+  .xl-v,
+  .xxl-v {
+    display: none;
+  }
+  .md-v {
+    display: block;
+  }
+  .xs-h,
+  .sm-h,
+  .md-h,
+  .lg-h,
+  .xl-h,
+  .xxl-h {
+    display: block;
+  }
+  .md-h {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .xs-v,
+  .sm-v,
+  .md-v,
+  .lg-v,
+  .xl-v,
+  .xxl-v {
+    display: none;
+  }
+  .lg-v {
+    display: block;
+  }
+  .xs-h,
+  .sm-h,
+  .md-h,
+  .lg-h,
+  .xl-h,
+  .xxl-h {
+    display: block;
+  }
+  .lg-h {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .xs-v,
+  .sm-v,
+  .md-v,
+  .lg-v,
+  .xl-v,
+  .xxl-v {
+    display: none;
+  }
+  .xl-v {
+    display: block;
+  }
+  .xs-h,
+  .sm-h,
+  .md-h,
+  .lg-h,
+  .xl-h,
+  .xxl-h {
+    display: block;
+  }
+  .xl-h {
+    display: none;
+  }
+}
+@media (min-width: 1536px) {
+  .xs-v,
+  .sm-v,
+  .md-v,
+  .lg-v,
+  .xl-v,
+  .xxl-v {
+    display: none;
+  }
+  .xxl-v {
+    display: block;
+  }
+  .xs-h,
+  .sm-h,
+  .md-h,
+  .lg-h,
+  .xl-h,
+  .xxl-h {
+    display: block;
+  }
+  .xxl-h {
+    display: none;
+  }
+}
 /*# sourceMappingURL=ptlib.css.map */
