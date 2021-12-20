@@ -66,10 +66,35 @@
 @pt-pink-8: rgb(157, 23, 77);
 @pt-pink-9: rgb(131, 24, 67);
 
+@pt-gray-0: #fafafa;
+@pt-gray-1: #f4f4f5;
+@pt-gray-2: #e4e4e7;
+@pt-gray-3: #d4d4d8;
+@pt-gray-4: #a1a1aa;
+@pt-gray-5: #71717a;
+@pt-gray-6: #52525b;
+@pt-gray-7: #3f3f46;
+@pt-gray-8: #27272a;
+@pt-gray-9: #18181b;
+
+@white:#ffffff;
+@black:#000000;
+
 //html 默认格式清理
 * {
   padding: 0;
   margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  .less{
+    font-size: 0.6em;
+  }
+}
+//
+.com-shadow{
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
 }
 
 //框架样式
@@ -107,12 +132,10 @@
 }
 
 .pt-panel {
+  .com-shadow;
   border: 1px solid #eeeeee;
   border-radius: 0.5rem;
-  //box-shadow: #0000001a 0px 4px 6px -1px, #0000000f 0px 2px 4px -1px;
-  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
   margin-bottom: 2rem;
-  //box-shadow: #000000 0px 1px 4px -2px;
   overflow: hidden;
 }
 
@@ -897,6 +920,64 @@ p {
 }
 
 ;
+//提示消息
+.pt-msg{
+.com-shadow;
+padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.pm-def{
+  .pt-msg;
+  background-color: @pt-gray-1;
+  color: @pt-gray-9;
+}
+.pm-blue{
+  .pt-msg;
+  background-color: @pt-blue-1;
+  color: @pt-blue-7;
+}
+.pm-green{
+  .pt-msg;
+  background-color: @pt-green-1;
+  color: @pt-green-7;
+}
+.pm-red{
+  .pt-msg;
+  background-color: @pt-red-1;
+  color: @pt-red-7;
+}
+.pm-yellow{
+  .pt-msg;
+  background-color: @pt-yellow-1;
+  color: @pt-yellow-7;
+}
+
+.pm-def-w{
+  .pt-msg;
+  color: @white;
+  background-color: @pt-gray-7;
+}
+.pm-blue-w{
+  .pt-msg;
+  color: @white;
+  background-color: @pt-blue-5;
+}
+.pm-green-w{
+  .pt-msg;
+  color: @white;
+  background-color: @pt-green-5;
+}
+.pm-red-w{
+  .pt-msg;
+  color: @white;
+  background-color: @pt-red-5;
+}
+.pm-yellow-w{
+  .pt-msg;
+  color: @white;
+  background-color: @pt-yellow-5;
+}
 //栅格与响应
 
 //最小情况下
