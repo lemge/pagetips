@@ -200,20 +200,8 @@
 
         <div>
             <p>当前宽度：
-            <span id="now-width"></span>
+            <span class="now-width"></span>
             </p>
-            <script type="text/javascript">
-                function setNowWidth(){
-                    nw=document.querySelector("#now-width")
-                    nw.innerHTML=window.innerWidth
-                }
-                window.onresize=function (){
-                    setNowWidth()
-                }
-                window.onload=function (){
-                    setNowWidth()
-                }
-            </script>
         </div>
             <hr>
             <h3>可见性</h3>
@@ -225,12 +213,44 @@
             <div class="xxl-v pm-def">大于1536显示</div>
             <hr>
             <h3>隐藏</h3>
-            <div class="xs-h pm-def">小于640隐藏</div>
-            <div class="sm-h pm-def">640-768隐藏</div>
-            <div class="md-h pm-def">768-1024隐藏</div>
-            <div class="lg-h pm-def">1024-1280隐藏</div>
-            <div class="xl-h pm-def">1280-1536隐藏</div>
-            <div class="xxl-h pm-def">大于1536隐藏</div>
+            <div class="xs-h pm-blue-w">小于640隐藏</div>
+            <div class="xs-v pm-blue">小于640已经隐藏</div>
+            <div class="sm-h pm-blue-w">640-768隐藏</div>
+            <div class="sm-v pm-blue">640-768已经隐藏</div>
+            <div class="md-h pm-blue-w">768-1024隐藏</div>
+            <div class="md-v pm-blue">768-1024已经隐藏</div>
+            <div class="lg-h pm-blue-w">1024-1280隐藏</div>
+            <div class="lg-v pm-blue">1024-1280已经隐藏</div>
+            <div class="xl-h pm-blue-w">1280-1536隐藏</div>
+            <div class="xl-v pm-blue">1280-1536已经隐藏</div>
+            <div class="xxl-h pm-blue-w">大于1536隐藏</div>
+            <div class="xxl-v pm-blue">大于1536已经隐藏</div>
+        </div>
+    </div>
+<!--    响应式栅格-->
+    <div class="pt-panel">
+        <div class="pt-panel-title">响应式栅格系统</div>
+        <div class="pt-panel-body">
+            <p>
+                以下的div的class值为
+                <code>
+                    pt-c-3 pt-xs-c-12 pt-sm-c-8 pt-md-c-6
+                </code>
+                <p>pt-c-3:表示默认的占3/24宽度</p>
+                <p>pt-xs-c-12:表示在xs尺寸占3/24宽度</p>
+                <p>pt-sm-c-8:表示sm尺寸占3/24宽度</p>
+                <p>pt-md-c-6:表示md尺寸占3/24宽度</p>
+            </p>
+            <div class="pt-row center">
+                <div class="pt-c-3 pt-xs-c-12 pt-sm-c-8 pt-md-c-6"><p class="pt-box"><span class="now-width"></span> </p> </div>
+                <div class="pt-c-3 pt-xs-c-12 pt-sm-c-8 pt-md-c-6"><p class="pt-box"><span class="now-width"></span> </p> </div>
+                <div class="pt-c-3 pt-xs-c-12 pt-sm-c-8 pt-md-c-6"><p class="pt-box"><span class="now-width"></span> </p> </div>
+                <div class="pt-c-3 pt-xs-c-12 pt-sm-c-8 pt-md-c-6"><p class="pt-box"><span class="now-width"></span> </p> </div>
+                <div class="pt-c-3 pt-xs-c-12 pt-sm-c-8 pt-md-c-6"><p class="pt-box"><span class="now-width"></span> </p> </div>
+                <div class="pt-c-3 pt-xs-c-12 pt-sm-c-8 pt-md-c-6"><p class="pt-box"><span class="now-width"></span> </p> </div>
+                <div class="pt-c-3 pt-xs-c-12 pt-sm-c-8 pt-md-c-6"><p class="pt-box"><span class="now-width"></span> </p> </div>
+                <div class="pt-c-3 pt-xs-c-12 pt-sm-c-8 pt-md-c-6"><p class="pt-box"><span class="now-width"></span> </p> </div>
+            </div>
         </div>
     </div>
 <!--    色彩-->
@@ -313,5 +333,20 @@
     </div>
 </div>
 </body>
+
+            <script type="text/javascript">
+                function setNowWidth(){
+                    nw=document.querySelectorAll(".now-width")
+                    for (i=0;i<nw.length;i++){
+                        nw[i].innerHTML=window.innerWidth;
+                    }
+                }
+                window.onresize=function (){
+                    setNowWidth()
+                }
+                window.onload=function (){
+                    setNowWidth()
+                }
+            </script>
 <link rel="stylesheet" href="../lib/ptlib.css">
 </html>

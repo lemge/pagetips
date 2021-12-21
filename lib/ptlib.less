@@ -680,6 +680,7 @@ p {
 }
 
 //普通
+//栅格宽度占位
 .pt-c-1 {
   width: (1/24)*100%
 }
@@ -800,6 +801,7 @@ p {
 }
 
 ;
+//栅格偏移
 .pt-co-1 {
   margin-left: (1/24)*100%
 }
@@ -982,7 +984,8 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 
 //最小情况下
 //xs 小于640宽度
-.xs-v, .sm-v, .md-v, .lg-v, .xl-v, .xxl-v {
+@media(max-width: 640px){
+  .xs-v, .sm-v, .md-v, .lg-v, .xl-v, .xxl-v {
   display: none;
 }
 
@@ -998,9 +1001,61 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 .xs-h {
   display: none;
 }
+  //栅格宽度占位
+.pt-xs-c-1 {  width: (1/24)*100%};
+.pt-xs-c-2 {  width: (2/24)*100%};
+.pt-xs-c-3 {  width: (3/24)*100%};
+.pt-xs-c-4 {  width: (4/24)*100%};
+.pt-xs-c-5 {  width: (5/24)*100%};
+.pt-xs-c-6 {  width: (6/24)*100%};
+.pt-xs-c-7 {  width: (7/24)*100%};
+.pt-xs-c-8 {  width: (8/24)*100%};
+.pt-xs-c-9 {  width: (9/24)*100%};
+.pt-xs-c-10 {  width: (10/24)*100%};
+.pt-xs-c-11 {  width: (11/24)*100%};
+.pt-xs-c-12 {  width: (12/24)*100%};
+.pt-xs-c-13 {  width: (13/24)*100%};
+.pt-xs-c-14 {  width: (14/24)*100%};
+.pt-xs-c-15 {  width: (15/24)*100%};
+.pt-xs-c-16 {  width: (16/24)*100%};
+.pt-xs-c-17 {  width: (17/24)*100%};
+.pt-xs-c-18 {  width: (18/24)*100%};
+.pt-xs-c-19 {  width: (19/24)*100%};
+.pt-xs-c-20 {  width: (20/24)*100%};
+.pt-xs-c-21 {  width: (21/24)*100%};
+.pt-xs-c-22 {  width: (22/24)*100%};
+.pt-xs-c-23 {  width: (23/24)*100%};
+.pt-xs-c-24 {  width: (24/24)*100%};
+//栅格偏移
+.pt-xs-co-1 {  margin-left: (1/24)*100%};
+.pt-xs-co-2 {  margin-left: (2/24)*100%};
+.pt-xs-co-3 {  margin-left: (3/24)*100%};
+.pt-xs-co-4 {  margin-left: (4/24)*100%};
+.pt-xs-co-5 {  margin-left: (5/24)*100%};
+.pt-xs-co-6 {  margin-left: (6/24)*100%};
+.pt-xs-co-7 {  margin-left: (7/24)*100%};
+.pt-xs-co-8 {  margin-left: (8/24)*100%};
+.pt-xs-co-9 {  margin-left: (9/24)*100%};
+.pt-xs-co-10 {  margin-left: (10/24)*100%};
+.pt-xs-co-11 {  margin-left: (11/24)*100%};
+.pt-xs-co-12 {  margin-left: (12/24)*100%};
+.pt-xs-co-13 {  margin-left: (13/24)*100%};
+.pt-xs-co-14 {  margin-left: (14/24)*100%};
+.pt-xs-co-15 {  margin-left: (15/24)*100%};
+.pt-xs-co-16 {  margin-left: (16/24)*100%};
+.pt-xs-co-17 {  margin-left: (17/24)*100%};
+.pt-xs-co-18 {  margin-left: (18/24)*100%};
+.pt-xs-co-19 {  margin-left: (19/24)*100%};
+.pt-xs-co-20 {  margin-left: (20/24)*100%};
+.pt-xs-co-21 {  margin-left: (21/24)*100%};
+.pt-xs-co-22 {  margin-left: (22/24)*100%};
+.pt-xs-co-23 {  margin-left: (23/24)*100%};
+.pt-xs-co-24 {  margin-left: (24/24)*100%};
+}
+
 
 //sm 大于640的宽度
-@media (min-width: 640px) {
+@media (min-width: 640px)and(max-width: 768px) {
 
   .xs-v, .sm-v, .md-v, .lg-v, .xl-v, .xxl-v {
     display: none;
@@ -1016,11 +1071,61 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 .sm-h{
   display: none;
 }
+//栅格宽度占位
+.pt-sm-c-1 {  width: (1/24)*100%};
+.pt-sm-c-2 {  width: (2/24)*100%};
+.pt-sm-c-3 {  width: (3/24)*100%};
+.pt-sm-c-4 {  width: (4/24)*100%};
+.pt-sm-c-5 {  width: (5/24)*100%};
+.pt-sm-c-6 {  width: (6/24)*100%};
+.pt-sm-c-7 {  width: (7/24)*100%};
+.pt-sm-c-8 {  width: (8/24)*100%};
+.pt-sm-c-9 {  width: (9/24)*100%};
+.pt-sm-c-10 {  width: (10/24)*100%};
+.pt-sm-c-11 {  width: (11/24)*100%};
+.pt-sm-c-12 {  width: (12/24)*100%};
+.pt-sm-c-13 {  width: (13/24)*100%};
+.pt-sm-c-14 {  width: (14/24)*100%};
+.pt-sm-c-15 {  width: (15/24)*100%};
+.pt-sm-c-16 {  width: (16/24)*100%};
+.pt-sm-c-17 {  width: (17/24)*100%};
+.pt-sm-c-18 {  width: (18/24)*100%};
+.pt-sm-c-19 {  width: (19/24)*100%};
+.pt-sm-c-20 {  width: (20/24)*100%};
+.pt-sm-c-21 {  width: (21/24)*100%};
+.pt-sm-c-22 {  width: (22/24)*100%};
+.pt-sm-c-23 {  width: (23/24)*100%};
+.pt-sm-c-24 {  width: (24/24)*100%};
+//栅格偏移
+.pt-sm-co-1 {  margin-left: (1/24)*100%};
+.pt-sm-co-2 {  margin-left: (2/24)*100%};
+.pt-sm-co-3 {  margin-left: (3/24)*100%};
+.pt-sm-co-4 {  margin-left: (4/24)*100%};
+.pt-sm-co-5 {  margin-left: (5/24)*100%};
+.pt-sm-co-6 {  margin-left: (6/24)*100%};
+.pt-sm-co-7 {  margin-left: (7/24)*100%};
+.pt-sm-co-8 {  margin-left: (8/24)*100%};
+.pt-sm-co-9 {  margin-left: (9/24)*100%};
+.pt-sm-co-10 {  margin-left: (10/24)*100%};
+.pt-sm-co-11 {  margin-left: (11/24)*100%};
+.pt-sm-co-12 {  margin-left: (12/24)*100%};
+.pt-sm-co-13 {  margin-left: (13/24)*100%};
+.pt-sm-co-14 {  margin-left: (14/24)*100%};
+.pt-sm-co-15 {  margin-left: (15/24)*100%};
+.pt-sm-co-16 {  margin-left: (16/24)*100%};
+.pt-sm-co-17 {  margin-left: (17/24)*100%};
+.pt-sm-co-18 {  margin-left: (18/24)*100%};
+.pt-sm-co-19 {  margin-left: (19/24)*100%};
+.pt-sm-co-20 {  margin-left: (20/24)*100%};
+.pt-sm-co-21 {  margin-left: (21/24)*100%};
+.pt-sm-co-22 {  margin-left: (22/24)*100%};
+.pt-sm-co-23 {  margin-left: (23/24)*100%};
+.pt-sm-co-24 {  margin-left: (24/24)*100%};
 
 }
 
 //md 大于768
-@media (min-width: 768px) {
+@media (min-width: 768px)and(max-width: 1024px) {
 
   .xs-v, .sm-v, .md-v, .lg-v, .xl-v, .xxl-v {
     display: none;
@@ -1037,10 +1142,61 @@ padding: 1rem 1.5rem 1rem 1.5rem;
   display: none;
 }
 
+//栅格宽度占位
+.pt-md-c-1 {  width: (1/24)*100%};
+.pt-md-c-2 {  width: (2/24)*100%};
+.pt-md-c-3 {  width: (3/24)*100%};
+.pt-md-c-4 {  width: (4/24)*100%};
+.pt-md-c-5 {  width: (5/24)*100%};
+.pt-md-c-6 {  width: (6/24)*100%};
+.pt-md-c-7 {  width: (7/24)*100%};
+.pt-md-c-8 {  width: (8/24)*100%};
+.pt-md-c-9 {  width: (9/24)*100%};
+.pt-md-c-10 {  width: (10/24)*100%};
+.pt-md-c-11 {  width: (11/24)*100%};
+.pt-md-c-12 {  width: (12/24)*100%};
+.pt-md-c-13 {  width: (13/24)*100%};
+.pt-md-c-14 {  width: (14/24)*100%};
+.pt-md-c-15 {  width: (15/24)*100%};
+.pt-md-c-16 {  width: (16/24)*100%};
+.pt-md-c-17 {  width: (17/24)*100%};
+.pt-md-c-18 {  width: (18/24)*100%};
+.pt-md-c-19 {  width: (19/24)*100%};
+.pt-md-c-20 {  width: (20/24)*100%};
+.pt-md-c-21 {  width: (21/24)*100%};
+.pt-md-c-22 {  width: (22/24)*100%};
+.pt-md-c-23 {  width: (23/24)*100%};
+.pt-md-c-24 {  width: (24/24)*100%};
+//栅格偏移
+.pt-md-co-1 {  margin-left: (1/24)*100%};
+.pt-md-co-2 {  margin-left: (2/24)*100%};
+.pt-md-co-3 {  margin-left: (3/24)*100%};
+.pt-md-co-4 {  margin-left: (4/24)*100%};
+.pt-md-co-5 {  margin-left: (5/24)*100%};
+.pt-md-co-6 {  margin-left: (6/24)*100%};
+.pt-md-co-7 {  margin-left: (7/24)*100%};
+.pt-md-co-8 {  margin-left: (8/24)*100%};
+.pt-md-co-9 {  margin-left: (9/24)*100%};
+.pt-md-co-10 {  margin-left: (10/24)*100%};
+.pt-md-co-11 {  margin-left: (11/24)*100%};
+.pt-md-co-12 {  margin-left: (12/24)*100%};
+.pt-md-co-13 {  margin-left: (13/24)*100%};
+.pt-md-co-14 {  margin-left: (14/24)*100%};
+.pt-md-co-15 {  margin-left: (15/24)*100%};
+.pt-md-co-16 {  margin-left: (16/24)*100%};
+.pt-md-co-17 {  margin-left: (17/24)*100%};
+.pt-md-co-18 {  margin-left: (18/24)*100%};
+.pt-md-co-19 {  margin-left: (19/24)*100%};
+.pt-md-co-20 {  margin-left: (20/24)*100%};
+.pt-md-co-21 {  margin-left: (21/24)*100%};
+.pt-md-co-22 {  margin-left: (22/24)*100%};
+.pt-md-co-23 {  margin-left: (23/24)*100%};
+.pt-md-co-24 {  margin-left: (24/24)*100%};
+
 }
 
 //lg 大于1024
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
 
   .xs-v, .sm-v, .md-v, .lg-v, .xl-v, .xxl-v {
     display: none;
@@ -1056,10 +1212,61 @@ padding: 1rem 1.5rem 1rem 1.5rem;
   display: none;
 }
 
+//栅格宽度占位
+.pt-lg-c-1 {  width: (1/24)*100%};
+.pt-lg-c-2 {  width: (2/24)*100%};
+.pt-lg-c-3 {  width: (3/24)*100%};
+.pt-lg-c-4 {  width: (4/24)*100%};
+.pt-lg-c-5 {  width: (5/24)*100%};
+.pt-lg-c-6 {  width: (6/24)*100%};
+.pt-lg-c-7 {  width: (7/24)*100%};
+.pt-lg-c-8 {  width: (8/24)*100%};
+.pt-lg-c-9 {  width: (9/24)*100%};
+.pt-lg-c-10 {  width: (10/24)*100%};
+.pt-lg-c-11 {  width: (11/24)*100%};
+.pt-lg-c-12 {  width: (12/24)*100%};
+.pt-lg-c-13 {  width: (13/24)*100%};
+.pt-lg-c-14 {  width: (14/24)*100%};
+.pt-lg-c-15 {  width: (15/24)*100%};
+.pt-lg-c-16 {  width: (16/24)*100%};
+.pt-lg-c-17 {  width: (17/24)*100%};
+.pt-lg-c-18 {  width: (18/24)*100%};
+.pt-lg-c-19 {  width: (19/24)*100%};
+.pt-lg-c-20 {  width: (20/24)*100%};
+.pt-lg-c-21 {  width: (21/24)*100%};
+.pt-lg-c-22 {  width: (22/24)*100%};
+.pt-lg-c-23 {  width: (23/24)*100%};
+.pt-lg-c-24 {  width: (24/24)*100%};
+//栅格偏移
+.pt-lg-co-1 {  margin-left: (1/24)*100%};
+.pt-lg-co-2 {  margin-left: (2/24)*100%};
+.pt-lg-co-3 {  margin-left: (3/24)*100%};
+.pt-lg-co-4 {  margin-left: (4/24)*100%};
+.pt-lg-co-5 {  margin-left: (5/24)*100%};
+.pt-lg-co-6 {  margin-left: (6/24)*100%};
+.pt-lg-co-7 {  margin-left: (7/24)*100%};
+.pt-lg-co-8 {  margin-left: (8/24)*100%};
+.pt-lg-co-9 {  margin-left: (9/24)*100%};
+.pt-lg-co-10 {  margin-left: (10/24)*100%};
+.pt-lg-co-11 {  margin-left: (11/24)*100%};
+.pt-lg-co-12 {  margin-left: (12/24)*100%};
+.pt-lg-co-13 {  margin-left: (13/24)*100%};
+.pt-lg-co-14 {  margin-left: (14/24)*100%};
+.pt-lg-co-15 {  margin-left: (15/24)*100%};
+.pt-lg-co-16 {  margin-left: (16/24)*100%};
+.pt-lg-co-17 {  margin-left: (17/24)*100%};
+.pt-lg-co-18 {  margin-left: (18/24)*100%};
+.pt-lg-co-19 {  margin-left: (19/24)*100%};
+.pt-lg-co-20 {  margin-left: (20/24)*100%};
+.pt-lg-co-21 {  margin-left: (21/24)*100%};
+.pt-lg-co-22 {  margin-left: (22/24)*100%};
+.pt-lg-co-23 {  margin-left: (23/24)*100%};
+.pt-lg-co-24 {  margin-left: (24/24)*100%};
+
 }
 
 //xl 大于1280
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1546px) {
 
   .xs-v, .sm-v, .md-v, .lg-v, .xl-v, .xxl-v {
     display: none;
@@ -1074,6 +1281,57 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 .xl-h{
   display: none;
 }
+
+//栅格宽度占位
+.pt-xl-c-1 {  width: (1/24)*100%};
+.pt-xl-c-2 {  width: (2/24)*100%};
+.pt-xl-c-3 {  width: (3/24)*100%};
+.pt-xl-c-4 {  width: (4/24)*100%};
+.pt-xl-c-5 {  width: (5/24)*100%};
+.pt-xl-c-6 {  width: (6/24)*100%};
+.pt-xl-c-7 {  width: (7/24)*100%};
+.pt-xl-c-8 {  width: (8/24)*100%};
+.pt-xl-c-9 {  width: (9/24)*100%};
+.pt-xl-c-10 {  width: (10/24)*100%};
+.pt-xl-c-11 {  width: (11/24)*100%};
+.pt-xl-c-12 {  width: (12/24)*100%};
+.pt-xl-c-13 {  width: (13/24)*100%};
+.pt-xl-c-14 {  width: (14/24)*100%};
+.pt-xl-c-15 {  width: (15/24)*100%};
+.pt-xl-c-16 {  width: (16/24)*100%};
+.pt-xl-c-17 {  width: (17/24)*100%};
+.pt-xl-c-18 {  width: (18/24)*100%};
+.pt-xl-c-19 {  width: (19/24)*100%};
+.pt-xl-c-20 {  width: (20/24)*100%};
+.pt-xl-c-21 {  width: (21/24)*100%};
+.pt-xl-c-22 {  width: (22/24)*100%};
+.pt-xl-c-23 {  width: (23/24)*100%};
+.pt-xl-c-24 {  width: (24/24)*100%};
+//栅格偏移
+.pt-xl-co-1 {  margin-left: (1/24)*100%};
+.pt-xl-co-2 {  margin-left: (2/24)*100%};
+.pt-xl-co-3 {  margin-left: (3/24)*100%};
+.pt-xl-co-4 {  margin-left: (4/24)*100%};
+.pt-xl-co-5 {  margin-left: (5/24)*100%};
+.pt-xl-co-6 {  margin-left: (6/24)*100%};
+.pt-xl-co-7 {  margin-left: (7/24)*100%};
+.pt-xl-co-8 {  margin-left: (8/24)*100%};
+.pt-xl-co-9 {  margin-left: (9/24)*100%};
+.pt-xl-co-10 {  margin-left: (10/24)*100%};
+.pt-xl-co-11 {  margin-left: (11/24)*100%};
+.pt-xl-co-12 {  margin-left: (12/24)*100%};
+.pt-xl-co-13 {  margin-left: (13/24)*100%};
+.pt-xl-co-14 {  margin-left: (14/24)*100%};
+.pt-xl-co-15 {  margin-left: (15/24)*100%};
+.pt-xl-co-16 {  margin-left: (16/24)*100%};
+.pt-xl-co-17 {  margin-left: (17/24)*100%};
+.pt-xl-co-18 {  margin-left: (18/24)*100%};
+.pt-xl-co-19 {  margin-left: (19/24)*100%};
+.pt-xl-co-20 {  margin-left: (20/24)*100%};
+.pt-xl-co-21 {  margin-left: (21/24)*100%};
+.pt-xl-co-22 {  margin-left: (22/24)*100%};
+.pt-xl-co-23 {  margin-left: (23/24)*100%};
+.pt-xl-co-24 {  margin-left: (24/24)*100%};
 
 }
 
@@ -1093,5 +1351,56 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 .xxl-h{
   display: none;
 }
+
+//栅格宽度占位
+.pt-xxl-c-1 {  width: (1/24)*100%};
+.pt-xxl-c-2 {  width: (2/24)*100%};
+.pt-xxl-c-3 {  width: (3/24)*100%};
+.pt-xxl-c-4 {  width: (4/24)*100%};
+.pt-xxl-c-5 {  width: (5/24)*100%};
+.pt-xxl-c-6 {  width: (6/24)*100%};
+.pt-xxl-c-7 {  width: (7/24)*100%};
+.pt-xxl-c-8 {  width: (8/24)*100%};
+.pt-xxl-c-9 {  width: (9/24)*100%};
+.pt-xxl-c-10 {  width: (10/24)*100%};
+.pt-xxl-c-11 {  width: (11/24)*100%};
+.pt-xxl-c-12 {  width: (12/24)*100%};
+.pt-xxl-c-13 {  width: (13/24)*100%};
+.pt-xxl-c-14 {  width: (14/24)*100%};
+.pt-xxl-c-15 {  width: (15/24)*100%};
+.pt-xxl-c-16 {  width: (16/24)*100%};
+.pt-xxl-c-17 {  width: (17/24)*100%};
+.pt-xxl-c-18 {  width: (18/24)*100%};
+.pt-xxl-c-19 {  width: (19/24)*100%};
+.pt-xxl-c-20 {  width: (20/24)*100%};
+.pt-xxl-c-21 {  width: (21/24)*100%};
+.pt-xxl-c-22 {  width: (22/24)*100%};
+.pt-xxl-c-23 {  width: (23/24)*100%};
+.pt-xxl-c-24 {  width: (24/24)*100%};
+//栅格偏移
+.pt-xxl-co-1 {  margin-left: (1/24)*100%};
+.pt-xxl-co-2 {  margin-left: (2/24)*100%};
+.pt-xxl-co-3 {  margin-left: (3/24)*100%};
+.pt-xxl-co-4 {  margin-left: (4/24)*100%};
+.pt-xxl-co-5 {  margin-left: (5/24)*100%};
+.pt-xxl-co-6 {  margin-left: (6/24)*100%};
+.pt-xxl-co-7 {  margin-left: (7/24)*100%};
+.pt-xxl-co-8 {  margin-left: (8/24)*100%};
+.pt-xxl-co-9 {  margin-left: (9/24)*100%};
+.pt-xxl-co-10 {  margin-left: (10/24)*100%};
+.pt-xxl-co-11 {  margin-left: (11/24)*100%};
+.pt-xxl-co-12 {  margin-left: (12/24)*100%};
+.pt-xxl-co-13 {  margin-left: (13/24)*100%};
+.pt-xxl-co-14 {  margin-left: (14/24)*100%};
+.pt-xxl-co-15 {  margin-left: (15/24)*100%};
+.pt-xxl-co-16 {  margin-left: (16/24)*100%};
+.pt-xxl-co-17 {  margin-left: (17/24)*100%};
+.pt-xxl-co-18 {  margin-left: (18/24)*100%};
+.pt-xxl-co-19 {  margin-left: (19/24)*100%};
+.pt-xxl-co-20 {  margin-left: (20/24)*100%};
+.pt-xxl-co-21 {  margin-left: (21/24)*100%};
+.pt-xxl-co-22 {  margin-left: (22/24)*100%};
+.pt-xxl-co-23 {  margin-left: (23/24)*100%};
+.pt-xxl-co-24 {  margin-left: (24/24)*100%};
 
 }
