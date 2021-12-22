@@ -88,7 +88,7 @@
 h1,h2,h3,h4,h5,h6{
   padding-top: 0.6em;
   padding-bottom: 0.6em;
-  .less{
+  .small{
     font-size: 0.6em;
   }
 }
@@ -132,7 +132,7 @@ h1,h2,h3,h4,h5,h6{
 .pt-c-full{
   //自动全部填充
   display: flex;
-  *{
+  >*{
     flex: auto;
   }
 }
@@ -1498,4 +1498,72 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 .pt-xxl-co-23 {  margin-left: (23/24)*100%};
 .pt-xxl-co-24 {  margin-left: (24/24)*100%};
 
+}
+
+//标签样式
+.pt-tag-def{
+  display: inline-flex;
+  background-color: @pt-gray-7;
+  color: @white;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid @pt-gray-7;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  span{
+    display: inline-flex;
+    background-color: white;
+    color: @pt-gray-7;
+    padding-right: 0.5rem;
+    padding-left: 0.2rem;
+    margin-left: 0.2rem;
+  }
+}
+.pt-tag-blue{
+.pt-tag-def;
+  border: 1px solid @pt-blue-6;
+  background-color: @pt-blue-6;
+  span{
+    color: @pt-blue-6;
+  }
+}
+.pt-tag-red{
+.pt-tag-def;
+  border: 1px solid @pt-red-6;
+  background-color: @pt-red-6;
+  span{
+    color: @pt-red-6;
+  }
+}
+.pt-tag-yellow{
+.pt-tag-def;
+  border: 1px solid @pt-yellow-5;
+  background-color: @pt-yellow-5;
+  span{
+    color: @pt-yellow-5;
+  }
+}
+.pt-tag-green{
+.pt-tag-def;
+  border: 1px solid @pt-green-5;
+  background-color: @pt-green-5;
+  span{
+    color: @pt-green-6;
+  }
+}
+.pt-tag-purple{
+.pt-tag-def;
+  border: 1px solid @pt-purple-5;
+  background-color: @pt-purple-5;
+  span{
+    color: @pt-purple-6;
+  }
+}
+.pt-tag-pink{
+.pt-tag-def;
+  border: 1px solid @pt-pink-4;
+  background-color: @pt-pink-4;
+  span{
+    color: @pt-pink-6;
+  }
 }

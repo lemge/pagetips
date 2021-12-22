@@ -11,12 +11,12 @@ h6 {
   padding-top: 0.6em;
   padding-bottom: 0.6em;
 }
-h1 .less,
-h2 .less,
-h3 .less,
-h4 .less,
-h5 .less,
-h6 .less {
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small {
   font-size: 0.6em;
 }
 .com-shadow {
@@ -49,7 +49,7 @@ h6 .less {
 .pt-c-full {
   display: flex;
 }
-.pt-c-full * {
+.pt-c-full > * {
   flex: auto;
 }
 .pt-panel {
@@ -1771,5 +1771,161 @@ p {
   .pt-xxl-co-24 {
     margin-left: 100%;
   }
+}
+.pt-tag-def {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.pt-tag-def span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
+}
+.pt-tag-blue {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border: 1px solid #2563eb;
+  background-color: #2563eb;
+}
+.pt-tag-blue span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
+}
+.pt-tag-blue span {
+  color: #2563eb;
+}
+.pt-tag-red {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border: 1px solid #dc2626;
+  background-color: #dc2626;
+}
+.pt-tag-red span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
+}
+.pt-tag-red span {
+  color: #dc2626;
+}
+.pt-tag-yellow {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border: 1px solid #f59e0b;
+  background-color: #f59e0b;
+}
+.pt-tag-yellow span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
+}
+.pt-tag-yellow span {
+  color: #f59e0b;
+}
+.pt-tag-green {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border: 1px solid #10b981;
+  background-color: #10b981;
+}
+.pt-tag-green span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
+}
+.pt-tag-green span {
+  color: #059669;
+}
+.pt-tag-purple {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border: 1px solid #8b5cf6;
+  background-color: #8b5cf6;
+}
+.pt-tag-purple span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
+}
+.pt-tag-purple span {
+  color: #7c3aed;
+}
+.pt-tag-pink {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  border: 1px solid #f472b6;
+  background-color: #f472b6;
+}
+.pt-tag-pink span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
+}
+.pt-tag-pink span {
+  color: #db2777;
 }
 /*# sourceMappingURL=ptlib.css.map */
