@@ -96,6 +96,9 @@ h1,h2,h3,h4,h5,h6{
 .com-shadow{
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
 }
+.com-shadow-in{
+  box-shadow: inset rgb(0 0 0 / 10%) 0px 4px 6px -1px, inset rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+}
 
 //框架样式
 .pt-container {
@@ -1569,4 +1572,160 @@ padding: 1rem 1.5rem 1rem 1.5rem;
   span{
     color: @pt-pink-6;
   }
+}
+
+//表单样式
+//按钮
+.pt-btn-def{
+    .com-shadow;
+    outline: 0;
+    border-radius: 0.5rem;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    color: @black;
+    background-color: @pt-gray-2;
+    border: 1px solid @pt-gray-3;
+    background-image: linear-gradient(@pt-gray-1 10%,@pt-gray-2 50%,@pt-gray-2 90%);
+  &:hover{
+    background-image: linear-gradient(@pt-gray-0 10%,@pt-gray-1 50%,@pt-gray-2 90%);
+  }
+  &:active{
+    .com-shadow-in;
+    background-image: linear-gradient(@pt-gray-1 10%,@pt-gray-1 50%,@pt-gray-1 90%);
+  }
+}
+
+.pt-btn-def[disabled]{
+  background-image: none;
+  border-color: @pt-gray-3;
+  color: @pt-gray-4;
+}
+
+.pt-btn-blue{
+  .pt-btn-def;
+    color: @white;
+    background-color: @pt-blue-6;
+    border: 1px solid @pt-blue-8;
+    background-image: linear-gradient(@pt-blue-5 10%,@pt-blue-6 50%,@pt-blue-7 90%);
+  &:hover{
+    background-image: linear-gradient(@pt-blue-4 10%,@pt-blue-5 50%,@pt-blue-6 90%);
+  }
+  &:active{
+    .com-shadow-in;
+    background-image: linear-gradient(@pt-blue-6 10%,@pt-blue-6 50%,@pt-blue-6 90%);
+  }
+}
+.pt-btn-blue[disabled]{
+  background-image: none;
+  border-color: @pt-blue-7;
+  color: @pt-blue-3;
+}
+
+.pt-btn-green{
+  .pt-btn-def;
+    color: @white;
+    background-color: @pt-green-6;
+    border: 1px solid @pt-green-8;
+    background-image: linear-gradient(@pt-green-5 10%,@pt-green-6 50%,@pt-green-7 90%);
+  &:hover{
+    background-image: linear-gradient(@pt-green-4 10%,@pt-green-5 50%,@pt-green-6 90%);
+  }
+  &:active{
+    .com-shadow-in;
+    background-image: linear-gradient(@pt-green-6 10%,@pt-green-6 50%,@pt-green-6 90%);
+  }
+}
+.pt-btn-green[disabled]{
+  background-image: none;
+  border-color: @pt-green-7;
+  color: @pt-green-3;
+}
+
+
+.pt-btn-red{
+  .pt-btn-def;
+    color: @white;
+    background-color: @pt-red-6;
+    border: 1px solid @pt-red-8;
+    background-image: linear-gradient(@pt-red-5 10%,@pt-red-6 50%,@pt-red-7 90%);
+  &:hover{
+    background-image: linear-gradient(@pt-red-4 10%,@pt-red-5 50%,@pt-red-6 90%);
+  }
+  &:active{
+    .com-shadow-in;
+    background-image: linear-gradient(@pt-red-6 10%,@pt-red-6 50%,@pt-red-6 90%);
+  }
+}
+.pt-btn-red[disabled]{
+  background-image: none;
+  border-color: @pt-red-7;
+  color: @pt-red-3;
+}
+
+
+.pt-btn-yellow{
+  .pt-btn-def;
+    color: @white;
+    background-color: @pt-yellow-5;
+    border: 1px solid @pt-yellow-6;
+    background-image: linear-gradient(@pt-yellow-4 10%,@pt-yellow-5 50%,@pt-yellow-6 90%);
+  &:hover{
+    background-image: linear-gradient(@pt-yellow-3 10%,@pt-yellow-4 50%,@pt-yellow-5 90%);
+  }
+  &:active{
+    .com-shadow-in;
+    background-image: linear-gradient(@pt-yellow-5 10%,@pt-yellow-5 50%,@pt-yellow-5 90%);
+  }
+}
+.pt-btn-yellow[disabled]{
+  background-image: none;
+  border-color: @pt-yellow-6;
+  color: @pt-yellow-2;
+}
+
+
+.pt-btn-purple{
+  .pt-btn-def;
+    color: @white;
+    background-color: @pt-purple-6;
+    border: 1px solid @pt-purple-8;
+    background-image: linear-gradient(@pt-purple-5 10%,@pt-purple-6 50%,@pt-purple-7 90%);
+  &:hover{
+    background-image: linear-gradient(@pt-purple-4 10%,@pt-purple-5 50%,@pt-purple-6 90%);
+  }
+  &:active{
+    .com-shadow-in;
+    background-image: linear-gradient(@pt-purple-6 10%,@pt-purple-6 50%,@pt-purple-6 90%);
+  }
+}
+.pt-btn-purple[disabled]{
+  background-image: none;
+  border-color: @pt-purple-7;
+  color: @pt-purple-3;
+}
+
+
+.pt-btn-pink{
+  .pt-btn-def;
+    color: @white;
+    background-color: @pt-pink-6;
+    border: 1px solid @pt-pink-8;
+    background-image: linear-gradient(@pt-pink-5 10%,@pt-pink-6 50%,@pt-pink-7 90%);
+  &:hover{
+    background-image: linear-gradient(@pt-pink-4 10%,@pt-pink-5 50%,@pt-pink-6 90%);
+  }
+  &:active{
+    .com-shadow-in;
+    background-image: linear-gradient(@pt-pink-6 10%,@pt-pink-6 50%,@pt-pink-6 90%);
+  }
+}
+.pt-btn-pink[disabled]{
+  background-image: none;
+  border-color: @pt-pink-7;
+  color: @pt-pink-3;
+}
+
+.pt-btn-sm{
+
 }
