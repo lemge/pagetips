@@ -2179,4 +2179,13 @@ p {
   border-color: #be185d;
   color: #f9a8d4;
 }
+.pt-btn-sm {
+  font-size: 0.6rem;
+  padding: 0.2rem 0.5rem;
+}
+.pt-btn-lg {
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.6rem;
+}
 /*# sourceMappingURL=ptlib.css.map */
