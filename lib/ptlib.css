@@ -2188,4 +2188,25 @@ p {
   padding: 0.5rem 1.2rem;
   border-radius: 0.6rem;
 }
+.pt-i[type=text],
+.pt-i[type=password],
+.pt-t {
+  outline: 0;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #a1a1aa;
+  box-shadow: inset rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, inset rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 0.5rem;
+  vertical-align: middle;
+  box-sizing: border-box;
+  display: inline-flex;
+  width: 100%;
+}
+.pt-i[type=text]:focus,
+.pt-i[type=password]:focus,
+.pt-t:focus {
+  border: 1px solid #3b82f6;
+}
+.pt-t {
+  min-height: 5rem;
+}
 /*# sourceMappingURL=ptlib.css.map */
