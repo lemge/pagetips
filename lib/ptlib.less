@@ -1736,7 +1736,7 @@ padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 0.6rem;
 }
 //输入框
-.pt-i[type=text],.pt-i[type=password],.pt-t{
+.pt-i[type=text],.pt-i[type=password],.pt-t,select.pt-i,.pt-i[list]{
     outline: 0;
     padding: .5rem .6rem;
     border: 1px solid @pt-gray-4;
@@ -1753,3 +1753,96 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 .pt-t{
   min-height: 5rem;
 }
+
+label.pt-i{
+  display: inline-flex;
+  position: relative;
+  span{
+    border: 1px solid @pt-gray-5;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.5rem 0.2rem 1.8rem;
+    cursor: pointer;
+    &:hover{
+      border-color: @pt-blue-5;
+    .com-shadow;
+    }
+  }
+    input[type=checkbox],input[type=radio]{
+      position: absolute;
+          top: 0.5rem;
+    left: 0.5rem;
+    }
+  input[type=checkbox]:checked+span,input[type=radio]:checked+span{
+    background-color: @pt-blue-5;
+    color: @white;
+    border-color: @pt-blue-5;
+  }
+  //自定义checked与radio的样子
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+input[type=checkbox]:after {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: -0.2rem;
+  content: "✓";
+  background-color: @white;
+  color: @pt-gray-5;
+  display: inline-block;
+  text-align: center;
+  visibility: visible;
+  border-radius: 0.2rem;
+  border: 0.1rem solid @pt-gray-5;
+  line-height: 1rem;
+  font-weight: bold;
+}
+input[type=checkbox]:checked:after {
+  background-color: @pt-blue-5;
+  color: @white;
+  border-color: @white;
+}
+
+  input[type=radio] {
+    visibility: hidden;
+
+}
+
+input[type=radio]:after {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: -0.2rem;
+    content: " ";
+    background-color: transparent;
+    border: 0.1rem solid @pt-gray-5;
+    color: @white;
+    display: inline-block;
+    visibility: visible;
+    border-radius: 50%;
+}
+
+input[type=radio]:checked:before {
+    content: "✓";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: -0.2rem;
+    text-align: center;
+    background-color: @pt-blue-5;
+    color: @white;
+    display: inline-block;
+    visibility: visible;
+    border-radius: 50%;
+    border: 0.1rem solid @white;
+    z-index: 1;
+   line-height: 1rem;
+  font-weight: bold;
+}
+
+}
+
+
+
+

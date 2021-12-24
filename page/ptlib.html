@@ -401,7 +401,7 @@
 <!--    表单-->
     <div class="pt-panel">
         <div class="pt-panel-title">表单控件</div>
-        <div class="pt-panel-body">
+             <div class="pt-panel-body">
             <h3>按钮</h3>
             <hr>
             <p>
@@ -451,13 +451,84 @@
 
             <button class="pt-btn-def pt-btn-lg">lg常规按钮</button>
             </p>
-            <hr>
+        </div>
+            <div class="pt-panel-body">
             <h3>输入框</h3>
             <hr>
-            <input type="text" class="pt-i"  placeholder="普通输入框">
-            <input type="password" class="pt-i" placeholder="输入密码">
-            <textarea name="" id="" class="pt-t"></textarea>
-        </div>
+            <label>
+                <span>普通输入框</span>
+                <input type="text" class="pt-i"  placeholder="普通输入框">
+            </label>
+            <br><br>
+            <label>
+                <span>密码框</span>
+                <input type="password" class="pt-i" placeholder="输入密码">
+            </label>
+            <br><br>
+            <label for="t1">文本域</label><textarea name="" id="t1" class="pt-t"></textarea>
+
+            </div>
+            <div class="pt-panel-body">
+            <h3>下拉框</h3>
+            <label>
+                <span>常规下拉框</span>
+                <select name="" class="pt-i">
+                <optgroup label="领导者">
+               <option  value="1">刘备</option>
+               <option  value="2">孙策</option>
+               <option  value="3">曹操</option>
+                </optgroup>
+                <optgroup label="军师">
+               <option  value="4">诸葛亮</option>
+               <option  value="5">周瑜</option>
+               <option  value="6">司马懿</option>
+                </optgroup>
+                </select>
+            </label>
+
+            <label>
+                <span>
+            基于datalist绑定的input，可以搜索候选
+                </span>
+                <input class="pt-i" list="browsers" name="xzcid">
+            </label>
+            <datalist id="browsers">
+                <option  value="1">刘备</option>
+                <option  value="2">孙策</option>
+                <option  value="3">曹操</option>
+                <option  value="4">诸葛亮</option>
+                <option  value="5">周瑜</option>
+                <option  value="6">司马懿</option>
+            </datalist>
+                </div>
+            <div class="pt-panel-body">
+                <h3>选择框</h3>
+                <label for="cb1" class="pt-i">
+                    <input type="checkbox" id="cb1" value="1">
+                    <span>复选1</span>
+                </label>
+                <label for="cb2" class="pt-i">
+                    <input type="checkbox" id="cb2" value="2">
+                    <span>复选2</span>
+                </label>
+                <label for="cb3" class="pt-i">
+                    <input type="checkbox" id="cb3" value="3">
+                    <span>复选3</span>
+                </label>
+                <h3>单选框</h3>
+                <label for="ra1" class="pt-i">
+                    <input type="radio" id="ra1" value="1" name="ra">
+                    <span>单选1</span>
+                </label>
+                <label for="ra2" class="pt-i">
+                    <input type="radio" id="ra2" value="2" name="ra">
+                    <span>单选2</span>
+                </label>
+                <label for="ra3" class="pt-i">
+                    <input type="radio" id="ra3" value=3" name="ra">
+                    <span>单选3</span>
+                </label>
+            </div>
     </div>
 </div>
 <div class="pt-b5"></div>

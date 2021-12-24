@@ -2190,7 +2190,9 @@ p {
 }
 .pt-i[type=text],
 .pt-i[type=password],
-.pt-t {
+.pt-t,
+select.pt-i,
+.pt-i[list] {
   outline: 0;
   padding: 0.5rem 0.6rem;
   border: 1px solid #a1a1aa;
@@ -2203,10 +2205,95 @@ p {
 }
 .pt-i[type=text]:focus,
 .pt-i[type=password]:focus,
-.pt-t:focus {
+.pt-t:focus,
+select.pt-i:focus,
+.pt-i[list]:focus {
   border: 1px solid #3b82f6;
 }
 .pt-t {
   min-height: 5rem;
+}
+label.pt-i {
+  display: inline-flex;
+  position: relative;
+}
+label.pt-i span {
+  border: 1px solid #71717a;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem 0.2rem 1.8rem;
+  cursor: pointer;
+}
+label.pt-i span:hover {
+  border-color: #3b82f6;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+label.pt-i input[type=checkbox],
+label.pt-i input[type=radio] {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+label.pt-i input[type=checkbox]:checked + span,
+label.pt-i input[type=radio]:checked + span {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+label.pt-i input[type=checkbox] {
+  visibility: hidden;
+}
+label.pt-i input[type=checkbox]:after {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: -0.2rem;
+  content: "✓";
+  background-color: #ffffff;
+  color: #71717a;
+  display: inline-block;
+  text-align: center;
+  visibility: visible;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #71717a;
+  line-height: 1rem;
+  font-weight: bold;
+}
+label.pt-i input[type=checkbox]:checked:after {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+label.pt-i input[type=radio] {
+  visibility: hidden;
+}
+label.pt-i input[type=radio]:after {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: -0.2rem;
+  content: " ";
+  background-color: transparent;
+  border: 0.1rem solid #71717a;
+  color: #ffffff;
+  display: inline-block;
+  visibility: visible;
+  border-radius: 50%;
+}
+label.pt-i input[type=radio]:checked:before {
+  content: "✓";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: -0.2rem;
+  text-align: center;
+  background-color: #3b82f6;
+  color: #ffffff;
+  display: inline-block;
+  visibility: visible;
+  border-radius: 50%;
+  border: 0.1rem solid #ffffff;
+  z-index: 1;
+  line-height: 1rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=ptlib.css.map */
