@@ -401,6 +401,7 @@
 <!--    表单-->
     <div class="pt-panel">
         <div class="pt-panel-title">表单控件</div>
+<!--        按钮-->
              <div class="pt-panel-body">
             <h3>按钮</h3>
             <hr>
@@ -463,6 +464,7 @@
                      <a href="#" class="pt-btn-purple pt-btn-lg">链接按钮</a>
                  </p>
         </div>
+<!--        输入框-->
             <div class="pt-panel-body">
             <h3>输入框</h3>
             <hr>
@@ -476,9 +478,10 @@
                 <input type="password" class="pt-i" placeholder="输入密码">
             </label>
             <br><br>
-            <label for="t1">文本域</label><textarea name="" id="t1" class="pt-t"></textarea>
+            <label for="t1">文本域</label><textarea name="" id="t1" class="pt-t" maxlength="200" minlength="20"></textarea>
 
             </div>
+<!--        下拉框-->
             <div class="pt-panel-body">
             <h3>下拉框</h3>
             <label>
@@ -512,6 +515,7 @@
                 <option  value="6">司马懿</option>
             </datalist>
                 </div>
+<!--        复选框与单选框-->
             <div class="pt-panel-body">
                 <h3>选择框</h3>
                 <label for="cb1" class="pt-i">
@@ -540,6 +544,61 @@
                     <span>单选3</span>
                 </label>
             </div>
+<!--        其他输入类型-->
+        <div class="pt-panel-body">
+            <form>
+            <h3>其他选择类型</h3>
+            <hr>
+            <label for="">
+                <span>颜色选择</span>
+                <input type="color">
+            </label>
+            <hr>
+            <label for="">
+                <span>日期选择</span>
+                <input type="date" class="pt-i">
+            </label>
+            <hr>
+            <label for="">
+                <span>时间日期选择</span>
+                <input type="datetime-local" class="pt-i">
+            </label>
+            <hr>
+            <label for="">
+                <span>时间</span>
+                <input type="time" class="pt-i">
+            </label>
+            <hr>
+            <label for="">
+                <span>数字</span>
+                <input type="number" class="pt-i" step="1">
+            </label>
+            <hr>
+            <label for="">
+                <span>范围选择</span>
+                <input type="range" min="0" max="100" class="pt-i">
+            </label>
+            <hr>
+            <label for="">
+                <span>电话号码</span>
+                <input type="tel" class="pt-i">
+            </label>
+            <hr>
+            <label for="">
+                <span>必须填写</span>
+                <input type="text" class="pt-i" required="required">
+            </label>
+            <hr>
+            <label for="">
+                <span>正则验证</span>
+                <input type="text" class="pt-i" pattern="^[0-9a-zA-Z]{6,16}$" alt="正则验证" required="required">
+                 请输入a-zA-Z0-9且长度6-16位的字符
+            </label>
+            <hr>
+                <button class="pt-btn-def" type="submit">测试提交</button>
+            </form>
+        </div>
+
     </div>
 </div>
 <div class="pt-b5"></div>

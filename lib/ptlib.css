@@ -2195,7 +2195,13 @@ p {
 .pt-i[type=password],
 .pt-t,
 select.pt-i,
-.pt-i[list] {
+.pt-i[list],
+.pt-i[type=tel],
+.pt-i[type=number],
+.pt-i[type=time],
+.pt-i[type=date],
+.pt-i[type=datetime-local],
+.pt-i[type=range] {
   outline: 0;
   padding: 0.5rem 0.6rem;
   border: 1px solid #a1a1aa;
@@ -2210,11 +2216,21 @@ select.pt-i,
 .pt-i[type=password]:focus,
 .pt-t:focus,
 select.pt-i:focus,
-.pt-i[list]:focus {
+.pt-i[list]:focus,
+.pt-i[type=tel]:focus,
+.pt-i[type=number]:focus,
+.pt-i[type=time]:focus,
+.pt-i[type=date]:focus,
+.pt-i[type=datetime-local]:focus,
+.pt-i[type=range]:focus {
   border: 1px solid #3b82f6;
 }
 .pt-t {
   min-height: 5rem;
+}
+.pt-i[type=range] {
+  box-shadow: none;
+  padding: 0;
 }
 label.pt-i {
   display: inline-flex;

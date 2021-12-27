@@ -1739,7 +1739,8 @@ padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 0.6rem;
 }
 //输入框
-.pt-i[type=text],.pt-i[type=password],.pt-t,select.pt-i,.pt-i[list]{
+.pt-i[type=text],.pt-i[type=password],.pt-t,select.pt-i,.pt-i[list],.pt-i[type=tel],.pt-i[type=number],.pt-i[type=time],.pt-i[type=date],.pt-i[type=datetime-local],
+.pt-i[type=range]{
     outline: 0;
     padding: .5rem .6rem;
     border: 1px solid @pt-gray-4;
@@ -1755,6 +1756,11 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 }
 .pt-t{
   min-height: 5rem;
+}
+.pt-i[type=range]{
+  box-shadow: none;
+  padding: 0;
+
 }
 
 label.pt-i{
