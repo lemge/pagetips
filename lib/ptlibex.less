@@ -60,8 +60,17 @@
 .pt-navi{
   background-color: @black;
   color: @white;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  li{
+  }
   a{
+    display: block;
+    white-space: nowrap;
     color: @white;
     text-decoration: none;
-  }
+    padding: 0.5rem;
+    overflow: hidden;
+}
 }

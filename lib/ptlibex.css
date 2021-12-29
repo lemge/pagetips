@@ -2507,9 +2507,16 @@ label.pt-i input[type=radio]:checked:before {
 .pt-navi {
   background-color: #000000;
   color: #ffffff;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 .pt-navi a {
+  display: block;
+  white-space: nowrap;
   color: #ffffff;
   text-decoration: none;
+  padding: 0.5rem;
+  overflow: hidden;
 }
 /*# sourceMappingURL=ptlibex.css.map */
