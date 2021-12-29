@@ -2366,6 +2366,7 @@ label.pt-i input[type=radio]:checked:before {
 }
 .pt-card-line .pt-card-txt {
   padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .pt-card-line .pt-card-title {
   font-weight: bold;
@@ -2378,5 +2379,21 @@ label.pt-i input[type=radio]:checked:before {
   height: 1.5rem;
   line-height: 1.5rem;
   overflow: hidden;
+}
+.pt-cell {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.pt-a {
+  text-decoration: none;
+}
+.pt-a:hover {
+  text-shadow: 1px 1px 1px #00000040;
 }
 /*# sourceMappingURL=ptlib.css.map */
