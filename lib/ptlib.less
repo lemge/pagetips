@@ -92,6 +92,11 @@ h1,h2,h3,h4,h5,h6{
     font-size: 0.6em;
   }
 }
+img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
 //
 .com-shadow{
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
@@ -146,7 +151,7 @@ h1,h2,h3,h4,h5,h6{
 //组件样式
 .pt-panel {
   .com-shadow;
-  border: 1px solid #eeeeee;
+  border: 1px solid @pt-gray-3;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   overflow: hidden;
@@ -155,7 +160,7 @@ h1,h2,h3,h4,h5,h6{
 .pt-panel-title {
   .panel-lr;
   font-weight: bold;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid @pt-gray-3;
 }
 
 .pt-panel-body {
@@ -163,7 +168,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .pt-panel-bot {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid @pt-gray-3;
   font-size: 0.7rem;
   .panel-lr;
 }
@@ -176,7 +181,7 @@ code {
 }
 
 hr{
-  background-color: #eee;
+  background-color: @pt-gray-3;
   border: none;
   display: block;
   height: 1px;
@@ -1588,7 +1593,7 @@ padding: 1rem 1.5rem 1rem 1.5rem;
     display: inline-flex;
     color: @black;
     background-color: @pt-gray-2;
-    border: 1px solid @pt-gray-3;
+    border: 1px solid @pt-gray-4;
     background-image: linear-gradient(@pt-gray-1 10%,@pt-gray-2 50%,@pt-gray-2 90%);
   &:hover{
     background-image: linear-gradient(@pt-gray-0 10%,@pt-gray-1 50%,@pt-gray-2 90%);
@@ -1760,7 +1765,6 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 .pt-i[type=range]{
   box-shadow: none;
   padding: 0;
-
 }
 
 label.pt-i{
@@ -1857,6 +1861,63 @@ input[type=radio]:checked:before {
 
 }
 
+.pt-c-box{
+  padding: 0.5rem;
+}
+
+.pt-card{
+  margin: 0.5rem;
+  .pt-card-img{
+    height: 6rem;
+    width: 100%;
+    overflow: hidden;
+    img {
+      //width: 100%;
+      //height: 100%;
+      max-height: none;
+    }
+  }
+  .pt-card-txt{
+    padding: 0.5rem;
+  }
+  .pt-card-title{
+    font-weight: bold;
+  }
+  .pt-card-info{
+    height: 1.5rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+  }
+}
+.pt-card-line{
+  margin: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 4rem;
+  .pt-card-img{
+    width: 4rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    img{
+      max-width: none;
+    }
+  }
+  .pt-card-txt{
+    padding-left: 0.5rem;
+  }
+  .pt-card-title{
+    font-weight: bold;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+    padding-top: 0.5rem;
+  }
+  .pt-card-info{
+    height: 1.5rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+  }
+}
 
 
 

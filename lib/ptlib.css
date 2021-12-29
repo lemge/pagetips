@@ -19,6 +19,11 @@ h5 .small,
 h6 .small {
   font-size: 0.6em;
 }
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
 .com-shadow {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -60,7 +65,7 @@ h6 .small {
 }
 .pt-panel {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  border: 1px solid #eeeeee;
+  border: 1px solid #d4d4d8;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   overflow: hidden;
@@ -68,13 +73,13 @@ h6 .small {
 .pt-panel-title {
   padding: 1em 1.5rem 1em 1.5rem;
   font-weight: bold;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #d4d4d8;
 }
 .pt-panel-body {
   padding: 1em 1.5rem 1em 1.5rem;
 }
 .pt-panel-bot {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #d4d4d8;
   font-size: 0.7rem;
   padding: 1em 1.5rem 1em 1.5rem;
 }
@@ -85,7 +90,7 @@ code {
   border-radius: 0.2rem;
 }
 hr {
-  background-color: #eee;
+  background-color: #d4d4d8;
   border: none;
   display: block;
   height: 1px;
@@ -1957,7 +1962,7 @@ p {
   display: inline-flex;
   color: #000000;
   background-color: #e4e4e7;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a1a1aa;
   background-image: linear-gradient(#f4f4f5 10%, #e4e4e7 50%, #e4e4e7 90%);
 }
 .pt-btn-def:hover {
@@ -1981,7 +1986,7 @@ p {
   display: inline-flex;
   color: #000000;
   background-color: #e4e4e7;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a1a1aa;
   background-image: linear-gradient(#f4f4f5 10%, #e4e4e7 50%, #e4e4e7 90%);
   color: #ffffff;
   background-color: #2563eb;
@@ -2016,7 +2021,7 @@ p {
   display: inline-flex;
   color: #000000;
   background-color: #e4e4e7;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a1a1aa;
   background-image: linear-gradient(#f4f4f5 10%, #e4e4e7 50%, #e4e4e7 90%);
   color: #ffffff;
   background-color: #059669;
@@ -2051,7 +2056,7 @@ p {
   display: inline-flex;
   color: #000000;
   background-color: #e4e4e7;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a1a1aa;
   background-image: linear-gradient(#f4f4f5 10%, #e4e4e7 50%, #e4e4e7 90%);
   color: #ffffff;
   background-color: #dc2626;
@@ -2086,7 +2091,7 @@ p {
   display: inline-flex;
   color: #000000;
   background-color: #e4e4e7;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a1a1aa;
   background-image: linear-gradient(#f4f4f5 10%, #e4e4e7 50%, #e4e4e7 90%);
   color: #ffffff;
   background-color: #f59e0b;
@@ -2121,7 +2126,7 @@ p {
   display: inline-flex;
   color: #000000;
   background-color: #e4e4e7;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a1a1aa;
   background-image: linear-gradient(#f4f4f5 10%, #e4e4e7 50%, #e4e4e7 90%);
   color: #ffffff;
   background-color: #7c3aed;
@@ -2156,7 +2161,7 @@ p {
   display: inline-flex;
   color: #000000;
   background-color: #e4e4e7;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a1a1aa;
   background-image: linear-gradient(#f4f4f5 10%, #e4e4e7 50%, #e4e4e7 90%);
   color: #ffffff;
   background-color: #db2777;
@@ -2319,5 +2324,59 @@ label.pt-i input[type=radio]:checked:before {
   z-index: 1;
   line-height: 1rem;
   font-weight: bold;
+}
+.pt-c-box {
+  padding: 0.5rem;
+}
+.pt-card {
+  margin: 0.5rem;
+}
+.pt-card .pt-card-img {
+  height: 6rem;
+  width: 100%;
+  overflow: hidden;
+}
+.pt-card .pt-card-img img {
+  max-height: none;
+}
+.pt-card .pt-card-txt {
+  padding: 0.5rem;
+}
+.pt-card .pt-card-title {
+  font-weight: bold;
+}
+.pt-card .pt-card-info {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+}
+.pt-card-line {
+  margin: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 4rem;
+}
+.pt-card-line .pt-card-img {
+  width: 4rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.pt-card-line .pt-card-img img {
+  max-width: none;
+}
+.pt-card-line .pt-card-txt {
+  padding-left: 0.5rem;
+}
+.pt-card-line .pt-card-title {
+  font-weight: bold;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+  padding-top: 0.5rem;
+}
+.pt-card-line .pt-card-info {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
 }
 /*# sourceMappingURL=ptlib.css.map */
