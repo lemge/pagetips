@@ -16,6 +16,11 @@ small {
   font-size: 0.8em;
   color: #00000080;
 }
+.small-s,
+small {
+  font-size: 0.8rem;
+  color: #00000080;
+}
 img {
   max-width: 100%;
   max-height: 100%;
@@ -2442,4 +2447,69 @@ label.pt-i input[type=radio]:checked:before {
 .pt-ul-free-w li:last-child {
   border-bottom: none;
 }
-/*# sourceMappingURL=ptlib.css.map */
+.pt-big-show {
+  margin-bottom: 2rem;
+}
+.pt-big-show .pt-b-title {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  font-weight: bold;
+}
+.pt-big-show .pt-b-info {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+.pt-bc-blue {
+  background-color: #3b82f6;
+}
+.pt-bc-blue > * {
+  color: #ffffff;
+}
+.pt-bc-green {
+  background-color: #10b981;
+}
+.pt-bc-green > * {
+  color: #ffffff;
+}
+.pt-bc-red {
+  background-color: #ef4444;
+}
+.pt-bc-red > * {
+  color: #ffffff;
+}
+.pt-bc-yellow {
+  background-color: #f59e0b;
+}
+.pt-bc-yellow > * {
+  color: #ffffff;
+}
+.pt-bc-purple {
+  background-color: #8b5cf6;
+}
+.pt-bc-purple > * {
+  color: #ffffff;
+}
+.pt-bc-pink {
+  background-color: #ec4899;
+}
+.pt-bc-pink > * {
+  color: #ffffff;
+}
+.pt-bc-gray {
+  background-color: #71717a;
+}
+.pt-bc-gray > * {
+  color: #ffffff;
+}
+.pt-navi {
+  background-color: #000000;
+  color: #ffffff;
+}
+.pt-navi a {
+  color: #ffffff;
+  text-decoration: none;
+}
+/*# sourceMappingURL=ptlibex.css.map */

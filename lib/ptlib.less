@@ -88,11 +88,15 @@
 h1,h2,h3,h4,h5,h6{
   padding-top: 0.6em;
   padding-bottom: 0.6em;
+}
   .small,small{
     font-size: 0.8em;
     color: #00000080;
   }
-}
+.small-s,small{
+    font-size: 0.8rem;
+    color: #00000080;
+  }
 img{
   max-width: 100%;
   max-height: 100%;
@@ -1919,6 +1923,13 @@ input[type=radio]:checked:before {
   padding: 0.5rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  display: inline-flex;
+}
+.pt-flex-column{
+  flex-direction: column;
+}
+.pt-flex-row{
+  flex-direction: row;
 }
 .pt-a{
   text-decoration: none;
