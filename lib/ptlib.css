@@ -16,8 +16,15 @@ h2 .small,
 h3 .small,
 h4 .small,
 h5 .small,
-h6 .small {
-  font-size: 0.6em;
+h6 .small,
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-size: 0.8em;
+  color: #00000080;
 }
 img {
   max-width: 100%;
@@ -2395,5 +2402,31 @@ label.pt-i input[type=radio]:checked:before {
 }
 .pt-a:hover {
   text-shadow: 1px 1px 1px #00000040;
+}
+.pt-ul {
+  list-style: none;
+  max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  word-break: break-word;
+}
+.pt-ul li {
+  border-bottom: 1px solid #d4d4d8;
+  padding: 0.5rem;
+}
+.pt-ul li:hover {
+  border-color: #a1a1aa;
+}
+.pt-ul li:last-child {
+  border-bottom: none;
+}
+.ul-fu {
+  width: 100%;
 }
 /*# sourceMappingURL=ptlib.css.map */

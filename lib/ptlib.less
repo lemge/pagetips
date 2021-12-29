@@ -88,8 +88,9 @@
 h1,h2,h3,h4,h5,h6{
   padding-top: 0.6em;
   padding-bottom: 0.6em;
-  .small{
-    font-size: 0.6em;
+  .small,small{
+    font-size: 0.8em;
+    color: #00000080;
   }
 }
 img{
@@ -1932,5 +1933,29 @@ input[type=radio]:checked:before {
   }
 }
 
+.pt-ul{
+  list-style: none;
+  overflow: hidden;
+  max-width: 100%;
+  .pt-panel;
+  display: flex;
+    flex-direction: column;
+    width: fit-content;
+  word-break: break-word;
+  li{
+    border-bottom: 1px solid @pt-gray-3;
+    padding: 0.5rem;
+    &:hover{
+      border-color: @pt-gray-4;
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+}
+
+.ul-fu{
+  width: 100%;
+}
 
 
