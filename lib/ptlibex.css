@@ -2529,11 +2529,27 @@ label.pt-i input[type=radio]:checked:before {
   color: #ffffff;
 }
 .pt-navi {
-  background-color: #000000;
+  background-color: #18181b;
   color: #ffffff;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.pt-navi .navi-title {
+  font-weight: bold;
+}
+.pt-navi .navi-title a {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.pt-navi .pt-navi-sw {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  cursor: pointer;
 }
 .pt-navi a {
   display: block;
@@ -2544,6 +2560,7 @@ label.pt-i input[type=radio]:checked:before {
   padding-left: 1rem;
   padding-right: 1rem;
   overflow: hidden;
+  cursor: pointer;
 }
 .pt-navi a:hover {
   background-color: #3f3f46;

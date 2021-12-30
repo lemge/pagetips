@@ -57,13 +57,31 @@
   color: @white;
   }
 }
+
+
 .pt-navi{
-  background-color: @black;
+  background-color: @pt-gray-9;
   color: @white;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  .navi-title{
+    font-weight: bold;
+    a{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    }
+  }
   li{
+  }
+  .pt-navi-sw{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    cursor: pointer;
   }
   a{
     display: block;
@@ -74,6 +92,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     overflow: hidden;
+    cursor: pointer;
     &:hover{
       background-color: @pt-gray-7;
     }
