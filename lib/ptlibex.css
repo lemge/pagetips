@@ -2529,6 +2529,7 @@ label.pt-i input[type=radio]:checked:before {
   color: #ffffff;
 }
 .pt-navi {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   background-color: #18181b;
   color: #ffffff;
   list-style: none;
@@ -2564,5 +2565,10 @@ label.pt-i input[type=radio]:checked:before {
 }
 .pt-navi a:hover {
   background-color: #3f3f46;
+}
+.ptNavi-fix {
+  position: fixed;
+  width: 100%;
+  max-height: 100%;
 }
 /*# sourceMappingURL=ptlibex.css.map */
