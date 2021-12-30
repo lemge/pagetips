@@ -88,6 +88,9 @@
 h1,h2,h3,h4,h5,h6{
   padding-top: 0.6em;
   padding-bottom: 0.6em;
+  display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
   .small,small{
     font-size: 0.8em;
@@ -160,6 +163,8 @@ img{
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   overflow: hidden;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .pt-panel-title {
@@ -1092,6 +1097,9 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 //最小情况下
 //xs 小于640宽度
 @media(max-width: 640px){
+  .pt-panel-body{
+    padding: 0.5rem;
+  }
   .xs-v, .sm-v, .md-v, .lg-v, .xl-v, .xxl-v {
   display: none;
 }
@@ -1161,6 +1169,10 @@ padding: 1rem 1.5rem 1rem 1.5rem;
 }
 //sm 大于640的宽度
 @media (min-width: 640px)and(max-width: 768px) {
+
+  .pt-panel-body{
+    padding: 0.5rem;
+  }
 
   .xs-v, .sm-v, .md-v, .lg-v, .xl-v, .xxl-v {
     display: none;

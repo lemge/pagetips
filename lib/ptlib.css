@@ -10,10 +10,18 @@ h5,
 h6 {
   padding-top: 0.6em;
   padding-bottom: 0.6em;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 .small,
 small {
   font-size: 0.8em;
+  color: #00000080;
+}
+.small-s,
+small {
+  font-size: 0.8rem;
   color: #00000080;
 }
 img {
@@ -66,6 +74,8 @@ img {
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   overflow: hidden;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .pt-panel-title {
   padding: 1em 1.5rem 1em 1.5rem;
@@ -766,6 +776,9 @@ p {
   background-color: #f59e0b;
 }
 @media (max-width: 640px) {
+  .pt-panel-body {
+    padding: 0.5rem;
+  }
   .xs-v,
   .sm-v,
   .md-v,
@@ -934,6 +947,9 @@ p {
   }
 }
 @media (min-width: 640px) and (max-width: 768px) {
+  .pt-panel-body {
+    padding: 0.5rem;
+  }
   .xs-v,
   .sm-v,
   .md-v,
@@ -2320,6 +2336,7 @@ label.pt-i input[type=radio]:checked:before {
 }
 .pt-card {
   margin: 0.5rem;
+  display: block;
 }
 .pt-card .pt-card-img {
   height: 6rem;
@@ -2331,14 +2348,20 @@ label.pt-i input[type=radio]:checked:before {
 }
 .pt-card .pt-card-txt {
   padding: 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pt-card .pt-card-title {
   font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pt-card .pt-card-info {
   height: 1.5rem;
   line-height: 1.5rem;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pt-card-line {
   margin: 0.5rem;
@@ -2376,6 +2399,8 @@ label.pt-i input[type=radio]:checked:before {
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   overflow: hidden;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0.5rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
@@ -2408,6 +2433,8 @@ label.pt-i input[type=radio]:checked:before {
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   overflow: hidden;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .pt-ul-adorn li {
   border-bottom: 1px solid #d4d4d8;
@@ -2427,6 +2454,8 @@ label.pt-i input[type=radio]:checked:before {
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   overflow: hidden;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   display: flex;
   flex-direction: column;
   width: fit-content;
