@@ -2414,6 +2414,7 @@ label.pt-i input[type=radio]:checked:before {
 }
 .pt-a {
   text-decoration: none;
+  color: #000000;
 }
 .pt-a:hover {
   text-shadow: 1px 1px 1px #00000040;
