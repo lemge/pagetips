@@ -1866,6 +1866,7 @@ input[type=radio]:checked:before {
 
 .pt-card{
   margin: 0.5rem;
+  display: block;
   .pt-card-img{
     height: 6rem;
     width: 100%;
@@ -1878,14 +1879,20 @@ input[type=radio]:checked:before {
   }
   .pt-card-txt{
     padding: 0.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .pt-card-title{
     font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .pt-card-info{
     height: 1.5rem;
     line-height: 1.5rem;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 .pt-card-line{

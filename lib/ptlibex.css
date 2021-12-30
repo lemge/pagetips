@@ -2325,6 +2325,7 @@ label.pt-i input[type=radio]:checked:before {
 }
 .pt-card {
   margin: 0.5rem;
+  display: block;
 }
 .pt-card .pt-card-img {
   height: 6rem;
@@ -2336,14 +2337,20 @@ label.pt-i input[type=radio]:checked:before {
 }
 .pt-card .pt-card-txt {
   padding: 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pt-card .pt-card-title {
   font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pt-card .pt-card-info {
   height: 1.5rem;
   line-height: 1.5rem;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pt-card-line {
   margin: 0.5rem;
@@ -2517,6 +2524,11 @@ label.pt-i input[type=radio]:checked:before {
   color: #ffffff;
   text-decoration: none;
   padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   overflow: hidden;
+}
+.pt-navi a:hover {
+  background-color: #3f3f46;
 }
 /*# sourceMappingURL=ptlibex.css.map */

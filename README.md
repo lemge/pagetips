@@ -4,3 +4,6 @@
 可以在本目录执行  
 `python -m http.server 80`  
 来查看
+也可以查看在线的page
+
+ https://lemge.github.io/pagetips/
