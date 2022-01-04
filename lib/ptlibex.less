@@ -1,65 +1,81 @@
 @import "ptlib";
-.pt-big-show{
+
+.pt-big-show {
   margin-bottom: 2rem;
-.pt-b-title{
+
+  .pt-b-title {
     font-size: 3rem;
     text-align: center;
     padding-top: 5rem;
     padding-bottom: 3rem;
     font-weight: bold;
-}
-  .pt-b-info{
+  }
+
+  .pt-b-info {
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 2rem;
   }
 }
 
-.pt-bc-blue{
+.pt-bc-blue {
   background-color: @pt-blue-5;
-  >*{
-  color: @white;
+
+  > * {
+    color: @white;
   }
 }
-.pt-bc-green{
+
+.pt-bc-green {
   background-color: @pt-green-5;
-  >*{
-  color: @white;
+
+  > * {
+    color: @white;
   }
 }
-.pt-bc-red{
+
+.pt-bc-red {
   background-color: @pt-red-5;
-  >*{
-  color: @white;
+
+  > * {
+    color: @white;
   }
 }
-.pt-bc-yellow{
+
+.pt-bc-yellow {
   background-color: @pt-yellow-5;
-  >*{
-  color: @white;
+
+  > * {
+    color: @white;
   }
 }
-.pt-bc-purple{
+
+.pt-bc-purple {
   background-color: @pt-purple-5;
-  >*{
-  color: @white;
+
+  > * {
+    color: @white;
   }
 }
-.pt-bc-pink{
+
+.pt-bc-pink {
   background-color: @pt-pink-5;
-  >*{
-  color: @white;
+
+  > * {
+    color: @white;
   }
 }
-.pt-bc-gray{
+
+.pt-bc-gray {
   background-color: @pt-gray-5;
-  >*{
-  color: @white;
+
+  > * {
+    color: @white;
   }
 }
 
 
-.pt-navi{
+.pt-navi {
   .com-shadow;
   background-color: @pt-gray-9;
   color: @white;
@@ -68,23 +84,28 @@
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
-  .navi-title{
+
+  .navi-title {
     font-weight: bold;
-    a{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+
+    a {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
   }
-  li{
+
+  li {
   }
-  .pt-navi-sw{
+
+  .pt-navi-sw {
     position: absolute;
     right: 0;
     top: 0;
     display: none;
     cursor: pointer;
   }
-  a{
+
+  a {
     display: block;
     white-space: nowrap;
     color: @white;
@@ -94,13 +115,77 @@
     padding-right: 1rem;
     overflow: hidden;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       background-color: @pt-gray-7;
     }
+  }
 }
-}
-.ptNavi-fix{
+
+.ptNavi-fix {
   position: fixed;
   width: 100%;
   max-height: 100%;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+//autocatalog样式开始
+.autoclbox {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 5vh;
+  left: 1vw;
+  max-height: 90vh;
+  overflow-y: scroll;
+  border: 1px solid @pt-gray-4;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: @pt-gray-2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: @pt-gray-4;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: @pt-gray-2;
+  }
+  .com-shadow;
+
+  .hlist-tool-bar{
+    background-color: #ffffffee;
+    .sw-btn{
+      border: 1px solid @pt-gray-3;
+      padding: 0.2rem;
+      cursor: pointer;
+    }
+  }
+  .autocl {
+    //background-color: red;
+    background-color: #ffffffee;
+    list-style: none;
+
+    li {
+      a {
+        display: block;
+        padding: 0.5rem;
+        text-decoration: none;
+        color: @black;
+      }
+    }
+  }
+
+}
+.autocl-hidden{
+display: none;
+}
+.autoclbox-hidden{
+  overflow: hidden;
 }
