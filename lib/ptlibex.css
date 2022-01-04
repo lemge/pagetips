@@ -2582,25 +2582,13 @@ label.pt-i input[type=radio]:checked:before {
   z-index: 100;
   top: 5vh;
   left: 1vw;
-  max-height: 90vh;
-  overflow-y: scroll;
   border: 1px solid #a1a1aa;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-.autoclbox::-webkit-scrollbar {
-  width: 5px;
-  background-color: #e4e4e7;
-}
-.autoclbox::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #a1a1aa;
-}
-.autoclbox::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #e4e4e7;
-}
 .autoclbox .hlist-tool-bar {
   background-color: #ffffffee;
+  top: 0;
+  display: flex;
 }
 .autoclbox .hlist-tool-bar .sw-btn {
   border: 1px solid #d4d4d8;
@@ -2610,6 +2598,20 @@ label.pt-i input[type=radio]:checked:before {
 .autoclbox .autocl {
   background-color: #ffffffee;
   list-style: none;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+.autoclbox .autocl::-webkit-scrollbar {
+  width: 5px;
+  background-color: #e4e4e7;
+}
+.autoclbox .autocl::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #a1a1aa;
+}
+.autoclbox .autocl::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #e4e4e7;
 }
 .autoclbox .autocl li a {
   display: block;

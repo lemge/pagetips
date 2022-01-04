@@ -139,11 +139,28 @@
   z-index: 100;
   top: 5vh;
   left: 1vw;
-  max-height: 90vh;
-  overflow-y: scroll;
   border: 1px solid @pt-gray-4;
+  .com-shadow;
 
-  &::-webkit-scrollbar {
+  .hlist-tool-bar{
+    background-color: #ffffffee;
+    top: 0;
+    display: flex;
+    .sw-btn{
+      border: 1px solid @pt-gray-3;
+      padding: 0.2rem;
+      cursor: pointer;
+    }
+  }
+  .autocl {
+    //background-color: red;
+    background-color: #ffffffee;
+    list-style: none;
+
+  max-height: 80vh;
+  overflow-y: scroll;
+
+    &::-webkit-scrollbar {
     width: 5px;
     background-color: @pt-gray-2;
   }
@@ -157,20 +174,6 @@
     -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
     background-color: @pt-gray-2;
   }
-  .com-shadow;
-
-  .hlist-tool-bar{
-    background-color: #ffffffee;
-    .sw-btn{
-      border: 1px solid @pt-gray-3;
-      padding: 0.2rem;
-      cursor: pointer;
-    }
-  }
-  .autocl {
-    //background-color: red;
-    background-color: #ffffffee;
-    list-style: none;
 
     li {
       a {
