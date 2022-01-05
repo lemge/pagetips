@@ -2582,7 +2582,6 @@ label.pt-i input[type=radio]:checked:before {
   z-index: 100;
   top: 0px;
   bottom: 0px;
-  border: 1px solid #a1a1aa;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .autoclbox .hlist-tool-bar {
@@ -2593,6 +2592,7 @@ label.pt-i input[type=radio]:checked:before {
   right: -28px;
   flex-direction: column;
   justify-content: space-around;
+  z-index: -1;
 }
 .autoclbox .hlist-tool-bar .sw-btn {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -2600,7 +2600,8 @@ label.pt-i input[type=radio]:checked:before {
   cursor: pointer;
   width: 20px;
   text-align: center;
-  background-color: #e4e4e7;
+  background-color: #ffffff;
+  border: 1px solid #d4d4d8;
   border-radius: 0 10px 10px 0px;
 }
 .autoclbox .autocl {
@@ -2608,6 +2609,7 @@ label.pt-i input[type=radio]:checked:before {
   list-style: none;
   height: 100vh;
   overflow-y: scroll;
+  width: 15rem;
 }
 .autoclbox .autocl::-webkit-scrollbar {
   width: 5px;
@@ -2627,10 +2629,12 @@ label.pt-i input[type=radio]:checked:before {
   text-decoration: none;
   color: #000000;
 }
-.autocl-hidden {
-  display: none;
-}
 .autoclbox-hidden {
-  overflow: hidden;
+  transition: all 0.5s;
+  left: -15rem;
+}
+.autoclbox-show {
+  transition: all 0.5s;
+  left: 0;
 }
 /*# sourceMappingURL=ptlibex.css.map */
