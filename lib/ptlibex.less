@@ -137,27 +137,35 @@
   display: block;
   position: fixed;
   z-index: 100;
-  top: 5vh;
-  left: 1vw;
+  top: 0px;
+  bottom: 0px;
   border: 1px solid @pt-gray-4;
   .com-shadow;
 
   .hlist-tool-bar{
-    background-color: #ffffffee;
     top: 0;
     display: flex;
+    position: absolute;
+    bottom: 0;
+    right: -28px;
+    flex-direction: column;
+    justify-content: space-around;
     .sw-btn{
-      border: 1px solid @pt-gray-3;
+      .com-shadow;
       padding: 0.2rem;
       cursor: pointer;
+      width: 20px;
+    text-align: center;
+      background-color: @pt-gray-2;
+
+    border-radius: 0 10px 10px 0px;
     }
   }
   .autocl {
     //background-color: red;
     background-color: #ffffffee;
     list-style: none;
-
-  max-height: 80vh;
+    height: 100vh;
   overflow-y: scroll;
 
     &::-webkit-scrollbar {
