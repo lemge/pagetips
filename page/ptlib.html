@@ -800,7 +800,11 @@
 <link rel="stylesheet" href="../lib/ptlibex.css">
 <script src="../lib/ptlib.js"></script>
 <script type='text/javascript'>
-    // autoCatalog('#pt-col-exm')
-    autoCatalog('body')
+    (function (){
+    autoCatalog.init('#pt-col-exm','in')
+    })();
+    (function () {
+    autoCatalog.init('body');
+    })();
 </script>
 </html>

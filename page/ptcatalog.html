@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PtCatalog</title>
+</head>
+<body>
+<div>
+        <ul class="pt-navi ptNavi ptNavi-fix ptNavi-full">
+            <li class="navi-title"><a href="../index.html">PageTips</a></li>
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../page/ptlib.html">基础样式</a></li>
+            <li><a href=" https://lemge.github.io/pagetips/">GithubPage</a></li>
+            <li><a href="https://github.com/lemge/pagetips">PageTips</a></li>
+            <li><a href="http://www.github.com">Github</a></li>
+<!--            <li><a href="#Link2">Link2</a></li>-->
+<!--            <li><a href="#Link3">Link3</a></li>-->
+<!--            <li><a href="#Link4">Link4</a></li>-->
+<!--            <li><a href="#Link5">Link5</a></li>-->
+        </ul>
+    <div class="pt-b4"></div>
+</div>
+<div class="pt-container">
+    <div>
+        <div class="pt-panel">
+            <div class="pt-panel-title">
+                自动目录
+            </div>
+            <div class="pt-panel-body">
+                <p>代码示例</p>
+                <p>
+                <textarea name="" id="" cols="30" rows="10" class="pt-t">
+autoCatalog('body')
+                </textarea>
+                </p>
+                <hr>
+                <p>
+                    本插件依赖于ptlib.js中的自动目录模块以及ptlibex.less中的样式。
+                    <br>
+                    可以单独提取为独立的插件
+                </p>
+                <p>
+                    <b>工作原理</b>
+
+                </p>
+                <p>
+                    在调用autocatalog时，会通过css选择器：
+                    <br>
+                    <code>
+                        h1,h2,h3,h4,h5,h6,.pt-ac-h1,.pt-ac-h2,.pt-ac-h3,.pt-ac-h4,.pt-ac-h5,.pt-ac-h6
+                        </code>
+                    <br>
+                    找到页面中所有的目录项。
+                    自动写入目录。
+                </p>
+                <p>
+                    如果有以上选择器的元素不希望被编入目录，可以添加 <code>pt-ca-rm</code>类来排除
+                </p>
+                <p>
+                    点击
+                    <a href="./ptlib.html" >AutoCataLog示例</a>
+                    查看应用
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<link rel="stylesheet" href="../lib/ptlib.css">
+<link rel="stylesheet" href="../lib/ptlibex.css">
+<script src="../lib/ptlib.js"></script>
+</html>
