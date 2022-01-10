@@ -2445,6 +2445,7 @@ a:hover {
   padding: 0.5rem;
 }
 .pt-ul-adorn li:hover {
+  box-shadow: 0px 0px 4px #d4d4d8;
   border-color: #a1a1aa;
 }
 .pt-ul-adorn li:last-child {
@@ -2470,6 +2471,7 @@ a:hover {
   padding: 0.5rem;
 }
 .pt-ul-free-w li:hover {
+  box-shadow: 0px 0px 4px #d4d4d8;
   border-color: #a1a1aa;
 }
 .pt-ul-free-w li:last-child {
