@@ -188,6 +188,7 @@ code {
   padding-right: 0.4rem;
   padding-left: 0.4rem;
   border-radius: 0.2rem;
+  color: @pt-red-7;
 }
 
 hr{
@@ -1998,4 +1999,23 @@ a{
   word-break: break-word;
 }
 
+.pt-table{
+  .com-shadow;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+  width: 100%;
+  border: 1px solid red;
+  th{
+    text-align: center;
+    background-color: @pt-gray-2;
+  }
+  th ,td{
+    border: 1px solid @pt-gray-5;
+    padding: 0.5rem;
+  }
+}
 
+ul{
+      list-style-position: inside;
+}

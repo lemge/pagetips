@@ -59,11 +59,94 @@ autoCatalog('body')
                 <p>
                     如果有以上选择器的元素不希望被编入目录，可以添加 <code>pt-ca-rm</code>类来排除
                 </p>
+                <p>本页的文档导航就是使用AutoCatalog的一个应用案例</p>
                 <p>
                     点击
                     <a href="./ptlib.html" >AutoCataLog示例</a>
                     查看应用
                 </p>
+                <hr>
+                <h1>文档</h1>
+                <p>本文档直接用来展示AutoCatalog示例，AC是一款自动化的目录插件，依赖于ptlib.js与ptlib.less。</p>
+                <p>后续会考虑将其单独提取作为独立的js组件展示。</p>
+                <h2>AutoCataLog的特点</h2>
+                <p>autocatalog设立之初就是为了快速的进行web开发导航，并且适应大部分场景，如后台管理界面，文章导航界面，模块导航界面。</p>
+                <p>
+                    <ul>
+                <li>
+                    简单，可以独立使用，采用原生JavaScript开发，无依赖框架
+                </li>
+                <li>
+                    通用，集成多种通用样式，满足常用的开发需求。
+                </li>
+                <li>可制定性</li>
+            </ul>
+                </p>
+                <hr>
+                <h2>自动化初始</h2>
+                <p>自动化寻找文档中的标题元素或被标记的元素生成文档</p>
+                <hr>
+                <h2>转换已有列表初始</h2>
+                <p>将已经有的目录列表转换为浮动侧边目录</p>
+                <hr>
+                <h2>参数初始</h2>
+                <p>将构成目录列表的数据作为参数传递给catelog并初始化侧边目录</p>
+                <hr>
+                <h2>参数示意</h2>
+                <table class="pt-table">
+                    <thead>
+                    <tr>
+                        <th>参数</th>
+                        <th>说明</th>
+                        <th>可选参数</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>struType</td>
+                        <td>构造方式</td>
+                        <td>
+                            <p>说明以什么样的方式来构建目录，需要同数据源配合使用</p>
+                            <ul>
+                                <li>htmlele:通过html元素选择器自动抓取目录数据</li>
+                                <li>htmllist:通过html元素选择器自动载入列表数据</li>
+                                <li>json:通过传入的json数据来构造目录</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>dataS</td>
+                        <td>数据源</td>
+                        <td>html元素选择器或构造目录的json数据</td>
+                    </tr>
+                    <tr>
+                        <td>style</td>
+                        <td>显示风格</td>
+                        <td>
+                            <p>定义显示风格</p>
+                            <ul>
+                                <li>catalog:目录显示风格</li>
+                                <li>catalog-in:目录显示风格，当struType为自动抓取目录时，此风格将目录显示在</li>
+                                <li>menu:菜单显示风格</li>
+                                <li>touch:触摸弹出的面板显示风格</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h2>传入json构造数据的格式</h2>
+                <pre class="pm-def">
+
+    tmp_data=[
+        {
+            'i':1,//等级，可选1，2,3,4,5,6
+            't':'Title',//标题文字
+            'l':'this is Link',//链接
+            'ex':'',扩展内容
+        },
+    ]
+
+                </pre>
             </div>
         </div>
     </div>
@@ -72,4 +155,5 @@ autoCatalog('body')
 <link rel="stylesheet" href="../lib/ptlib.css">
 <link rel="stylesheet" href="../lib/ptlibex.css">
 <script src="../lib/ptlib.js"></script>
+
 </html>

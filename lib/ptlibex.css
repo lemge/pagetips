@@ -95,6 +95,7 @@ code {
   padding-right: 0.4rem;
   padding-left: 0.4rem;
   border-radius: 0.2rem;
+  color: #b91c1c;
 }
 hr {
   background-color: #d4d4d8;
@@ -2476,6 +2477,26 @@ a:hover {
 }
 .pt-ul-free-w li:last-child {
   border-bottom: none;
+}
+.pt-table {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  width: 100%;
+  border: 1px solid red;
+}
+.pt-table th {
+  text-align: center;
+  background-color: #e4e4e7;
+}
+.pt-table th,
+.pt-table td {
+  border: 1px solid #71717a;
+  padding: 0.5rem;
+}
+ul {
+  list-style-position: inside;
 }
 .pt-big-show {
   margin-bottom: 2rem;
