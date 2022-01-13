@@ -2420,6 +2420,15 @@ label.pt-i input[type=radio]:checked:before {
 .pt-a:hover {
   text-shadow: 1px 1px 1px #00000040;
 }
+.pt-a-w {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  width: 100%;
+}
+.pt-a-w:hover {
+  text-shadow: 1px 1px 1px #00000040;
+}
 a:hover {
   text-shadow: 1px 1px 1px #00000040;
 }
@@ -2440,6 +2449,8 @@ a:hover {
   overflow: hidden;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .pt-ul-adorn li {
   border-bottom: 1px solid #d4d4d8;
@@ -2462,6 +2473,8 @@ a:hover {
   overflow: hidden;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -2497,6 +2510,9 @@ a:hover {
 }
 ul {
   list-style-position: inside;
+}
+ul ul {
+  padding-left: 1rem;
 }
 .pt-big-show {
   margin-bottom: 2rem;
