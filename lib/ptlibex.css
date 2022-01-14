@@ -2695,6 +2695,19 @@ ul ul {
   text-decoration: none;
   color: #000000;
 }
+.autoclbox .autocl .pt-ac-ff {
+  background-color: #e4e4e7;
+}
+.autoclbox .autocl .pt-ac-folder-box {
+  border: 1px solid #e4e4e7;
+  padding-left: 0.5rem;
+}
+.autoclbox .autocl .pt-ac-fb-open {
+  display: block;
+}
+.autoclbox .autocl .pt-ac-fb-close {
+  display: none;
+}
 .autoclbox-hidden {
   transition: all 0.5s;
   left: -15rem;
@@ -2709,6 +2722,7 @@ ul ul {
 .autoclbox-in .hlist-tool-bar {
   justify-content: flex-start;
   right: -70px;
+  height: fit-content;
 }
 .autoclbox-in .hlist-tool-bar .sw-btn {
   width: 70px;
