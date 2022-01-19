@@ -33,8 +33,12 @@
                 <p>代码示例</p>
                 <p>
                 <textarea name="" id="" cols="30" rows="10" class="pt-t">
-autoCatalog('body')
+autoCatalog2.init({'struType':'json','dataS':jsonData,'style':'catalog'})
                 </textarea>
+                </p>
+                <p>
+
+                <a href="catalogex/json.html" class="pt-btn-def">点击查看示例</a>
                 </p>
                 <hr>
                 <p>
@@ -42,9 +46,23 @@ autoCatalog('body')
                     <br>
                     可以单独提取为独立的插件
                 </p>
-                <p>
-                    <b>工作原理</b>
+                <h2>传入json构造数据的格式</h2>
+                <pre class="pm-def">
 
+    tmp_data=[
+        {
+            t:'Title',//标题文字
+            l:'this is Link',//链接
+            c:[],//tmp_data结构，子元素
+            i:1,//等级，对应 1 2 3 4 5 6 影响不同样式下的显示效果
+            ex:{},扩展内容
+        },
+    ]
+
+                </pre>
+
+                <p>
+                    <h2>文档自动化工作原理</h2>
                 </p>
                 <p>
                     在调用autocatalog时，会通过css选择器：
@@ -126,10 +144,19 @@ autoCatalog('body')
                             <p>定义显示风格</p>
                             <ul>
                                 <li>catalog:目录显示风格</li>
-                                <li>catalog-in:目录显示风格，当struType为自动抓取目录时，此风格将目录显示在</li>
                                 <li>menu:菜单显示风格</li>
                                 <li>touch:触摸弹出的面板显示风格</li>
                             </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            leaveClose
+                        </td>
+                        <td>离开目录是否自动收起</td>
+                        <td>
+                            默认为false，
+                            可选参数 true false
                         </td>
                     </tr>
                     </tbody>
@@ -142,19 +169,7 @@ autoCatalog('body')
                     pt-ac-fc为折叠的内容。
                     <b>折叠分组可递归</b>
                 </p>
-                <h2>传入json构造数据的格式</h2>
-                <pre class="pm-def">
 
-    tmp_data=[
-        {
-            'i':1,//等级，可选1，2,3,4,5,6
-            't':'Title',//标题文字
-            'l':'this is Link',//链接
-            'ex':'',扩展内容
-        },
-    ]
-
-                </pre>
                 <h2>定义与示例</h2>
                 <div>
                     <pre class="pm-def">
