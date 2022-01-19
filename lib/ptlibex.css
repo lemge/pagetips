@@ -2618,4 +2618,72 @@ ul ul {
   left: 0;
   right: 0;
 }
+.acl-box {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  bottom: 0px;
+  max-width: 80%;
+}
+.acl-box > ul {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.acl-box > ul ul {
+  padding-left: 1rem;
+}
+.acl-box > ul::-webkit-scrollbar {
+  width: 5px;
+  background-color: #e4e4e7;
+}
+.acl-box > ul::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #a1a1aa;
+}
+.acl-box > ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #e4e4e7;
+}
+.acl-box ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffffff;
+}
+.acl-box ul li a {
+  display: block;
+  padding: 0.5rem;
+  border-bottom: 1px solid #a1a1aa;
+  text-decoration: none;
+  color: #18181b;
+}
+.acl-box ul li a:hover {
+  background-color: #e4e4e7;
+}
+.acl-box .acl-swb {
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  width: 28px;
+  right: -28px;
+  top: 40%;
+  border: 1px solid #d4d4d8;
+  text-align: center;
+  border-radius: 0 0.5rem 0.5rem 0;
+  z-index: -1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.acl-box .aclist-hidden {
+  display: none;
+}
+.acl-box-hidden {
+  transition: all 0.5s;
+  width: 0;
+}
+.acl-box-show {
+  transition: all 0.5s;
+  width: 10rem;
+}
 /*# sourceMappingURL=ptlibex.css.map */
