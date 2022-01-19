@@ -2626,13 +2626,14 @@ ul ul {
   top: 0px;
   bottom: 0px;
   max-width: 80%;
+  border-right: 1px solid #e4e4e7;
 }
 .acl-box > ul {
   max-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .acl-box > ul ul {
-  padding-left: 1rem;
+  margin-left: 1rem;
 }
 .acl-box > ul::-webkit-scrollbar {
   width: 5px;
@@ -2651,11 +2652,11 @@ ul ul {
   margin: 0px;
   padding: 0px;
   background-color: #ffffff;
+  border-left: 1px solid #a1a1aa;
 }
 .acl-box ul li a {
   display: block;
   padding: 0.5rem;
-  border-bottom: 1px solid #a1a1aa;
   text-decoration: none;
   color: #18181b;
 }

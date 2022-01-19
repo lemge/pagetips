@@ -141,12 +141,13 @@
   top: 0px;
   bottom: 0px;
   max-width: 80%;
+  border-right: 1px solid @pt-gray-2;
   //overflow-y: scroll;
   & >ul{
   max-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     ul{
-      padding-left: 1rem;
+      margin-left: 1rem;
     }
   &::-webkit-scrollbar {
     width: 5px;
@@ -169,11 +170,12 @@
     margin: 0px;
     padding: 0px;
     background-color: @white;
+
+        border-left: 1px solid @pt-gray-4;
     li{
       a{
         display: block;
         padding: 0.5rem;
-        border-bottom: 1px solid @pt-gray-4;
         text-decoration: none;
         color: @pt-gray-9;
         &:hover{
