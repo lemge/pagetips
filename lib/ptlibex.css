@@ -2668,11 +2668,11 @@ ul ul {
   position: absolute;
   width: 28px;
   right: -28px;
-  top: 40%;
   border: 1px solid #d4d4d8;
   text-align: center;
-  border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 0 0.5rem 0;
   z-index: -1;
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .acl-box .aclist-hidden {
