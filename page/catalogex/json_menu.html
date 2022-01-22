@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>AutoCataLog Example-json-Catalog-style</title>
+    <title>AutoCataLog Example-json-Menu-style</title>
 </head>
 <body>
 <div>
@@ -13,7 +13,7 @@
         <div class="pt-b5"></div>
         <div class="pt-panel">
             <div class="pt-panel-body">
-                <h1>Catalog Style</h1>
+                <h1>Menu style</h1>
                 <p>
                     本页展示AutoCataLog使用参数初始化的示例
                 <hr>
@@ -57,7 +57,7 @@
             ex: {},//扩展内容
         },
         {
-            t: 'Link4',//标题文字
+            t: 'Link4LongTextThisIS',//标题文字
             l: '#link4',//链接
             c: [
 
@@ -198,6 +198,6 @@
             ex: {},//扩展内容
         },
     ];
-    autoCatalog2.init({'struType': 'json', 'dataS': jsonData, 'style': 'catalog',leaveClose:false})
+    autoCatalog2.init({'struType': 'json', 'dataS': jsonData, style: 'menu',leaveClose:false})
 </script>
 </html>
