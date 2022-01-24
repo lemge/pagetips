@@ -255,7 +255,7 @@
           right: 0.5rem;
         }
         &:hover {
-          background-color: @pt-gray-2;
+          box-shadow: 0 0 10px #cccccc;
         }
       }
     }
@@ -330,3 +330,141 @@
 }
 
 //autocatalog样式
+//touch 样式开始
+.acl-swb-touch{
+  border: 1px solid @pt-gray-7;
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    z-index: 100;
+    background-color: @pt-gray-7;
+    bottom: 1rem;
+    left: 1rem;
+    color: @white;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+  .com-shadow;
+  cursor:pointer;
+  border-radius: 5px;
+}
+.acl-swb-open-touch{
+  border-radius: 0 0 5px 5px ;
+}
+
+.acl-box-touch{
+    display: flex;
+    position: fixed;
+    bottom: 4rem;
+    left: 1rem;
+  background-color: @white;
+  border-radius: 5px 5px 5px 0;
+  .com-shadow;
+  z-index: 110;
+  overflow-y: auto;
+
+    &::-webkit-scrollbar {
+
+      width: 5px;
+      //background-color: @pt-gray-2;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      //-webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+      //background-color: @pt-gray-4;
+      //background: linear-gradient(180deg, green 0%,blue 25%,red 25%,green 50%,yellow 50%,pink 75%,blue 75%, green)
+      background: linear-gradient(180deg,
+      transparent 0%,transparent 0%,
+      @pt-gray-4 45%,@pt-gray-4 55%,
+      transparent 100%,transparent 100%
+      )
+    }
+
+    &::-webkit-scrollbar-track {
+      //-webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+      //background-color: @pt-gray-2;
+      background: transparent;
+    }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-content: flex-start;
+    height: fit-content;
+  }
+
+.aclist-hidden-touch{
+  display: none;
+}
+  .acl-ul-touch{
+  .acl-ul-touch{
+    .com-shadow-in;
+      margin-left: 15px;
+    border-left: 1px solid @pt-gray-4;
+      border-bottom: 1px solid @pt-gray-4;
+     margin-bottom: -1px;
+    .acl-ul-touch{
+      border-left: 1px solid @pt-gray-4;
+      border-bottom: 1px solid @pt-gray-4;
+    }
+  }
+    }
+  .acl-li-b-touch{
+    width: 100%;
+  }
+  li{
+    height: fit-content;
+    a{
+      .com-shadow;
+      .com-shadow-txt;
+      display: block;
+      border: 1px solid @pt-gray-4;
+      padding: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 5px;
+      overflow: hidden;
+      text-decoration: none;
+      color: @black;
+      &:hover{
+        transition: all .5s;
+        background-color: @pt-gray-6;
+        color: @white;
+      }
+    }
+  }
+  .acl-li-touch{
+    padding: 15px;
+  }
+  .acl-li-b-touch{
+    padding: 0;
+    & >a{
+      border-radius: 0;
+      background-color: @pt-gray-2;
+      border: none;
+      border-top: 1px solid @pt-gray-4;
+      border-bottom: 1px solid @pt-gray-4;
+      box-shadow: none;
+    }
+  }
+}
+
+.acl-box-show-touch{
+  transition: all .5s;
+  height: 60vh;
+  width: 60vw;
+  border: 1px solid @pt-gray-4;
+
+}
+.acl-box-hidden-touch{
+  transition: all .5s;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+//touch 样式结束

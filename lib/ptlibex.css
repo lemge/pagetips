@@ -2723,7 +2723,7 @@ ul ul {
   right: 0.5rem;
 }
 .acl-box-menu ul li a:hover {
-  background-color: #e4e4e7;
+  box-shadow: 0 0 10px #cccccc;
 }
 .acl-box-menu > ul {
   max-height: 100vh;
@@ -2773,5 +2773,121 @@ ul ul {
 .acl-box-show-menu {
   transition: all 0.5s;
   width: 10rem;
+}
+.acl-swb-touch {
+  border: 1px solid #3f3f46;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  z-index: 100;
+  background-color: #3f3f46;
+  bottom: 1rem;
+  left: 1rem;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.acl-swb-open-touch {
+  border-radius: 0 0 5px 5px ;
+}
+.acl-box-touch {
+  display: flex;
+  position: fixed;
+  bottom: 4rem;
+  left: 1rem;
+  background-color: #ffffff;
+  border-radius: 5px 5px 5px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 110;
+  overflow-y: auto;
+}
+.acl-box-touch::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+.acl-box-touch::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, transparent 0%, transparent 0%, #a1a1aa 45%, #a1a1aa 55%, transparent 100%, transparent 100%);
+}
+.acl-box-touch::-webkit-scrollbar-track {
+  background: transparent;
+}
+.acl-box-touch ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-content: flex-start;
+  height: fit-content;
+}
+.acl-box-touch .aclist-hidden-touch {
+  display: none;
+}
+.acl-box-touch .acl-ul-touch .acl-ul-touch {
+  box-shadow: inset rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, inset rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  margin-left: 15px;
+  border-left: 1px solid #a1a1aa;
+  border-bottom: 1px solid #a1a1aa;
+  margin-bottom: -1px;
+}
+.acl-box-touch .acl-ul-touch .acl-ul-touch .acl-ul-touch {
+  border-left: 1px solid #a1a1aa;
+  border-bottom: 1px solid #a1a1aa;
+}
+.acl-box-touch .acl-li-b-touch {
+  width: 100%;
+}
+.acl-box-touch li {
+  height: fit-content;
+}
+.acl-box-touch li a {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  text-shadow: 1px 1px 1px #00000040;
+  display: block;
+  border: 1px solid #a1a1aa;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #000000;
+}
+.acl-box-touch li a:hover {
+  transition: all 0.5s;
+  background-color: #52525b;
+  color: #ffffff;
+}
+.acl-box-touch .acl-li-touch {
+  padding: 15px;
+}
+.acl-box-touch .acl-li-b-touch {
+  padding: 0;
+}
+.acl-box-touch .acl-li-b-touch > a {
+  border-radius: 0;
+  background-color: #e4e4e7;
+  border: none;
+  border-top: 1px solid #a1a1aa;
+  border-bottom: 1px solid #a1a1aa;
+  box-shadow: none;
+}
+.acl-box-show-touch {
+  transition: all 0.5s;
+  height: 60vh;
+  width: 60vw;
+  border: 1px solid #a1a1aa;
+}
+.acl-box-hidden-touch {
+  transition: all 0.5s;
+  height: 0;
+  width: 0;
+  overflow: hidden;
 }
 /*# sourceMappingURL=ptlibex.css.map */
