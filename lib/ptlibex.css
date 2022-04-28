@@ -2829,19 +2829,20 @@ ul ul {
 .acl-box-touch .aclist-hidden-touch {
   display: none;
 }
+.acl-box-touch .acl-ul-touch {
+  background-color: #fafafa;
+}
 .acl-box-touch .acl-ul-touch .acl-ul-touch {
-  box-shadow: inset rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, inset rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  margin-left: 15px;
-  border-left: 1px solid #a1a1aa;
+  margin-left: 10px;
   border-bottom: 1px solid #a1a1aa;
   margin-bottom: -1px;
 }
 .acl-box-touch .acl-ul-touch .acl-ul-touch .acl-ul-touch {
-  border-left: 1px solid #a1a1aa;
   border-bottom: 1px solid #a1a1aa;
 }
 .acl-box-touch .acl-li-b-touch {
   width: 100%;
+  background-color: #a1a1aa;
 }
 .acl-box-touch li {
   height: fit-content;
@@ -2869,13 +2870,14 @@ ul ul {
 }
 .acl-box-touch .acl-li-b-touch {
   padding: 0;
+  border-bottom: 1px solid #a1a1aa;
+  margin-bottom: 10px;
 }
 .acl-box-touch .acl-li-b-touch > a {
   border-radius: 0;
   background-color: #e4e4e7;
   border: none;
   border-top: 1px solid #a1a1aa;
-  border-bottom: 1px solid #a1a1aa;
   box-shadow: none;
 }
 .acl-box-show-touch {
