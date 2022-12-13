@@ -1,0 +1,1408 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+
+/**
+   * Remove the margin in all browsers.
+   */
+
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+b, strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+code, kbd, samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+button, input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+button, select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+
+/**
+   * Add the correct display in IE 10+.
+   */
+
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+
+[hidden] {
+  display: none;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------mini css------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------- */
+
+/*定义颜色*/
+
+/* 定于元素 */
+
+hr {
+  background-color: #eeeeee;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+}
+
+/* 定义容器 */
+
+.is-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60rem;
+  max-width: 100%;
+}
+
+.is-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.is-col {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.is-col-body {
+  height: 100%;
+}
+
+.is-panel {
+  background-color: #FAFAFA;
+  border: 1px solid #eeeeee;
+  border-radius: 0.1rem;
+  padding: 1rem;
+}
+
+.blank-box {
+  display: block;
+  height: 2rem;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* 色彩定义 */
+
+.bg-smoke {
+  background-color: #F5F5F5;
+}
+
+.bg-blue {
+  background-color: #328DD3;
+}
+
+.bg-pure {
+  background-color: #7F57A3;
+}
+
+.bg-green {
+  background-color: #64B962;
+}
+
+.bg-red {
+  background-color: #CA4B4B;
+}
+
+.bg-orange {
+  background-color: #CD4C4C;
+}
+
+.bg-yellow {
+  background-color: #F7D244;
+}
+//定义边框
+.bor-smoke {
+  border-color: #cccccc;
+  border-style:solid;
+  border-width:1px;
+}
+
+.bor-blue {
+  border-color: #328DD3;
+  border-style:solid;
+  border-width:1px;
+}
+
+.bor-pure {
+  border-color: #7F57A3;
+  border-style:solid;
+  border-width:1px;
+}
+
+.bor-green {
+  border-color: #64B962;
+  border-style:solid;
+  border-width:1px;
+}
+
+.bor-red {
+  border-color: #CA4B4B;
+  border-style:solid;
+  border-width:1px;
+}
+
+.bor-orange {
+  border-color: #CD4C4C;
+  border-style:solid;
+  border-width:1px;
+}
+
+.bor-yellow {
+  border-color: #F7D244;
+  border-style:solid;
+  border-width:1px;
+}
+
+.fontcolor-smoke {
+  color: #F5F5F5;
+}
+
+.fontcolor-blue {
+  color: #328DD3;
+}
+
+.fontcolor-pure {
+  color: #7F57A3;
+}
+
+.fontcolor-green {
+  color: #64B962;
+}
+
+.fontcolor-red {
+  color: #CA4B4B;
+}
+
+.fontcolor-orange {
+  color: #CD4C4C;
+}
+
+.fontcolor-yellow {
+  color: #F7D244;
+}
+
+/* 实现5分与24分栅格*/
+
+.is-c-static-def{
+  flex:none;
+}
+
+/* 5分栅格 */
+
+.is-c105 {
+  width: 20%;
+  .is-c-static-def
+}
+
+.is-c205 {
+  width: 40%;
+  .is-c-static-def
+}
+
+.is-c305 {
+  width: 60%;
+.is-c-static-def;
+}
+
+.is-c405 {
+  width: 80%;
+.is-c-static-def;
+}
+
+/* 24分栅格 */
+
+.is-c1 {
+  width: 4.1667%;
+.is-c-static-def;
+}
+
+.is-c2 {
+  width: 8.3333%;
+.is-c-static-def;
+}
+
+.is-c3 {
+  width: 12.5000%;
+.is-c-static-def;
+}
+
+.is-c4 {
+  width: 16.6667%;
+.is-c-static-def;
+}
+
+.is-c5 {
+  width: 20.8333%;
+.is-c-static-def;
+}
+
+.is-c6 {
+  width: 25%;
+.is-c-static-def;
+}
+
+.is-c7 {
+  width: 29.1667%;
+.is-c-static-def;
+}
+
+.is-c8 {
+  width: 33.3333%;
+.is-c-static-def;
+}
+
+.is-c9 {
+  width: 37.5000%;
+.is-c-static-def;
+}
+
+.is-c10 {
+  width: 41.6667%;
+.is-c-static-def;
+}
+
+.is-c11 {
+  width: 45.8333%;
+.is-c-static-def;
+}
+
+.is-c12 {
+  width: 50%;
+.is-c-static-def;
+}
+
+.is-c13 {
+  width: 54.1667%;
+.is-c-static-def;
+}
+
+.is-c14 {
+  width: 58.3333%;
+.is-c-static-def;
+}
+
+.is-c15 {
+  width: 62.5000%;
+.is-c-static-def;
+}
+
+.is-c16 {
+  width: 66.6667%;
+.is-c-static-def;
+}
+
+.is-c17 {
+  width: 70.8333%;
+.is-c-static-def;
+}
+
+.is-c18 {
+  width: 75%;
+.is-c-static-def;
+}
+
+.is-c19 {
+  width: 79.1667%;
+.is-c-static-def;
+}
+
+.is-c20 {
+  width: 83.3333%;
+.is-c-static-def;
+}
+
+.is-c21 {
+  width: 87.5000%;
+.is-c-static-def;
+}
+
+.is-c22 {
+  width: 91.6667%;
+.is-c-static-def;
+}
+
+.is-c23 {
+  width: 95.8333%;
+.is-c-static-def;
+}
+.is-c24 {
+  width: 100%;
+  .is-c-static-def;
+}
+
+/* 定义偏移 */
+
+/* 5分偏移 */
+
+.is-offset-c105 {
+  margin-left: 20%;
+}
+
+.is-offset-c205 {
+  margin-left: 40%;
+}
+
+.is-offset-c305 {
+  margin-left: 60%;
+}
+
+.is-offset-c405 {
+  margin-left: 80%;
+}
+
+/* 24分偏移 */
+
+.is-offset-c1 {
+  margin-left: 4.1667%;
+}
+
+.is-offset-c2 {
+  margin-left: 8.3333%;
+}
+
+.is-offset-c3 {
+  margin-left: 12.5000%;
+}
+
+.is-offset-c4 {
+  margin-left: 16.6667%;
+}
+
+.is-offset-c5 {
+  margin-left: 20.8333%;
+}
+
+.is-offset-c6 {
+  margin-left: 25%;
+}
+
+.is-offset-c7 {
+  margin-left: 29.1667%;
+}
+
+.is-offset-c8 {
+  margin-left: 33.3333%;
+}
+
+.is-offset-c9 {
+  margin-left: 37.5000%;
+}
+
+.is-offset-c10 {
+  margin-left: 41.6667%;
+}
+
+.is-offset-c11 {
+  margin-left: 45.8333%;
+}
+
+.is-offset-c12 {
+  margin-left: 50%;
+}
+
+.is-offset-c13 {
+  margin-left: 54.1667%;
+}
+
+.is-offset-c14 {
+  margin-left: 58.3333%;
+}
+
+.is-offset-c15 {
+  margin-left: 62.5000%;
+}
+
+.is-offset-c16 {
+  margin-left: 66.6667%;
+}
+
+.is-offset-c17 {
+  margin-left: 70.8333%;
+}
+
+.is-offset-c18 {
+  margin-left: 75%;
+}
+
+.is-offset-c19 {
+  margin-left: 79.1667%;
+}
+
+.is-offset-c20 {
+  margin-left: 83.3333%;
+}
+
+.is-offset-c21 {
+  margin-left: 87.5000%;
+}
+
+.is-offset-c22 {
+  margin-left: 91.6667%;
+}
+
+.is-offset-c23 {
+  margin-left: 95.8333%;
+}
+
+/* 字号定义 */
+
+h1, h2, h3, h4, h5, h6 {
+  //font-weight: 500;
+  font-weight: bold;
+  margin: 0;
+}
+
+h1 {
+  margin: .5em 0;
+  font-size: 2em;
+}
+
+h2 {
+  margin: .25em 0;
+  font-size: 1.75em;
+}
+
+h3 {
+  margin: .2em 0;
+  font-size: 1.5em;
+}
+
+/*定义按钮*/
+
+/* 默认按钮样式 */
+.btn-def {
+  color: #0063B1;
+  color: #333333;
+  background-color: #dddddd;
+  border: 1px solid #d0d0d0;
+  background-image: linear-gradient(#e0e0e0 10%, #dddddd 50%, #d0d0d0 90%);
+}
+.btn-def:hover{
+  background-image: linear-gradient(#efefef 10%, #e0e0e0 50%, #dddddd 90%);
+}
+
+/* 主要按钮样式 */
+.btn-pri {
+  color: #ffffff;
+  background-color: #0078e7;
+  border: 1px solid #004f96;
+  background-image: linear-gradient(#1088f7 10%, #0078e7 50%, #0068d7 90%);
+}
+.btn-pri:hover{
+  background-image: linear-gradient(#2098ff 10%, #1088f7 50%, #0078e7 90%);
+}
+
+/* 成功按钮样式 */
+.btn-suc {
+  color: #ffffff;
+  background-color: #31B847;
+  border: 1px solid #119827;
+  background-image: linear-gradient(#41c857 10%, #31B847 50%, #21a837 90%);
+}
+.btn-suc:hover{
+
+  background-image: linear-gradient(#51d867 10%, #41c857 50%, #31B847 90%);
+}
+
+/* 错误按钮样式 */
+.btn-ero{
+  color: #ffffff;
+  background-color: #C63B40;
+  border: 1px solid #a61b20;
+  background-image: linear-gradient(#d64b50 10%, #C63B40 50%, #b62b30 90%);
+}
+.btn-ero:hover{
+
+  background-image: linear-gradient(#f65b60 10%, #d64b50 50%, #C63B40 90%);
+}
+
+/* 警告按钮样式 */
+.btn-war{
+  color: #ffffff;
+  background-color: #DB7526;
+  border: 1px solid #bb5506;
+  background-image: linear-gradient(#eb8536 10%, #DB7526 50%, #cb6516 90%);
+}
+.btn-war:hover{
+
+  background-image: linear-gradient(#fb9526 10%, #eb8536 50%, #DB7526 90%);
+}
+/* 次级按钮样式 */
+.btn-sec{
+  color: #ffffff;
+  background-color: #4FB8DB;
+  border: 1px solid #2f98bb;
+  background-image: linear-gradient(#5fc8fb 10%, #4FB8DB 50%, #3fa8cb 90%);
+}
+.btn-sec:hover{
+
+  background-image: linear-gradient(#6fd8ff 10%, #5fc8fb 50%, #4FB8DB 90%);
+}
+/* 通用按钮样式 */
+.is-btn {
+  outline: none;
+  border-radius: 0.5rem;
+  padding: .5rem 1rem;
+  border-width: 0;
+  box-shadow: 0 0 2px #000000;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-sm{
+  font-size: 0.7rem;
+  padding:.35rem 0.7rem;
+}
+.btn-lg{
+  font-size: 1.25rem;
+  padding:0.75rem 1.5rem;
+}
+.is-btn[disabled],.is-btn[disabled]:hover{
+  background-image: none;
+  color: #cccccc;
+}
+.btn-def[disabled],.btn-def[disabled]:hover{
+  background-image: none;
+  color: #666666;
+}
+.is-btn:active,.btn-actived,.btn-actived:hover{
+  background-image: none;
+  box-shadow: 0px 0px 0.3rem #333333 inset;
+}
+
+/* 表单样式 */
+.is-ctl{
+  outline:none;
+  padding: .5rem .6rem;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 0.1rem;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.is-ctl:focus,.is-ctl-foc{
+  border-color: #328DD3;
+}
+.is-ctl-suc{
+  border-color: #64B962;
+}
+.is-ctl-ero{
+  border-color: #CA4B4B;
+}
+label.is-ctl{
+  box-shadow: none;
+  cursor: pointer;
+}
+label.is-ctl:hover{
+  border-color: #328DD3;
+}
+label.is-ctl input[type="checkbox"]{
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: inherit;
+}
+label.is-ctl input[type="radio"]{
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: inherit;
+}
+/* 消息内容 */
+.is-msg{
+  padding: 1rem;
+  border-radius: 0.1rem;
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.im-def{
+  background-color: #dddddd;
+  color: #000000;
+}
+.im-pri{
+  background-color: #328DD3;
+}
+.im-suc{
+  background-color: #31B847;
+}
+.im-ero{
+  background-color: #C63B40;
+}
+.im-war{
+  background-color: #DB7526;
+}
+.im-sec{
+  background-color: #4FB8DB;
+}
+/* 定义标签 */
+.is-tag{
+  border-radius: 0.5rem;
+  color: #ffffff;
+  padding: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-flex;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  text-decoration: none;
+  overflow: hidden;
+}
+.is-tag span{
+  display: inline-flex;
+  margin-right: -0.5rem;
+  margin-top: -0.2rem;
+  margin-bottom: -0.2rem;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+}
+.it-def{
+  background-color: #cccccc;
+  color:#000000;
+  border: 1px solid #cccccc;
+}
+.it-black{
+  background-color: #333333;
+  border: 1px solid #333333;
+}
+.it-blue{
+  background-color: #328DD3;
+  border: 1px solid #328DD3;
+}
+.it-green{
+  background-color: #31B847;
+  border: 1px solid #31B847;
+}
+.it-red{
+  background-color: #C63B40;
+  border: 1px solid #C63B40;
+}
+.it-orange{
+  background-color: #DB7526;
+  border: 1px solid #DB7526;
+}
+.it-pure{
+  background-color: #7F57A3;
+  border: 1px solid #7F57A3;
+}
+.it-yellow{
+  background-color: #F7D244;
+  border: 1px solid #F7D244;
+}
+
+.is-group{
+  margin-bottom: 1rem;
+}
+.group-box{
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+}
+
+/* mobile：小于等于768px */
+@media screen and (Max-width:768px){
+  //设置响应式可见
+  .visible-tablet,.visible-desktop,.visible-widescreen,.visible-fullhd{
+    display: none;
+  }
+  .hidden-mobile{
+    display: none;
+  }
+}
+/* tablet：大于等于769px */
+@media screen and (Min-width:769px) {
+  //设置响应式可见
+  .visible-mobile,.visible-desktop,.visible-widescreen,.visible-fullhd{
+    display: none;
+  }
+  .hidden-tablet{
+    display: none;
+  }
+//自定适应宽度
+  .is-ta-ca{width: fit-content;.is-c-static-def;}
+  /* 5分栅格 */
+
+  .is-ta-c105 {  width: 20%;.is-c-static-def;}
+  .is-ta-c205 {  width: 40%;.is-c-static-def;}
+  .is-ta-c305 {  width: 60%;.is-c-static-def;}
+  .is-ta-c405 {  width: 80%;.is-c-static-def;}
+  /* 24分栅格 */
+
+  .is-ta-c1 {  width: 4.1667%;.is-c-static-def;}
+  .is-ta-c2 {  width: 8.3333%;.is-c-static-def;}
+  .is-ta-c3 {  width: 12.5000%;.is-c-static-def;}
+  .is-ta-c4 {  width: 16.6667%;.is-c-static-def;}
+  .is-ta-c5 {  width: 20.8333%;.is-c-static-def;}
+  .is-ta-c6 {  width: 25%;.is-c-static-def;}
+  .is-ta-c7 {  width: 29.1667%;.is-c-static-def;}
+  .is-ta-c8 {  width: 33.3333%;.is-c-static-def;}
+  .is-ta-c9 {  width: 37.5000%;.is-c-static-def;}
+  .is-ta-c10 {  width: 41.6667%;.is-c-static-def;}
+  .is-ta-c11 {  width: 45.8333%;.is-c-static-def;}
+  .is-ta-c12 {  width: 50%;.is-c-static-def;}
+  .is-ta-c13 {  width: 54.1667%;.is-c-static-def;}
+  .is-ta-c14 {  width: 58.3333%;.is-c-static-def;}
+  .is-ta-c15 {  width: 62.5000%;.is-c-static-def;}
+  .is-ta-c16 {  width: 66.6667%;.is-c-static-def;}
+  .is-ta-c17 {  width: 70.8333%;.is-c-static-def;}
+  .is-ta-c18 {  width: 75%;.is-c-static-def;}
+  .is-ta-c19 {  width: 79.1667%;.is-c-static-def;}
+  .is-ta-c20 {  width: 83.3333%;.is-c-static-def;}
+  .is-ta-c21 {  width: 87.5000%;.is-c-static-def;}
+  .is-ta-c22 {  width: 91.6667%;.is-c-static-def;}
+  .is-ta-c23 {  width: 95.8333%;.is-c-static-def;}
+  .is-ta-c24 {  width: 100%;.is-c-static-def;}
+  /* 定义偏移 */
+
+  /* 5分偏移 */
+
+  .is-ta-offset-c105 {  margin-left: 20%;}
+  .is-ta-offset-c205 {  margin-left: 40%;}
+  .is-ta-offset-c305 {  margin-left: 60%;}
+  .is-ta-offset-c405 {  margin-left: 80%;}
+  /* 24分偏移 */
+
+  .is-ta-offset-c1 {  margin-left: 4.1667%;}
+  .is-ta-offset-c2 {  margin-left: 8.3333%;}
+  .is-ta-offset-c3 {  margin-left: 12.5000%;}
+  .is-ta-offset-c4 {  margin-left: 16.6667%;}
+  .is-ta-offset-c5 {  margin-left: 20.8333%;}
+  .is-ta-offset-c6 {  margin-left: 25%;}
+  .is-ta-offset-c7 {  margin-left: 29.1667%;}
+  .is-ta-offset-c8 {  margin-left: 33.3333%;}
+  .is-ta-offset-c9 {  margin-left: 37.5000%;}
+  .is-ta-offset-c10 {  margin-left: 41.6667%;}
+  .is-ta-offset-c11 {  margin-left: 45.8333%;}
+  .is-ta-offset-c12 {  margin-left: 50%;}
+  .is-ta-offset-c13 {  margin-left: 54.1667%;}
+  .is-ta-offset-c14 {  margin-left: 58.3333%;}
+  .is-ta-offset-c15 {  margin-left: 62.5000%;}
+  .is-ta-offset-c16 {  margin-left: 66.6667%;}
+  .is-ta-offset-c17 {  margin-left: 70.8333%;}
+  .is-ta-offset-c18 {  margin-left: 75%;}
+  .is-ta-offset-c19 {  margin-left: 79.1667%;}
+  .is-ta-offset-c20 {  margin-left: 83.3333%;}
+  .is-ta-offset-c21 {  margin-left: 87.5000%;}
+  .is-ta-offset-c22 {  margin-left: 91.6667%;}
+  .is-ta-offset-c23 {  margin-left: 95.8333%;}
+}
+
+/* desktop：大于等于1024px */
+
+@media screen and (Min-width:1024px)   {
+  //设置响应式可见
+  .visible-mobile,.visible-tablet,.visible-widescreen,.visible-fullhd{
+    display: none;
+  }
+  .hidden-desktop{
+    display: none;
+  }
+  .is-de-ca{width: fit-content;.is-c-static-def;}
+  /* 5分栅格 */
+
+  .is-de-c105 {  width: 20%;.is-c-static-def;}
+  .is-de-c205 {  width: 40%;.is-c-static-def;}
+  .is-de-c305 {  width: 60%;.is-c-static-def;}
+  .is-de-c405 {  width: 80%;.is-c-static-def;}
+  /* 24分栅格 */
+
+  .is-de-c1 {  width: 4.1667%;.is-c-static-def;}
+  .is-de-c2 {  width: 8.3333%;.is-c-static-def;}
+  .is-de-c3 {  width: 12.5000%;.is-c-static-def;}
+  .is-de-c4 {  width: 16.6667%;.is-c-static-def;}
+  .is-de-c5 {  width: 20.8333%;.is-c-static-def;}
+  .is-de-c6 {  width: 25%;.is-c-static-def;}
+  .is-de-c7 {  width: 29.1667%;.is-c-static-def;}
+  .is-de-c8 {  width: 33.3333%;.is-c-static-def;}
+  .is-de-c9 {  width: 37.5000%;.is-c-static-def;}
+  .is-de-c10 {  width: 41.6667%;.is-c-static-def;}
+  .is-de-c11 {  width: 45.8333%;.is-c-static-def;}
+  .is-de-c12 {  width: 50%;.is-c-static-def;}
+  .is-de-c13 {  width: 54.1667%;.is-c-static-def;}
+  .is-de-c14 {  width: 58.3333%;.is-c-static-def;}
+  .is-de-c15 {  width: 62.5000%;.is-c-static-def;}
+  .is-de-c16 {  width: 66.6667%;.is-c-static-def;}
+  .is-de-c17 {  width: 70.8333%;.is-c-static-def;}
+  .is-de-c18 {  width: 75%;.is-c-static-def;}
+  .is-de-c19 {  width: 79.1667%;.is-c-static-def;}
+  .is-de-c20 {  width: 83.3333%;.is-c-static-def;}
+  .is-de-c21 {  width: 87.5000%;.is-c-static-def;}
+  .is-de-c22 {  width: 91.6667%;.is-c-static-def;}
+  .is-de-c23 {  width: 95.8333%;.is-c-static-def;}
+  .is-de-c24 {  width: 100%;.is-c-static-def;}
+  /* 定义偏移 */
+
+  /* 5分偏移 */
+
+  .is-de-offset-c105 {  margin-left: 20%;}
+  .is-de-offset-c205 {  margin-left: 40%;}
+  .is-de-offset-c305 {  margin-left: 60%;}
+  .is-de-offset-c405 {  margin-left: 80%;}
+  /* 24分偏移 */
+
+  .is-de-offset-c1 {  margin-left: 4.1667%;}
+  .is-de-offset-c2 {  margin-left: 8.3333%;}
+  .is-de-offset-c3 {  margin-left: 12.5000%;}
+  .is-de-offset-c4 {  margin-left: 16.6667%;}
+  .is-de-offset-c5 {  margin-left: 20.8333%;}
+  .is-de-offset-c6 {  margin-left: 25%;}
+  .is-de-offset-c7 {  margin-left: 29.1667%;}
+  .is-de-offset-c8 {  margin-left: 33.3333%;}
+  .is-de-offset-c9 {  margin-left: 37.5000%;}
+  .is-de-offset-c10 {  margin-left: 41.6667%;}
+  .is-de-offset-c11 {  margin-left: 45.8333%;}
+  .is-de-offset-c12 {  margin-left: 50%;}
+  .is-de-offset-c13 {  margin-left: 54.1667%;}
+  .is-de-offset-c14 {  margin-left: 58.3333%;}
+  .is-de-offset-c15 {  margin-left: 62.5000%;}
+  .is-de-offset-c16 {  margin-left: 66.6667%;}
+  .is-de-offset-c17 {  margin-left: 70.8333%;}
+  .is-de-offset-c18 {  margin-left: 75%;}
+  .is-de-offset-c19 {  margin-left: 79.1667%;}
+  .is-de-offset-c20 {  margin-left: 83.3333%;}
+  .is-de-offset-c21 {  margin-left: 87.5000%;}
+  .is-de-offset-c22 {  margin-left: 91.6667%;}
+  .is-de-offset-c23 {  margin-left: 95.8333%;}
+}
+
+/* widescreen：大于等于1216px */
+
+@media screen and (Min-width:1216px)  {
+  //设置响应式可见
+  .visible-mobile,.visible-tablet,.visible-desktop,.visible-fullhd{
+    display: none;
+  }
+  .hidden-widescreen{
+    display: none;
+  }
+  .is-wi-ca{width: fit-content;.is-c-static-def;}
+  /* 5分栅格 */
+
+  .is-wi-c105 {  width: 20%;.is-c-static-def;}
+  .is-wi-c205 {  width: 40%;.is-c-static-def;}
+  .is-wi-c305 {  width: 60%;.is-c-static-def;}
+  .is-wi-c405 {  width: 80%;.is-c-static-def;}
+  /* 24分栅格 */
+
+  .is-wi-c1 {  width: 4.1667%;.is-c-static-def;}
+  .is-wi-c2 {  width: 8.3333%;.is-c-static-def;}
+  .is-wi-c3 {  width: 12.5000%;.is-c-static-def;}
+  .is-wi-c4 {  width: 16.6667%;.is-c-static-def;}
+  .is-wi-c5 {  width: 20.8333%;.is-c-static-def;}
+  .is-wi-c6 {  width: 25%;.is-c-static-def;}
+  .is-wi-c7 {  width: 29.1667%;.is-c-static-def;}
+  .is-wi-c8 {  width: 33.3333%;.is-c-static-def;}
+  .is-wi-c9 {  width: 37.5000%;.is-c-static-def;}
+  .is-wi-c10 {  width: 41.6667%;.is-c-static-def;}
+  .is-wi-c11 {  width: 45.8333%;.is-c-static-def;}
+  .is-wi-c12 {  width: 50%;.is-c-static-def;}
+  .is-wi-c13 {  width: 54.1667%;.is-c-static-def;}
+  .is-wi-c14 {  width: 58.3333%;.is-c-static-def;}
+  .is-wi-c15 {  width: 62.5000%;.is-c-static-def;}
+  .is-wi-c16 {  width: 66.6667%;.is-c-static-def;}
+  .is-wi-c17 {  width: 70.8333%;.is-c-static-def;}
+  .is-wi-c18 {  width: 75%;.is-c-static-def;}
+  .is-wi-c19 {  width: 79.1667%;.is-c-static-def;}
+  .is-wi-c20 {  width: 83.3333%;.is-c-static-def;}
+  .is-wi-c21 {  width: 87.5000%;.is-c-static-def;}
+  .is-wi-c22 {  width: 91.6667%;.is-c-static-def;}
+  .is-wi-c23 {  width: 95.8333%;.is-c-static-def;}
+  .is-wi-c24 {  width: 100%;.is-c-static-def;}
+  /* 定义偏移 */
+
+  /* 5分偏移 */
+
+  .is-wi-offset-c105 {  margin-left: 20%;}
+  .is-wi-offset-c205 {  margin-left: 40%;}
+  .is-wi-offset-c305 {  margin-left: 60%;}
+  .is-wi-offset-c405 {  margin-left: 80%;}
+  /* 24分偏移 */
+
+  .is-wi-offset-c1 {  margin-left: 4.1667%;}
+  .is-wi-offset-c2 {  margin-left: 8.3333%;}
+  .is-wi-offset-c3 {  margin-left: 12.5000%;}
+  .is-wi-offset-c4 {  margin-left: 16.6667%;}
+  .is-wi-offset-c5 {  margin-left: 20.8333%;}
+  .is-wi-offset-c6 {  margin-left: 25%;}
+  .is-wi-offset-c7 {  margin-left: 29.1667%;}
+  .is-wi-offset-c8 {  margin-left: 33.3333%;}
+  .is-wi-offset-c9 {  margin-left: 37.5000%;}
+  .is-wi-offset-c10 {  margin-left: 41.6667%;}
+  .is-wi-offset-c11 {  margin-left: 45.8333%;}
+  .is-wi-offset-c12 {  margin-left: 50%;}
+  .is-wi-offset-c13 {  margin-left: 54.1667%;}
+  .is-wi-offset-c14 {  margin-left: 58.3333%;}
+  .is-wi-offset-c15 {  margin-left: 62.5000%;}
+  .is-wi-offset-c16 {  margin-left: 66.6667%;}
+  .is-wi-offset-c17 {  margin-left: 70.8333%;}
+  .is-wi-offset-c18 {  margin-left: 75%;}
+  .is-wi-offset-c19 {  margin-left: 79.1667%;}
+  .is-wi-offset-c20 {  margin-left: 83.3333%;}
+  .is-wi-offset-c21 {  margin-left: 87.5000%;}
+  .is-wi-offset-c22 {  margin-left: 91.6667%;}
+  .is-wi-offset-c23 {  margin-left: 95.8333%;}
+}
+
+/* fullhd：大于等于1408px */
+
+@media screen and (Min-width:1408px) {
+  //设置响应式可见
+  .visible-mobile,.visible-tablet,.visible-desktop,.visible-widescreen{
+    display: none;
+  }
+  .hidden-fullhd{
+    display: none;
+  }
+  .is-fu-ca{width: fit-content;.is-c-static-def;}
+  /* 5分栅格 */
+
+  .is-fu-c105 {  width: 20%;.is-c-static-def;}
+  .is-fu-c205 {  width: 40%;.is-c-static-def;}
+  .is-fu-c305 {  width: 60%;.is-c-static-def;}
+  .is-fu-c405 {  width: 80%;.is-c-static-def;}
+  /* 24分栅格 */
+
+  .is-fu-c1 {  width: 4.1667%;.is-c-static-def;}
+  .is-fu-c2 {  width: 8.3333%;.is-c-static-def;}
+  .is-fu-c3 {  width: 12.5000%;.is-c-static-def;}
+  .is-fu-c4 {  width: 16.6667%;.is-c-static-def;}
+  .is-fu-c5 {  width: 20.8333%;.is-c-static-def;}
+  .is-fu-c6 {  width: 25%;.is-c-static-def;}
+  .is-fu-c7 {  width: 29.1667%;.is-c-static-def;}
+  .is-fu-c8 {  width: 33.3333%;.is-c-static-def;}
+  .is-fu-c9 {  width: 37.5000%;.is-c-static-def;}
+  .is-fu-c10 {  width: 41.6667%;.is-c-static-def;}
+  .is-fu-c11 {  width: 45.8333%;.is-c-static-def;}
+  .is-fu-c12 {  width: 50%;.is-c-static-def;}
+  .is-fu-c13 {  width: 54.1667%;.is-c-static-def;}
+  .is-fu-c14 {  width: 58.3333%;.is-c-static-def;}
+  .is-fu-c15 {  width: 62.5000%;.is-c-static-def;}
+  .is-fu-c16 {  width: 66.6667%;.is-c-static-def;}
+  .is-fu-c17 {  width: 70.8333%;.is-c-static-def;}
+  .is-fu-c18 {  width: 75%;.is-c-static-def;}
+  .is-fu-c19 {  width: 79.1667%;.is-c-static-def;}
+  .is-fu-c20 {  width: 83.3333%;.is-c-static-def;}
+  .is-fu-c21 {  width: 87.5000%;.is-c-static-def;}
+  .is-fu-c22 {  width: 91.6667%;.is-c-static-def;}
+  .is-fu-c23 {  width: 95.8333%;.is-c-static-def;}
+  .is-fu-c24 {  width: 100%;.is-c-static-def;}
+  /* 定义偏移 */
+
+  /* 5分偏移 */
+
+  .is-fu-offset-c105 {  margin-left: 20%;}
+  .is-fu-offset-c205 {  margin-left: 40%;}
+  .is-fu-offset-c305 {  margin-left: 60%;}
+  .is-fu-offset-c405 {  margin-left: 80%;}
+  /* 24分偏移 */
+
+  .is-fu-offset-c1 {  margin-left: 4.1667%;}
+  .is-fu-offset-c2 {  margin-left: 8.3333%;}
+  .is-fu-offset-c3 {  margin-left: 12.5000%;}
+  .is-fu-offset-c4 {  margin-left: 16.6667%;}
+  .is-fu-offset-c5 {  margin-left: 20.8333%;}
+  .is-fu-offset-c6 {  margin-left: 25%;}
+  .is-fu-offset-c7 {  margin-left: 29.1667%;}
+  .is-fu-offset-c8 {  margin-left: 33.3333%;}
+  .is-fu-offset-c9 {  margin-left: 37.5000%;}
+  .is-fu-offset-c10 {  margin-left: 41.6667%;}
+  .is-fu-offset-c11 {  margin-left: 45.8333%;}
+  .is-fu-offset-c12 {  margin-left: 50%;}
+  .is-fu-offset-c13 {  margin-left: 54.1667%;}
+  .is-fu-offset-c14 {  margin-left: 58.3333%;}
+  .is-fu-offset-c15 {  margin-left: 62.5000%;}
+  .is-fu-offset-c16 {  margin-left: 66.6667%;}
+  .is-fu-offset-c17 {  margin-left: 70.8333%;}
+  .is-fu-offset-c18 {  margin-left: 75%;}
+  .is-fu-offset-c19 {  margin-left: 79.1667%;}
+  .is-fu-offset-c20 {  margin-left: 83.3333%;}
+  .is-fu-offset-c21 {  margin-left: 87.5000%;}
+  .is-fu-offset-c22 {  margin-left: 91.6667%;}
+  .is-fu-offset-c23 {  margin-left: 95.8333%;}
+}
+.column {
+  border: 1px solid green;
+}
+
+//通用工具
+.font-sm{
+  font-size: 0.7em;
+}
+.font-smaller{
+  font-size: 0.5em;
+}
+.font-lg{
+  font-size: 1.3em;
+}
+.font-bigger{
+  font-size: 1.5em;
+}
+.table-comm{
+  border: 1px solid #333333;
+  border-collapse: collapse;
+  tr{
+    &:hover{
+      background-color: #cccccc;
+    }
+  }
+  th{
+    background-color: #cccccc;
+  }
+  th,td{
+    border: 1px solid #333333;
+    margin: 0;
+    padding: 0.5rem;
+  }
+}

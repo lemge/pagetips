@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>MinPop</title>
+</head>
+<body>
+<div class="is-container">
+    <h1>MinPop</h1>
+    <div class="is-msg im-def">这是一个基于原生js的弹框，不依赖任何的js库，自带css样式</div>
+    <hr>
+    <div class="is-panel">
+        <div class="is-msg im-def">遮罩层</div>
+        <button class="is-btn btn-def" id="cover_btn">遮罩层</button>
+
+        <div class="is-msg im-def">样式化通知</div>
+
+        <button class="is-btn btn-def" id="def_msg">普通消息</button>
+        <button class="is-btn btn-def" id="suc_msg">成功消息</button>
+        <button class="is-btn btn-def" id="ero_msg">错误消息</button>
+        <button class="is-btn btn-def" id="war_msg">警告消息</button>
+        <button class="is-btn btn-def" id="ctl_msg">操作反馈</button>
+        <button class="is-btn btn-def" id="pro_msg">进程反馈</button>
+
+        <div class="is-msg im-def">位置变化</div>
+
+        <button class="is-btn btn-def btn-pos-exmp" data-t="center">中心默认</button>
+        <button class="is-btn btn-def btn-pos-exmp" data-t="centerup">center up</button>
+        <button class="is-btn btn-def btn-pos-exmp" data-t="centerdown">center down</button>
+        <div class="blank-box"></div>
+        <button class="is-btn btn-def btn-pos-exmp" data-t="lefttop">lefttop</button>
+        <button class="is-btn btn-def btn-pos-exmp" data-t="leftbot">left bottom</button>
+        <button class="is-btn btn-def btn-pos-exmp" data-t="righttop">right top</button>
+        <button class="is-btn btn-def btn-pos-exmp" data-t="rightbot">right bottom</button>
+        <div class="blank-box"></div>
+        <button class="is-btn btn-def btn-pos-exmp" data-t="smmsg">sm msg</button>
+        <button class="is-btn btn-def btn-pos-exmp" data-t="lgmsg">lg msg</button>
+
+
+        <div class="is-msg im-def">消息待关闭</div>
+        <button class="is-btn btn-def btn-pos-exmp" data-t="closebtn">需要自己关闭的消息</button>
+    </div>
+    <div class="blank-box"></div>
+    <hr>
+</div>
+</body>
+<script type="text/javascript" src="/page/minipop/minpop.js"></script>
+<link rel="stylesheet" href="/page/minipop/min.css">
+<script type="text/javascript">
+    window.onload=function(){
+        document.querySelector("#cover_btn").addEventListener("click",function () {
+            minpop2().cover();
+        });
+        document.querySelector("#def_msg").addEventListener("click",function () {
+            var time=new Date();
+            var inhtml="普通消息"+time.getMilliseconds();
+            minpop2().msg(inhtml)
+
+        });
+
+        document.querySelector("#suc_msg").addEventListener("click",function () {
+            var time=new Date();
+            var inhtml="成功消息"+time.getMilliseconds();
+            minpop2().type_suc().msg(inhtml)
+
+        });
+        document.querySelector("#ero_msg").addEventListener("click",function () {
+            var time=new Date();
+            var inhtml="错误消息"+time.getMilliseconds();
+            minpop2().type_ero().msg(inhtml)
+
+        });
+        document.querySelector("#war_msg").addEventListener("click",function () {
+            var time=new Date();
+            var inhtml="警告消息"+time.getMilliseconds();
+            minpop2().type_war().msg(inhtml);
+        });
+
+        document.querySelector("#ctl_msg").addEventListener("click",function () {
+            var time=new Date();
+            var inhtml="操作反馈样式"+time.getMilliseconds();
+            minpop2().pos_center_down().size_fit_txt().size_sm().type_notice().msg(inhtml);
+        });
+
+        document.querySelector("#pro_msg").addEventListener("click",function () {
+            var time=new Date();
+            var inhtml="运行进程反馈样式"+time.getMilliseconds();
+            minpop2().cover().pos_center_up().size_lg().type_notice().msg(inhtml);
+            setTimeout(function () {
+                var time=new Date();
+                var inhtml="222运行进程反馈样式"+time.getMilliseconds();
+                minpop2().cover().pos_center_up().size_lg().type_notice().msg(inhtml);
+            },1000);
+        });
+
+
+        var btn_exmp=document.querySelectorAll(".btn-pos-exmp");
+        for(var i in btn_exmp){
+            var o=btn_exmp[i];
+            o.onclick=function (e) {
+
+                var ran=Math.random()*10;
+                var rand="长度";
+                for(var j=0;j<=ran;j++){
+                    rand=rand+j;
+                }
+                var time=new Date();
+                var ms=time.getMilliseconds();
+                var res=e.target.dataset.t;
+                if(res=="center"){
+                    minpop2().msg(rand+"默认中心位置"+ms);
+                }else if(res=="lefttop"){
+                    minpop2().pos_left_top().type_suc().msg(rand+"左上位置消息"+ms);
+                }else if(res=="leftbot"){
+                    minpop2().pos_left_bot().type_ero().msg(rand+"左上位置消息"+ms);
+                }else if(res=="righttop"){
+                    minpop2().pos_right_top().size_fit_txt().type_war().msg(rand+"右上位置消息"+ms);
+                }else if(res=="rightbot"){
+                    minpop2().pos_right_bot().msg(rand+"右下位置消息"+ms);
+                }else if(res=="centerup"){
+                    minpop2().pos_center_up().msg(rand+"中部偏上"+ms);
+                }else if(res=="centerdown"){
+                    minpop2().pos_center_down().msg(rand+"中部偏下"+ms);
+                }else if(res=="smmsg"){
+                    minpop2().size_sm().msg(rand+"小尺寸提示"+ms);
+                }else if(res=="lgmsg"){
+                    minpop2().size_lg().msg(rand+"大尺寸提示"+ms);
+                } else if(res=="closebtn"){
+                    minpop2().pos_right_top().ctl_m_close().msg(rand+"需要手动关000闭0000000的消息"+ms);
+                }
+            };
+
+        }
+    }
+</script>
+</html>
