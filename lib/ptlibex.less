@@ -18,6 +18,27 @@
   }
 }
 
+// @media (min-width: 640px)and(max-width: 768px) {
+  //小于768的情况
+  @media (max-width: 768px) {
+    .pt-big-show {
+      margin-bottom: 2rem;
+      .pt-b-title {
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-weight: bold;
+      }
+    
+      .pt-b-info {
+        text-align: center;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+}
+
 .pt-bc-blue {
   background-color: @pt-blue-5;
 
@@ -115,6 +136,7 @@
     padding-right: 1rem;
     overflow: hidden;
     cursor: pointer;
+    line-height: 1.5rem;
 
     &:hover {
       background-color: @pt-gray-7;

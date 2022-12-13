@@ -1965,6 +1965,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -1989,6 +1990,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2024,6 +2026,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2059,6 +2062,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2094,6 +2098,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2129,6 +2134,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2164,6 +2170,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2218,7 +2225,7 @@ select.pt-i,
   padding: 0.5rem 0.6rem;
   border: 1px solid #a1a1aa;
   box-shadow: inset rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, inset rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   vertical-align: middle;
   box-sizing: border-box;
   display: inline-flex;
@@ -2514,4 +2521,3 @@ ul {
 ul ul {
   padding-left: 1rem;
 }
-/*# sourceMappingURL=ptlib.css.map */

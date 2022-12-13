@@ -1965,6 +1965,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -1989,6 +1990,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2024,6 +2026,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2059,6 +2062,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2094,6 +2098,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2129,6 +2134,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2164,6 +2170,7 @@ p {
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+  line-height: 1rem;
   text-decoration: none;
   display: inline-flex;
   color: #000000;
@@ -2218,7 +2225,7 @@ select.pt-i,
   padding: 0.5rem 0.6rem;
   border: 1px solid #a1a1aa;
   box-shadow: inset rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, inset rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   vertical-align: middle;
   box-sizing: border-box;
   display: inline-flex;
@@ -2529,6 +2536,23 @@ ul ul {
   font-size: 1.5rem;
   padding-bottom: 2rem;
 }
+@media (max-width: 768px) {
+  .pt-big-show {
+    margin-bottom: 2rem;
+  }
+  .pt-big-show .pt-b-title {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+  }
+  .pt-big-show .pt-b-info {
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+}
 .pt-bc-blue {
   background-color: #3b82f6;
 }
@@ -2605,6 +2629,7 @@ ul ul {
   padding-right: 1rem;
   overflow: hidden;
   cursor: pointer;
+  line-height: 1.5rem;
 }
 .pt-navi a:hover {
   background-color: #3f3f46;
@@ -2892,4 +2917,3 @@ ul ul {
   width: 0;
   overflow: hidden;
 }
-/*# sourceMappingURL=ptlibex.css.map */
