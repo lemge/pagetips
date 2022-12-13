@@ -1,3 +1,24 @@
+//可以暂停的settimeout
+function setTimeoutEx(callback, delay) {
+    var setTimeoutId, start, remaining = delay;
+
+    this.pause = function () {
+        window.clearTimeout(setTimeoutId);
+        remaining -= new Date() - start;
+    };
+
+    this.play= function () {
+        start = new Date();
+        window.clearTimeout(setTimeoutId);
+        setTimeoutId= window.setTimeout(callback, remaining);
+        console.log(setTimeoutId)
+    };
+
+    this.play();
+}
+
+
+
 var minpop2 = function () {
     var mo = {
     };
@@ -57,6 +78,7 @@ var minpop2 = function () {
         self._cus_msg_style=self._map_com(self._cus_msg_style,size_style);
         return self;
     };
+    //尺寸适应文字大小
     mo.size_fit_txt=function(){
         var self=this;
         size_style={
@@ -281,18 +303,23 @@ var minpop2 = function () {
         self._rm_cover(cover_div,"cover",rm_time);
         return self;
     };
+    //删除rm_msg的具体操作
+    mo._rm_msg_func=function(o,oid,rm_time){
+        var self=this;
+        var pn=o._pN;
+        o.parentNode.removeChild(o);
+        delete (self._root._minpop_._msg_eles[oid]);
+        self._rm_msg_box(pn,pn.id,10);
+        console.log(rm_time)
+    }
     //删除方法
     mo._rm_msg=function(o,oid,rm_time){
         var self=this;
         if(typeof(rm_time)=="undefined"){
             rm_time=self._rmtime;
         }
-        setTimeout(function () {
-            var pn=o._pN;
-            o.parentNode.removeChild(o);
-            delete (self._root._minpop_._msg_eles[oid]);
-            self._rm_msg_box(pn,pn.id,10);
-            console.log(rm_time)
+        setTimeoutEx(function () {
+            mo._rm_msg_func(o,oid,rm_time) 
         },rm_time);
     };
     mo._rm_msg_box=function(o,oid,rm_time){
@@ -300,7 +327,7 @@ var minpop2 = function () {
         if(typeof (rm_time)=="undefined"){
             rm_time=self._rmtime;
         }
-        setTimeout(function () {
+        setTimeoutEx(function () {
             if(o.childElementCount<1){
                 try{
                     self._body_dom.removeChild(o);
@@ -377,7 +404,7 @@ var minpop2 = function () {
         var self = this;
         self._window_height = window.innerHeight;
         self._window_width = window.innerWidth;
-        self._rmtime=3000;
+        self._rmtime=3000000;
         self._cus_msg_box_style={};//初始化msgbox的位置
         self._cus_msg_style={};//初始化msg的样式
         self._body_dom = document.querySelector("body");
