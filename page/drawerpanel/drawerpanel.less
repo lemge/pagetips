@@ -1,0 +1,172 @@
+#mydp {
+    background-color: red;
+    .btn-light-box{
+        position: absolute;
+        top: 0px;
+        span{
+            margin-right: 2px;
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+        }
+    }
+    .btn_light{
+        background-color: rgb(0, 255, 0);
+        border-radius: 100px;
+
+    }
+    .btn_dark{
+        background-color: #999999;
+        border-radius: 100px;
+
+    }
+    
+    .mydp-navi {
+        background-color: #ffffffa3;
+        position: fixed;
+        bottom: 10px;
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        padding: 5px;
+        padding-bottom: 25px;
+        .navi-switch-btn{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            margin: 0px;
+            width: 100%;
+            height: 20px;
+            border: 0px;
+            background-color: #ffffff00;
+            color: #999999;
+            min-width: 60px;
+            line-height: 1rem;
+            text-align: center;
+            div{
+                transform: rotate(-90deg);
+                display: inline-block;
+            }
+            &:hover{
+                background-color: #ffffffa5;
+                color: #666666;
+            }
+        }
+        .navi-switch-btn-hidden{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin: 0px;
+            width: 100%;
+            height: 20px;
+            border: 0px;
+            background-color: #ffffffa3;
+            color: #666666;
+            min-width: 60px;
+            div{
+                transform: rotate(90deg);
+                display: inline-block;
+            }
+            &:hover{
+                background-color: #ffffff;
+                color: #333333;
+            }
+        }
+        button {
+            position: relative;
+            background-color: #ffffff;
+            border: none;  
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            border: 1px solid #666666;
+            border-radius: 8px;
+            margin: 5px;
+            &:hover:not(.navi-switch-btn){
+                box-shadow: 0px 1px 5px 0px #666666a3;
+                margin: 0px;
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+
+    .navi-hidden{
+        background-color: #ffffff00;
+        height: 0px;
+        overflow: hidden;
+        padding-bottom: 0px;
+        padding-top: 25px;
+    }
+
+    
+    .mydp-panelbox {
+        background-color: red;
+        &>div{
+            background-color: green;
+            display: none;
+        }
+        .p-full{
+            position: fixed;
+            left: 20px;
+            right: 20px;
+            top: 20px;
+            bottom: 120px;
+            border-radius: 10px;
+            border: 1px solid #c7c7c7;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 5px 3px #66666666; 
+
+            .panel-body{
+                overflow: auto;
+                position: absolute;
+                bottom: 20px;
+                top: 20px;
+                left: 20px;
+                right: 20px;  
+            }
+        }
+        .p-tips{
+            position: fixed;
+            bottom: 120px;
+            border-radius: 10px;
+            border: 1px solid #c7c7c7;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 5px 3px #66666666;
+
+            .panel-body{
+                padding: 10px;
+            }
+        }
+        .p-show{
+            display: flex;
+        }
+        .panel-close-btn{    
+            display: flex;
+            position: absolute;
+            right: 20px;
+            bottom: -30px;
+            width: 30px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            background-color: #fee2e2;
+            color: #b91c1c;
+            border: 0;
+            border-radius: 0px 0px 10px 10px;
+            cursor: pointer;
+            box-shadow: 0px 5px 5px 3px #66666630; 
+            &:hover{
+                background-color: #b91c1c;
+
+                color: #fee2e2;
+            }
+        }
+    }
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+}

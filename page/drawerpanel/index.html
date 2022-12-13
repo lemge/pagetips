@@ -1,0 +1,87 @@
+<!--
+ * @Description: 
+ * @Date: 2022-12-07 21:25:18
+ * @LastEditors: lec
+ * @LastEditTime: 2022-12-13 15:59:18
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="drawerpanel.js"></script>
+    <link rel="stylesheet" href="drawerpanel.css">
+    <title>Drawerpanel示例</title>
+</head>
+<body>
+    <div id="mydp">
+        <div class="mydp-navi">
+            <button data-for="panel1">文档</button>
+            <button data-for="mop,sss">执行函数</button>
+           <button data-for="bi,panel3">顺序执行</button>
+            <button data-for="panel41,panel42">按钮4</button>
+        </div>
+        <div class="mydp-panelbox">
+            <div id="panel1" class="p-full">
+                <div>
+                    <h2>Drawerpanel是什么？</h2>
+                    <p>Drawerpanel是一款点击按钮弹出操作面板或执行某个函数的JS插件</p>
+                    <h2>操作面板是什么？</h2>
+                    <p>操作面板指的是弹出的窗口，目前支持为p-full与p-tips两类。用于配合不同的设置动作。</p>
+                    <h2>其他说明</h2>
+                    <p>
+                        <ul>
+                            <li>绑定了动作的按钮在左上角会有灰色/绿色的指示器，分别代表绑定动作数量与当前数量。自行体会</li>
+                            
+                        </ul>
+                    </p>
+                    <h2>Drawerpanel如何运行？</h2>
+                    <p>直接查看本页的源码就可以</p>
+                    <p>需要注意的特殊类有：
+                        <ul>
+                            <li>mydp-navi类div：存放所有的button</li>
+                            <li>mydp-panelbox类div：存放所有的panel</li>
+                            <li>data-for属性：为button绑定动作</li>
+                            <li>p-full/p-tips类div：代表不同的panle类型</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div id="panel3" class="p-tips">
+               这里弹出的是一个p-tips的操作面板,当前是panel3面板
+            </div>
+            <div id="panel41" class="p-full">
+                <p>这个按钮响应panel41,panel42两个面板。当前是panel41面板</p>
+            </div>
+            <div id="panel42" class="p-tips">
+                <p>这个按钮响应panel41,panel42两个面板。当前是panel42面板</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+
+        $DP("#mydp").funcs({
+            mop:function(e){
+                window.alert("mop click")
+            },
+            sss:function(e){
+                window.alert("sss click")
+            },
+            bi:function(e){
+                window.alert("bi runing")
+            }
+        }).run()
+
+
+</script>
+<style>
+    body{
+        background-image: url(../f.jpg);
+        background-repeat: repeat-y;
+    background-size: cover;
+    }
+</style>
+</html>
