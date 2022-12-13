@@ -9,13 +9,14 @@ var minpop2 = function () {
         var zid=self._get_z();
         msg=self._set_ele_style(msg,{
             // "border":"1px solid #333333",
-            padding:"1rem",
+            "padding":"1rem",
             "position":"relative",
             "margin-bottom":"0.5rem",
             "border-radius":"0.2rem",
             "background-color":"#4FB8DB",
             "color":"#ffffff",
             "text-align":"left",
+            "padding-right":"25px",
         });
         msg=self._set_ele_style(msg,self._cus_msg_style);
         var inhtmlbody=self._create_ele("span");
@@ -111,9 +112,10 @@ var minpop2 = function () {
             "top":"0",
             "right":"0",
             "border-radius":"100px",
-            "height":"100%",
+            "height":"25px",
+            "width":"25px",
         });
-        close_btn.innerHTML="×";
+        close_btn.innerHTML="✖";
         close_btn.onclick=function(e){
             var pn=e.target._pN;
             self._rm_msg(pn,pn.id,10);
@@ -290,6 +292,7 @@ var minpop2 = function () {
             o.parentNode.removeChild(o);
             delete (self._root._minpop_._msg_eles[oid]);
             self._rm_msg_box(pn,pn.id,10);
+            console.log(rm_time)
         },rm_time);
     };
     mo._rm_msg_box=function(o,oid,rm_time){
