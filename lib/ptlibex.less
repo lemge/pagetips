@@ -494,3 +494,63 @@
   overflow: hidden;
 }
 //touch 样式结束
+
+
+
+// table 样式
+// 装饰风格的table
+.pt-table-dec {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  td,th{
+      border: 1px solid #ddd;
+      padding: 8px;
+      word-break:break-word;
+  }
+  tr{
+      &:nth-child(even){
+          background-color:#f2f2f2;
+      }
+      &:hover{
+          background-color: #dddddd;
+      }
+  }
+  th{
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  }
+}
+
+// 简单风格的table
+.pt-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  td,th{
+      border: 1px solid #999999;
+      padding: 8px;
+      word-break:break-word;
+  }
+  tr{
+      &:hover{
+          background-color: #f5f5f5;
+      }
+  }
+  th{
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  font-weight: bold;
+  background-color: #f2f2f2;
+
+  }
+  .datailed-div{    
+      word-break: break-word;
+  }
+}
