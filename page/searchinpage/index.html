@@ -2,16 +2,18 @@
  * @Description: 
  * @Date: 2022-12-14 15:55:34
  * @LastEditors: lec
- * @LastEditTime: 2022-12-14 16:54:17
+ * @LastEditTime: 2022-12-14 16:58:22
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>页内搜索示例</title>
 </head>
+
 <body>
     <div>
 
@@ -47,175 +49,1041 @@
                     <h2>常用标点</h2>
                     <hr>
                     <table class="pt-table-dec">
-                        <tbody><tr>
-                        <th style="width:10%">字符</th>
-                        <th style="width:10%">十进制</th>
-                        <th style="width:10%">十六进制</th>
-                        <th style="width:15%">实体</th>
-                        <th>名称</th>
-                        </tr>
-                        <tr><td> </td><td>8192</td><td>2000</td><td>&nbsp;</td><td>EN QUAD</td></tr>
-                        <tr><td> </td><td>8193</td><td>2001</td><td>&nbsp;</td><td>EM QUAD</td></tr>
-                        <tr><td> </td><td>8194</td><td>2002</td><td>&amp;ensp;</td><td>EN SPACE</td></tr>
-                        <tr><td> </td><td>8195</td><td>2003</td><td>&amp;emsp;</td><td>EM SPACE</td></tr>
-                        <tr><td> </td><td>8196</td><td>2004</td><td>&nbsp;</td><td>THREE-PER-EM SPACE</td></tr>
-                        <tr><td> </td><td>8197</td><td>2005</td><td>&nbsp;</td><td>FOUR-PER-EM SPACE</td></tr>
-                        <tr><td> </td><td>8198</td><td>2006</td><td>&nbsp;</td><td>SIX-PER-EM SPACE</td></tr>
-                        <tr><td> </td><td>8199</td><td>2007</td><td>&nbsp;</td><td>FIGURE SPACE</td></tr>
-                        <tr><td> </td><td>8200</td><td>2008</td><td>&nbsp;</td><td>PUNCTUATION SPACE</td></tr>
-                        <tr><td> </td><td>8201</td><td>2009</td><td>&amp;thinsp;</td><td>THIN SPACE</td></tr>
-                        <tr><td> </td><td>8202</td><td>200A</td><td>&nbsp;</td><td>HAIR SPACE</td></tr>
-                        <tr><td>​</td><td>8203</td><td>200B</td><td>&nbsp;</td><td>ZERO WIDTH SPACE</td></tr>
-                        <tr><td>‌</td><td>8204</td><td>200C</td><td>&amp;zwnj;</td><td>ZERO WIDTH NON-JOINER</td></tr>
-                        <tr><td>‍</td><td>8205</td><td>200D</td><td>&amp;zwj;</td><td>ZERO WIDTH JOINER</td></tr>
-                        <tr><td>‎</td><td>8206</td><td>200E</td><td>&amp;lrm;</td><td>LEFT-TO-RIGHT MARK</td></tr>
-                        <tr><td>‏</td><td>8207</td><td>200F</td><td>&amp;rlm;</td><td>RIGHT-TO-LEFT MARK</td></tr>
-                        <tr><td>‐</td><td>8208</td><td>2010</td><td>&nbsp;</td><td>HYPHEN</td></tr>
-                        <tr><td>‑</td><td>8209</td><td>2011</td><td>&nbsp;</td><td>NON-BREAKING HYPHEN</td></tr>
-                        <tr><td>‒</td><td>8210</td><td>2012</td><td>&nbsp;</td><td>FIGURE DASH</td></tr>
-                        <tr><td>–</td><td>8211</td><td>2013</td><td>&amp;ndash;</td><td>EN DASH</td></tr>
-                        <tr><td>—</td><td>8212</td><td>2014</td><td>&amp;mdash;</td><td>EM DASH</td></tr>
-                        <tr><td>―</td><td>8213</td><td>2015</td><td>&nbsp;</td><td>HORIZONTAL BAR</td></tr>
-                        <tr><td>‖</td><td>8214</td><td>2016</td><td>&nbsp;</td><td>DOUBLE VERTICAL LINE</td></tr>
-                        <tr><td>‗</td><td>8215</td><td>2017</td><td>&nbsp;</td><td>DOUBLE LOW LINE</td></tr>
-                        <tr><td>‘</td><td>8216</td><td>2018</td><td>&amp;lsquo;</td><td>LEFT SINGLE QUOTATION MARK</td></tr>
-                        <tr><td>’</td><td>8217</td><td>2019</td><td>&amp;rsquo;</td><td>RIGHT SINGLE QUOTATION MARK</td></tr>
-                        <tr><td>‚</td><td>8218</td><td>201A</td><td>&amp;sbquo;</td><td>SINGLE LOW-9 QUOTATION MARK</td></tr>
-                        <tr><td>‛</td><td>8219</td><td>201B</td><td>&nbsp;</td><td>SINGLE HIGH-REVERSED-9 QUOTATION MARK</td></tr>
-                        <tr><td>“</td><td>8220</td><td>201C</td><td>&amp;ldquo;</td><td>LEFT DOUBLE QUOTATION MARK</td></tr>
-                        <tr><td>”</td><td>8221</td><td>201D</td><td>&amp;rdquo;</td><td>RIGHT DOUBLE QUOTATION MARK</td></tr>
-                        <tr><td>„</td><td>8222</td><td>201E</td><td>&amp;bdquo;</td><td>DOUBLE LOW-9 QUOTATION MARK</td></tr>
-                        <tr><td>‟</td><td>8223</td><td>201F</td><td>&nbsp;</td><td>DOUBLE HIGH-REVERSED-9 QUOTATION MARK</td></tr>
-                        <tr><td>†</td><td>8224</td><td>2020</td><td>&amp;dagger;</td><td>DAGGER</td></tr>
-                        <tr><td>‡</td><td>8225</td><td>2021</td><td>&amp;Dagger;</td><td>DOUBLE DAGGER</td></tr>
-                        <tr><td>•</td><td>8226</td><td>2022</td><td>&amp;bull;</td><td>BULLET</td></tr>
-                        <tr><td>‣</td><td>8227</td><td>2023</td><td>&nbsp;</td><td>TRIANGULAR BULLET</td></tr>
-                        <tr><td>․</td><td>8228</td><td>2024</td><td>&nbsp;</td><td>ONE DOT LEADER</td></tr>
-                        <tr><td>‥</td><td>8229</td><td>2025</td><td>&nbsp;</td><td>TWO DOT LEADER</td></tr>
-                        <tr><td>…</td><td>8230</td><td>2026</td><td>&amp;hellip;</td><td>HORIZONTAL ELLIPSIS</td></tr>
-                        <tr><td>‧</td><td>8231</td><td>2027</td><td>&nbsp;</td><td>HYPHENATION POINT</td></tr>
-                        <tr><td></td><td>8232</td><td>2028</td><td>&nbsp;</td><td>LINE SEPARATOR</td></tr>
-                        <tr><td></td><td>8233</td><td>2029</td><td>&nbsp;</td><td>PARAGRAPH SEPARATOR</td></tr>
-                        <tr><td>‪</td><td>8234</td><td>202A</td><td>&nbsp;</td><td>LEFT-TO-RIGHT EMBEDDING</td></tr>
-                        <tr><td>‫</td><td>8235</td><td>202B</td><td>&nbsp;</td><td>RIGHT-TO-LEFT EMBEDDING</td></tr>
-                        <tr><td>‬</td><td>8236</td><td>202C</td><td>&nbsp;</td><td>POP DIRECTIONAL FORMATTING</td></tr>
-                        <tr><td>‭</td><td>8237</td><td>202D</td><td>&nbsp;</td><td>LEFT-TO-RIGHT OVERRIDE</td></tr>
-                        <tr><td>‮</td><td>8238</td><td>202E</td><td>&nbsp;</td><td>RIGHT-TO-LEFT OVERRIDE</td></tr>
-                        <tr><td> </td><td>8239</td><td>202F</td><td>&nbsp;</td><td>NARROW NON-BREAK SPACE</td></tr>
-                        <tr><td>‰</td><td>8240</td><td>2030</td><td>&amp;permil;</td><td>PER MILLE SIGN</td></tr>
-                        <tr><td>‱</td><td>8241</td><td>2031</td><td>&nbsp;</td><td>PER TEN THOUSAND SIGN</td></tr>
-                        <tr><td>′</td><td>8242</td><td>2032</td><td>&amp;prime;</td><td>PRIME</td></tr>
-                        <tr><td>″</td><td>8243</td><td>2033</td><td>&amp;Prime;</td><td>DOUBLE PRIME</td></tr>
-                        <tr><td>‴</td><td>8244</td><td>2034</td><td>&nbsp;</td><td>TRIPLE PRIME</td></tr>
-                        <tr><td>‵</td><td>8245</td><td>2035</td><td>&nbsp;</td><td>REVERSED PRIME</td></tr>
-                        <tr><td>‶</td><td>8246</td><td>2036</td><td>&nbsp;</td><td>REVERSED DOUBLE PRIME</td></tr>
-                        <tr><td>‷</td><td>8247</td><td>2037</td><td>&nbsp;</td><td>REVERSED TRIPLE PRIME</td></tr>
-                        <tr><td>‸</td><td>8248</td><td>2038</td><td>&nbsp;</td><td>CARET</td></tr>
-                        <tr><td>‹</td><td>8249</td><td>2039</td><td>&amp;lsaquo;</td><td>SINGLE LEFT-POINTING ANGLE QUOTATION MARK</td></tr>
-                        <tr><td>›</td><td>8250</td><td>203A</td><td>&amp;rsaquo;</td><td>SINGLE RIGHT-POINTING ANGLE QUOTATION MARK</td></tr>
-                        <tr><td>※</td><td>8251</td><td>203B</td><td>&nbsp;</td><td>REFERENCE MARK</td></tr>
-                        <tr><td>‼</td><td>8252</td><td>203C</td><td>&nbsp;</td><td>DOUBLE EXCLAMATION MARK</td></tr>
-                        <tr><td>‽</td><td>8253</td><td>203D</td><td>&nbsp;</td><td>INTERROBANG</td></tr>
-                        <tr><td>‾</td><td>8254</td><td>203E</td><td>&amp;oline;</td><td>OVERLINE</td></tr>
-                        <tr><td>‿</td><td>8255</td><td>203F</td><td>&nbsp;</td><td>UNDERTIE</td></tr>
-                        <tr><td>⁀</td><td>8256</td><td>2040</td><td>&nbsp;</td><td>CHARACTER TIE</td></tr>
-                        <tr><td>⁁</td><td>8257</td><td>2041</td><td>&nbsp;</td><td>CARET INSERTION POINT</td></tr>
-                        <tr><td>⁂</td><td>8258</td><td>2042</td><td>&nbsp;</td><td>ASTERISM</td></tr>
-                        <tr><td>⁃</td><td>8259</td><td>2043</td><td>&nbsp;</td><td>HYPHEN BULLET</td></tr>
-                        <tr><td>⁄</td><td>8260</td><td>2044</td><td>&amp;frasl;</td><td>FRACTION SLASH</td></tr>
-                        <tr><td>⁅</td><td>8261</td><td>2045</td><td>&nbsp;</td><td>LEFT SQUARE BRACKET WITH QUILL</td></tr>
-                        <tr><td>⁆</td><td>8262</td><td>2046</td><td>&nbsp;</td><td>RIGHT SQUARE BRACKET WITH QUILL</td></tr>
-                        <tr><td>⁇</td><td>8263</td><td>2047</td><td>&nbsp;</td><td>DOUBLE QUESTION MARK</td></tr>
-                        <tr><td>⁈</td><td>8264</td><td>2048</td><td>&nbsp;</td><td>QUESTION EXCLAMATION MARK</td></tr>
-                        <tr><td>⁉</td><td>8265</td><td>2049</td><td>&nbsp;</td><td>EXCLAMATION QUESTION MARK</td></tr>
-                        <tr><td>⁊</td><td>8266</td><td>204A</td><td>&nbsp;</td><td>TIRONIAN SIGN ET</td></tr>
-                        <tr><td>⁋</td><td>8267</td><td>204B</td><td>&nbsp;</td><td>REVERSED PILCROW SIGN</td></tr>
-                        <tr><td>⁌</td><td>8268</td><td>204C</td><td>&nbsp;</td><td>BLACK LEFTWARDS BULLET</td></tr>
-                        <tr><td>⁍</td><td>8269</td><td>204D</td><td>&nbsp;</td><td>BLACK RIGHTWARDS BULLET</td></tr>
-                        <tr><td>⁎</td><td>8270</td><td>204E</td><td>&nbsp;</td><td>LOW ASTERISK</td></tr>
-                        <tr><td>⁏</td><td>8271</td><td>204F</td><td>&nbsp;</td><td>REVERSED SEMICOLON</td></tr>
-                        <tr><td>⁐</td><td>8272</td><td>2050</td><td>&nbsp;</td><td>CLOSE UP</td></tr>
-                        <tr><td>⁑</td><td>8273</td><td>2051</td><td>&nbsp;</td><td>TWO ASTERISKS ALIGNED VERTICALLY</td></tr>
-                        <tr><td>⁒</td><td>8274</td><td>2052</td><td>&nbsp;</td><td>COMMERCIAL MINUS SIGN</td></tr>
-                        <tr><td>⁓</td><td>8275</td><td>2053</td><td>&nbsp;</td><td>SWUNG DASH</td></tr>
-                        <tr><td>⁔</td><td>8276</td><td>2054</td><td>&nbsp;</td><td>INVERTED UNDERTIE</td></tr>
-                        <tr><td>⁕</td><td>8277</td><td>2055</td><td>&nbsp;</td><td>FLOWER PUNCTUATION MARK</td></tr>
-                        <tr><td>⁖</td><td>8278</td><td>2056</td><td>&nbsp;</td><td>THREE DOT PUNCTUATION</td></tr>
-                        <tr><td>⁗</td><td>8279</td><td>2057</td><td>&nbsp;</td><td>QUADRUPLE PRIME</td></tr>
-                        <tr><td>⁘</td><td>8280</td><td>2058</td><td>&nbsp;</td><td>FOUR DOT PUNCTUATION</td></tr>
-                        <tr><td>⁙</td><td>8281</td><td>2059</td><td>&nbsp;</td><td>FIVE DOT PUNCTUATION</td></tr>
-                        <tr><td>⁚</td><td>8282</td><td>205A</td><td>&nbsp;</td><td>TWO DOT PUNCTUATION</td></tr>
-                        <tr><td>⁛</td><td>8283</td><td>205B</td><td>&nbsp;</td><td>FOUR DOT MARK</td></tr>
-                        <tr><td>⁜</td><td>8284</td><td>205C</td><td>&nbsp;</td><td>DOTTED CROSS</td></tr>
-                        <tr><td>⁝</td><td>8285</td><td>205D</td><td>&nbsp;</td><td>TRICOLON</td></tr>
-                        <tr><td>⁞</td><td>8286</td><td>205E</td><td>&nbsp;</td><td>VERTICAL FOUR DOTS</td></tr>
-                        <tr><td> </td><td>8287</td><td>205F</td><td>&nbsp;</td><td>MEDIUM MATHEMATICAL SPACE</td></tr>
-                        <tr><td>⁠</td><td>8288</td><td>2060</td><td>&nbsp;</td><td>WORD JOINER</td></tr>
-                        <tr><td>⁡</td><td>8289</td><td>2061</td><td>&nbsp;</td><td>FUNCTION APPLICATION</td></tr>
-                        <tr><td>⁢</td><td>8290</td><td>2062</td><td>&nbsp;</td><td>INVISIBLE TIMES</td></tr>
-                        <tr><td>⁣</td><td>8291</td><td>2063</td><td>&nbsp;</td><td>INVISIBLE SEPARATOR</td></tr>
-                        <tr><td>⁤</td><td>8292</td><td>2064</td><td>&nbsp;</td><td>INVISIBLE PLUS</td></tr>
-                        <tr><td>⁦</td><td>8294</td><td>2066</td><td>&nbsp;</td><td>LEFT-TO-RIGHT ISOLATE</td></tr>
-                        <tr><td>⁧</td><td>8295</td><td>2067</td><td>&nbsp;</td><td>RIGHT-TO-LEFT ISOLATE</td></tr>
-                        <tr><td>⁨</td><td>8296</td><td>2068</td><td>&nbsp;</td><td>FIRST STRONG ISOLATE</td></tr>
-                        <tr><td>⁩</td><td>8297</td><td>2069</td><td>&nbsp;</td><td>POP DIRECTIONAL ISOLATE</td></tr>
-                        <tr><td>⁪</td><td>8298</td><td>206A</td><td>&nbsp;</td><td>INHIBIT SYMMETRIC SWAPPING</td></tr>
-                        <tr><td>⁫</td><td>8299</td><td>206B</td><td>&nbsp;</td><td>ACTIVATE SYMMETRIC SWAPPING</td></tr>
-                        <tr><td>⁬</td><td>8300</td><td>206C</td><td>&nbsp;</td><td>INHIBIT ARABIC FORM SHAPING</td></tr>
-                        <tr><td>⁭</td><td>8301</td><td>206D</td><td>&nbsp;</td><td>ACTIVATE ARABIC FORM SHAPING</td></tr>
-                        <tr><td>⁮</td><td>8302</td><td>206E</td><td>&nbsp;</td><td>NATIONAL DIGIT SHAPES</td></tr>
-                        <tr><td>⁯</td><td>8303</td><td>206F</td><td>&nbsp;</td><td>NOMINAL DIGIT SHAPES</td></tr>
-                        </tbody></table>
-                        <hr>
-                        <h2>货币符号</h2>
-                        <hr>
-                        <table class="pt-table-dec">
-                            <tbody><tr>
-                            <th style="width:10%">字符</th>
-                            <th style="width:10%">十进制</th>
-                            <th style="width:10%">十六进制</th>
-                            <th style="width:15%">实体</th>
-                            <th>名称</th>
+                        <tbody>
+                            <tr>
+                                <th style="width:10%">字符</th>
+                                <th style="width:10%">十进制</th>
+                                <th style="width:10%">十六进制</th>
+                                <th style="width:15%">实体</th>
+                                <th>名称</th>
                             </tr>
-                            
-                            <tr><td>₠</td><td>8352</td><td>20A0</td><td>&nbsp;</td><td>EURO-CURRENCY SIGN</td></tr>
-                            <tr><td>₡</td><td>8353</td><td>20A1</td><td>&nbsp;</td><td>COLON SIGN</td></tr>
-                            <tr><td>₢</td><td>8354</td><td>20A2</td><td>&nbsp;</td><td>CRUZEIRO SIGN</td></tr>
-                            <tr><td>₣</td><td>8355</td><td>20A3</td><td>&nbsp;</td><td>FRENCH FRANC SIGN</td></tr>
-                            <tr><td>₤</td><td>8356</td><td>20A4</td><td>&nbsp;</td><td>LIRA SIGN</td></tr>
-                            <tr><td>₥</td><td>8357</td><td>20A5</td><td>&nbsp;</td><td>MILL SIGN</td></tr>
-                            <tr><td>₦</td><td>8358</td><td>20A6</td><td>&nbsp;</td><td>NAIRA SIGN</td></tr>
-                            <tr><td>₧</td><td>8359</td><td>20A7</td><td>&nbsp;</td><td>PESETA SIGN</td></tr>
-                            <tr><td>₨</td><td>8360</td><td>20A8</td><td>&nbsp;</td><td>RUPEE SIGN</td></tr>
-                            <tr><td>₩</td><td>8361</td><td>20A9</td><td>&nbsp;</td><td>WON SIGN</td></tr>
-                            <tr><td>₪</td><td>8362</td><td>20AA</td><td>&nbsp;</td><td>NEW SHEQEL SIGN</td></tr>
-                            <tr><td>₫</td><td>8363</td><td>20AB</td><td>&nbsp;</td><td>DONG SIGN</td></tr>
-                            <tr><td>€</td><td>8364</td><td>20AC</td><td>&amp;euro;</td><td>EURO SIGN</td></tr>
-                            <tr><td>₭</td><td>8365</td><td>20AD</td><td>&nbsp;</td><td>KIP SIGN</td></tr>
-                            <tr><td>₮</td><td>8366</td><td>20AE</td><td>&nbsp;</td><td>TUGRIK SIGN</td></tr>
-                            <tr><td>₯</td><td>8367</td><td>20AF</td><td>&nbsp;</td><td>DRACHMA SIGN</td></tr>
-                            <tr><td>₰</td><td>8368</td><td>20B0</td><td>&nbsp;</td><td>GERMAN PENNY SYMBOL</td></tr>
-                            <tr><td>₱</td><td>8369</td><td>20B1</td><td>&nbsp;</td><td>PESO SIGN</td></tr>
-                            <tr><td>₲</td><td>8370</td><td>20B2</td><td>&nbsp;</td><td>GUARANI SIGN</td></tr>
-                            <tr><td>₳</td><td>8371</td><td>20B3</td><td>&nbsp;</td><td>AUSTRAL SIGN</td></tr>
-                            <tr><td>₴</td><td>8372</td><td>20B4</td><td>&nbsp;</td><td>HRYVNIA SIGN</td></tr>
-                            <tr><td>₵</td><td>8373</td><td>20B5</td><td>&nbsp;</td><td>CEDI SIGN</td></tr>
-                            <tr><td>₶</td><td>8374</td><td>20B6</td><td>&nbsp;</td><td>LIVRE TOURNOIS SIGN</td></tr>
-                            <tr><td>₷</td><td>8375</td><td>20B7</td><td>&nbsp;</td><td>SPESMILO SIGN</td></tr>
-                            <tr><td>₸</td><td>8376</td><td>20B8</td><td>&nbsp;</td><td>TENGE SIGN</td></tr>
-                            <tr><td>₹</td><td>8377</td><td>20B9</td><td>&nbsp;</td><td>INDIAN RUPEE SIGN</td></tr>
-                            <tr><td>₺</td><td>8378</td><td>20BA</td><td>&nbsp;</td><td>TURKISH LIRA SIGN</td></tr>
-                            <tr><td>₻</td><td>8379</td><td>20BB</td><td>&nbsp;</td><td>NORDIC MARK SIGN</td></tr>
-                            <tr><td>₼</td><td>8380</td><td>20BC</td><td>&nbsp;</td><td>MANAT SIGN</td></tr>
-                            <tr><td>₽</td><td>8381</td><td>20BD</td><td>&nbsp;</td><td>RUBLE SIGN</td></tr>
-                            <tr><td>₾</td><td>8382</td><td>20BE</td><td>&nbsp;</td><td>LARI SIGN</td></tr>
-                            <tr><td>₿</td><td>8383</td><td>20BF</td><td>&nbsp;</td><td>BITCOIN SIGN</td></tr>
-                            
-                            </tbody></table>
+                            <tr>
+                                <td> </td>
+                                <td>8192</td>
+                                <td>2000</td>
+                                <td>&nbsp;</td>
+                                <td>EN QUAD</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8193</td>
+                                <td>2001</td>
+                                <td>&nbsp;</td>
+                                <td>EM QUAD</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8194</td>
+                                <td>2002</td>
+                                <td>&amp;ensp;</td>
+                                <td>EN SPACE</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8195</td>
+                                <td>2003</td>
+                                <td>&amp;emsp;</td>
+                                <td>EM SPACE</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8196</td>
+                                <td>2004</td>
+                                <td>&nbsp;</td>
+                                <td>THREE-PER-EM SPACE</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8197</td>
+                                <td>2005</td>
+                                <td>&nbsp;</td>
+                                <td>FOUR-PER-EM SPACE</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8198</td>
+                                <td>2006</td>
+                                <td>&nbsp;</td>
+                                <td>SIX-PER-EM SPACE</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8199</td>
+                                <td>2007</td>
+                                <td>&nbsp;</td>
+                                <td>FIGURE SPACE</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8200</td>
+                                <td>2008</td>
+                                <td>&nbsp;</td>
+                                <td>PUNCTUATION SPACE</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8201</td>
+                                <td>2009</td>
+                                <td>&amp;thinsp;</td>
+                                <td>THIN SPACE</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8202</td>
+                                <td>200A</td>
+                                <td>&nbsp;</td>
+                                <td>HAIR SPACE</td>
+                            </tr>
+                            <tr>
+                                <td>​</td>
+                                <td>8203</td>
+                                <td>200B</td>
+                                <td>&nbsp;</td>
+                                <td>ZERO WIDTH SPACE</td>
+                            </tr>
+                            <tr>
+                                <td>‌</td>
+                                <td>8204</td>
+                                <td>200C</td>
+                                <td>&amp;zwnj;</td>
+                                <td>ZERO WIDTH NON-JOINER</td>
+                            </tr>
+                            <tr>
+                                <td>‍</td>
+                                <td>8205</td>
+                                <td>200D</td>
+                                <td>&amp;zwj;</td>
+                                <td>ZERO WIDTH JOINER</td>
+                            </tr>
+                            <tr>
+                                <td>‎</td>
+                                <td>8206</td>
+                                <td>200E</td>
+                                <td>&amp;lrm;</td>
+                                <td>LEFT-TO-RIGHT MARK</td>
+                            </tr>
+                            <tr>
+                                <td>‏</td>
+                                <td>8207</td>
+                                <td>200F</td>
+                                <td>&amp;rlm;</td>
+                                <td>RIGHT-TO-LEFT MARK</td>
+                            </tr>
+                            <tr>
+                                <td>‐</td>
+                                <td>8208</td>
+                                <td>2010</td>
+                                <td>&nbsp;</td>
+                                <td>HYPHEN</td>
+                            </tr>
+                            <tr>
+                                <td>‑</td>
+                                <td>8209</td>
+                                <td>2011</td>
+                                <td>&nbsp;</td>
+                                <td>NON-BREAKING HYPHEN</td>
+                            </tr>
+                            <tr>
+                                <td>‒</td>
+                                <td>8210</td>
+                                <td>2012</td>
+                                <td>&nbsp;</td>
+                                <td>FIGURE DASH</td>
+                            </tr>
+                            <tr>
+                                <td>–</td>
+                                <td>8211</td>
+                                <td>2013</td>
+                                <td>&amp;ndash;</td>
+                                <td>EN DASH</td>
+                            </tr>
+                            <tr>
+                                <td>—</td>
+                                <td>8212</td>
+                                <td>2014</td>
+                                <td>&amp;mdash;</td>
+                                <td>EM DASH</td>
+                            </tr>
+                            <tr>
+                                <td>―</td>
+                                <td>8213</td>
+                                <td>2015</td>
+                                <td>&nbsp;</td>
+                                <td>HORIZONTAL BAR</td>
+                            </tr>
+                            <tr>
+                                <td>‖</td>
+                                <td>8214</td>
+                                <td>2016</td>
+                                <td>&nbsp;</td>
+                                <td>DOUBLE VERTICAL LINE</td>
+                            </tr>
+                            <tr>
+                                <td>‗</td>
+                                <td>8215</td>
+                                <td>2017</td>
+                                <td>&nbsp;</td>
+                                <td>DOUBLE LOW LINE</td>
+                            </tr>
+                            <tr>
+                                <td>‘</td>
+                                <td>8216</td>
+                                <td>2018</td>
+                                <td>&amp;lsquo;</td>
+                                <td>LEFT SINGLE QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>’</td>
+                                <td>8217</td>
+                                <td>2019</td>
+                                <td>&amp;rsquo;</td>
+                                <td>RIGHT SINGLE QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>‚</td>
+                                <td>8218</td>
+                                <td>201A</td>
+                                <td>&amp;sbquo;</td>
+                                <td>SINGLE LOW-9 QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>‛</td>
+                                <td>8219</td>
+                                <td>201B</td>
+                                <td>&nbsp;</td>
+                                <td>SINGLE HIGH-REVERSED-9 QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>“</td>
+                                <td>8220</td>
+                                <td>201C</td>
+                                <td>&amp;ldquo;</td>
+                                <td>LEFT DOUBLE QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>”</td>
+                                <td>8221</td>
+                                <td>201D</td>
+                                <td>&amp;rdquo;</td>
+                                <td>RIGHT DOUBLE QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>„</td>
+                                <td>8222</td>
+                                <td>201E</td>
+                                <td>&amp;bdquo;</td>
+                                <td>DOUBLE LOW-9 QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>‟</td>
+                                <td>8223</td>
+                                <td>201F</td>
+                                <td>&nbsp;</td>
+                                <td>DOUBLE HIGH-REVERSED-9 QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>†</td>
+                                <td>8224</td>
+                                <td>2020</td>
+                                <td>&amp;dagger;</td>
+                                <td>DAGGER</td>
+                            </tr>
+                            <tr>
+                                <td>‡</td>
+                                <td>8225</td>
+                                <td>2021</td>
+                                <td>&amp;Dagger;</td>
+                                <td>DOUBLE DAGGER</td>
+                            </tr>
+                            <tr>
+                                <td>•</td>
+                                <td>8226</td>
+                                <td>2022</td>
+                                <td>&amp;bull;</td>
+                                <td>BULLET</td>
+                            </tr>
+                            <tr>
+                                <td>‣</td>
+                                <td>8227</td>
+                                <td>2023</td>
+                                <td>&nbsp;</td>
+                                <td>TRIANGULAR BULLET</td>
+                            </tr>
+                            <tr>
+                                <td>․</td>
+                                <td>8228</td>
+                                <td>2024</td>
+                                <td>&nbsp;</td>
+                                <td>ONE DOT LEADER</td>
+                            </tr>
+                            <tr>
+                                <td>‥</td>
+                                <td>8229</td>
+                                <td>2025</td>
+                                <td>&nbsp;</td>
+                                <td>TWO DOT LEADER</td>
+                            </tr>
+                            <tr>
+                                <td>…</td>
+                                <td>8230</td>
+                                <td>2026</td>
+                                <td>&amp;hellip;</td>
+                                <td>HORIZONTAL ELLIPSIS</td>
+                            </tr>
+                            <tr>
+                                <td>‧</td>
+                                <td>8231</td>
+                                <td>2027</td>
+                                <td>&nbsp;</td>
+                                <td>HYPHENATION POINT</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>8232</td>
+                                <td>2028</td>
+                                <td>&nbsp;</td>
+                                <td>LINE SEPARATOR</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>8233</td>
+                                <td>2029</td>
+                                <td>&nbsp;</td>
+                                <td>PARAGRAPH SEPARATOR</td>
+                            </tr>
+                            <tr>
+                                <td>‪</td>
+                                <td>8234</td>
+                                <td>202A</td>
+                                <td>&nbsp;</td>
+                                <td>LEFT-TO-RIGHT EMBEDDING</td>
+                            </tr>
+                            <tr>
+                                <td>‫</td>
+                                <td>8235</td>
+                                <td>202B</td>
+                                <td>&nbsp;</td>
+                                <td>RIGHT-TO-LEFT EMBEDDING</td>
+                            </tr>
+                            <tr>
+                                <td>‬</td>
+                                <td>8236</td>
+                                <td>202C</td>
+                                <td>&nbsp;</td>
+                                <td>POP DIRECTIONAL FORMATTING</td>
+                            </tr>
+                            <tr>
+                                <td>‭</td>
+                                <td>8237</td>
+                                <td>202D</td>
+                                <td>&nbsp;</td>
+                                <td>LEFT-TO-RIGHT OVERRIDE</td>
+                            </tr>
+                            <tr>
+                                <td>‮</td>
+                                <td>8238</td>
+                                <td>202E</td>
+                                <td>&nbsp;</td>
+                                <td>RIGHT-TO-LEFT OVERRIDE</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8239</td>
+                                <td>202F</td>
+                                <td>&nbsp;</td>
+                                <td>NARROW NON-BREAK SPACE</td>
+                            </tr>
+                            <tr>
+                                <td>‰</td>
+                                <td>8240</td>
+                                <td>2030</td>
+                                <td>&amp;permil;</td>
+                                <td>PER MILLE SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>‱</td>
+                                <td>8241</td>
+                                <td>2031</td>
+                                <td>&nbsp;</td>
+                                <td>PER TEN THOUSAND SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>′</td>
+                                <td>8242</td>
+                                <td>2032</td>
+                                <td>&amp;prime;</td>
+                                <td>PRIME</td>
+                            </tr>
+                            <tr>
+                                <td>″</td>
+                                <td>8243</td>
+                                <td>2033</td>
+                                <td>&amp;Prime;</td>
+                                <td>DOUBLE PRIME</td>
+                            </tr>
+                            <tr>
+                                <td>‴</td>
+                                <td>8244</td>
+                                <td>2034</td>
+                                <td>&nbsp;</td>
+                                <td>TRIPLE PRIME</td>
+                            </tr>
+                            <tr>
+                                <td>‵</td>
+                                <td>8245</td>
+                                <td>2035</td>
+                                <td>&nbsp;</td>
+                                <td>REVERSED PRIME</td>
+                            </tr>
+                            <tr>
+                                <td>‶</td>
+                                <td>8246</td>
+                                <td>2036</td>
+                                <td>&nbsp;</td>
+                                <td>REVERSED DOUBLE PRIME</td>
+                            </tr>
+                            <tr>
+                                <td>‷</td>
+                                <td>8247</td>
+                                <td>2037</td>
+                                <td>&nbsp;</td>
+                                <td>REVERSED TRIPLE PRIME</td>
+                            </tr>
+                            <tr>
+                                <td>‸</td>
+                                <td>8248</td>
+                                <td>2038</td>
+                                <td>&nbsp;</td>
+                                <td>CARET</td>
+                            </tr>
+                            <tr>
+                                <td>‹</td>
+                                <td>8249</td>
+                                <td>2039</td>
+                                <td>&amp;lsaquo;</td>
+                                <td>SINGLE LEFT-POINTING ANGLE QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>›</td>
+                                <td>8250</td>
+                                <td>203A</td>
+                                <td>&amp;rsaquo;</td>
+                                <td>SINGLE RIGHT-POINTING ANGLE QUOTATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>※</td>
+                                <td>8251</td>
+                                <td>203B</td>
+                                <td>&nbsp;</td>
+                                <td>REFERENCE MARK</td>
+                            </tr>
+                            <tr>
+                                <td>‼</td>
+                                <td>8252</td>
+                                <td>203C</td>
+                                <td>&nbsp;</td>
+                                <td>DOUBLE EXCLAMATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>‽</td>
+                                <td>8253</td>
+                                <td>203D</td>
+                                <td>&nbsp;</td>
+                                <td>INTERROBANG</td>
+                            </tr>
+                            <tr>
+                                <td>‾</td>
+                                <td>8254</td>
+                                <td>203E</td>
+                                <td>&amp;oline;</td>
+                                <td>OVERLINE</td>
+                            </tr>
+                            <tr>
+                                <td>‿</td>
+                                <td>8255</td>
+                                <td>203F</td>
+                                <td>&nbsp;</td>
+                                <td>UNDERTIE</td>
+                            </tr>
+                            <tr>
+                                <td>⁀</td>
+                                <td>8256</td>
+                                <td>2040</td>
+                                <td>&nbsp;</td>
+                                <td>CHARACTER TIE</td>
+                            </tr>
+                            <tr>
+                                <td>⁁</td>
+                                <td>8257</td>
+                                <td>2041</td>
+                                <td>&nbsp;</td>
+                                <td>CARET INSERTION POINT</td>
+                            </tr>
+                            <tr>
+                                <td>⁂</td>
+                                <td>8258</td>
+                                <td>2042</td>
+                                <td>&nbsp;</td>
+                                <td>ASTERISM</td>
+                            </tr>
+                            <tr>
+                                <td>⁃</td>
+                                <td>8259</td>
+                                <td>2043</td>
+                                <td>&nbsp;</td>
+                                <td>HYPHEN BULLET</td>
+                            </tr>
+                            <tr>
+                                <td>⁄</td>
+                                <td>8260</td>
+                                <td>2044</td>
+                                <td>&amp;frasl;</td>
+                                <td>FRACTION SLASH</td>
+                            </tr>
+                            <tr>
+                                <td>⁅</td>
+                                <td>8261</td>
+                                <td>2045</td>
+                                <td>&nbsp;</td>
+                                <td>LEFT SQUARE BRACKET WITH QUILL</td>
+                            </tr>
+                            <tr>
+                                <td>⁆</td>
+                                <td>8262</td>
+                                <td>2046</td>
+                                <td>&nbsp;</td>
+                                <td>RIGHT SQUARE BRACKET WITH QUILL</td>
+                            </tr>
+                            <tr>
+                                <td>⁇</td>
+                                <td>8263</td>
+                                <td>2047</td>
+                                <td>&nbsp;</td>
+                                <td>DOUBLE QUESTION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>⁈</td>
+                                <td>8264</td>
+                                <td>2048</td>
+                                <td>&nbsp;</td>
+                                <td>QUESTION EXCLAMATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>⁉</td>
+                                <td>8265</td>
+                                <td>2049</td>
+                                <td>&nbsp;</td>
+                                <td>EXCLAMATION QUESTION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>⁊</td>
+                                <td>8266</td>
+                                <td>204A</td>
+                                <td>&nbsp;</td>
+                                <td>TIRONIAN SIGN ET</td>
+                            </tr>
+                            <tr>
+                                <td>⁋</td>
+                                <td>8267</td>
+                                <td>204B</td>
+                                <td>&nbsp;</td>
+                                <td>REVERSED PILCROW SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>⁌</td>
+                                <td>8268</td>
+                                <td>204C</td>
+                                <td>&nbsp;</td>
+                                <td>BLACK LEFTWARDS BULLET</td>
+                            </tr>
+                            <tr>
+                                <td>⁍</td>
+                                <td>8269</td>
+                                <td>204D</td>
+                                <td>&nbsp;</td>
+                                <td>BLACK RIGHTWARDS BULLET</td>
+                            </tr>
+                            <tr>
+                                <td>⁎</td>
+                                <td>8270</td>
+                                <td>204E</td>
+                                <td>&nbsp;</td>
+                                <td>LOW ASTERISK</td>
+                            </tr>
+                            <tr>
+                                <td>⁏</td>
+                                <td>8271</td>
+                                <td>204F</td>
+                                <td>&nbsp;</td>
+                                <td>REVERSED SEMICOLON</td>
+                            </tr>
+                            <tr>
+                                <td>⁐</td>
+                                <td>8272</td>
+                                <td>2050</td>
+                                <td>&nbsp;</td>
+                                <td>CLOSE UP</td>
+                            </tr>
+                            <tr>
+                                <td>⁑</td>
+                                <td>8273</td>
+                                <td>2051</td>
+                                <td>&nbsp;</td>
+                                <td>TWO ASTERISKS ALIGNED VERTICALLY</td>
+                            </tr>
+                            <tr>
+                                <td>⁒</td>
+                                <td>8274</td>
+                                <td>2052</td>
+                                <td>&nbsp;</td>
+                                <td>COMMERCIAL MINUS SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>⁓</td>
+                                <td>8275</td>
+                                <td>2053</td>
+                                <td>&nbsp;</td>
+                                <td>SWUNG DASH</td>
+                            </tr>
+                            <tr>
+                                <td>⁔</td>
+                                <td>8276</td>
+                                <td>2054</td>
+                                <td>&nbsp;</td>
+                                <td>INVERTED UNDERTIE</td>
+                            </tr>
+                            <tr>
+                                <td>⁕</td>
+                                <td>8277</td>
+                                <td>2055</td>
+                                <td>&nbsp;</td>
+                                <td>FLOWER PUNCTUATION MARK</td>
+                            </tr>
+                            <tr>
+                                <td>⁖</td>
+                                <td>8278</td>
+                                <td>2056</td>
+                                <td>&nbsp;</td>
+                                <td>THREE DOT PUNCTUATION</td>
+                            </tr>
+                            <tr>
+                                <td>⁗</td>
+                                <td>8279</td>
+                                <td>2057</td>
+                                <td>&nbsp;</td>
+                                <td>QUADRUPLE PRIME</td>
+                            </tr>
+                            <tr>
+                                <td>⁘</td>
+                                <td>8280</td>
+                                <td>2058</td>
+                                <td>&nbsp;</td>
+                                <td>FOUR DOT PUNCTUATION</td>
+                            </tr>
+                            <tr>
+                                <td>⁙</td>
+                                <td>8281</td>
+                                <td>2059</td>
+                                <td>&nbsp;</td>
+                                <td>FIVE DOT PUNCTUATION</td>
+                            </tr>
+                            <tr>
+                                <td>⁚</td>
+                                <td>8282</td>
+                                <td>205A</td>
+                                <td>&nbsp;</td>
+                                <td>TWO DOT PUNCTUATION</td>
+                            </tr>
+                            <tr>
+                                <td>⁛</td>
+                                <td>8283</td>
+                                <td>205B</td>
+                                <td>&nbsp;</td>
+                                <td>FOUR DOT MARK</td>
+                            </tr>
+                            <tr>
+                                <td>⁜</td>
+                                <td>8284</td>
+                                <td>205C</td>
+                                <td>&nbsp;</td>
+                                <td>DOTTED CROSS</td>
+                            </tr>
+                            <tr>
+                                <td>⁝</td>
+                                <td>8285</td>
+                                <td>205D</td>
+                                <td>&nbsp;</td>
+                                <td>TRICOLON</td>
+                            </tr>
+                            <tr>
+                                <td>⁞</td>
+                                <td>8286</td>
+                                <td>205E</td>
+                                <td>&nbsp;</td>
+                                <td>VERTICAL FOUR DOTS</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>8287</td>
+                                <td>205F</td>
+                                <td>&nbsp;</td>
+                                <td>MEDIUM MATHEMATICAL SPACE</td>
+                            </tr>
+                            <tr>
+                                <td>⁠</td>
+                                <td>8288</td>
+                                <td>2060</td>
+                                <td>&nbsp;</td>
+                                <td>WORD JOINER</td>
+                            </tr>
+                            <tr>
+                                <td>⁡</td>
+                                <td>8289</td>
+                                <td>2061</td>
+                                <td>&nbsp;</td>
+                                <td>FUNCTION APPLICATION</td>
+                            </tr>
+                            <tr>
+                                <td>⁢</td>
+                                <td>8290</td>
+                                <td>2062</td>
+                                <td>&nbsp;</td>
+                                <td>INVISIBLE TIMES</td>
+                            </tr>
+                            <tr>
+                                <td>⁣</td>
+                                <td>8291</td>
+                                <td>2063</td>
+                                <td>&nbsp;</td>
+                                <td>INVISIBLE SEPARATOR</td>
+                            </tr>
+                            <tr>
+                                <td>⁤</td>
+                                <td>8292</td>
+                                <td>2064</td>
+                                <td>&nbsp;</td>
+                                <td>INVISIBLE PLUS</td>
+                            </tr>
+                            <tr>
+                                <td>⁦</td>
+                                <td>8294</td>
+                                <td>2066</td>
+                                <td>&nbsp;</td>
+                                <td>LEFT-TO-RIGHT ISOLATE</td>
+                            </tr>
+                            <tr>
+                                <td>⁧</td>
+                                <td>8295</td>
+                                <td>2067</td>
+                                <td>&nbsp;</td>
+                                <td>RIGHT-TO-LEFT ISOLATE</td>
+                            </tr>
+                            <tr>
+                                <td>⁨</td>
+                                <td>8296</td>
+                                <td>2068</td>
+                                <td>&nbsp;</td>
+                                <td>FIRST STRONG ISOLATE</td>
+                            </tr>
+                            <tr>
+                                <td>⁩</td>
+                                <td>8297</td>
+                                <td>2069</td>
+                                <td>&nbsp;</td>
+                                <td>POP DIRECTIONAL ISOLATE</td>
+                            </tr>
+                            <tr>
+                                <td>⁪</td>
+                                <td>8298</td>
+                                <td>206A</td>
+                                <td>&nbsp;</td>
+                                <td>INHIBIT SYMMETRIC SWAPPING</td>
+                            </tr>
+                            <tr>
+                                <td>⁫</td>
+                                <td>8299</td>
+                                <td>206B</td>
+                                <td>&nbsp;</td>
+                                <td>ACTIVATE SYMMETRIC SWAPPING</td>
+                            </tr>
+                            <tr>
+                                <td>⁬</td>
+                                <td>8300</td>
+                                <td>206C</td>
+                                <td>&nbsp;</td>
+                                <td>INHIBIT ARABIC FORM SHAPING</td>
+                            </tr>
+                            <tr>
+                                <td>⁭</td>
+                                <td>8301</td>
+                                <td>206D</td>
+                                <td>&nbsp;</td>
+                                <td>ACTIVATE ARABIC FORM SHAPING</td>
+                            </tr>
+                            <tr>
+                                <td>⁮</td>
+                                <td>8302</td>
+                                <td>206E</td>
+                                <td>&nbsp;</td>
+                                <td>NATIONAL DIGIT SHAPES</td>
+                            </tr>
+                            <tr>
+                                <td>⁯</td>
+                                <td>8303</td>
+                                <td>206F</td>
+                                <td>&nbsp;</td>
+                                <td>NOMINAL DIGIT SHAPES</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <h2>货币符号</h2>
+                    <hr>
+                    <table class="pt-table-dec">
+                        <tbody>
+                            <tr>
+                                <th style="width:10%">字符</th>
+                                <th style="width:10%">十进制</th>
+                                <th style="width:10%">十六进制</th>
+                                <th style="width:15%">实体</th>
+                                <th>名称</th>
+                            </tr>
+
+                            <tr>
+                                <td>₠</td>
+                                <td>8352</td>
+                                <td>20A0</td>
+                                <td>&nbsp;</td>
+                                <td>EURO-CURRENCY SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₡</td>
+                                <td>8353</td>
+                                <td>20A1</td>
+                                <td>&nbsp;</td>
+                                <td>COLON SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₢</td>
+                                <td>8354</td>
+                                <td>20A2</td>
+                                <td>&nbsp;</td>
+                                <td>CRUZEIRO SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₣</td>
+                                <td>8355</td>
+                                <td>20A3</td>
+                                <td>&nbsp;</td>
+                                <td>FRENCH FRANC SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₤</td>
+                                <td>8356</td>
+                                <td>20A4</td>
+                                <td>&nbsp;</td>
+                                <td>LIRA SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₥</td>
+                                <td>8357</td>
+                                <td>20A5</td>
+                                <td>&nbsp;</td>
+                                <td>MILL SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₦</td>
+                                <td>8358</td>
+                                <td>20A6</td>
+                                <td>&nbsp;</td>
+                                <td>NAIRA SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₧</td>
+                                <td>8359</td>
+                                <td>20A7</td>
+                                <td>&nbsp;</td>
+                                <td>PESETA SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₨</td>
+                                <td>8360</td>
+                                <td>20A8</td>
+                                <td>&nbsp;</td>
+                                <td>RUPEE SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₩</td>
+                                <td>8361</td>
+                                <td>20A9</td>
+                                <td>&nbsp;</td>
+                                <td>WON SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₪</td>
+                                <td>8362</td>
+                                <td>20AA</td>
+                                <td>&nbsp;</td>
+                                <td>NEW SHEQEL SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₫</td>
+                                <td>8363</td>
+                                <td>20AB</td>
+                                <td>&nbsp;</td>
+                                <td>DONG SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>€</td>
+                                <td>8364</td>
+                                <td>20AC</td>
+                                <td>&amp;euro;</td>
+                                <td>EURO SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₭</td>
+                                <td>8365</td>
+                                <td>20AD</td>
+                                <td>&nbsp;</td>
+                                <td>KIP SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₮</td>
+                                <td>8366</td>
+                                <td>20AE</td>
+                                <td>&nbsp;</td>
+                                <td>TUGRIK SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₯</td>
+                                <td>8367</td>
+                                <td>20AF</td>
+                                <td>&nbsp;</td>
+                                <td>DRACHMA SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₰</td>
+                                <td>8368</td>
+                                <td>20B0</td>
+                                <td>&nbsp;</td>
+                                <td>GERMAN PENNY SYMBOL</td>
+                            </tr>
+                            <tr>
+                                <td>₱</td>
+                                <td>8369</td>
+                                <td>20B1</td>
+                                <td>&nbsp;</td>
+                                <td>PESO SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₲</td>
+                                <td>8370</td>
+                                <td>20B2</td>
+                                <td>&nbsp;</td>
+                                <td>GUARANI SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₳</td>
+                                <td>8371</td>
+                                <td>20B3</td>
+                                <td>&nbsp;</td>
+                                <td>AUSTRAL SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₴</td>
+                                <td>8372</td>
+                                <td>20B4</td>
+                                <td>&nbsp;</td>
+                                <td>HRYVNIA SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₵</td>
+                                <td>8373</td>
+                                <td>20B5</td>
+                                <td>&nbsp;</td>
+                                <td>CEDI SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₶</td>
+                                <td>8374</td>
+                                <td>20B6</td>
+                                <td>&nbsp;</td>
+                                <td>LIVRE TOURNOIS SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₷</td>
+                                <td>8375</td>
+                                <td>20B7</td>
+                                <td>&nbsp;</td>
+                                <td>SPESMILO SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₸</td>
+                                <td>8376</td>
+                                <td>20B8</td>
+                                <td>&nbsp;</td>
+                                <td>TENGE SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₹</td>
+                                <td>8377</td>
+                                <td>20B9</td>
+                                <td>&nbsp;</td>
+                                <td>INDIAN RUPEE SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₺</td>
+                                <td>8378</td>
+                                <td>20BA</td>
+                                <td>&nbsp;</td>
+                                <td>TURKISH LIRA SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₻</td>
+                                <td>8379</td>
+                                <td>20BB</td>
+                                <td>&nbsp;</td>
+                                <td>NORDIC MARK SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₼</td>
+                                <td>8380</td>
+                                <td>20BC</td>
+                                <td>&nbsp;</td>
+                                <td>MANAT SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₽</td>
+                                <td>8381</td>
+                                <td>20BD</td>
+                                <td>&nbsp;</td>
+                                <td>RUBLE SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₾</td>
+                                <td>8382</td>
+                                <td>20BE</td>
+                                <td>&nbsp;</td>
+                                <td>LARI SIGN</td>
+                            </tr>
+                            <tr>
+                                <td>₿</td>
+                                <td>8383</td>
+                                <td>20BF</td>
+                                <td>&nbsp;</td>
+                                <td>BITCOIN SIGN</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <hr>
+                    <h2>字母符号</h2>
+                    <hr>
+                    
                 </div>
             </div>
 
-            
+
         </div>
 
 
@@ -225,4 +1093,5 @@
 <link rel="stylesheet" href="../../lib/ptlib.css">
 <link rel="stylesheet" href="../../lib/ptlibex.css">
 <script src="../../lib/ptlib.js"></script>
+
 </html>
