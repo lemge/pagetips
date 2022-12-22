@@ -2228,8 +2228,6 @@ select.pt-i,
   border-radius: 0.4rem;
   vertical-align: middle;
   box-sizing: border-box;
-  display: inline-flex;
-  width: 100%;
 }
 .pt-i[type=text]:focus,
 .pt-i[type=password]:focus,
@@ -2243,6 +2241,9 @@ select.pt-i:focus,
 .pt-i[type=datetime-local]:focus,
 .pt-i[type=range]:focus {
   border: 1px solid #3b82f6;
+}
+.pt-i-w100 {
+  width: auto;
 }
 .pt-t {
   min-height: 5rem;
