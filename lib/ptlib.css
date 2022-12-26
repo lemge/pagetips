@@ -1968,6 +1968,7 @@ p {
   color: #db2777;
 }
 .pt-btn-def {
+  font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
@@ -1994,6 +1995,7 @@ p {
   color: #a1a1aa;
 }
 .pt-btn-blue {
+  font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
@@ -2031,6 +2033,7 @@ p {
   color: #93c5fd;
 }
 .pt-btn-green {
+  font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
@@ -2068,6 +2071,7 @@ p {
   color: #6ee7b7;
 }
 .pt-btn-red {
+  font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
@@ -2105,6 +2109,7 @@ p {
   color: #fca5a5;
 }
 .pt-btn-yellow {
+  font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
@@ -2142,6 +2147,7 @@ p {
   color: #fde68a;
 }
 .pt-btn-purple {
+  font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
@@ -2179,6 +2185,7 @@ p {
   color: #c4b5fd;
 }
 .pt-btn-pink {
+  font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
