@@ -2526,7 +2526,6 @@ a:hover {
   border-spacing: 0;
   empty-cells: show;
   width: 100%;
-  border: 1px solid red;
 }
 .pt-table th {
   text-align: center;
@@ -2986,5 +2985,11 @@ ul ul {
 }
 .pt-table .datailed-div {
   word-break: break-word;
+}
+.table-container {
+  overflow: auto;
+}
+.table-container table {
+  min-width: 50rem;
 }
 /*# sourceMappingURL=ptlibex.css.map */
