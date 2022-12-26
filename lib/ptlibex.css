@@ -27,13 +27,12 @@ small {
 img {
   max-width: 100%;
   max-height: 100%;
-  display: block;
 }
 .com-shadow {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
 }
 .com-shadow-in {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
 }
 .com-shadow-txt {
   text-shadow: 1px 1px 1px #00000040;
@@ -69,7 +68,7 @@ img {
   flex: auto;
 }
 .pt-panel {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   border: 1px solid #d4d4d8;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
@@ -691,13 +690,13 @@ p {
   margin-left: 100%;
 }
 .pt-msg {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
 }
 .pm-def {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -705,7 +704,7 @@ p {
   color: #18181b;
 }
 .pm-blue {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -713,7 +712,7 @@ p {
   color: #1d4ed8;
 }
 .pm-green {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -721,7 +720,7 @@ p {
   color: #047857;
 }
 .pm-red {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -729,7 +728,7 @@ p {
   color: #b91c1c;
 }
 .pm-yellow {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -737,7 +736,7 @@ p {
   color: #b45309;
 }
 .pm-def-w {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -745,7 +744,7 @@ p {
   background-color: #3f3f46;
 }
 .pm-blue-w {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -753,7 +752,7 @@ p {
   background-color: #3b82f6;
 }
 .pm-green-w {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -761,7 +760,7 @@ p {
   background-color: #10b981;
 }
 .pm-red-w {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -769,7 +768,7 @@ p {
   background-color: #ef4444;
 }
 .pm-yellow-w {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -1969,7 +1968,7 @@ p {
 }
 .pt-btn-def {
   font-size: 1rem;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -1986,7 +1985,7 @@ p {
   background-image: linear-gradient(#fafafa 10%, #f4f4f5 50%, #e4e4e7 90%);
 }
 .pt-btn-def:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#f4f4f5 10%, #f4f4f5 50%, #f4f4f5 90%);
 }
 .pt-btn-def[disabled] {
@@ -1996,7 +1995,7 @@ p {
 }
 .pt-btn-blue {
   font-size: 1rem;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -2017,14 +2016,14 @@ p {
   background-image: linear-gradient(#fafafa 10%, #f4f4f5 50%, #e4e4e7 90%);
 }
 .pt-btn-blue:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#f4f4f5 10%, #f4f4f5 50%, #f4f4f5 90%);
 }
 .pt-btn-blue:hover {
   background-image: linear-gradient(#60a5fa 10%, #3b82f6 50%, #2563eb 90%);
 }
 .pt-btn-blue:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#2563eb 10%, #2563eb 50%, #2563eb 90%);
 }
 .pt-btn-blue[disabled] {
@@ -2034,7 +2033,7 @@ p {
 }
 .pt-btn-green {
   font-size: 1rem;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -2055,14 +2054,14 @@ p {
   background-image: linear-gradient(#fafafa 10%, #f4f4f5 50%, #e4e4e7 90%);
 }
 .pt-btn-green:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#f4f4f5 10%, #f4f4f5 50%, #f4f4f5 90%);
 }
 .pt-btn-green:hover {
   background-image: linear-gradient(#34d399 10%, #10b981 50%, #059669 90%);
 }
 .pt-btn-green:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#059669 10%, #059669 50%, #059669 90%);
 }
 .pt-btn-green[disabled] {
@@ -2072,7 +2071,7 @@ p {
 }
 .pt-btn-red {
   font-size: 1rem;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -2093,14 +2092,14 @@ p {
   background-image: linear-gradient(#fafafa 10%, #f4f4f5 50%, #e4e4e7 90%);
 }
 .pt-btn-red:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#f4f4f5 10%, #f4f4f5 50%, #f4f4f5 90%);
 }
 .pt-btn-red:hover {
   background-image: linear-gradient(#f87171 10%, #ef4444 50%, #dc2626 90%);
 }
 .pt-btn-red:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#dc2626 10%, #dc2626 50%, #dc2626 90%);
 }
 .pt-btn-red[disabled] {
@@ -2110,7 +2109,7 @@ p {
 }
 .pt-btn-yellow {
   font-size: 1rem;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -2131,14 +2130,14 @@ p {
   background-image: linear-gradient(#fafafa 10%, #f4f4f5 50%, #e4e4e7 90%);
 }
 .pt-btn-yellow:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#f4f4f5 10%, #f4f4f5 50%, #f4f4f5 90%);
 }
 .pt-btn-yellow:hover {
   background-image: linear-gradient(#fcd34d 10%, #fbbf24 50%, #f59e0b 90%);
 }
 .pt-btn-yellow:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#f59e0b 10%, #f59e0b 50%, #f59e0b 90%);
 }
 .pt-btn-yellow[disabled] {
@@ -2148,7 +2147,7 @@ p {
 }
 .pt-btn-purple {
   font-size: 1rem;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -2169,14 +2168,14 @@ p {
   background-image: linear-gradient(#fafafa 10%, #f4f4f5 50%, #e4e4e7 90%);
 }
 .pt-btn-purple:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#f4f4f5 10%, #f4f4f5 50%, #f4f4f5 90%);
 }
 .pt-btn-purple:hover {
   background-image: linear-gradient(#a78bfa 10%, #8b5cf6 50%, #7c3aed 90%);
 }
 .pt-btn-purple:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#7c3aed 10%, #7c3aed 50%, #7c3aed 90%);
 }
 .pt-btn-purple[disabled] {
@@ -2186,7 +2185,7 @@ p {
 }
 .pt-btn-pink {
   font-size: 1rem;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   outline: 0;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -2207,14 +2206,14 @@ p {
   background-image: linear-gradient(#fafafa 10%, #f4f4f5 50%, #e4e4e7 90%);
 }
 .pt-btn-pink:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#f4f4f5 10%, #f4f4f5 50%, #f4f4f5 90%);
 }
 .pt-btn-pink:hover {
   background-image: linear-gradient(#f472b6 10%, #ec4899 50%, #db2777 90%);
 }
 .pt-btn-pink:active {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   background-image: linear-gradient(#db2777 10%, #db2777 50%, #db2777 90%);
 }
 .pt-btn-pink[disabled] {
@@ -2245,7 +2244,7 @@ select.pt-i,
   outline: 0;
   padding: 0.5rem 0.6rem;
   border: 1px solid #a1a1aa;
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   border-radius: 0.4rem;
   vertical-align: middle;
   box-sizing: border-box;
@@ -2285,7 +2284,7 @@ label.pt-i span {
 }
 label.pt-i span:hover {
   border-color: #3b82f6;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
 }
 label.pt-i input[type=checkbox],
 label.pt-i input[type=radio] {
@@ -2303,7 +2302,7 @@ label.pt-i input[type=checkbox] {
   visibility: hidden;
 }
 label.pt-i input[type=checkbox]:after {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   text-shadow: 1px 1px 1px #00000040;
   position: absolute;
   width: 1rem;
@@ -2329,7 +2328,7 @@ label.pt-i input[type=radio] {
   visibility: hidden;
 }
 label.pt-i input[type=radio]:after {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   position: absolute;
   width: 1rem;
   height: 1rem;
@@ -2343,7 +2342,7 @@ label.pt-i input[type=radio]:after {
   border-radius: 50%;
 }
 label.pt-i input[type=radio]:checked:before {
-  box-shadow: inset rgb(0 0 0 0.1) 0px 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
+  box-shadow: inset rgb(0 0 0 0.1) 0 4px 6px -1px, inset rgb(0 0 0 0.1) 0px 2px 4px -1px;
   text-shadow: 1px 1px 1px #00000040;
   content: "✓";
   position: absolute;
@@ -2424,7 +2423,7 @@ label.pt-i input[type=radio]:checked:before {
   overflow: hidden;
 }
 .pt-cell {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   border: 1px solid #d4d4d8;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
@@ -2471,7 +2470,7 @@ a:hover {
 .pt-ul-adorn {
   max-width: 100%;
   list-style: none;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   border: 1px solid #d4d4d8;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
@@ -2486,7 +2485,7 @@ a:hover {
   padding: 0.5rem;
 }
 .pt-ul-adorn li:hover {
-  box-shadow: 0px 0px 4px #d4d4d8;
+  box-shadow: 0 0 4px #d4d4d8;
   border-color: #a1a1aa;
 }
 .pt-ul-adorn li:last-child {
@@ -2495,7 +2494,7 @@ a:hover {
 .pt-ul-free-w {
   max-width: 100%;
   list-style: none;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   border: 1px solid #d4d4d8;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
@@ -2514,14 +2513,14 @@ a:hover {
   padding: 0.5rem;
 }
 .pt-ul-free-w li:hover {
-  box-shadow: 0px 0px 4px #d4d4d8;
+  box-shadow: 0 0 4px #d4d4d8;
   border-color: #a1a1aa;
 }
 .pt-ul-free-w li:last-child {
   border-bottom: none;
 }
 .pt-table {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
@@ -2617,7 +2616,7 @@ ul ul {
   color: #ffffff;
 }
 .pt-navi {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   background-color: #18181b;
   color: #ffffff;
   list-style: none;
@@ -2665,7 +2664,7 @@ ul ul {
   right: 0;
 }
 .acl-box {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   display: block;
   position: fixed;
   z-index: 100;
@@ -2722,7 +2721,7 @@ ul ul {
   border-radius: 0 0 0.5rem 0;
   z-index: -1;
   cursor: pointer;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
 }
 .acl-box .aclist-hidden {
   display: none;
@@ -2736,7 +2735,7 @@ ul ul {
   width: 10rem;
 }
 .acl-box-menu {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   display: block;
   position: fixed;
   z-index: 100;
@@ -2797,7 +2796,7 @@ ul ul {
   display: block;
   padding: 0.5rem;
   width: 1rem;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   cursor: pointer;
   background-color: #3f3f46;
   color: #ffffff;
@@ -2835,7 +2834,7 @@ ul ul {
   vertical-align: middle;
   align-items: center;
   justify-content: center;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -2849,7 +2848,7 @@ ul ul {
   left: 1rem;
   background-color: #ffffff;
   border-radius: 5px 5px 5px 0;
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   z-index: 110;
   overflow-y: auto;
 }
@@ -2894,7 +2893,7 @@ ul ul {
   height: fit-content;
 }
 .acl-box-touch li a {
-  box-shadow: rgb(0 0 0 0.1) 0px 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
+  box-shadow: rgb(0 0 0 0.1) 0 4px 6px -1px, rgb(0 0 0 0.06) 0px 2px 4px -1px;
   text-shadow: 1px 1px 1px #00000040;
   display: block;
   border: 1px solid #a1a1aa;
