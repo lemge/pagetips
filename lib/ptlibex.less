@@ -583,3 +583,82 @@
     min-width: 50rem;
   }
 }
+//简单风格talbe 结束
+
+//综合列表布局开始
+//博客列表布局
+.pt-list-blog{
+  ul{
+    display: block;
+    li{
+      display: block;
+      a{
+
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+        color: @pt-gray-9;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid @pt-gray-3;
+        &:hover{
+          .com-shadow-card;
+        }
+        .list-title{
+          font-size: 1.1rem;
+          font-weight: bold;
+          width: 100%;
+          padding: 10px;
+        }
+          .list-txt{
+            flex-grow: 2;
+            padding: 10px;
+            width: 5rem;
+            line-height: 1.6rem;
+          }
+          .list-img{
+            width: 15rem;
+            max-height: 10rem;
+            overflow: hidden;
+            padding: 5px;
+            img{
+              width: 100%;
+            }
+          }
+
+        .list-ex{
+          width: 100%;
+          padding: 10px;
+          font-size: 0.9rem;
+
+        }
+      }
+    }
+  }
+}
+//移动屏幕显示
+@media (max-width: 768px) {
+  .pt-list-blog{
+    ul{
+      li{
+        a{
+          .list-title{
+          }
+          .list-txt{
+            height: 2.5rem;
+            overflow: hidden;
+          }
+          .list-img{
+            width: 6rem;
+            img{
+            }
+          }
+          .list-ex{
+          }
+        }
+      }
+    }
+  }
+}
+//综合列表布局结束

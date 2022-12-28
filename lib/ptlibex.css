@@ -31,6 +31,9 @@ img {
 .com-shadow {
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+.com-shadow-card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0px 10px 5px;
+}
 .com-shadow-in {
   box-shadow: inset rgba(0, 0, 0, 0.1) 0 4px 6px -1px, inset rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
 }
@@ -3051,5 +3054,59 @@ ul ul {
 }
 .table-container table {
   min-width: 50rem;
+}
+.pt-list-blog ul {
+  display: block;
+}
+.pt-list-blog ul li {
+  display: block;
+}
+.pt-list-blog ul li a {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: #18181b;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #d4d4d8;
+}
+.pt-list-blog ul li a:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0px 10px 5px;
+}
+.pt-list-blog ul li a .list-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+}
+.pt-list-blog ul li a .list-txt {
+  flex-grow: 2;
+  padding: 10px;
+  width: 5rem;
+  line-height: 1.6rem;
+}
+.pt-list-blog ul li a .list-img {
+  width: 15rem;
+  max-height: 10rem;
+  overflow: hidden;
+  padding: 5px;
+}
+.pt-list-blog ul li a .list-img img {
+  width: 100%;
+}
+.pt-list-blog ul li a .list-ex {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .pt-list-blog ul li a .list-txt {
+    height: 2.5rem;
+    overflow: hidden;
+  }
+  .pt-list-blog ul li a .list-img {
+    width: 6rem;
+  }
 }
 /*# sourceMappingURL=ptlibex.css.map */
