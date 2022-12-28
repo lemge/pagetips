@@ -95,11 +95,11 @@
   }
 }
 
-
-.pt-navi {
-  .com-shadow;
+.pt-navi{
   background-color: @pt-gray-9;
   color: @white;
+  ul{
+  .com-shadow;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -117,8 +117,8 @@
 
   li {
   }
-
   .pt-navi-sw {
+    //navi折叠开关
     position: absolute;
     right: 0;
     top: 0;
@@ -143,7 +143,27 @@
     }
   }
 }
+}
 
+.pt-navi-bc-inherit{
+  .bc-in;
+  ul{
+    a{
+      &:hover{
+        background-color: inherit;
+      }
+    }
+  }
+}
+
+.pt-navi-container{
+  display: flex;
+  justify-content: center;
+  ul{
+    max-width: 60rem;
+    flex-grow: 2;
+  }
+}
 .ptNavi-fix {
   position: fixed;
   width: 100%;
@@ -153,6 +173,8 @@
   left: 0;
   right: 0;
 }
+
+
 
 //autocatalog样式开始
 .acl-box {

@@ -689,6 +689,50 @@ p {
 .pt-co-24 {
   margin-left: 100%;
 }
+.bc-in {
+  background-color: inherit;
+  color: inherit;
+}
+.bc-black {
+  background-color: #f4f4f5;
+  color: #18181b;
+}
+.bc-black-w {
+  color: #ffffff;
+  background-color: #3f3f46;
+}
+.bc-blue {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+.bc-blue-w {
+  color: #ffffff;
+  background-color: #3b82f6;
+}
+.bc-green {
+  background-color: #d1fae5;
+  color: #047857;
+}
+.bc-green-w {
+  color: #ffffff;
+  background-color: #10b981;
+}
+.bc-red {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+.bc-red-w {
+  color: #ffffff;
+  background-color: #ef4444;
+}
+.bc-yellow {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+.bc-yellow-w {
+  color: #ffffff;
+  background-color: #f59e0b;
+}
 .pt-msg {
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
@@ -2616,30 +2660,32 @@ ul ul {
   color: #ffffff;
 }
 .pt-navi {
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   background-color: #18181b;
   color: #ffffff;
+}
+.pt-navi ul {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
 }
-.pt-navi .navi-title {
+.pt-navi ul .navi-title {
   font-weight: bold;
 }
-.pt-navi .navi-title a {
+.pt-navi ul .navi-title a {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.pt-navi .pt-navi-sw {
+.pt-navi ul .pt-navi-sw {
   position: absolute;
   right: 0;
   top: 0;
   display: none;
   cursor: pointer;
 }
-.pt-navi a {
+.pt-navi ul a {
   display: block;
   white-space: nowrap;
   color: #ffffff;
@@ -2651,8 +2697,23 @@ ul ul {
   cursor: pointer;
   line-height: 1.5rem;
 }
-.pt-navi a:hover {
+.pt-navi ul a:hover {
   background-color: #3f3f46;
+}
+.pt-navi-bc-inherit {
+  background-color: inherit;
+  color: inherit;
+}
+.pt-navi-bc-inherit ul a:hover {
+  background-color: inherit;
+}
+.pt-navi-container {
+  display: flex;
+  justify-content: center;
+}
+.pt-navi-container ul {
+  max-width: 60rem;
+  flex-grow: 2;
 }
 .ptNavi-fix {
   position: fixed;

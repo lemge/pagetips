@@ -689,6 +689,50 @@ p {
 .pt-co-24 {
   margin-left: 100%;
 }
+.bc-in {
+  background-color: inherit;
+  color: inherit;
+}
+.bc-black {
+  background-color: #f4f4f5;
+  color: #18181b;
+}
+.bc-black-w {
+  color: #ffffff;
+  background-color: #3f3f46;
+}
+.bc-blue {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+.bc-blue-w {
+  color: #ffffff;
+  background-color: #3b82f6;
+}
+.bc-green {
+  background-color: #d1fae5;
+  color: #047857;
+}
+.bc-green-w {
+  color: #ffffff;
+  background-color: #10b981;
+}
+.bc-red {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+.bc-red-w {
+  color: #ffffff;
+  background-color: #ef4444;
+}
+.bc-yellow {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+.bc-yellow-w {
+  color: #ffffff;
+  background-color: #f59e0b;
+}
 .pt-msg {
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   padding: 1rem 1.5rem 1rem 1.5rem;
