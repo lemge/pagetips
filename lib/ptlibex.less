@@ -588,6 +588,13 @@
 //综合列表布局开始
 //博客列表布局
 .pt-list-blog{
+  .list-box-title{
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid @pt-gray-3;
+  }
   ul{
     display: block;
     li{
@@ -670,6 +677,14 @@
 //陈列样式
 
 .pt-list-window{
+
+  .list-box-title{
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid @pt-gray-3;
+  }
   ul{
     display: flex;
     flex-wrap: wrap;
@@ -746,6 +761,118 @@
             }
           }
           .list-ex{
+          }
+        }
+      }
+    }
+  }
+}
+
+//列表块布局
+
+.pt-list-block{
+  margin: 10px;
+  margin-bottom: 20px;
+  .list-box-title{
+    font-weight: bold;
+    border-bottom:1px solid @pt-gray-4;
+    padding: 10px;
+  }
+  ul{
+    display: block;
+    flex-wrap: wrap;
+    li{
+      display: block;
+      &:first-child{
+        a{
+          justify-content: space-between;
+          .list-img{
+            display: block;
+            order: 2;
+            width: 100px;
+            flex-shrink: 0;
+          }
+          .list-title{
+            //font-weight: bold;
+            order: 1;
+            line-height: 2rem;
+            height: 4rem;
+            white-space: unset;
+          }
+        }
+      }
+      a{
+        padding: 5px;
+        display: flex;
+        text-decoration: none;
+        color: @pt-gray-9;
+        border-bottom: 1px solid @pt-gray-3;
+        &:hover{
+          //.com-shadow-card;
+          font-weight: bold;
+        }
+        .list-title{
+          line-height: 2rem;
+          height: 2rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .list-txt{
+          display: none;
+        }
+        .list-img{
+          display: none;
+          img{
+            width: 100%;
+          }
+        }
+
+        .list-ex{
+          display: none;
+        }
+      }
+    }
+  }
+}
+//作品集目录
+.pt-list-cell{
+  margin-bottom: 20px;
+
+  .list-box-title{
+    font-weight: bold;
+    border-bottom:1px solid @pt-gray-4;
+    padding: 10px;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      display: flex;
+      width: 25%;
+      border-bottom: 1px dotted @pt-gray-4;
+      a{
+        text-decoration: none;
+        color: @pt-gray-9;
+        display: flex;
+        padding: 10px;
+        &:hover{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .pt-list-cell{
+    .list-box-title{
+    }
+    ul{
+      li{
+        width: 100%;
+        a{
+          &:hover{
           }
         }
       }

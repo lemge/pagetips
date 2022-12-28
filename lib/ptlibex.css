@@ -3055,6 +3055,13 @@ ul ul {
 .table-container table {
   min-width: 50rem;
 }
+.pt-list-blog .list-box-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4d4d8;
+}
 .pt-list-blog ul {
   display: block;
 }
@@ -3113,6 +3120,13 @@ ul ul {
     width: 6rem;
   }
 }
+.pt-list-window .list-box-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4d4d8;
+}
 .pt-list-window ul {
   display: flex;
   flex-wrap: wrap;
@@ -3170,6 +3184,97 @@ ul ul {
   .pt-list-window ul li {
     width: 48%;
     margin: 1%;
+  }
+}
+.pt-list-block {
+  margin: 10px;
+  margin-bottom: 20px;
+}
+.pt-list-block .list-box-title {
+  font-weight: bold;
+  border-bottom: 1px solid #a1a1aa;
+  padding: 10px;
+}
+.pt-list-block ul {
+  display: block;
+  flex-wrap: wrap;
+}
+.pt-list-block ul li {
+  display: block;
+}
+.pt-list-block ul li:first-child a {
+  justify-content: space-between;
+}
+.pt-list-block ul li:first-child a .list-img {
+  display: block;
+  order: 2;
+  width: 100px;
+  flex-shrink: 0;
+}
+.pt-list-block ul li:first-child a .list-title {
+  order: 1;
+  line-height: 2rem;
+  height: 4rem;
+  white-space: unset;
+}
+.pt-list-block ul li a {
+  padding: 5px;
+  display: flex;
+  text-decoration: none;
+  color: #18181b;
+  border-bottom: 1px solid #d4d4d8;
+}
+.pt-list-block ul li a:hover {
+  font-weight: bold;
+}
+.pt-list-block ul li a .list-title {
+  line-height: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.pt-list-block ul li a .list-txt {
+  display: none;
+}
+.pt-list-block ul li a .list-img {
+  display: none;
+}
+.pt-list-block ul li a .list-img img {
+  width: 100%;
+}
+.pt-list-block ul li a .list-ex {
+  display: none;
+}
+.pt-list-cell {
+  margin-bottom: 20px;
+}
+.pt-list-cell .list-box-title {
+  font-weight: bold;
+  border-bottom: 1px solid #a1a1aa;
+  padding: 10px;
+}
+.pt-list-cell ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pt-list-cell ul li {
+  display: flex;
+  width: 25%;
+  border-bottom: 1px dotted #a1a1aa;
+}
+.pt-list-cell ul li a {
+  text-decoration: none;
+  color: #18181b;
+  display: flex;
+  padding: 10px;
+}
+.pt-list-cell ul li a:hover {
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .pt-list-cell ul li {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=ptlibex.css.map */
