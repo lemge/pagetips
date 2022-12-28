@@ -182,8 +182,8 @@
   display: block;
   position: fixed;
   z-index: 100;
-  top: 0px;
-  bottom: 0px;
+  top: 0;
+  bottom: 0;
   max-width: 80%;
   border-right: 1px solid @pt-gray-2;
   //overflow-y: scroll;
@@ -214,8 +214,8 @@
 
   ul {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-color: @white;
 
     border-left: 1px solid @pt-gray-4;
@@ -268,8 +268,8 @@
   display: block;
   position: fixed;
   z-index: 100;
-  top: 0px;
-  bottom: 0px;
+  top: 0;
+  bottom: 0;
   max-width: 80%;
   border-right: 1px solid @pt-gray-2;
   //overflow-y: scroll;
@@ -277,8 +277,8 @@
 
   ul {
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-color:@pt-gray-3;
 
     padding-left: 0.5rem;
@@ -610,18 +610,21 @@
           font-weight: bold;
           width: 100%;
           padding: 10px;
+          order: 1;
         }
           .list-txt{
             flex-grow: 2;
             padding: 10px;
             width: 5rem;
             line-height: 1.6rem;
+            order: 3;
           }
           .list-img{
             width: 15rem;
             max-height: 10rem;
             overflow: hidden;
             padding: 5px;
+            order: 2;
             img{
               width: 100%;
             }
@@ -631,12 +634,14 @@
           width: 100%;
           padding: 10px;
           font-size: 0.9rem;
+          order: 4;
 
         }
       }
     }
   }
 }
+
 //移动屏幕显示
 @media (max-width: 768px) {
   .pt-list-blog{
@@ -661,4 +666,91 @@
     }
   }
 }
+
+//陈列样式
+
+.pt-list-window{
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-evenly;
+    li{
+      display: block;
+      width: 23%;
+      margin: 1%;
+      a{
+
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+        color: @pt-gray-9;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        border: 1px solid @pt-gray-3;
+        &:hover{
+          .com-shadow-card;
+        }
+        .list-title{
+          font-size: 1.1rem;
+          font-weight: bold;
+          width: 100%;
+          padding: 10px;
+          order: 2;
+          height: 2.5rem;
+          overflow: hidden;
+        }
+        .list-txt{
+          flex-grow: 2;
+          padding: 10px;
+          width: 5rem;
+          line-height: 1.6rem;
+          order: 3;
+          height: 2.5rem;
+          overflow: hidden;
+        }
+        .list-img{
+          overflow: hidden;
+          padding: 5px;
+          order: 1;
+          img{
+            width: 100%;
+          }
+        }
+
+        .list-ex{
+          width: 100%;
+          padding: 10px;
+          font-size: 0.9rem;
+          order: 4;
+
+        }
+      }
+    }
+  }
+}
+
+//移动屏幕显示
+@media (max-width: 768px) {
+  .pt-list-window{
+    ul{
+      li{
+        width: 48%;
+        margin: 1%;
+        a{
+          .list-title{
+          }
+          .list-txt{
+          }
+          .list-img{
+            img{
+            }
+          }
+          .list-ex{
+          }
+        }
+      }
+    }
+  }
+}
+
 //综合列表布局结束

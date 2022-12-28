@@ -2732,8 +2732,8 @@ ul ul {
   display: block;
   position: fixed;
   z-index: 100;
-  top: 0px;
-  bottom: 0px;
+  top: 0;
+  bottom: 0;
   max-width: 80%;
   border-right: 1px solid #e4e4e7;
 }
@@ -2758,8 +2758,8 @@ ul ul {
 }
 .acl-box ul {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   background-color: #ffffff;
   border-left: 1px solid #a1a1aa;
 }
@@ -2803,15 +2803,15 @@ ul ul {
   display: block;
   position: fixed;
   z-index: 100;
-  top: 0px;
-  bottom: 0px;
+  top: 0;
+  bottom: 0;
   max-width: 80%;
   border-right: 1px solid #e4e4e7;
 }
 .acl-box-menu ul {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   background-color: #d4d4d8;
   padding-left: 0.5rem;
 }
@@ -3079,18 +3079,21 @@ ul ul {
   font-weight: bold;
   width: 100%;
   padding: 10px;
+  order: 1;
 }
 .pt-list-blog ul li a .list-txt {
   flex-grow: 2;
   padding: 10px;
   width: 5rem;
   line-height: 1.6rem;
+  order: 3;
 }
 .pt-list-blog ul li a .list-img {
   width: 15rem;
   max-height: 10rem;
   overflow: hidden;
   padding: 5px;
+  order: 2;
 }
 .pt-list-blog ul li a .list-img img {
   width: 100%;
@@ -3099,6 +3102,7 @@ ul ul {
   width: 100%;
   padding: 10px;
   font-size: 0.9rem;
+  order: 4;
 }
 @media (max-width: 768px) {
   .pt-list-blog ul li a .list-txt {
@@ -3107,6 +3111,65 @@ ul ul {
   }
   .pt-list-blog ul li a .list-img {
     width: 6rem;
+  }
+}
+.pt-list-window ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pt-list-window ul li {
+  display: block;
+  width: 23%;
+  margin: 1%;
+}
+.pt-list-window ul li a {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: #18181b;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  border: 1px solid #d4d4d8;
+}
+.pt-list-window ul li a:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0px 10px 5px;
+}
+.pt-list-window ul li a .list-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  order: 2;
+  height: 2.5rem;
+  overflow: hidden;
+}
+.pt-list-window ul li a .list-txt {
+  flex-grow: 2;
+  padding: 10px;
+  width: 5rem;
+  line-height: 1.6rem;
+  order: 3;
+  height: 2.5rem;
+  overflow: hidden;
+}
+.pt-list-window ul li a .list-img {
+  overflow: hidden;
+  padding: 5px;
+  order: 1;
+}
+.pt-list-window ul li a .list-img img {
+  width: 100%;
+}
+.pt-list-window ul li a .list-ex {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  order: 4;
+}
+@media (max-width: 768px) {
+  .pt-list-window ul li {
+    width: 48%;
+    margin: 1%;
   }
 }
 /*# sourceMappingURL=ptlibex.css.map */
