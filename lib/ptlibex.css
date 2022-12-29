@@ -1857,6 +1857,29 @@ p {
   margin-left: 0.5rem;
   margin-right: -0.5rem;
 }
+.pt-tag-def-p {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  line-height: 1.6rem;
+  color: #3f3f46;
+  background-color: #ffffff;
+}
+.pt-tag-def-p span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: -0.5rem;
+}
 .pt-tag-blue {
   display: inline-flex;
   background-color: #3f3f46;
@@ -1882,6 +1905,31 @@ p {
 }
 .pt-tag-blue span {
   color: #2563eb;
+}
+.pt-tag-blue-p {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  line-height: 1.6rem;
+  color: #3f3f46;
+  background-color: #ffffff;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+.pt-tag-blue-p span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: -0.5rem;
 }
 .pt-tag-red {
   display: inline-flex;
@@ -1909,6 +1957,31 @@ p {
 .pt-tag-red span {
   color: #dc2626;
 }
+.pt-tag-red-p {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  line-height: 1.6rem;
+  color: #3f3f46;
+  background-color: #ffffff;
+  border: 1px solid #dc2626;
+  color: #dc2626;
+}
+.pt-tag-red-p span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: -0.5rem;
+}
 .pt-tag-yellow {
   display: inline-flex;
   background-color: #3f3f46;
@@ -1934,6 +2007,31 @@ p {
 }
 .pt-tag-yellow span {
   color: #f59e0b;
+}
+.pt-tag-yellow-p {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  line-height: 1.6rem;
+  color: #3f3f46;
+  background-color: #ffffff;
+  border: 1px solid #f59e0b;
+  color: #f59e0b;
+}
+.pt-tag-yellow-p span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: -0.5rem;
 }
 .pt-tag-green {
   display: inline-flex;
@@ -1961,6 +2059,31 @@ p {
 .pt-tag-green span {
   color: #059669;
 }
+.pt-tag-green-p {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  line-height: 1.6rem;
+  color: #3f3f46;
+  background-color: #ffffff;
+  border: 1px solid #10b981;
+  color: #059669;
+}
+.pt-tag-green-p span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: -0.5rem;
+}
 .pt-tag-purple {
   display: inline-flex;
   background-color: #3f3f46;
@@ -1987,6 +2110,31 @@ p {
 .pt-tag-purple span {
   color: #7c3aed;
 }
+.pt-tag-purple-p {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  line-height: 1.6rem;
+  color: #3f3f46;
+  background-color: #ffffff;
+  border: 1px solid #8b5cf6;
+  color: #7c3aed;
+}
+.pt-tag-purple-p span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: -0.5rem;
+}
 .pt-tag-pink {
   display: inline-flex;
   background-color: #3f3f46;
@@ -2012,6 +2160,31 @@ p {
 }
 .pt-tag-pink span {
   color: #db2777;
+}
+.pt-tag-pink-p {
+  display: inline-flex;
+  background-color: #3f3f46;
+  color: #ffffff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  line-height: 1.6rem;
+  color: #3f3f46;
+  background-color: #ffffff;
+  border: 1px solid #f472b6;
+  color: #db2777;
+}
+.pt-tag-pink-p span {
+  display: inline-flex;
+  background-color: white;
+  color: #3f3f46;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: -0.5rem;
 }
 .pt-btn-def {
   font-size: 1rem;
@@ -3282,5 +3455,72 @@ ul ul {
   .pt-list-cell ul li {
     width: 100%;
   }
+}
+.pt-list-post {
+  padding: 10px;
+}
+.pt-list-post .list-box-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4d4d8;
+}
+.pt-list-post ul {
+  display: block;
+}
+.pt-list-post ul li {
+  display: block;
+}
+.pt-list-post ul li a {
+  display: flex;
+  text-decoration: none;
+  color: #18181b;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #e4e4e7;
+  border-radius: 4px;
+}
+.pt-list-post ul li a:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0px 10px 5px;
+}
+.pt-list-post ul li a .list-title {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  width: 100%;
+  order: 2;
+  margin-bottom: 5px;
+}
+.pt-list-post ul li a .list-txt {
+  display: none;
+  width: 100%;
+  line-height: 1.6rem;
+  height: 1.6rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  order: 3;
+}
+.pt-list-post ul li a .list-img {
+  width: 4rem;
+  max-height: 10rem;
+  overflow: hidden;
+  order: 4;
+  margin-right: 5px;
+}
+.pt-list-post ul li a .list-img img {
+  width: 100%;
+}
+.pt-list-post ul li a .list-ex {
+  width: 100%;
+  font-size: 0.9rem;
+  order: 4;
+  margin-top: 5px;
 }
 /*# sourceMappingURL=ptlibex.css.map */
