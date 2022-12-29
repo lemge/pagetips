@@ -3699,7 +3699,6 @@ ul ul {
   height: 68px;
   overflow: hidden;
   order: 1;
-  background-color: #e4e4e7;
   border-radius: 8px;
 }
 .pt-list-icon ul li a .list-img img {
@@ -3767,7 +3766,6 @@ ul ul {
   height: 68px;
   overflow: hidden;
   order: 1;
-  background-color: #e4e4e7;
   border-radius: 8px;
   flex-shrink: 0;
 }
