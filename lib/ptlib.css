@@ -2677,9 +2677,6 @@ label.pt-i input[type=radio]:checked:before {
 .pt-a-w:hover {
   text-shadow: 1px 1px 1px #00000040;
 }
-a:hover {
-  text-shadow: 1px 1px 1px #00000040;
-}
 .pt-ul {
   list-style: none;
 }

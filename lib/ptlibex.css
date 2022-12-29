@@ -2677,9 +2677,6 @@ label.pt-i input[type=radio]:checked:before {
 .pt-a-w:hover {
   text-shadow: 1px 1px 1px #00000040;
 }
-a:hover {
-  text-shadow: 1px 1px 1px #00000040;
-}
 .pt-ul {
   list-style: none;
 }
@@ -3258,6 +3255,9 @@ ul ul {
 .pt-list-blog ul li a:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0 0px 10px 5px;
 }
+.pt-list-blog ul li a:hover .list-img img {
+  transform: scale(1.1);
+}
 .pt-list-blog ul li a .list-title {
   font-size: 1.1rem;
   font-weight: bold;
@@ -3283,6 +3283,7 @@ ul ul {
 }
 .pt-list-blog ul li a .list-img img {
   width: 100%;
+  transition: all 1000ms;
 }
 .pt-list-blog ul li a .list-ex {
   width: 100%;
@@ -3406,6 +3407,9 @@ ul ul {
 .pt-list-block ul li a:hover {
   font-weight: bold;
 }
+.pt-list-block ul li a:hover .list-img img {
+  transform: scale(1.1);
+}
 .pt-list-block ul li a .list-title {
   line-height: 2rem;
   height: 2rem;
@@ -3421,8 +3425,121 @@ ul ul {
 }
 .pt-list-block ul li a .list-img img {
   width: 100%;
+  transition: all 500ms;
 }
 .pt-list-block ul li a .list-ex {
+  display: none;
+}
+.pt-list-block-img-list {
+  margin: 10px;
+  margin-bottom: 20px;
+}
+.pt-list-block-img-list .list-box-title {
+  font-weight: bold;
+  border-bottom: 1px solid #a1a1aa;
+  padding: 10px;
+}
+.pt-list-block-img-list ul {
+  display: block;
+  flex-wrap: wrap;
+}
+.pt-list-block-img-list ul li {
+  display: block;
+}
+.pt-list-block-img-list ul li a {
+  padding: 5px;
+  display: flex;
+  text-decoration: none;
+  color: #18181b;
+  border-bottom: 1px solid #d4d4d8;
+}
+.pt-list-block-img-list ul li a:hover {
+  font-weight: bold;
+}
+.pt-list-block-img-list ul li a .list-title {
+  line-height: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  order: 2;
+  padding-left: 5px;
+}
+.pt-list-block-img-list ul li a .list-txt {
+  display: none;
+}
+.pt-list-block-img-list ul li a .list-img {
+  display: flex;
+  order: 1;
+  width: 48px;
+  flex-shrink: 0;
+}
+.pt-list-block-img-list ul li a .list-img img {
+  width: 100%;
+}
+.pt-list-block-img-list ul li a .list-ex {
+  order: 3;
+}
+.pt-list-block-img-window {
+  margin: 10px;
+  margin-bottom: 20px;
+}
+.pt-list-block-img-window .list-box-title {
+  font-weight: bold;
+  border-bottom: 1px solid #a1a1aa;
+  padding: 10px;
+}
+.pt-list-block-img-window ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pt-list-block-img-window ul li {
+  width: 48%;
+  display: block;
+}
+.pt-list-block-img-window ul li a {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: #18181b;
+  border-bottom: 1px solid #d4d4d8;
+}
+.pt-list-block-img-window ul li a:hover {
+  font-weight: bold;
+}
+.pt-list-block-img-window ul li a:hover .list-img {
+  overflow: hidden;
+}
+.pt-list-block-img-window ul li a:hover .list-img img {
+  transform: scale(1.05);
+}
+.pt-list-block-img-window ul li a .list-title {
+  line-height: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  order: 2;
+  padding-left: 5px;
+  margin-top: -1.5rem;
+  background-color: #ffffffcc;
+  z-index: 99;
+}
+.pt-list-block-img-window ul li a .list-txt {
+  display: none;
+}
+.pt-list-block-img-window ul li a .list-img {
+  display: flex;
+  order: 1;
+  width: 100%;
+  flex-shrink: 0;
+}
+.pt-list-block-img-window ul li a .list-img img {
+  width: 100%;
+  transition: all 0.5s;
+}
+.pt-list-block-img-window ul li a .list-ex {
   display: none;
 }
 .pt-list-cell {
@@ -3476,7 +3593,6 @@ ul ul {
   display: flex;
   text-decoration: none;
   color: #18181b;
-  flex-wrap: wrap;
   margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #e4e4e7;
@@ -3493,9 +3609,9 @@ ul ul {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-weight: bold;
-  width: 100%;
   order: 2;
   margin-bottom: 5px;
+  flex-grow: 2;
 }
 .pt-list-post ul li a .list-txt {
   display: none;
@@ -3511,16 +3627,23 @@ ul ul {
   width: 4rem;
   max-height: 10rem;
   overflow: hidden;
-  order: 4;
+  order: 1;
   margin-right: 5px;
 }
 .pt-list-post ul li a .list-img img {
   width: 100%;
 }
 .pt-list-post ul li a .list-ex {
-  width: 100%;
   font-size: 0.9rem;
   order: 4;
   margin-top: 5px;
+}
+@media (max-width: 768px) {
+  .pt-list-post ul li a {
+    flex-wrap: wrap;
+  }
+  .pt-list-post ul li a .list-title {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=ptlibex.css.map */

@@ -613,6 +613,11 @@
         border-radius: 4px;
         &:hover{
           .com-shadow-card;
+          .list-img{
+            img{
+              transform: scale(1.1);
+            }
+          }
         }
         .list-title{
           font-size: 1.1rem;
@@ -638,6 +643,7 @@
             order: 2;
             img{
               width: 100%;
+              transition: all 1000ms;
             }
           }
 
@@ -813,6 +819,11 @@
         &:hover{
           //.com-shadow-card;
           font-weight: bold;
+          .list-img{
+            img{
+              transform: scale(1.1);
+            }
+          }
         }
         .list-title{
           line-height: 2rem;
@@ -828,6 +839,124 @@
           display: none;
           img{
             width: 100%;
+            transition: all 500ms;
+          }
+        }
+
+        .list-ex{
+          display: none;
+        }
+      }
+    }
+  }
+}
+//列表块，带图标与备注
+.pt-list-block-img-list{
+  margin: 10px;
+  margin-bottom: 20px;
+  .list-box-title{
+    font-weight: bold;
+    border-bottom:1px solid @pt-gray-4;
+    padding: 10px;
+  }
+  ul{
+    display: block;
+    flex-wrap: wrap;
+    li{
+      display: block;
+      a{
+        padding: 5px;
+        display: flex;
+        text-decoration: none;
+        color: @pt-gray-9;
+        border-bottom: 1px solid @pt-gray-3;
+        &:hover{
+          font-weight: bold;
+        }
+        .list-title{
+          line-height: 2rem;
+          height: 2rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          order: 2;
+          padding-left: 5px;
+        }
+        .list-txt{
+          display: none;
+        }
+        .list-img{
+          display: flex;
+          order: 1;
+          width: 48px;
+          flex-shrink: 0;
+          img{
+            width: 100%;
+          }
+        }
+
+        .list-ex{
+          order: 3;
+        }
+      }
+    }
+  }
+}
+
+//列表块，橱窗
+.pt-list-block-img-window{
+  margin: 10px;
+  margin-bottom: 20px;
+  .list-box-title{
+    font-weight: bold;
+    border-bottom:1px solid @pt-gray-4;
+    padding: 10px;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      width: 48%;
+      display: block;
+      a{
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: none;
+        color: @pt-gray-9;
+        border-bottom: 1px solid @pt-gray-3;
+        &:hover{
+          font-weight: bold;
+          .list-img{
+            overflow: hidden;
+            img{
+              transform: scale(1.05);
+            }
+          }
+        }
+        .list-title{
+          line-height: 1.5rem;
+          height: 1.5rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          order: 2;
+          padding-left: 5px;
+          margin-top: -1.5rem;
+          background-color: #ffffffcc;
+          z-index: 99;
+        }
+        .list-txt{
+          display: none;
+        }
+        .list-img{
+          display: flex;
+          order: 1;
+          width: 100%;
+          flex-shrink: 0;
+          img{
+            width: 100%;
+            transition: all 0.5s;
           }
         }
 
@@ -902,7 +1031,7 @@
         display: flex;
         text-decoration: none;
         color: @pt-gray-9;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
         margin-bottom: 20px;
         padding: 10px;
         border: 1px solid @pt-gray-2;
@@ -918,9 +1047,10 @@
           text-overflow: ellipsis;
           white-space: nowrap;
           font-weight: bold;
-          width: 100%;
+          //width: 100%;
           order: 2;
           margin-bottom: 5px;
+          flex-grow: 2;
         }
         .list-txt{
           display: none;
@@ -936,7 +1066,7 @@
           width: 4rem;
           max-height: 10rem;
           overflow: hidden;
-          order: 4;
+          order: 1;
           margin-right: 5px;
           img{
             width: 100%;
@@ -944,7 +1074,7 @@
         }
 
         .list-ex{
-          width: 100%;
+          //width: 100%;
           font-size: 0.9rem;
           order: 4;
           margin-top: 5px;
@@ -960,7 +1090,9 @@
     ul{
       li{
         a{
+          flex-wrap: wrap;
           .list-title{
+            width: 50%;
           }
           .list-txt{
           }
