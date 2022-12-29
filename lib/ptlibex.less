@@ -588,6 +588,7 @@
 //综合列表布局开始
 //博客列表布局
 .pt-list-blog{
+  padding: 10px;
   .list-box-title{
     font-weight: bold;
     font-size: 1.2rem;
@@ -608,7 +609,8 @@
         flex-wrap: wrap;
         margin-bottom: 20px;
         padding: 10px;
-        border: 1px solid @pt-gray-3;
+        border: 1px solid @pt-gray-2;
+        border-radius: 4px;
         &:hover{
           .com-shadow-card;
         }
@@ -616,14 +618,16 @@
           font-size: 1.1rem;
           font-weight: bold;
           width: 100%;
-          padding: 10px;
           order: 1;
+          margin-bottom: 5px;
         }
           .list-txt{
             flex-grow: 2;
-            padding: 10px;
+            padding-left: 10px;
             width: 5rem;
             line-height: 1.6rem;
+            height: 8rem;
+            overflow: hidden;
             order: 3;
           }
           .list-img{
@@ -639,10 +643,9 @@
 
         .list-ex{
           width: 100%;
-          padding: 10px;
           font-size: 0.9rem;
           order: 4;
-
+          margin-top: 5px;
         }
       }
     }
@@ -658,7 +661,7 @@
           .list-title{
           }
           .list-txt{
-            height: 2.5rem;
+            height: 3rem;
             overflow: hidden;
           }
           .list-img{

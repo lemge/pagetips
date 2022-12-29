@@ -3055,6 +3055,9 @@ ul ul {
 .table-container table {
   min-width: 50rem;
 }
+.pt-list-blog {
+  padding: 10px;
+}
 .pt-list-blog .list-box-title {
   font-weight: bold;
   font-size: 1.2rem;
@@ -3076,7 +3079,8 @@ ul ul {
   flex-wrap: wrap;
   margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #e4e4e7;
+  border-radius: 4px;
 }
 .pt-list-blog ul li a:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0 0px 10px 5px;
@@ -3085,14 +3089,16 @@ ul ul {
   font-size: 1.1rem;
   font-weight: bold;
   width: 100%;
-  padding: 10px;
   order: 1;
+  margin-bottom: 5px;
 }
 .pt-list-blog ul li a .list-txt {
   flex-grow: 2;
-  padding: 10px;
+  padding-left: 10px;
   width: 5rem;
   line-height: 1.6rem;
+  height: 8rem;
+  overflow: hidden;
   order: 3;
 }
 .pt-list-blog ul li a .list-img {
@@ -3107,13 +3113,13 @@ ul ul {
 }
 .pt-list-blog ul li a .list-ex {
   width: 100%;
-  padding: 10px;
   font-size: 0.9rem;
   order: 4;
+  margin-top: 5px;
 }
 @media (max-width: 768px) {
   .pt-list-blog ul li a .list-txt {
-    height: 2.5rem;
+    height: 3rem;
     overflow: hidden;
   }
   .pt-list-blog ul li a .list-img {
