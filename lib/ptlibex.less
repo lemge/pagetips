@@ -168,7 +168,7 @@
   position: fixed;
   width: 100%;
   max-height: 100%;
-  z-index: 98;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
@@ -291,8 +291,9 @@
         text-decoration: none;
         color: @pt-gray-9;
         border-bottom: 1px solid @pt-gray-3;
-
         position: relative;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         .acl-sws-menu{
           position: absolute;
           top: 0.5rem;
@@ -338,24 +339,28 @@
 
   .acl-swb-menu {
     display: block;
-    padding: 0.5rem;
     width: 1rem;
+    padding: 0.5rem;
     .com-shadow;
     cursor: pointer;
     background-color: @pt-gray-7;
     color: @white;
+    border-radius: 0 0 8px 0;
   }
 
   .acl-swb-open-menu {
-
     display: block;
     text-align: center;
-    padding: 0.5rem;
-    width: auto;
+    width: 100%;
     border-bottom: 1px solid @pt-gray-5;
+    padding: 0.5rem;
   }
 
   .acl-swb-close-menu {
+    transition: all .5s;
+    padding: 0.5rem;
+    width: 1rem;
+    text-align: center;
   }
 
   .aclist-hidden-menu {
@@ -370,7 +375,8 @@
 
 .acl-box-show-menu {
   transition: all .5s;
-  width: 10rem;
+  width: 20rem;
+  max-width: 70%;
 }
 
 //autocatalog样式

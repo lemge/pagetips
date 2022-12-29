@@ -2892,7 +2892,7 @@ ul ul {
   position: fixed;
   width: 100%;
   max-height: 100%;
-  z-index: 98;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
@@ -2995,6 +2995,8 @@ ul ul {
   color: #18181b;
   border-bottom: 1px solid #d4d4d8;
   position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .acl-box-menu ul li a .acl-sws-menu {
   position: absolute;
@@ -3028,19 +3030,26 @@ ul ul {
 }
 .acl-box-menu .acl-swb-menu {
   display: block;
-  padding: 0.5rem;
   width: 1rem;
+  padding: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   cursor: pointer;
   background-color: #3f3f46;
   color: #ffffff;
+  border-radius: 0 0 8px 0;
 }
 .acl-box-menu .acl-swb-open-menu {
   display: block;
   text-align: center;
-  padding: 0.5rem;
-  width: auto;
+  width: 100%;
   border-bottom: 1px solid #71717a;
+  padding: 0.5rem;
+}
+.acl-box-menu .acl-swb-close-menu {
+  transition: all 0.5s;
+  padding: 0.5rem;
+  width: 1rem;
+  text-align: center;
 }
 .acl-box-menu .aclist-hidden-menu {
   display: none;
@@ -3051,7 +3060,8 @@ ul ul {
 }
 .acl-box-show-menu {
   transition: all 0.5s;
-  width: 10rem;
+  width: 20rem;
+  max-width: 70%;
 }
 .acl-swb-touch {
   border: 1px solid #3f3f46;
