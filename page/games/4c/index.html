@@ -15,10 +15,11 @@
         currentGameName = "Align 4 BIG",
         currentVersion = "M20_S_S3.43.3_C2.2.44_V1.9.6",
         currentCatalog = "PZOOL",
-        hostCommon = "http://0.0.0.0:8000/page/games/4c/playzool.com/common/",
-        hostCDN = "http://0.0.0.0:8000/page/games/4c/cdn.playtouch.net/",
+        hostCommon = "playzool.com/common/",
+        hostCDN = "cdn.playtouch.net/",
         hostCDNCommon = hostCDN + "common/",
-        hostCDNDir = hostCDN + "games/" + currentGame + "/" + currentVersion + "/",
+        hostCDNDir =
+          hostCDN + "games/" + currentGame + "/" + currentVersion + "/",
         gameURL = hostCDNDir,
         gameFilesURL = hostCDNDir,
         hostCDNImg = hostCDNDir + "images/",
@@ -338,18 +339,6 @@
       }
     </script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-    <script>
-      // window.dataLayer = window.dataLayer || [];
-      // function gtag() {
-      //   dataLayer.push(arguments);
-      // }
-      // gtag("js", new Date());
-      // gtag("config", "G-KB7PJQS0QV");
-    </script>
-    <!-- Meta Pixel Code -->
-    <!-- End Meta Pixel Code -->
 
     <script>
       // Fix for shopmanager checker
@@ -359,7 +348,7 @@
         return window._alert.apply(this, arguments);
       };
     </script>
-    </head>
+   </head>
 
   <body>
     <div id="fb-root"></div>
@@ -468,37 +457,6 @@
       tabScriptToLoad.push(gameFilesURL + "c2runtime.js");
     </script>
 
-    <!-- no cache system -->
-    <script src="cdn.playtouch.net/common/js/blockadblock/blockadblock-3.2.1.js?prebid-ads=prebid-ads"></script>
-    <script>
-      // function adBlockDetected() {
-      //   window.adBlockNotDetected = function () {};
-      //   gtag("send", "event", {
-      //     eventCategory: "Blocker",
-      //     eventAction: "blocked",
-      //     eventLabel: "has been blocked",
-      //     nonInteraction: true,
-      //   });
-      //   setTimeout(function () {
-      //     window.location.href =
-      //       "playzool.com/games/align4Big/Align-4-BIG?rel=playtouch&fromPartner=abk";
-      //   }, 200);
-      // }
-      // var adBlockNotDetected = function () {
-      //   gtag("send", "event", {
-      //     eventCategory: "Blocker",
-      //     eventAction: "blocked",
-      //     eventLabel: "has passed",
-      //     nonInteraction: true,
-      //   });
-      // };
-      // if (typeof blockAdBlock === "undefined") {
-      //   adBlockDetected();
-      // } else {
-      //   blockAdBlock.onDetected(adBlockDetected);
-      //   blockAdBlock.onNotDetected(adBlockNotDetected);
-      // }
-    </script>
 
     <script>
       // GGA Tracking
@@ -587,9 +545,7 @@
         }
       }, 60000);
 
-      //	Gameplay Analytics
-      //gtag('send', 'event', 'category','action', 'label', 'value')
-      //
+
       var gameOverByRetry = false;
       function setAsReplay() {
         gameOverByRetry = true;
@@ -661,53 +617,26 @@
     </span>
     <div id="mainContainer" class="widthHeight100" style="display: none">
       <div id="adContainer" class="widthHeight100">
-        <!-- Remove on next push -->
-        <!-- <div class="titleAndAdHolder" id="titleTimer" style="display:none"> 			
-			<p id="adTitle" style="position:absolute;">
-				<span id="firstAdText">Ad - will close in</span>&nbsp;
-				<span id="Ad_timer">15</span>
-				<span id="lastAdText">s</span>
-			</p>
-		</div> -->
+
       </div>
     </div>
 
-    <!-- Remove on next push -->
-    <!-- <div class="containerProgressBar" id="containerProgressBar" >
-	<div class="progressBar" id="progressBar" ></div>
-</div> -->
+
 
     <script>
       var showInterDFP = true;
     </script>
 
     <!--------------------IMA------------------->
-
     <!-------------------\IMA------------------->
     <!-----------------MODULE(s)---------------->
     <script src="cdn.playtouch.net/common/js/spin.min.js"></script>
     <script src="cdn.playtouch.net/common/js/spin.custom.js"></script>
-    <!----------------\MODULE(s)---------------->
-    <!--
-array(7) {
-  ["id"]=>
-  string(4) "2615"
-  ["isLandscape"]=>
-  string(1) "0"
-  ["code"]=>
-  string(15) "align4Big_PZOOL"
-  ["masterCode"]=>
-  string(9) "align4Big"
-  ["name"]=>
-  string(11) "Align 4 BIG"
-  ["orientation"]=>
-  string(8) "portrait"
-  ["exportVersion"]=>
-  string(28) "M20_S_S3.43.3_C2.2.44_V1.9.6"
-}
--->
-    <!-------------pre/mid roll-------------->
 
+    <script
+      type="text/javascript"
+      src="playzool.com/games/DFPWPAsync/landingAds.js"
+    ></script>
     <!-------------\pre/mid roll-------------->
     <!-- Playzool - playtouch 	> 	2980870669	-->
     <!-- END ADS -->
