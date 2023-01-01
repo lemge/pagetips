@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>248 Scribble</title>
+    <script>
+        if (!Date.now) {
+            Date.now = function now() {
+                return (new Date()).getTime();
+            };
+        }
+        var _debug = false, currentGame = "248Scribble"
+            , currentGameName = "248 Scribble"
+            , currentVersion = "M20_S_S3.43.3_C2.2.44_V1.5.11_LSD"
+            , currentCatalog = "PZOOL"
+            , hostCommon = "playzool.com/common/"
+            , hostCDN = "cdn.playtouch.net/"
+            , hostCDNCommon = hostCDN + "common/"
+            , hostCDNDir = hostCDN + "games/" + currentGame + "/" + currentVersion + "/", gameURL = hostCDNDir,
+            gameFilesURL = hostCDNDir
+            , hostCDNImg = hostCDNDir + "images/"
+            , hostCDNMedia = hostCDNDir + "media/"
+            , loadingImg = hostCDNDir + "loading-logo.png"
+            , statisticPool = "GoogleCache"
+            , currentLayout = null
+            , startsLoadingGameAt = 0, endsLoadingGameAt = 0, loadingTimeCap = 300000, trackUnfocused = false,
+            shouldLoadTimeBeTracked = true;
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+    <!-- Standardised web app manifest -->
+
+
+    <!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="apple-touch-icon" sizes="256x256"
+          href="cdn.playtouch.net/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-256.png"/>
+    <meta name="HandheldFriendly" content="true"/>
+
+    <!-- Chrome for Android web app tags -->
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <link rel="shortcut icon" sizes="256x256"
+          href="cdn.playtouch.net/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-256.png"/>
+
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="cdn.playtouch.net/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="cdn.playtouch.net/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-16.png"/>
+    <link rel="mask-icon" href="cdn.playtouch.net/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="cdn.playtouch.net/common/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="cdn.playtouch.net/common/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+
+        html, body {
+            background: #000;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+
+        canvas {
+            touch-action-delay: none;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+    </style>
+
+    <script>
+        var EVENT_TO_FIRE_VERSION = 4;
+        if (typeof window.eventToFire === "undefined" || typeof window.eventToFire.version === "undefined" || window.eventToFire.version < EVENT_TO_FIRE_VERSION) {
+            var eventToFire = window.eventToFire || {};
+            eventToFire.events = ((window.eventToFire && window.eventToFire.events) ? window.eventToFire.events : {});
+            eventToFire.version = EVENT_TO_FIRE_VERSION;
+            eventToFire.registerEvent = function (eventName, callback, staticArgs) {
+                if (typeof eventName !== 'string') return false;
+                if (typeof callback !== 'function' && typeof callback !== 'string') return false;
+                if (typeof this.events[eventName] === 'undefined') this.events[eventName] = [];
+                this.events[eventName].push({"func": callback, "staticArgs": staticArgs});
+                return true;
+            };
+            if (typeof ce7 !== "function") {
+                var ce7_lut = [], ce7 = function () {
+                    if (typeof window.crypto === "object" && typeof window.crypto.getRandomValues === "function") {
+                        var rnd = window.crypto.getRandomValues(new Uint32Array(4)), d0 = rnd[0], d1 = rnd[1],
+                            d2 = rnd[2], d3 = rnd[3]
+                    } else {
+                        var d0 = Math.random() * 0x100000000 >>> 0, d1 = Math.random() * 0x100000000 >>> 0,
+                            d2 = Math.random() * 0x100000000 >>> 0, d3 = Math.random() * 0x100000000 >>> 0;
+                    }
+                    return ce7_lut[d0 & 0xff] + ce7_lut[d0 >> 8 & 0xff] + ce7_lut[d0 >> 16 & 0xff] + ce7_lut[d0 >> 24 & 0xff] + '-' +
+                        ce7_lut[d1 & 0xff] + ce7_lut[d1 >> 8 & 0xff] + '-' + ce7_lut[d1 >> 16 & 0x0f | 0x40] + ce7_lut[d1 >> 24 & 0xff] + '-' +
+                        ce7_lut[d2 & 0x3f | 0x80] + ce7_lut[d2 >> 8 & 0xff] + '-' + ce7_lut[d2 >> 16 & 0xff] + ce7_lut[d2 >> 24 & 0xff] +
+                        ce7_lut[d3 & 0xff] + ce7_lut[d3 >> 8 & 0xff] + ce7_lut[d3 >> 16 & 0xff] + ce7_lut[d3 >> 24 & 0xff];
+                };
+                for (var i = 0; i < 256; i++) {
+                    ce7_lut[i] = (i < 16 ? '0' : '') + (i).toString(16);
+                }
+            }
+            eventToFire.fireEvent = function (eventName) {
+                if (typeof eventName !== 'string') return false;
+                var eventHandlersToCall = Object.keys(this.events).filter(function (v) {
+                    var f = v.replace(/\./g, '\\\.');
+                    if (f.indexOf('*') !== -1) f = f.split('*')[0] + ".*";
+                    return (new RegExp('^' + f + "$").test(eventName))
+                }).sort(function (a, b) {
+                    return (b === eventName) ? 1 : (a === eventName) ? -1 : b.replace('*', '').length - a.replace('*', '').length;
+                }), eventUID = ce7();
+                if (eventHandlersToCall.length === 0) return false;
+                for (var i = 0; i < eventHandlersToCall.length; i++) {
+                    for (var f = 0; f < this.events[eventHandlersToCall[i]].length; f++) {
+                        var func = this.events[eventHandlersToCall[i]][f]["func"];
+                        if (typeof func === "string") if (typeof window[func] === "function") func = window[func]; else continue;
+                        var args = [].slice.call(arguments, 1);
+                        args.push(this.events[eventHandlersToCall[i]][f]["staticArgs"]);
+                        func.apply({
+                            eventName: eventName,
+                            eventUID: eventUID,
+                            eventHandler: eventHandlersToCall[i],
+                            eventToFire: this
+                        }, args);
+                    }
+                }
+                return true;
+            };
+            eventToFire.getAllEvent = function () {
+                return this.events;
+            };
+
+            window.eventToFire = eventToFire;
+
+            //compatibility playzool/shell
+            window.registerEvent = function (eventName, callback, args) {
+                window.eventToFire.registerEvent(eventName, callback, args);
+            }
+            window.fireEvent = function (eventName, args) {
+                window.eventToFire.fireEvent(eventName, args);
+            }
+        }
+
+        function c2LayoutChange() {
+            if (arguments[0] === "in") currentLayout = arguments[1];
+            eventToFire.fireEvent.apply(eventToFire, ["c2LayoutChange"].concat([].slice.call(arguments)));
+        }
+
+        function gameOver() {
+            eventToFire.fireEvent.apply(eventToFire, ["gameOver"].concat([].slice.call(arguments)));
+        }
+
+        //localStorage delegation
+        try {
+            localStorage.getItem("ls");
+        } catch (_e) {
+            console.log("Saves are written on session only");
+
+            function customStorage() {
+                var e = {};
+                return Object.defineProperty(e, "setItem", {
+                    get: function () {
+                        return function (t, n) {
+                            if (void 0 === n) throw new TypeError("Failed to execute 'setItem' on 'Storage': 2 arguments required, but only 1 present.");
+                            e[String(t)] = String(n)
+                        }
+                    }
+                }), Object.defineProperty(e, "getItem", {
+                    get: function () {
+                        return function (t) {
+                            return e.hasOwnProperty(String(t)) ? e[String(t)] : null
+                        }
+                    }
+                }), Object.defineProperty(e, "removeItem", {
+                    get: function () {
+                        return function (t) {
+                            e.hasOwnProperty(String(t)) && delete e[String(t)]
+                        }
+                    }
+                }), Object.defineProperty(e, "clear", {
+                    get: function () {
+                        return function () {
+                            for (var t in e) delete e[String(t)]
+                        }
+                    }
+                }), Object.defineProperty(e, "length", {
+                    get: function () {
+                        return Object.keys(e).length
+                    }
+                }), Object.defineProperty(e, "key", {
+                    value: function (t) {
+                        var n = Object.keys(e)[String(t)];
+                        return n || null
+                    }
+                }), e
+            }
+
+            window.proxyStorageEngines = {localStorage: customStorage(), sessionStorage: customStorage()};
+        }
+        ;
+        if (typeof loadGameInfo !== "function") {
+            window.loadGameInfo = function (force) {
+                if (typeof force !== "boolean") force = false;
+                if (!force && typeof lastGameInfoReq !== "undefined" && lastGameInfoReq > Date.now() - 1000) return true; //prevent multiple calls at once
+                try {
+                    window.gameInfo = JSON.parse(c2_callFunction("getGameInfo", [], true));
+                } catch (e) {
+                    window.gameInfo = {};
+                    return false;
+                }
+                window.lastGameInfoReq = Date.now();
+                return true;
+            };
+        }
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<!--    <script async src="www.googletagmanager.com/gtag/js?id=G-KB7PJQS0QV"></script>-->
+<!--    <script>-->
+<!--        window.dataLayer = window.dataLayer || [];-->
+
+<!--        function gtag() {-->
+<!--            dataLayer.push(arguments);-->
+<!--        }-->
+
+<!--        gtag('js', new Date());-->
+<!--        gtag('config', 'G-KB7PJQS0QV');-->
+
+<!--    </script>-->
+    <!-- Meta Pixel Code -->
+<!--    <script>-->
+<!--        !function (f, b, e, v, n, t, s) {-->
+<!--            if (f.fbq) return;-->
+<!--            n = f.fbq = function () {-->
+<!--                n.callMethod ?-->
+<!--                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)-->
+<!--            };-->
+<!--            if (!f._fbq) f._fbq = n;-->
+<!--            n.push = n;-->
+<!--            n.loaded = !0;-->
+<!--            n.version = '2.0';-->
+<!--            n.queue = [];-->
+<!--            t = b.createElement(e);-->
+<!--            t.async = !0;-->
+<!--            t.src = v;-->
+<!--            s = b.getElementsByTagName(e)[0];-->
+<!--            s.parentNode.insertBefore(t, s)-->
+<!--        }(window, document, 'script',-->
+<!--            'connect.facebook.net/en_US/fbevents.js');-->
+<!--        fbq('init', '477486527454046');-->
+<!--        fbq('track', 'PageView');-->
+<!--        var fbNotFirstGame = false;-->
+<!--        eventToFire.registerEvent("c2LayoutChange", function (dir, name, obj) {-->
+<!--            if (dir == "in" && name.toLowerCase() == "gamemain") {-->
+<!--                if (fbNotFirstGame) {-->
+<!--                    fbq('track', 'ViewContent', {-->
+<!--                            content_ids: [currentGame, 'midroll'],-->
+<!--                            content_type: 'product',-->
+<!--                            value: 0.01,-->
+<!--                            currency: 'EUR'-->
+<!--                        }-->
+<!--                    );-->
+<!--                } else {-->
+<!--                    fbNotFirstGame = true;-->
+<!--                }-->
+<!--            }-->
+<!--        });-->
+<!--    </script>-->
+<!--    <noscript><img height="1" width="1" style="display:none"-->
+<!--                   src="www.facebook.com/tr?id=477486527454046&ev=PageView&noscript=1"-->
+<!--    /></noscript>-->
+<!--    &lt;!&ndash; End Meta Pixel Code &ndash;&gt;-->
+
+<!--    <script>-->
+<!--        // Fix for shopmanager checker-->
+<!--        window._alert = window.alert;-->
+<!--        window.alert = function (text) {-->
+<!--            if (text.indexOf("shopmanager") !== -1) return;-->
+<!--            return window._alert.apply(this, arguments);-->
+<!--        }-->
+<!--    </script>-->
+    <!--
+    <script type="text/javascript">
+        window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://www.google.com/policies/technologies/types/","theme":"light-bottom"};
+    </script>
+
+    <script type="text/javascript" src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
+     -->
+
+
+</head>
+
+<body>
+<div id="fb-root"></div>
+
+<div id="c2canvasdiv">
+
+    <!--  width="510" height="907" -->
+    <canvas id="c2canvas">
+    </canvas>
+
+</div>
+
+<script type="text/javascript" src="cdn.playtouch.net/common/js/workerCORS.js"></script>
+
+<div id="rotator" style="display:none;">
+
+</div>
+
+<script>
+    //ROTATOR START
+    var gameOrientation = "portrait", gameIsPortrait = (gameOrientation === "portrait"), activeRotator = true,
+        onMobile = reallyOnMobile = navigator.userAgent.match(/(mobile|android|iphone|ipad|blackberry|symbian|symbianos|symbos|netfront|model-orange|javaplatform|iemobile|windows phone|samsung|htc|opera mobile|opera mobi|opera mini|presto|huawei|blazer|bolt|doris|fennec|gobrowser|iris|maemo browser|mib|cldc|minimo|semc-browser|skyfire|teashark|teleca|uzard|uzardweb|meego|nokia|bb10|playbook)/gi);
+
+    function checkOrientation() {
+        // console.log("checkOrientation");
+        if (!activeRotator || !reallyOnMobile) return true;
+        if (_debug) console.log("activated and on mobile");
+        if (gameIsPortrait && jQuery(window).width() > jQuery(window).height()) {
+            displayRotator('portrait');
+            return false;
+        }
+        if (!gameIsPortrait && jQuery(window).width() < jQuery(window).height()) {
+            displayRotator('landscape');
+            return false;
+        }
+        return true;
+    }
+
+    function displayRotator(orientation) {
+        var gameElement = document.getElementById("c2canvasdiv");
+        var rotatorElement = document.getElementById("rotator");
+        if ((gameElement.style.display != "block" && gameElement.style.display != "") || rotatorElement.style.display != "none") return false;
+        if (typeof (cr_setSuspended) == "function") cr_setSuspended(true);
+        gameElement.style.display = "none";
+        rotatorElement.innerHTML = "";
+        rotatorElement.innerHTML = '<img id="rotatorLogo" src="cdn.playtouch.net/common/img/rotate-device-to-' + orientation + '.jpg" />';
+        rotatorElement.style.display = "block";
+        rotatorElement.style.backgroundColor = "black";
+        rotatorElement.style.width = "100%";
+        rotatorElement.style.height = "100%";
+        window.centerRotatorTimer = setInterval(function () {
+            centerRotator();
+        }, 100);
+        return true;
+    }
+
+    function centerRotator() {
+        var rotatorElement = document.getElementById("rotator");
+        rotatorElement.style.paddingLeft = jQuery(window).width() / 2 - jQuery("#rotatorLogo").width() / 2 + "px";
+        rotatorElement.style.paddingTop = jQuery(window).height() / 2 - jQuery("#rotatorLogo").height() / 2 + "px";
+        rotatorElement.style.paddingBottom = jQuery(window).height() / 2 - jQuery("#rotatorLogo").height() / 2 + "px";
+    }
+
+    function hideRotator() {
+        var gameElement = document.getElementById("c2canvasdiv");
+        var rotatorElement = document.getElementById("rotator");
+        if (rotatorElement.style.display != "block") return false;
+        rotatorElement.innerHTML = "";
+        rotatorElement.style.display = "none";
+        gameElement.style.display = "block";
+        if (typeof (cr_setSuspended) == "function") cr_setSuspended(false);
+        clearInterval(window.centerRotatorTimer);
+        return true;
+    }
+
+    //ROTATOR END
+
+</script>
+<script src="cdn.playtouch.net/common/js/jquery-2.2.4.min.js"></script>
+
+<script>
+    var tabScriptToLoad = [];
+    tabScriptToLoad.push(gameFilesURL + "c2runtime.js");
+</script>
+
+<!-- no cache system -->
+<script src="cdn.playtouch.net/common/js/blockadblock/blockadblock-3.2.1.js?prebid-ads=prebid-ads"></script>
+<script>
+    function adBlockDetected() {
+        window.adBlockNotDetected = function () {
+        };
+        gtag('send', 'event', {
+            eventCategory: 'Blocker',
+            eventAction: 'blocked',
+            eventLabel: 'has been blocked',
+            nonInteraction: true
+        });
+        setTimeout(function () {
+            window.location.href = "playzool.com/games/248Scribble/248-Scribble?rel=playtouch&fromPartner=abk";
+        }, 200);
+    }
+
+    var adBlockNotDetected = function () {
+        gtag('send', 'event', {
+            eventCategory: 'Blocker',
+            eventAction: 'blocked',
+            eventLabel: 'has passed',
+            nonInteraction: true
+        });
+    }
+    if (typeof blockAdBlock === 'undefined') {
+        adBlockDetected();
+    } else {
+        blockAdBlock.onDetected(adBlockDetected);
+        blockAdBlock.onNotDetected(adBlockNotDetected);
+    }
+</script>
+
+<script>
+    // GGA Tracking
+    //	GGA Sampling
+    var GGSamplingRate = 100; //%
+    var GGIsElected = (Math.random() < GGSamplingRate / 100);
+    if (!Date.now) {
+        Date.now = function () {
+            return new Date().getTime();
+        }
+    }
+
+    function GGAQueueTrack(_objToFire, sampled) {
+        slot = Math.floor(Date.now() / 1000);
+        objToFire.c = objToFire["c"] || objToFire["cat"] || objToFire["category"] || "";
+        objToFire.l = objToFire["l"] || objToFire["label"] || "";
+        objToFire.a = objToFire["a"] || objToFire["act"] || objToFire["action"] || "";
+        if (objToFire["c"] == "" || objToFire["l"] == "" || objToFire["a"] == "") return false;
+        window.GGAQStack = window.GGAQStack || {"lastFire": 1};
+        if (typeof (sampled) == 'undefined') sampled = false;
+        if (sampled && !GGIsElected) return false;
+        while (window.GGAQStack.hasOwnProperty("" + slot)) slot++;
+        window.GGAQStack[slot] = objToFire;
+        GGAQueueFireNext();
+    }
+
+    function GGAQueueFireNext() {
+        hasFire = false;
+        if (typeof (gtag) == 'undefined') return false;
+        for (var k in window.GGAQStack) {
+            if (window.GGAQStack.hasOwnProperty(k)) {
+                if (k == "lastFire") continue;
+                objToFire = window.GGAQStack[k];
+                if (objToFire.hasOwnProperty("v")) {
+                    gtag('send', 'event', objToFire.c, objToFire.a, objToFire.l, objToFire.v);
+                } else {
+                    gtag('send', 'event', objToFire.c, objToFire.a, objToFire.l);
+                }
+                hasFire = true;
+            }
+        }
+        if (hasFire) setTimeout(GGAQueueFireNext, 1100);
+    }
+
+    // Playtime Analytics
+    var GGTrackerTimerTime = 60;
+    var GGTrackerTimer;
+    var GGATrackerActive = true;
+
+    function reActiveGGTracker() {
+        // console.log("GGTracker reactivated");
+        clearTimeout(GGTrackerTimer);
+        GGTrackerTimer = setTimeout(function () {
+            GGATrackerActive = false;
+        }, GGTrackerTimerTime * 1000);
+    }
+
+    reActiveGGTracker();
+    document.getElementById("c2canvas").addEventListener("touchstart", reActiveGGTracker, false);
+    document.getElementById("c2canvas").addEventListener("click", reActiveGGTracker, false);
+
+    setInterval(function () {
+        if (typeof (gtag) != 'undefined' && GGATrackerActive) {
+            gtag('send', 'event', 'games', 'minute Played', '248Scribble');/*console.log("GGTracker send 1 min");*/
+        }
+    }, 60000);
+
+
+    //	Gameplay Analytics
+    //gtag('send', 'event', 'category','action', 'label', 'value')
+    //
+    var gameOverByRetry = false;
+
+    function setAsReplay() {
+        gameOverByRetry = true;
+    }
+
+    function gameOverResultStats(score, win, scoreObj) {
+        if (!loadGameInfo(true)) return false;
+        if (typeof gameInfo.gameMode === "undefined") gameInfo.gameMode = "default";
+        if (typeof gameInfo.level === "undefined") gameInfo.level = "-1";
+
+        gtag('send', 'event', 'games', 'lvl_' + gameInfo.gameMode + '_' + gameInfo.level + '_' + ((gameOverByRetry) ? "retry" : ((typeof (win) != "undefined") ? ((win) ? "victory" : "defeat") : "unknow")), currentGame);
+        gameOverByRetry = false;
+    }
+
+    function layoutsStats(dir, name, obj) {
+        gtag('send', 'event', 'games', "layout_" + name + '_' + dir, currentGame);
+        if (dir === "in" && name.toLowerCase() === "gamemain") {
+            if (!loadGameInfo(true)) return false;
+            if (typeof gameInfo.gameMode === "undefined") gameInfo.gameMode = "default";
+            if (typeof gameInfo.level === "undefined") gameInfo.level = "-1";
+
+            gtag('send', 'event', 'games', 'lvl_' + gameInfo.gameMode + '_' + gameInfo.level + '_start', currentGame);
+        }
+    }
+
+    (function () {
+        setTimeout(function () {
+            window.registerEvent("c2LayoutChange", layoutsStats);
+            window.registerEvent("gameOver", gameOverResultStats);
+            window.registerEvent("c2:replay", setAsReplay);
+        }, 10);
+
+    })();
+
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="cdn.playtouch.net/common/css/landingAds.css">
+<span id="buttonPlayContainer" class="widthHeight100"> 
+	<button type="button" class="buttonPlayCustom2" id="buttonPlay">
+		<span>Play</span>
+	</button>
+</span>
+<div id="mainContainer" class="widthHeight100" style="display:none">
+    <div id="adContainer" class="widthHeight100">
+        <!-- Remove on next push -->
+        <!-- <div class="titleAndAdHolder" id="titleTimer" style="display:none">
+            <p id="adTitle" style="position:absolute;">
+                <span id="firstAdText">Ad - will close in</span>&nbsp;
+                <span id="Ad_timer">15</span>
+                <span id="lastAdText">s</span>
+            </p>
+        </div> -->
+    </div>
+</div>
+
+<!-- Remove on next push -->
+<!-- <div class="containerProgressBar" id="containerProgressBar" >
+	<div class="progressBar" id="progressBar" ></div>
+</div> -->
+
+
+<script>
+    var showInterDFP = true;</script>
+
+<!--------------------IMA------------------->
+<!--<script type="text/javascript" src="imasdk.googleapis.com/js/sdkloader/ima3.js"></script>-->
+<!-------------------\IMA------------------->
+<!-----------------MODULE(s)---------------->
+<script src="cdn.playtouch.net/common/js/spin.min.js"></script>
+<script src="cdn.playtouch.net/common/js/spin.custom.js"></script><!----------------\MODULE(s)---------------->
+
+<script type="text/javascript" src="playzool.com/games/DFPWPAsync/landingAds.js"></script>
+
+
+<script>
+    // clear the font.css issue (untill full catalog repush)
+    setInterval(function () {
+        if (typeof $ === "function") $('link').each(function (i) {
+            if (i > 0 && $(this).attr('href').split('/').pop() === 'font.css') $(this).remove();
+        });
+    }, 10000);
+</script>
+</body>
+</html> 
