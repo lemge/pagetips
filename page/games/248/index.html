@@ -14,8 +14,8 @@
             , currentGameName = "248 Scribble"
             , currentVersion = "M20_S_S3.43.3_C2.2.44_V1.5.11_LSD"
             , currentCatalog = "PZOOL"
-            , hostCommon = "playzool.com/common/"
-            , hostCDN = "cdn.playtouch.net/"
+            , hostCommon = "runtimedir/common/"
+            , hostCDN = "resourcedir/"
             , hostCDNCommon = hostCDN + "common/"
             , hostCDNDir = hostCDN + "games/" + currentGame + "/" + currentVersion + "/", gameURL = hostCDNDir,
             gameFilesURL = hostCDNDir
@@ -44,22 +44,22 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <link rel="apple-touch-icon" sizes="256x256"
-          href="cdn.playtouch.net/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-256.png"/>
+          href="resourcedir/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-256.png"/>
     <meta name="HandheldFriendly" content="true"/>
 
     <!-- Chrome for Android web app tags -->
     <meta name="mobile-web-app-capable" content="yes"/>
     <link rel="shortcut icon" sizes="256x256"
-          href="cdn.playtouch.net/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-256.png"/>
+          href="resourcedir/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-256.png"/>
 
     <link rel="icon" type="image/png" sizes="32x32"
-          href="cdn.playtouch.net/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-32.png"/>
+          href="resourcedir/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-32.png"/>
     <link rel="icon" type="image/png" sizes="16x16"
-          href="cdn.playtouch.net/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-16.png"/>
-    <link rel="mask-icon" href="cdn.playtouch.net/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+          href="resourcedir/games/248Scribble/M20_S_S3.43.3_C2.2.44_V1.5.11_LSD/icon-16.png"/>
+    <link rel="mask-icon" href="resourcedir/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="msapplication-TileImage" content="cdn.playtouch.net/common/favicon/mstile-144x144.png">
-    <meta name="msapplication-config" content="cdn.playtouch.net/common/favicon/browserconfig.xml">
+    <meta name="msapplication-TileImage" content="resourcedir/common/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="resourcedir/common/favicon/browserconfig.xml">
     <meta name="theme-color" content="#000000">
 
     <!-- All margins and padding must be zero for the canvas to fill the screen. -->
@@ -233,78 +233,7 @@
 
     </script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<!--    <script async src="www.googletagmanager.com/gtag/js?id=G-KB7PJQS0QV"></script>-->
-<!--    <script>-->
-<!--        window.dataLayer = window.dataLayer || [];-->
 
-<!--        function gtag() {-->
-<!--            dataLayer.push(arguments);-->
-<!--        }-->
-
-<!--        gtag('js', new Date());-->
-<!--        gtag('config', 'G-KB7PJQS0QV');-->
-
-<!--    </script>-->
-    <!-- Meta Pixel Code -->
-<!--    <script>-->
-<!--        !function (f, b, e, v, n, t, s) {-->
-<!--            if (f.fbq) return;-->
-<!--            n = f.fbq = function () {-->
-<!--                n.callMethod ?-->
-<!--                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)-->
-<!--            };-->
-<!--            if (!f._fbq) f._fbq = n;-->
-<!--            n.push = n;-->
-<!--            n.loaded = !0;-->
-<!--            n.version = '2.0';-->
-<!--            n.queue = [];-->
-<!--            t = b.createElement(e);-->
-<!--            t.async = !0;-->
-<!--            t.src = v;-->
-<!--            s = b.getElementsByTagName(e)[0];-->
-<!--            s.parentNode.insertBefore(t, s)-->
-<!--        }(window, document, 'script',-->
-<!--            'connect.facebook.net/en_US/fbevents.js');-->
-<!--        fbq('init', '477486527454046');-->
-<!--        fbq('track', 'PageView');-->
-<!--        var fbNotFirstGame = false;-->
-<!--        eventToFire.registerEvent("c2LayoutChange", function (dir, name, obj) {-->
-<!--            if (dir == "in" && name.toLowerCase() == "gamemain") {-->
-<!--                if (fbNotFirstGame) {-->
-<!--                    fbq('track', 'ViewContent', {-->
-<!--                            content_ids: [currentGame, 'midroll'],-->
-<!--                            content_type: 'product',-->
-<!--                            value: 0.01,-->
-<!--                            currency: 'EUR'-->
-<!--                        }-->
-<!--                    );-->
-<!--                } else {-->
-<!--                    fbNotFirstGame = true;-->
-<!--                }-->
-<!--            }-->
-<!--        });-->
-<!--    </script>-->
-<!--    <noscript><img height="1" width="1" style="display:none"-->
-<!--                   src="www.facebook.com/tr?id=477486527454046&ev=PageView&noscript=1"-->
-<!--    /></noscript>-->
-<!--    &lt;!&ndash; End Meta Pixel Code &ndash;&gt;-->
-
-<!--    <script>-->
-<!--        // Fix for shopmanager checker-->
-<!--        window._alert = window.alert;-->
-<!--        window.alert = function (text) {-->
-<!--            if (text.indexOf("shopmanager") !== -1) return;-->
-<!--            return window._alert.apply(this, arguments);-->
-<!--        }-->
-<!--    </script>-->
-    <!--
-    <script type="text/javascript">
-        window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://www.google.com/policies/technologies/types/","theme":"light-bottom"};
-    </script>
-
-    <script type="text/javascript" src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
-     -->
 
 
 </head>
@@ -320,7 +249,7 @@
 
 </div>
 
-<script type="text/javascript" src="cdn.playtouch.net/common/js/workerCORS.js"></script>
+<script type="text/javascript" src="resourcedir/common/js/workerCORS.js"></script>
 
 <div id="rotator" style="display:none;">
 
@@ -353,7 +282,7 @@
         if (typeof (cr_setSuspended) == "function") cr_setSuspended(true);
         gameElement.style.display = "none";
         rotatorElement.innerHTML = "";
-        rotatorElement.innerHTML = '<img id="rotatorLogo" src="cdn.playtouch.net/common/img/rotate-device-to-' + orientation + '.jpg" />';
+        rotatorElement.innerHTML = '<img id="rotatorLogo" src="resourcedir/common/img/rotate-device-to-' + orientation + '.jpg" />';
         rotatorElement.style.display = "block";
         rotatorElement.style.backgroundColor = "black";
         rotatorElement.style.width = "100%";
@@ -386,7 +315,7 @@
     //ROTATOR END
 
 </script>
-<script src="cdn.playtouch.net/common/js/jquery-2.2.4.min.js"></script>
+<script src="resourcedir/common/js/jquery-2.2.4.min.js"></script>
 
 <script>
     var tabScriptToLoad = [];
@@ -394,36 +323,9 @@
 </script>
 
 <!-- no cache system -->
-<script src="cdn.playtouch.net/common/js/blockadblock/blockadblock-3.2.1.js?prebid-ads=prebid-ads"></script>
+<script src="resourcedir/common/js/blockadblock/blockadblock-3.2.1.js?prebid-ads=prebid-ads"></script>
 <script>
-    function adBlockDetected() {
-        window.adBlockNotDetected = function () {
-        };
-        gtag('send', 'event', {
-            eventCategory: 'Blocker',
-            eventAction: 'blocked',
-            eventLabel: 'has been blocked',
-            nonInteraction: true
-        });
-        setTimeout(function () {
-            window.location.href = "playzool.com/games/248Scribble/248-Scribble?rel=playtouch&fromPartner=abk";
-        }, 200);
-    }
 
-    var adBlockNotDetected = function () {
-        gtag('send', 'event', {
-            eventCategory: 'Blocker',
-            eventAction: 'blocked',
-            eventLabel: 'has passed',
-            nonInteraction: true
-        });
-    }
-    if (typeof blockAdBlock === 'undefined') {
-        adBlockDetected();
-    } else {
-        blockAdBlock.onDetected(adBlockDetected);
-        blockAdBlock.onNotDetected(adBlockNotDetected);
-    }
 </script>
 
 <script>
@@ -451,23 +353,7 @@
         GGAQueueFireNext();
     }
 
-    function GGAQueueFireNext() {
-        hasFire = false;
-        if (typeof (gtag) == 'undefined') return false;
-        for (var k in window.GGAQStack) {
-            if (window.GGAQStack.hasOwnProperty(k)) {
-                if (k == "lastFire") continue;
-                objToFire = window.GGAQStack[k];
-                if (objToFire.hasOwnProperty("v")) {
-                    gtag('send', 'event', objToFire.c, objToFire.a, objToFire.l, objToFire.v);
-                } else {
-                    gtag('send', 'event', objToFire.c, objToFire.a, objToFire.l);
-                }
-                hasFire = true;
-            }
-        }
-        if (hasFire) setTimeout(GGAQueueFireNext, 1100);
-    }
+
 
     // Playtime Analytics
     var GGTrackerTimerTime = 60;
@@ -486,16 +372,10 @@
     document.getElementById("c2canvas").addEventListener("touchstart", reActiveGGTracker, false);
     document.getElementById("c2canvas").addEventListener("click", reActiveGGTracker, false);
 
-    setInterval(function () {
-        if (typeof (gtag) != 'undefined' && GGATrackerActive) {
-            gtag('send', 'event', 'games', 'minute Played', '248Scribble');/*console.log("GGTracker send 1 min");*/
-        }
-    }, 60000);
 
 
-    //	Gameplay Analytics
-    //gtag('send', 'event', 'category','action', 'label', 'value')
-    //
+
+
     var gameOverByRetry = false;
 
     function setAsReplay() {
@@ -507,18 +387,15 @@
         if (typeof gameInfo.gameMode === "undefined") gameInfo.gameMode = "default";
         if (typeof gameInfo.level === "undefined") gameInfo.level = "-1";
 
-        gtag('send', 'event', 'games', 'lvl_' + gameInfo.gameMode + '_' + gameInfo.level + '_' + ((gameOverByRetry) ? "retry" : ((typeof (win) != "undefined") ? ((win) ? "victory" : "defeat") : "unknow")), currentGame);
         gameOverByRetry = false;
     }
 
     function layoutsStats(dir, name, obj) {
-        gtag('send', 'event', 'games', "layout_" + name + '_' + dir, currentGame);
         if (dir === "in" && name.toLowerCase() === "gamemain") {
             if (!loadGameInfo(true)) return false;
             if (typeof gameInfo.gameMode === "undefined") gameInfo.gameMode = "default";
             if (typeof gameInfo.level === "undefined") gameInfo.level = "-1";
 
-            gtag('send', 'event', 'games', 'lvl_' + gameInfo.gameMode + '_' + gameInfo.level + '_start', currentGame);
         }
     }
 
@@ -534,7 +411,7 @@
 </script>
 
 
-<link rel="stylesheet" type="text/css" href="cdn.playtouch.net/common/css/landingAds.css">
+<link rel="stylesheet" type="text/css" href="resourcedir/common/css/landingAds.css">
 <span id="buttonPlayContainer" class="widthHeight100"> 
 	<button type="button" class="buttonPlayCustom2" id="buttonPlay">
 		<span>Play</span>
@@ -566,10 +443,10 @@
 <!--<script type="text/javascript" src="imasdk.googleapis.com/js/sdkloader/ima3.js"></script>-->
 <!-------------------\IMA------------------->
 <!-----------------MODULE(s)---------------->
-<script src="cdn.playtouch.net/common/js/spin.min.js"></script>
-<script src="cdn.playtouch.net/common/js/spin.custom.js"></script><!----------------\MODULE(s)---------------->
+<script src="resourcedir/common/js/spin.min.js"></script>
+<script src="resourcedir/common/js/spin.custom.js"></script><!----------------\MODULE(s)---------------->
 
-<script type="text/javascript" src="playzool.com/games/DFPWPAsync/landingAds.js"></script>
+<script type="text/javascript" src="runtimedir/games/DFPWPAsync/landingAds.js"></script>
 
 
 <script>
