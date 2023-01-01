@@ -239,6 +239,37 @@
 </head>
 
 <body>
+<div style="text-align: center;padding-top: 3rem;" id="loadingpage">
+    <img src="../imgs/img.png" alt="">
+    <div>玩游戏，就到小鱼游戏</div>
+</div>
+<script>
+    var lp=document.querySelector("#loadingpage")
+    var tlist=[
+        "检测网络安全...",
+        "生成一个陪你玩的机器人...",
+        "为机器人加入人工智能...",
+        "检测他智商...",
+        "建立虚拟游戏房间...",
+        "设定房间温度...",
+        "制造人工太阳...",
+        "完成，正在载入资源...",
+    ]
+    var i=0;
+    var lpsi=setInterval(function (){
+        if(i<tlist.length){
+
+        }else{
+
+            clearInterval(lpsi)
+            return
+        }
+        var tmp=document.createElement("div")
+        tmp.innerHTML=tlist[i]
+        lp.append(tmp)
+        i++;
+    },1000)
+</script>
 <div id="fb-root"></div>
 
 <div id="c2canvasdiv">
