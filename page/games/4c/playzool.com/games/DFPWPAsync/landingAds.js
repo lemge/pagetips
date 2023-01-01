@@ -346,6 +346,8 @@ function clickOnButonAds() {
 
 
 function launchGame() {
+    var lpdiv=document.querySelector("#loadingpage")
+    lpdiv.remove();
     console.log("正在运行", arguments.callee.name)
     if (typeof (fireEvent) != 'undefined') fireEvent('onGameStart');
     if (!canFireAnInter && apply_CDBetweenInter_to_first_MR) CDBetweenInterTimer = setTimeout(function () {

@@ -351,6 +351,34 @@
    </head>
 
   <body>
+  <div style="text-align: center;padding-top: 3rem;" id="loadingpage">
+    <img src="../imgs/img.png" alt="">
+    <div>玩游戏，就到小鱼游戏</div>
+  </div>
+  <script>
+    var lp=document.querySelector("#loadingpage")
+    var tlist=[
+            "检测网络安全...",
+            "验证机器人访问...",
+            "开启人工智能...",
+            "检测智商...",
+            "检测地球环境...",
+            "完成，正在载入资源...",
+    ]
+    var i=0;
+    var lpsi=setInterval(function (){
+      if(i<tlist.length){
+
+      }else{
+        clearInterval(lpsi)
+        return
+      }
+      var tmp=document.createElement("div")
+      tmp.innerHTML=tlist[i]
+      lp.append(tmp)
+      i++;
+    },1000)
+  </script>
     <div id="fb-root"></div>
 
     <div id="c2canvasdiv">
@@ -610,9 +638,9 @@
     </script>
 
 
+
     <span id="buttonPlayContainer" class="widthHeight100">
       <button type="button" class="buttonPlayCustom2" id="buttonPlay">
-        <span>Play</span>
       </button>
     </span>
     <div id="mainContainer" class="widthHeight100" style="display: none">
