@@ -8531,6 +8531,7 @@
             var h = Host.bootstrapper.load((function () {
                 return XS.assets.__importATL("i/g/s/branded-modal-base.svg", {
                     data: '<svg xmlns="http://www.w3.org/2000/svg" width="620" height="916"><path data-name="Tracciato 923" d="M142.374.005H70.882A71.091 71.091 0 0 0-.001 70.888v31.079h142.452Z" fill="#00bdff"/><path data-name="Tracciato 924" d="M263.059.004h-121.66l-17.481 26.1v75.867h139.141Z" fill="#9b00ff"/><path data-name="Tracciato 925" d="M383.759.004H262.095l-17.481 26.1v75.867H383.76Z" fill="#ff0029"/><path data-name="Tracciato 926" d="M504.338.004H382.673l-17.481 26.1v75.867h139.146Z" fill="#ff9603"/><path data-name="Tracciato 927" d="M620 70.884A71.092 71.092 0 0 0 549.117.001h-45.64l-17.516 26.082v75.88H620Z" fill="#ffc700"/><path data-name="banner bg" d="M620.002 97.995c0-39.553-32.217-71.914-71.591-71.914H71.59C32.215 26.081 0 58.442 0 97.995v653.858h620Z" fill="#fff"/><g data-name="btn play"><path d="M.002 758v86.025C.002 883.612 32.217 916 71.592 916h476.819c39.374 0 71.591-32.388 71.591-71.975V758Z" fill="#1d9d3e"/><path data-name="btn" d="M.002 748v86.025C.002 873.612 32.217 906 71.592 906h476.819c39.374 0 71.591-32.388 71.591-71.975V748Z" fill="#2abb4f"/></g></svg>',
+                    data:"",
                     width: 620,
                     height: 916,
                     mimetype: "svg+xml"
@@ -9613,6 +9614,7 @@
             var b = Host.bootstrapper.load((function () {
                 return XS.assets.__importATL("i/g/s/socialleaderboards/start_bg.svg", {
                     data: '<svg xmlns="http://www.w3.org/2000/svg" width="392" height="392" style="enable-background:new 0 0 392 392" xml:space="preserve"><g style="opacity:1"><path d="M158.6 61.3 113.4 17l3.6 63.2-57.2-27.1 23.8 58.7-62.7-7.1 41.7 47.8L.9 166.1l54.8 31.6-54.1 33.1 62.2 12.1-40.4 48.8 62.6-9.2-22.3 59.3 56.4-28.7-2 63.3 44.1-45.4 18.8 60.5 27-57.3 37.4 51.2 6.9-63 51.9 36.2-14-61.8 60.9 17.5-33.1-53.9 63.2-3.3-48.9-40.1 58.8-23.6-59.3-22.2 48.1-41.6-63.4-1.6 31.8-54.8-60.4 19 12.4-62.1-50.9 37.7L240.9 5l-36 52.1L176.6.5l-18 60.8z" style="fill:#fff"/></g></svg>',
+
                     width: 392,
                     height: 392,
                     mimetype: "svg+xml"

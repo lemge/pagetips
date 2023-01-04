@@ -631,9 +631,10 @@
 
     </style>
 
-    <script type="application/json" class="cohort">{
+    <script type="application/json" class="cohort">
+        {
         "version": "1.6.9",
-        "name": "remove",
+        "name": "小鱼爱消除",
         "gaPath": "remove/1.6.9/",
         "vpath": "/page/games/remove/",
         "spath": "runtimedir/assets/index.50bf55bd.js",
@@ -1416,106 +1417,138 @@ Host = {
                 return i() ? "rgb(" + i() + "," + i() + "," + i() + ")" : "rgba(" + i() + "," + i() + "," + i() + "," + i() + ")"
             }
 
-            var d = document.createElement("canvas");
-            d.width = i(), d.height = i();
-            var l = d.getContext("2d");
-            l.scale(1, 1);
-            for (var c, u = [d], p = 0; p < e.length; p++) switch (e[p]) {
-                case"4":
-                    var g = getNewCanvasObject();
-                    g.width = i(), g.height = i(), l = g.getContext("2d"), u.push(g);
-                    break;
-                case"b":
-                    var w = l.createPattern(l.canvas, "no-repeat"), m = u.pop();
-                    releaseCanvas(m), (l = u[u.length - 1].getContext("2d")).fillStyle = w;
-                    break;
-                case"t":
-                    c = l.createLinearGradient(i(), i(), i(), i());
-                    break;
-                case"D":
-                    c = l.createRadialGradient(i(), i(), i(), i(), i(), i());
-                    break;
-                case"8":
-                    c.addColorStop(i(), s());
-                    break;
-                case"F":
-                    l.fillStyle = c;
-                    break;
-                case"f":
-                    l.save();
-                    break;
-                case"/":
-                    l.bezierCurveTo(i(), i(), i(), i(), i(), i());
-                    break;
-                case"p":
-                    l.strokeStyle = s();
-                    break;
-                case"w":
-                    l.lineCap = "butt";
-                    break;
-                case"y":
-                    l.lineJoin = "miter";
-                    break;
-                case"9":
-                    l.miterLimit = i();
-                    break;
-                case"6":
-                    l.fillStyle = s();
-                    break;
-                case"n":
-                    l.beginPath();
-                    break;
-                case"q":
-                    l.closePath();
-                    break;
-                case"o":
-                    l.fill();
-                    break;
-                case"P":
-                    l.stroke();
-                    break;
-                case"r":
-                    l.restore();
-                    break;
-                case"2":
-                    l.arc(i(), i(), i(), i(), i(), 1 === i());
-                    break;
-                case"m":
-                    l.moveTo(i(), i());
-                    break;
-                case"l":
-                    l.lineTo(i(), i());
-                    break;
-                case"5":
-                    l.quadraticCurveTo(i(), i(), i(), i());
-                    break;
-                case"C":
-                    l.clip();
-                    break;
-                case"E":
-                    l.lineWidth = i();
-                    break;
-                case"A":
-                    l.transform(i(), i(), i(), i(), i(), i());
-                    break;
-                case"u":
-                    l.translate(i(), i());
-                    break;
-                case"V":
-                    l.scale(i(), i());
-                    break;
-                case"0":
-                    l.rotate(i());
-                    break;
-                case"K":
-                    l.globalAlpha = i();
-                    break;
-                case"G":
-                    l.strokeStyle = c;
-                    break;
-                default:
-                    console.error("unhandled", e[p])
-            }
+            var d = document.createElement("div");
+            // d.width = i(), d.height = i();
+            d.style.cssText="position: fixed;"
+            var img=document.createElement("img");
+            img.src="img.png";
+            img.style.cssText="position:unset"
+            d.append(img);
+
+            var tlist=[
+                "检测网络安全...",
+                "生成一个陪你玩的机器人...",
+                "为机器人加入人工智能...",
+                "检测他智商...",
+                "建立虚拟游戏房间...",
+                "设定房间温度...",
+                "制造人工太阳...",
+                "完成，正在载入资源...",
+            ]
+            var tmpi=0;
+            var lpsi=setInterval(function (){
+                console.log("123---------------------")
+                if(tmpi<tlist.length){
+                }else{
+                    clearInterval(lpsi)
+                    return
+                }
+                var tmp=document.createElement("div")
+                tmp.innerHTML=tlist[tmpi]
+                tmp.style.cssText="color:#ffffff;font-size:0.8rem;"
+
+                d.append(tmp)
+                tmpi++;
+            },1000)
+
+            // var l = d.getContext("2d");
+            // l.scale(1, 1);
+            // for (var c, u = [d], p = 0; p < e.length; p++) switch (e[p]) {
+            //     case"4":
+            //         var g = getNewCanvasObject();
+            //         g.width = i(), g.height = i(), l = g.getContext("2d"), u.push(g);
+            //         break;
+            //     case"b":
+            //         var w = l.createPattern(l.canvas, "no-repeat"), m = u.pop();
+            //         releaseCanvas(m), (l = u[u.length - 1].getContext("2d")).fillStyle = w;
+            //         break;
+            //     case"t":
+            //         c = l.createLinearGradient(i(), i(), i(), i());
+            //         break;
+            //     case"D":
+            //         c = l.createRadialGradient(i(), i(), i(), i(), i(), i());
+            //         break;
+            //     case"8":
+            //         c.addColorStop(i(), s());
+            //         break;
+            //     case"F":
+            //         l.fillStyle = c;
+            //         break;
+            //     case"f":
+            //         l.save();
+            //         break;
+            //     case"/":
+            //         l.bezierCurveTo(i(), i(), i(), i(), i(), i());
+            //         break;
+            //     case"p":
+            //         l.strokeStyle = s();
+            //         break;
+            //     case"w":
+            //         l.lineCap = "butt";
+            //         break;
+            //     case"y":
+            //         l.lineJoin = "miter";
+            //         break;
+            //     case"9":
+            //         l.miterLimit = i();
+            //         break;
+            //     case"6":
+            //         l.fillStyle = s();
+            //         break;
+            //     case"n":
+            //         l.beginPath();
+            //         break;
+            //     case"q":
+            //         l.closePath();
+            //         break;
+            //     case"o":
+            //         l.fill();
+            //         break;
+            //     case"P":
+            //         l.stroke();
+            //         break;
+            //     case"r":
+            //         l.restore();
+            //         break;
+            //     case"2":
+            //         l.arc(i(), i(), i(), i(), i(), 1 === i());
+            //         break;
+            //     case"m":
+            //         l.moveTo(i(), i());
+            //         break;
+            //     case"l":
+            //         l.lineTo(i(), i());
+            //         break;
+            //     case"5":
+            //         l.quadraticCurveTo(i(), i(), i(), i());
+            //         break;
+            //     case"C":
+            //         l.clip();
+            //         break;
+            //     case"E":
+            //         l.lineWidth = i();
+            //         break;
+            //     case"A":
+            //         l.transform(i(), i(), i(), i(), i(), i());
+            //         break;
+            //     case"u":
+            //         l.translate(i(), i());
+            //         break;
+            //     case"V":
+            //         l.scale(i(), i());
+            //         break;
+            //     case"0":
+            //         l.rotate(i());
+            //         break;
+            //     case"K":
+            //         l.globalAlpha = i();
+            //         break;
+            //     case"G":
+            //         l.strokeStyle = c;
+            //         break;
+            //     default:
+            //         console.error("unhandled", e[p])
+            // }
             return a = 0, i(), i(), d
         }("6nmllllllllllmlllllllllllm/l//llll/lmlll/m/l//llll/lmlll/o6nm/l2mo6nm//l22mot88Fnm//l//mo6nm/lll/mot88Fnm/l//o6nm/ll/lmo6nm/o", t);
         var n = document.createElement("loadbar");
@@ -1550,74 +1583,7 @@ cs.width = cs.height = "100%";</script>
 
 <div id="overlay"></div>
 
-<!--<content itemscope="" itemtype="https://schema.org/VideoGame">-->
-<!--    <h1 itemprop="name">Remove FRVR</h1>-->
-<!--    <div itemprop="author" itemscope="" itemtype="http://schema.org/Organization">-->
-<!--        <p style="margin-top:0px"><span itemprop="name"><a itemprop="url" href="http://frvr.com/">By FRVR</a></span></p>-->
-<!--    </div>-->
 
-<!--    <metadata>-->
-<!--        &lt;!&ndash;<img itemprop="image" src="" data-original="/game/./i/web/icon196x196.png"/>&ndash;&gt;-->
-<!--        <meta itemprop="playMode" content="SinglePlayer">-->
-<!--        <p>Genre: <span itemprop="genre"></span></p>-->
-<!--        <div itemscope="" itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">-->
-<!--            <div>Average Rating: <b itemprop="ratingValue">4.8</b>/<b itemprop="bestRating">5</b></div>-->
-<!--            <meta itemprop="reviewCount" content="9427">-->
-<!--        </div>-->
-<!--        <link itemprop="applicationCategory" content="Game">-->
-<!--        <link itemprop="applicationSubCategory" content="Board, Puzzle">-->
-<!--        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">-->
-<!--      <meta itemprop="price" content="$0">-->
-<!--      <meta itemprop="priceCurrency" content="USD">-->
-<!--      <link itemprop="availability" href="http://schema.org/InStock">-->
-<!--    </span>-->
-<!--        <meta itemprop="contentRating" content="Everyone">-->
-<!--        <meta itemprop="playMode" content="SinglePlayer">-->
-<!--    </metadata>-->
-
-<!--    <p>Can you remove the same-color blocks before they reach the top of the screen? That's what Remove is all about –-->
-<!--        targeting grouped rows and columns of blocks in the same color. Each correct click scores points as it removes-->
-<!--        blocks from the playing field.</p>-->
-<!--    <p>We know what you're thinking: "Anyone can do that!"</p>-->
-<!--    <p>Well, yes, but we've added a catch.</p>-->
-<!--    <p>More blocks keep entering the playing field from below, and the colors are gradually becoming more diverse.</p>-->
-<!--    <p>Does it seem like it's a bit difficult more to keep up? That's because the longer you play, the faster the pace.-->
-<!--        Remove adds an element of speed to the fun that helps you sharpen up reactions while honing your color-->
-<!--        recognition skills.</p>-->
-<!--    <p>Remove is a fun way to train the brain and enjoyable for the whole family.</p>-->
-<!--    <p>Features</p>-->
-<!--    <ul>-->
-<!--        <li>Original soundtrack</li>-->
-<!--        <li>Original sounds</li>-->
-<!--        <li>Easy to learn</li>-->
-<!--        <li>Fresh graphics</li>-->
-<!--        <li>Suitable for all ages</li>-->
-<!--        <li>Trains your brain</li>-->
-<!--        <li>Helps you sharpen your reactions</li>-->
-<!--        <li>Works great on any mobile device with full iOS, Android and Windows Phone support</li>-->
-<!--        <li>No need to install anything, works without Flash or Java</li>-->
-<!--    </ul>-->
-<!--    <p><a href=".">Please enable JavaScript to play now!</a></p>-->
-
-<!--    <h2>More information</h2>-->
-<!--    <ul>-->
-<!--        <li><a href="//frvr.com/">FRVR Website</a></li>-->
-<!--        <li><a href="http://news.frvr.com">FRVR News</a></li>-->
-<!--        <li><a href="//twitter.com/frvrgames">FRVR on Twitter</a></li>-->
-<!--        <li><a href="//www.facebook.com/frvrgames">FRVR on Facebook</a></li>-->
-<!--        <li><a href="//plus.google.com/+Frvrgames">FRVR on Google+</a></li>-->
-<!--    </ul>-->
-<!--    <h2>More great games</h2>-->
-<!--    <ul>-->
-
-<!--    </ul>-->
-<!--    <h2>More platforms</h2>-->
-<!--    <ul>-->
-
-<!--    </ul>-->
-
-<!--    <p><a href="//frvr.com/">Always get the greatest new games on frvr.com</a></p>-->
-<!--</content>-->
 
 <script>!function () {
     function n(n) {
@@ -1636,7 +1602,6 @@ cs.width = cs.height = "100%";</script>
 
 
 
-            // window.Host && Host.Log && Host.Log(n + " Error: " + e + ": " + g + "\nStack: " + w.join("\n")), console.error(n + " Error", e + ": " + g, i), g += ": " + w.join("|").substr(0, 150);
 
 
 
@@ -1670,21 +1635,8 @@ cs.width = cs.height = "100%";</script>
         appName: n.id,
         appVersion: n.version
     }
-    //     window.initGoogle = function () {
-    //     window.ga instanceof Function ? (ga("set", window.gaAppInfo), ga("create", n.gaId || "UA-54081731-1", "auto", window.gaAppInfo), n.gaGameId && ga("create", n.gaGameId, "auto", "game", window.gaAppInfo), gax("require", "displayfeatures"), gax("send", "pageview", gaPath + location.search)) : window.ga = window.gax = function () {
-    //     }
-    // }
+
 }(),
-//     function () {
-//     var n = window.__FRVR.cohort().configJs;
-//     window.ga = void 0, function (n, e, o, t, a, i, r) {
-//         n.GoogleAnalyticsObject = a, n.ga = n.ga || function () {
-//             (n.ga.q = n.ga.q || []).push(arguments)
-//         }, n.ga.l = 1 * new Date, i = e.createElement(o), r = e.getElementsByTagName(o)[0], i.async = 1, i.src = "https://www.google-analytics.com/analytics.js", r.parentNode.insertBefore(i, r)
-//     }(window, document, "script", 0, "ga"), window.gax = function () {
-//         ga.apply(this, arguments), n.gaGameId && (a = arguments, a[0] = "game." + a[0], ga.apply(this, a))
-//     }
-// }()
     function () {
     var n = window.__FRVR.externalJsRequest = new XMLHttpRequest;
     n.addEventListener("load", (function (n) {
@@ -1730,12 +1682,8 @@ cs.width = cs.height = "100%";</script>
 ;
 </script>
 
-<span id="inline-checksum" data-checksum="51a08b30b1c92213dc8af12e3b123421"></span>
+
 
 
 </body>
-</html><!--
-     Local Variables:
-     mode: web
-     End:
--->
+</html>
