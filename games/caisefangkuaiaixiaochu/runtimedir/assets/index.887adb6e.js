@@ -3822,7 +3822,7 @@
                     } catch (o) {
                         i.Log("PostJSON Error:", o), n && n(!1, o)
                     }
-                }, i.Web = {}, i.Web.GetQueryString = window.__FRVR.getQueryString, i.Localize = i.Localize || {}, i.Localize.Translations = {
+                }, i.Web = {}, i.Web.GetQueryString = window.__XYYX.getQueryString, i.Localize = i.Localize || {}, i.Localize.Translations = {
                     en: {},
                     "en-US": {}
                 }, i.Localize._currentLanguage = "en-US", i.Localize.LocalizedString = function (e, t) {
@@ -3915,7 +3915,7 @@
                     showCrossPromoBanner: !1,
                     showModalTryAgain: !0
                 }
-            }(), window.FRVRInterfaceCore && (window.FRVRInstant = new function (e) {
+            }(), window.XYYXInterfaceCore && (window.XYYXInstant = new function (e) {
                 var t = 0, n = {};
 
                 function r(e, t) {
@@ -3948,7 +3948,7 @@
                     }
                 }
 
-                window.FRVRInstantCore = {
+                window.XYYXInstantCore = {
                     getADIDCallback: r("getADIDCallback"),
                     canCreateShortcutCallback: r("canCreateShortcutCallback"),
                     createShortcutCallback: r("createShortcutCallback"),
@@ -3964,7 +3964,7 @@
                             } catch (a) {
                                 n("getADID " + a)
                             }
-                        })), FRVRInterfaceCore.getADID(t), t++
+                        })), XYYXInterfaceCore.getADID(t), t++
                     }))
                 }, a.canCreateShortcut = function (e) {
                     return new Promise((function (n, r) {
@@ -3976,7 +3976,7 @@
                             } catch (a) {
                                 r("canCreateShortcut statusCode:" + e + " state:" + t + " msg:" + a)
                             }
-                        })), FRVRInterfaceCore.canCreateShortcut(t, e), t++
+                        })), XYYXInterfaceCore.canCreateShortcut(t, e), t++
                     }))
                 }, a.createShortcut = function (e, n, r, a) {
                     return new Promise((function (s, l) {
@@ -3988,7 +3988,7 @@
                             } catch (n) {
                                 l("createShortcut statusCode:" + e + " msg:" + n)
                             }
-                        })), console.warn("Trying createShortcut", e, n, r, a), FRVRInterfaceCore.createShortcut(t, e, n, r, a), t++
+                        })), console.warn("Trying createShortcut", e, n, r, a), XYYXInterfaceCore.createShortcut(t, e, n, r, a), t++
                     }))
                 }, a.share = function (e, n, r) {
                     return new Promise((function (e, a) {
@@ -3999,34 +3999,34 @@
                             } catch (r) {
                                 a("share " + r)
                             }
-                        })), FRVRInterfaceCore.share(t, n, r), t++
+                        })), XYYXInterfaceCore.share(t, n, r), t++
                     }))
                 }, a.close = function () {
                     try {
-                        FRVRInterfaceCore.close()
+                        XYYXInterfaceCore.close()
                     } catch (e) {
-                        window.onerror && window.onerror("Error in FRVRInstant.close: " + (e.message || e.toString()), e)
+                        window.onerror && window.onerror("Error in XYYXInstant.close: " + (e.message || e.toString()), e)
                     }
                 }, a.trackPlay = function (e, t, n, r, i) {
                     console.log("Running track play with", e, t, n, r);
                     try {
-                        FRVRInterfaceCore.trackPlay(e, t, n, r, i)
+                        XYYXInterfaceCore.trackPlay(e, t, n, r, i)
                     } catch (o) {
-                        window.onerror && window.onerror("Error in FRVRInstant.trackPlay: " + (o.message || o.toString()), o)
+                        window.onerror && window.onerror("Error in XYYXInstant.trackPlay: " + (o.message || o.toString()), o)
                     }
                 }, a.forceReload = function () {
                     try {
-                        FRVRInterfaceCore.forceReload()
+                        XYYXInterfaceCore.forceReload()
                     } catch (e) {
-                        window.onerror && window.onerror("Error in FRVRInstant.forceReload: " + (e.message || e.toString()), e)
+                        window.onerror && window.onerror("Error in XYYXInstant.forceReload: " + (e.message || e.toString()), e)
                     }
                 }, a.clearCache = function () {
                     try {
-                        FRVRInterfaceCore.clearCache()
+                        XYYXInterfaceCore.clearCache()
                     } catch (e) {
-                        window.onerror && window.onerror("Error in FRVRInstant.clearCache: " + (e.message || e.toString()), e)
+                        window.onerror && window.onerror("Error in XYYXInstant.clearCache: " + (e.message || e.toString()), e)
                     }
-                }, console.log("FRVR Instant Init Done")
+                }, console.log("XYYX Instant Init Done")
             }(window)), function (e) {
                 e.Host = e.Host || {}, Host.Type = "web", Host.Log = function (e) {
                     console.log(e)
@@ -4087,8 +4087,8 @@
                 }
             }(window), window.getRenderer = function () {
                 var e = {
-                    frvrTextureMemoryUsage: 0,
-                    frvrGLErrors: {
+                    xyyxTextureMemoryUsage: 0,
+                    xyyxGLErrors: {
                         NO_ERROR: 0,
                         OUT_OF_MEMORY: 0,
                         INVALID_ENUM: 0,
@@ -4098,17 +4098,17 @@
                         CONTEXT_LOST_WEBGL: 0,
                         TOTAL_ERRORS: 0
                     },
-                    frvrErrorStats: function () {
+                    xyyxErrorStats: function () {
                         var t = "";
-                        for (name in e.frvrGLErrors) {
-                            var n = e.frvrGLErrors[name];
+                        for (name in e.xyyxGLErrors) {
+                            var n = e.xyyxGLErrors[name];
                             t += name + ": " + n + "\n"
                         }
                         return t
                     },
                     WEBGL_RENDERER: 0,
                     CANVAS_RENDERER: 1,
-                    VERSION: "v2.2.3FRVR",
+                    VERSION: "v2.2.3XYYX",
                     blendModes: {NORMAL: 0, ADD: 1, MULTIPLY: 2, SCREEN: 3},
                     scaleModes: {DEFAULT: 0, LINEAR: 0, NEAREST: 1},
                     _UID: 0
@@ -4478,12 +4478,12 @@
                     this.updateTexture()
                 },e.Text.prototype.updateTexture = function () {
                     try {
-                        void 0 !== this._lastSize && (e.frvrTextureMemoryUsage -= 4 * this._lastSize.w * this._lastSize.h)
+                        void 0 !== this._lastSize && (e.xyyxTextureMemoryUsage -= 4 * this._lastSize.w * this._lastSize.h)
                     } catch (t) {
                     }
                     this.texture.baseTexture.width = this.canvas.width, this.texture.baseTexture.height = this.canvas.height, this.texture.frame.width = this.canvas.width, this.texture.frame.height = this.canvas.height, this._width = this.canvas.width, this._height = this.canvas.height;
                     try {
-                        e.frvrTextureMemoryUsage += 4 * this.texture.baseTexture.width * this.texture.baseTexture.height, this._lastSize = {
+                        e.xyyxTextureMemoryUsage += 4 * this.texture.baseTexture.width * this.texture.baseTexture.height, this._lastSize = {
                             w: this.texture.baseTexture.width,
                             h: this.texture.baseTexture.height
                         }
@@ -5004,12 +5004,12 @@
                     if (t.hasLoaded && t.source && t.source.width && t.source.height && !t.isMock && !t.source.isMock) {
                         var n = this.gl;
                         try {
-                            void 0 !== this._lastSize && (e.frvrTextureMemoryUsage -= 4 * t._lastSize.w * t._lastSize.h)
+                            void 0 !== this._lastSize && (e.xyyxTextureMemoryUsage -= 4 * t._lastSize.w * t._lastSize.h)
                         } catch (r) {
                         }
                         t._glTextures[n.id] || (t._glTextures[n.id] = n.createTexture()), n.bindTexture(n.TEXTURE_2D, t._glTextures[n.id]), n.pixelStorei(n.UNPACK_PREMULTIPLY_ALPHA_WEBGL, t.premultipliedAlpha), n.texImage2D(n.TEXTURE_2D, 0, n.RGBA, n.RGBA, n.UNSIGNED_BYTE, t.source);
                         try {
-                            e.frvrTextureMemoryUsage += 4 * t.source.width * t.source.height, t._lastSize = {
+                            e.xyyxTextureMemoryUsage += 4 * t.source.width * t.source.height, t._lastSize = {
                                 w: t.source.width,
                                 h: t.source.height
                             }
@@ -5281,14 +5281,14 @@
                 },e.FilterTexture.prototype.resize = function (t, n) {
                     if (this.width !== t || this.height !== n) {
                         try {
-                            void 0 !== this._lastSize && (e.frvrTextureMemoryUsage -= 4 * this._lastSize.w * this._lastSize.h)
+                            void 0 !== this._lastSize && (e.xyyxTextureMemoryUsage -= 4 * this._lastSize.w * this._lastSize.h)
                         } catch (i) {
                         }
                         this.width = t, this.height = n;
                         var r = this.gl;
                         r.bindTexture(r.TEXTURE_2D, this.texture), r.texImage2D(r.TEXTURE_2D, 0, r.RGBA, t, n, 0, r.RGBA, r.UNSIGNED_BYTE, null);
                         try {
-                            e.frvrTextureMemoryUsage += 4 * t * n, this._lastSize = {w: t, h: n}
+                            e.xyyxTextureMemoryUsage += 4 * t * n, this._lastSize = {w: t, h: n}
                         } catch (i) {
                         }
                         r.bindRenderbuffer(r.RENDERBUFFER, this.renderBuffer), r.renderbufferStorage(r.RENDERBUFFER, r.DEPTH_STENCIL, t, n)
@@ -6002,7 +6002,7 @@
 
                 n.audio = new t
             }(window), function (e) {
-                var t = "--https--production-dot-frvr-chatbot.appspot.com/refer";
+                var t = "--https--production-dot-xyyx-chatbot.appspot.com/refer";
 
                 function n(e, t) {
                     t || (t = !1);
@@ -6282,13 +6282,13 @@
                         return e.type !== eventTypes.forced.name && (!(!d() && !t.isFrozen(e.frzGrp)) && (e.type === eventTypes.transient.name || i.cacheEvent(e.callFrom, e.name, e.frzGrp, e.cbData, e.callback), !0))
                     }
                 }), i.prototype.constructor = i, t.on("gameLoaded", (function () {
-                    ve(!0), t.is.facebookInstant && "undefined" != typeof FBInstant && FBInstant.logEvent && (n.frvrGLErrors.TOTAL_ERRORS > 0 && FBInstant.logEvent("webgl_errors", 1, {
-                        OUT_OF_MEMORY: n.frvrGLErrors.OUT_OF_MEMORY,
-                        INVALID_ENUM: n.frvrGLErrors.INVALID_ENUM,
-                        INVALID_VALUE: n.frvrGLErrors.INVALID_VALUE,
-                        INVALID_OPERATION: n.frvrGLErrors.INVALID_OPERATION,
-                        INVALID_FRAMEBUFFER_OPERATION: n.frvrGLErrors.INVALID_FRAMEBUFFER_OPERATION,
-                        CONTEXT_LOST_WEBGL: n.frvrGLErrors.CONTEXT_LOST_WEBGL
+                    ve(!0), t.is.facebookInstant && "undefined" != typeof FBInstant && FBInstant.logEvent && (n.xyyxGLErrors.TOTAL_ERRORS > 0 && FBInstant.logEvent("webgl_errors", 1, {
+                        OUT_OF_MEMORY: n.xyyxGLErrors.OUT_OF_MEMORY,
+                        INVALID_ENUM: n.xyyxGLErrors.INVALID_ENUM,
+                        INVALID_VALUE: n.xyyxGLErrors.INVALID_VALUE,
+                        INVALID_OPERATION: n.xyyxGLErrors.INVALID_OPERATION,
+                        INVALID_FRAMEBUFFER_OPERATION: n.xyyxGLErrors.INVALID_FRAMEBUFFER_OPERATION,
+                        CONTEXT_LOST_WEBGL: n.xyyxGLErrors.CONTEXT_LOST_WEBGL
                     }), FBInstant.logEvent("pixi_renderer", 1, {renderer: t.is.usingCanvasRenderer ? "canvas" : t.is.usingWebGLRenderer ? "webgl" : "unknown"}))
                 }), {freezeGroup: ENG_FRZ_GRP}), t.modulesToPreload = [], t.ignoreCursorChanges = !1, t.dirty = !1, Host.Log("User Agent: " + navigator.userAgent), t.assets = {}, t.assets.__lookupFetchCache = function (e) {
                     var t = Host.bootstrapper && Host.bootstrapper.mnemonicMap[e];
@@ -6366,7 +6366,7 @@
                     e.preload.apply(null, t.concat([function () {
                         n && n(t)
                     }]))
-                }, t.is = window.__FRVR.platformIs, t.can = {
+                }, t.is = window.__XYYX.platformIs, t.can = {
                     showSidebar: function () {
                         return !t.is.jioStb && Host.supports.showSidebar
                     }, showSidebarSocial: function () {
@@ -6730,7 +6730,7 @@
                     if (!(y || t.is.facebookInstant || t.is.twitch || t.is.yandex || t.is.jioStb || t.is.samsungInstantPlay || t.is.snapchat)) {
                         var n = Config.remoteConfigVersion;
                         if (t.is.iOS ? n += ".ios" : t.is.android && !t.is.silk ? n += ".android" : t.is.chromeWrapper ? n += ".chrome" : t.is.facebookInstant && (n += ".instant"), "undefined" != typeof Config && Config.stage && "live" != Config.stage && "gold" != Config.stage && "beta" != Config.stage && "rc" != Config.stage) Host.WrapperLog("Skipping ad config loading, because of Config.stage"), console.warn("Skipping ad config loading, because of Config.stage"); else {
-                            var r = t.httpPrefix + "cdn.frvr.com/config/" + e + "." + n + ".json?r=" + (new Date).getTime();
+                            var r = t.httpPrefix + "cdn.xyyx.com/config/" + e + "." + n + ".json?r=" + (new Date).getTime();
                             Host.Tools.LoadJSON(r, (function (e) {
                                 for (var n in Host.WrapperLog("Loading Config URL: " + r), e) t.remoteConfig[n] = e[n];
                                 t.configLoadCallback()
@@ -6740,7 +6740,7 @@
                                 }), 6e4)
                             }))
                         }
-                        Host.Log(t.httpPrefix + "cdn.frvr.com/config/" + e + "." + n + ".json?r="), y = !0
+                        Host.Log(t.httpPrefix + "cdn.xyyx.com/config/" + e + "." + n + ".json?r="), y = !0
                     }
                 }, t.navigate = function (e, n) {
                     window.Host && window.Host.IOS && window.Host.IOS.OpenURL && Host.IOS.OpenURL(e), window.Host && window.Host.Android && window.Host.Android.OpenURL ? window.Host.Android.OpenURL(e) : t.is.clay ? (window.open(e, n || "_blank"), navigator.app && navigator.app.loadUrl && navigator.app.loadUrl(e, {openExternal: !0})) : window.open(e, n || "_blank")
@@ -7539,7 +7539,7 @@
 
                 function u() {
                     var t = this;
-                    t.timeStart = e && e.__FRVR && e.__FRVR.startTime || Date.now(), t.timeLoaded = void 0, t.handleGameLoaded = t.handleGameLoaded.bind(this), t.handleFBInstantStart = t.handleFBInstantStart.bind(this), t.handleFBInstantPreloadComplete = t.handleFBInstantPreloadComplete.bind(this), t.handleRefreshPersistentData = t.handleRefreshPersistentData.bind(this), t.handlePlaySession = t.handlePlaySession.bind(this), t.isSessionTimedOut = t.isSessionTimedOut.bind(this), t.extendSession = t.extendSession.bind(this), t.data = {}, t.dataStore = {}, t.dataIsDirty = !0, t.providers = {}, t.DEBUG = !1, this.facebook_entrypoint = this.facebook_context_type = this.facebook_campaign = null, this.events = []
+                    t.timeStart = e && e.__XYYX && e.__XYYX.startTime || Date.now(), t.timeLoaded = void 0, t.handleGameLoaded = t.handleGameLoaded.bind(this), t.handleFBInstantStart = t.handleFBInstantStart.bind(this), t.handleFBInstantPreloadComplete = t.handleFBInstantPreloadComplete.bind(this), t.handleRefreshPersistentData = t.handleRefreshPersistentData.bind(this), t.handlePlaySession = t.handlePlaySession.bind(this), t.isSessionTimedOut = t.isSessionTimedOut.bind(this), t.extendSession = t.extendSession.bind(this), t.data = {}, t.dataStore = {}, t.dataIsDirty = !0, t.providers = {}, t.DEBUG = !1, this.facebook_entrypoint = this.facebook_context_type = this.facebook_campaign = null, this.events = []
                 }
 
                 var h = u.prototype;
@@ -7590,25 +7590,25 @@
                 }, h.initUserId = function () {
                     if (Host.userId) this.userId = Host.userId, this.globalUserId = Host.userId; else {
                         var e = c();
-                        f.data.addString("__frvr_user_id", {
+                        f.data.addString("__xyyx_user_id", {
                             default: e, remote: !0, merge: function (e, t) {
                                 return t
                             }, prefix: "global"
-                        }), this.userId = f.data.__frvr_user_id = "undefined" === f.data.__frvr_user_id || void 0 === f.data.__frvr_user_id ? e : f.data.__frvr_user_id, this.globalUserId = window.__FRVR.globalUserId(), Host.emit("xstrack:InitUserId", {globalUserId: this.globalUserId})
+                        }), this.userId = f.data.__xyyx_user_id = "undefined" === f.data.__xyyx_user_id || void 0 === f.data.__xyyx_user_id ? e : f.data.__xyyx_user_id, this.globalUserId = window.__XYYX.globalUserId(), Host.emit("xstrack:InitUserId", {globalUserId: this.globalUserId})
                     }
                 }, h.initData = function (e) {
                     var t = u.DATAKEY, n = u.PERSISTENT_DATA, r = this, o = this.dataStore = {
-                        app_id: "com.frvr." + Config.id,
+                        app_id: "com.xyyx." + Config.id,
                         app_name: Config.id,
                         app_version: Config.version,
                         app_build: Config.build,
                         development: !1,
-                        engine_version: __FRVR.XSEngineVersion || function () {
+                        engine_version: __XYYX.XSEngineVersion || function () {
                             try {
-                                var e = JSON.parse(Config.frvr_repo_statuses)["frvr-tools"].branch;
+                                var e = JSON.parse(Config.xyyx_repo_statuses)["xyyx-tools"].branch;
                                 if (0 === e.indexOf("release/")) return e.slice(8)
                             } catch (t) {
-                                return console.warn("[xs.data]", "failed to parse Config.frvr_repo_statuses"), null
+                                return console.warn("[xs.data]", "failed to parse Config.xyyx_repo_statuses"), null
                             }
                         }(),
                         play_session_count: 0,
@@ -7808,7 +7808,7 @@
                     var t = document && document.location && document.location.search || "",
                         n = (t = t.replace(/^\?/, "")).match("^(?:.*utm_" + e + "=([^&]*)|).*$");
                     return n.length > 1 ? n[1] : void 0
-                }, h.getChannel = window.__FRVR.getChannel, h.handleFBInstantPreloadComplete = function () {
+                }, h.getChannel = window.__XYYX.getChannel, h.handleFBInstantPreloadComplete = function () {
                 }, h.handleFBInstantStart = function () {
                     this.facebook_player_id = FBInstant.player.getID(), FBInstant.getEntryPointAsync && FBInstant.getEntryPointAsync().then(this.handleEntryPointAsync.bind(this));
                     var e = (FBInstant.context.getType() || "unspecified").toLowerCase();
@@ -7866,10 +7866,10 @@
                     var i = u.NON_INTERACTION_EVENTS.indexOf(e) >= 0;
                     i || this.handlePlaySession();
                     var o = this.buildEventContext(e, t, n);
-                    if (o._userId = this.userId, window.__FRVR && window.__FRVR.consent && (window.__FRVR.consent.hasConsent(window.__FRVR.consent.COOKIES) || (o._userId = this.globalUserId)), o.global_user_id = this.globalUserId, o.non_interaction = i ? 1 : 0, o.facebook_entrypoint = this.facebook_entrypoint, o.facebook_context_type = this.facebook_context_type, o.facebook_player_id = this.facebook_player_id || (f.is.facebookInstant && FBInstant.player && FBInstant.player.getID ? FBInstant.player.getID() : null), o.social_session_id = f.is.facebookInstant && FBInstant.context && FBInstant.context.getID ? FBInstant.context.getID() : null, o.page_session_id = window.__FRVR.analytics.getPageSessionId(), o.play_session_id = window.__FRVR.analytics.getPlaySessionId(), r && ["_userId", "global_user_id", "facebook_player_id", "social_session_id", "page_session_id", "play_session_id"].forEach((function (e) {
+                    if (o._userId = this.userId, window.__XYYX && window.__XYYX.consent && (window.__XYYX.consent.hasConsent(window.__XYYX.consent.COOKIES) || (o._userId = this.globalUserId)), o.global_user_id = this.globalUserId, o.non_interaction = i ? 1 : 0, o.facebook_entrypoint = this.facebook_entrypoint, o.facebook_context_type = this.facebook_context_type, o.facebook_player_id = this.facebook_player_id || (f.is.facebookInstant && FBInstant.player && FBInstant.player.getID ? FBInstant.player.getID() : null), o.social_session_id = f.is.facebookInstant && FBInstant.context && FBInstant.context.getID ? FBInstant.context.getID() : null, o.page_session_id = window.__XYYX.analytics.getPageSessionId(), o.play_session_id = window.__XYYX.analytics.getPlaySessionId(), r && ["_userId", "global_user_id", "facebook_player_id", "social_session_id", "page_session_id", "play_session_id"].forEach((function (e) {
                         o[e] && (o[e] = d)
                     })), this.facebook_campaign) for (var a in this.facebook_campaign) 0 == a.indexOf("fb_") ? o[a] = this.facebook_campaign[a] : o["fb_" + a] = this.facebook_campaign[a];
-                    var s = window.__FRVR.cohort();
+                    var s = window.__XYYX.cohort();
                     if (s.experiment) {
                         var l = s.experiment.weights,
                             c = "uniform" === l ? s.cohortWeight * s.experiment.numberOfCohorts : l.reduce((function (e, t) {
@@ -7984,7 +7984,7 @@
 
                     f.track.addHandler("ad", (function (i, o, a, s, l) {
                         var c = !1;
-                        window.__FRVR && window.__FRVR.consent && (c = !window.__FRVR.consent.hasConsent(window.__FRVR.consent.AD_ANALYTICS));
+                        window.__XYYX && window.__XYYX.consent && (c = !window.__XYYX.consent.hasConsent(window.__XYYX.consent.AD_ANALYTICS));
                         var d = void 0, u = (l = l || {}, n[o]);
                         u ? l[u] = a : (l = s || {}, s = a, a = void 0), "finish" === o && (d = "success" === a ? t[e[i]] : 0), l.ad_point = s || "engine-triggered", this.send(r(i, o), d, l, c)
                     }));
@@ -8111,7 +8111,7 @@
                                 console.log("[xs.abtest] ab_fran_adsense.adsense"), n("pbgam")
                             }
                         })
-                    })), XS.abtest.init(window.__FRVR.globalUserId()), e) r[t] = new i(e[t]);
+                    })), XS.abtest.init(window.__XYYX.globalUserId()), e) r[t] = new i(e[t]);
                     var n
                 }
 
@@ -8162,8 +8162,8 @@
                     if (console.warn("INIT", e), t = e, Config.ads) {
                         var n = Config.ads[t];
                         n && (n.remote ? fetch(function (e) {
-                            var t = Config.id, n = __FRVR.getChannel();
-                            return "--https--fran-cdn.frvr.com/configs/ads/{GAME}/{PLATFORM}/{CHANNEL}/xs.json".replace("{GAME}", t).replace("{PLATFORM}", e).replace("{CHANNEL}", n)
+                            var t = Config.id, n = __XYYX.getChannel();
+                            return "--https--fran-cdn.xyyx.com/configs/ads/{GAME}/{PLATFORM}/{CHANNEL}/xs.json".replace("{GAME}", t).replace("{PLATFORM}", e).replace("{CHANNEL}", n)
                         }(t)).then((function (e) {
                             if (!e.ok) throw Error(e.statusText);
                             return e.json()
@@ -8175,7 +8175,7 @@
                     }
                 }
             }(), function (e) {
-                var t = "--https--bucket.frvr.com/config/";
+                var t = "--https--bucket.xyyx.com/config/";
 
                 function n(e, t) {
                     var n, r, o,
@@ -8282,12 +8282,12 @@
                 window.XC = {};
                 for (var t = document.cookie.split("; "), n = t.length - 1; n >= 0; n--) {
                     var r = t[n].split("=");
-                    if ("frvr_uid" == r[0]) {
-                        XC.frvr_uid = r[1];
+                    if ("xyyx_uid" == r[0]) {
+                        XC.xyyx_uid = r[1];
                         break
                     }
                 }
-                window.location && window.location.search && window.location.search.indexOf("tsrv=") > -1 ? XC.server = "http://l.frvr.com:8008/" : XC.server = "--https--xc.frvr.com/", XC.c = function () {
+                window.location && window.location.search && window.location.search.indexOf("tsrv=") > -1 ? XC.server = "http://l.xyyx.com:8008/" : XC.server = "--https--xc.xyyx.com/", XC.c = function () {
                     for (var e = [], t = 0; 64 > t;) e[t] = 0 | 4294967296 * Math.abs(Math.sin(++t));
                     return function (t) {
                         for (var n, r, i, o, a = [], s = (t = unescape(encodeURI(t))).length, l = [n = 1732584193, r = -271733879, ~n, ~r], c = 0; c <= s;) a[c >> 2] |= (t.charCodeAt(c) || 128) << c++ % 4 * 8;
@@ -8298,7 +8298,7 @@
                         for (t = ""; 32 > o;) t += (l[o >> 3] >> 4 * (1 ^ 7 & o++) & 15).toString(16);
                         return t
                     }
-                }(), XC.loggedin = !1, XC.slt = "I think you'll enjoy playing FRVR Games!", XC.user = XC.nouser = {
+                }(), XC.loggedin = !1, XC.slt = "I think you'll enjoy playing XYYX Games!", XC.user = XC.nouser = {
                     set: function () {
                     }, get: function () {
                     }
@@ -8316,7 +8316,7 @@
                         var r = new FormData, i = JSON.stringify(n), a = t || "";
                         r.append("id", a), r.append("c", XC.c(XC.slt + a + i)), r.append("data", i), r.append("game", Config.id), o.open("POST", e), o.send(r)
                     };
-                    XC.frvr_uid ? a(XC.frvr_uid) : XC.user && XC.user.id ? a(XC.user.id) : Host.Preferences.GetString("frvr.uid", a)
+                    XC.xyyx_uid ? a(XC.xyyx_uid) : XC.user && XC.user.id ? a(XC.user.id) : Host.Preferences.GetString("xyyx.uid", a)
                 }, XC.onFBAuth = function (e) {
                     XC.login(e)
                 }, XC.onFBDeauth = function () {
@@ -8326,8 +8326,8 @@
                         load: function (t) {
                             e.isUserInteraction && XS.loadSpinner.hide();
                             var n = JSON.parse(t);
-                            XC.user = new XC.User(n), XC.loggedin = !0, XS.data._loadRemote(XC, XC.user.data), Host.Preferences.SetString("frvr.uid", XC.user.id), XC.frvr_uid = XC.user.id, document.cookie = "frvr_uid=" + XC.user.id + ";path=/ ;max-age= 3153600000;expires=Fri, 01 Jan 2100 00:00:00 GMT", XS.emit("login", XC.user)
-                        }, data: {id: XC.frvr_uid, fb_uid: e.userID, fb_auth: e.accessToken}, error: function (t) {
+                            XC.user = new XC.User(n), XC.loggedin = !0, XS.data._loadRemote(XC, XC.user.data), Host.Preferences.SetString("xyyx.uid", XC.user.id), XC.xyyx_uid = XC.user.id, document.cookie = "xyyx_uid=" + XC.user.id + ";path=/ ;max-age= 3153600000;expires=Fri, 01 Jan 2100 00:00:00 GMT", XS.emit("login", XC.user)
+                        }, data: {id: XC.xyyx_uid, fb_uid: e.userID, fb_auth: e.accessToken}, error: function (t) {
                             e.isUserInteraction && XS.loadSpinner.hide(), Host.Log("Login Error: " + t), XS.emit("login-error", t)
                         }
                     })
@@ -8339,8 +8339,8 @@
                     XC.send(XC.server + "login", {
                         load: function (e) {
                             var t = JSON.parse(e);
-                            XC.user = new XC.User(t), XC.loggedin = !0, console.log("Logged in - returned uid: ", XC.user.id), Host.Preferences.SetString("frvr.uid", XC.user.id), XC.frvr_uid = XC.user.id, document.cookie = "frvr_uid=" + XC.user.id + ";path=/ ;max-age= 3153600000;expires=Fri, 01 Jan 2100 00:00:00 GMT", XS.emit("login", XC.user)
-                        }, data: {id: XC.frvr_uid, fb_uid: e, fb_auth: t}, error: function (e) {
+                            XC.user = new XC.User(t), XC.loggedin = !0, console.log("Logged in - returned uid: ", XC.user.id), Host.Preferences.SetString("xyyx.uid", XC.user.id), XC.xyyx_uid = XC.user.id, document.cookie = "xyyx_uid=" + XC.user.id + ";path=/ ;max-age= 3153600000;expires=Fri, 01 Jan 2100 00:00:00 GMT", XS.emit("login", XC.user)
+                        }, data: {id: XC.xyyx_uid, fb_uid: e, fb_auth: t}, error: function (e) {
                             Host.Log("Login Error: " + e), XS.emit("login-error", e)
                         }
                     })
@@ -8386,14 +8386,14 @@
                     Sidebar.addAdsDebug(), Sidebar.addQaDebug(), Sidebar.addBuildInfo()
                 }), {freezeGroup: ENG_FRZ_GRP});
                 var l, c, h, f = 0;
-                if (window.__requestOffset = window.__requestOffset || 1, XS.is.samsungGameLauncher && Config.samsungGameLauncher && "undefined" != typeof FRVRInstant) {
+                if (window.__requestOffset = window.__requestOffset || 1, XS.is.samsungGameLauncher && Config.samsungGameLauncher && "undefined" != typeof XYYXInstant) {
                     var p = function () {
                         var e = Host.Web.GetQueryString("source");
                         return e || XS.is.samsungBixby && (e = "daily"), e || ""
                     };
-                    XS.track.customEvent("gl_enabled", 1, {source: p()}), FRVRInstant.trackPlay(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "--https--play.frvr.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/?method=trackPlay", p()), function (e) {
-                        if ("undefined" != typeof FRVRInstant) return console.warn("Missing SDK FRVRInstant");
-                        FRVRInstant.canCreateShortcut(Config.id).then((function (t, n) {
+                    XS.track.customEvent("gl_enabled", 1, {source: p()}), XYYXInstant.trackPlay(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "--https--play.xyyx.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/?method=trackPlay", p()), function (e) {
+                        if ("undefined" != typeof XYYXInstant) return console.warn("Missing SDK XYYXInstant");
+                        XYYXInstant.canCreateShortcut(Config.id).then((function (t, n) {
                             XS.track.customEvent("gl_shortcut_test_success", 1, {statusCode: t, state: n});
                             var r = "?method=library_icon";
                             0 == t ? (r = "?method=homescreen", XS.track.customEvent("gl_shortcut_create_native", 1, {
@@ -8402,7 +8402,7 @@
                             })) : XS.track.customEvent("gl_shortcut_create_library", 1, {
                                 statusCode: t,
                                 state: n
-                            }), FRVRInstant.createShortcut(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "--https--play.frvr.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/" + r).then((function () {
+                            }), XYYXInstant.createShortcut(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "--https--play.xyyx.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/" + r).then((function () {
                                 0 == t ? XS.track.customEvent("gl_shortcut_create_native_success", 1, {
                                     statusCode: t,
                                     state: n
@@ -8483,8 +8483,8 @@
                             config: {
                                 huaweidiscoverycard: {
                                     chance: 100,
-                                    portrait: {path: "--https--cdn.frvr.com/huawei/card/huawei_card_portrait.jpg"},
-                                    landscape: {path: "--https--cdn.frvr.com/huawei/card/huawei_card_landscape.jpg"},
+                                    portrait: {path: "--https--cdn.xyyx.com/huawei/card/huawei_card_portrait.jpg"},
+                                    landscape: {path: "--https--cdn.xyyx.com/huawei/card/huawei_card_landscape.jpg"},
                                     data: {huaweiquickapp: "com.huawei.intelligent://service.hag/service_detail?abilityId=889771d62614416aa230f417d93e2307&isNeedSubscribe=1"}
                                 }
                             }
@@ -8494,11 +8494,11 @@
                             if (Config.ads.web.reward && Config.ads.web.reward.providers) for (var i in Config.ads.web.reward.providers) n.push(i);
                             for (var o = 0; o < n.length; o++) if (n[o] && -1 !== n[o].indexOf("pbgam")) {
                                 Config.prebid = {
-                                    url: "--https--cdn.frvr.com/fran/prebid.7.22.0.js",
-                                    analytics: {enabled: !0, provider: "frvr", options: {}},
+                                    url: "--https--cdn.xyyx.com/fran/prebid.7.22.0.js",
+                                    analytics: {enabled: !0, provider: "xyyx", options: {}},
                                     config: {
                                         cache: {
-                                            url: "--https--usc.cache.frvr.com/cache",
+                                            url: "--https--usc.cache.xyyx.com/cache",
                                             vasttrack: !0,
                                             ignoreBidderCacheKey: !0
                                         },
@@ -8519,12 +8519,12 @@
                                             accountId: "9a3c6c23-1111-1111-1111-123456789123",
                                             bidders: ["rubicon", "pubmatic", "openx"],
                                             endpoint: {
-                                                p1Consent: "--https--fran.frvr.com/openrtb2/auction",
-                                                noP1Consent: "--https--fran.frvr.com/openrtb2/auction"
+                                                p1Consent: "--https--fran.xyyx.com/openrtb2/auction",
+                                                noP1Consent: "--https--fran.xyyx.com/openrtb2/auction"
                                             },
                                             syncEndpoint: {
-                                                p1Consent: "--https--fran.frvr.com/cookie_sync",
-                                                noP1Consent: "--https--fran.frvr.com/cookie_sync"
+                                                p1Consent: "--https--fran.xyyx.com/cookie_sync",
+                                                noP1Consent: "--https--fran.xyyx.com/cookie_sync"
                                             }
                                         }],
                                         schain: {
@@ -8532,7 +8532,7 @@
                                             config: {
                                                 ver: "1.0",
                                                 complete: 1,
-                                                nodes: [{asi: "frvr.com", sid: "001", hp: 1}]
+                                                nodes: [{asi: "xyyx.com", sid: "001", hp: 1}]
                                             }
                                         },
                                         userSync: {
@@ -8559,7 +8559,7 @@
                                 };
                                 var a = Config.gpt || {}, s = {};
                                 for (var l in a) s[l] = a[l];
-                                s.url = "--https--cdn.frvr.com/fran/gpt_2021120601.js", s.pubadsUrl = "--https--cdn.frvr.com/fran/pubads_2021120601.js", Config.gpt = s;
+                                s.url = "--https--cdn.xyyx.com/fran/gpt_2021120601.js", s.pubadsUrl = "--https--cdn.xyyx.com/fran/pubads_2021120601.js", Config.gpt = s;
                                 break
                             }
                         }
@@ -8569,10 +8569,10 @@
                                 providers: {"crazygames-interstitial": {timeout: 500, priority: 1}}
                             }, reward: {providers: {"crazygames-reward": {timeout: 500, priority: 1}}}
                         }), Config.ads && XS.is.harman && (console.warn("social.web: overriding ads for harman"), Config.ads.web = {}), XS.ads && XS.ads._init && XS.ads._init("web"), Config.twitterTexts && (window.shareDialogueCallback = function (e) {
-                            // XS.navigate("--https--twitter.com/share?url=" + Host.makeGameShareURL() + "&via=FRVRGames&related=" + encodeURI(Config.twitterRelated) + "&hashtags=" + encodeURI(Config.twitterHashTags) + "&text=" + encodeURI(w()))
+                            // XS.navigate("--https--twitter.com/share?url=" + Host.makeGameShareURL() + "&via=XYYXGames&related=" + encodeURI(Config.twitterRelated) + "&hashtags=" + encodeURI(Config.twitterHashTags) + "&text=" + encodeURI(w()))
                             XS.navigate("/games/index01ue.html")
                         }), XS.is.samsungGameLauncher && (window.shareDialogueCallback = function (e) {
-                            FRVRInstant.share(window.__requestOffset++, Config.shareTitle.toString(), "--https--play.frvr.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/?method=share")
+                            XYYXInstant.share(window.__requestOffset++, Config.shareTitle.toString(), "--https--play.xyyx.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/?method=share")
                         }), XS.is.kik ? window.shareDialogueCallback = function (e) {
                             top.postMessage("share_kik", "*")
                         } : XS.is.kongregate || XS.is.spilGamesWrapper || XS.is.twitch || XS.is.vkru || XS.is.okru || XS.is.rocketChat || (Config.facebookAppId ? function () {
@@ -8615,7 +8615,8 @@
                                 var r = document.createElement("iframe");
                                 r.src = t(), r.frameborder = "0", r.scrolling = "no", r.allowTransparency = "true", r.id = "adframe", r.style.cssText = "border:none;overflow:hidden;height:90px;width:728px;margin-left:-364px", n.appendChild(r), document.body.appendChild(n), XS.showGameOverAd = function (e) {
                                     height / XS.devicePixelRatio > (e || 450) && (o = !0, n.style.bottom = "0px", XS.emit("toggleoverlayad", {visible: !0}))
-                                }, XS.hideGameOverAd = function () {
+                                },
+                                    XS.hideGameOverAd = function () {
                                     n.style.bottom = "-500px", o && (o = !1, r.src = t()), XS.emit("toggleoverlayad", {visible: !1})
                                 }
                             }("//" + Config.domain + "/ad/facebookLSM/");
@@ -8639,15 +8640,16 @@
                             }), {freezeGroup: ENG_FRZ_GRP}), XS.on("togglesidebar", (function (e) {
                                 c = e.visible, h()
                             }), {freezeGroup: ENG_FRZ_GRP}), h(), XS.is.huaweiquickapp || XS.is.lgtv || XS.is.oppoGlobal || (window.fbAsyncInit = function () {
-                                FB.init({
-                                    appId: Config.facebookGamingLoginId ? Config.facebookGamingLoginId : Config.facebookAppId,
-                                    status: !0,
-                                    xfbml: !0,
-                                    version: "v10.0",
-                                    cookie: !0
-                                }), FB.AppEvents.logPageView(), XS.can.showSidebarSaveProgressHeader() && Sidebar.addMenuHeader(Host.Localize.Translate("Save your progress!")), FB.getLoginStatus((function (e) {
-                                    "connected" === e.status ? r(e.authResponse) : i(!1), XS.emit("userloaded")
-                                }))
+                                // FB.init({
+                                //     appId: Config.facebookGamingLoginId ? Config.facebookGamingLoginId : Config.facebookAppId,
+                                //     status: !0,
+                                //     xfbml: !0,
+                                //     version: "v10.0",
+                                //     cookie: !0
+                                // }), FB.AppEvents.logPageView(),
+                                // XS.can.showSidebarSaveProgressHeader() && Sidebar.addMenuHeader(Host.Localize.Translate("Save your progress!")), FB.getLoginStatus((function (e) {
+                                //     "connected" === e.status ? r(e.authResponse) : i(!1), XS.emit("userloaded")
+                                // }))
                             }, function (e, t, n) {
                                 var r, i = e.getElementsByTagName(t)[0];
                                 e.getElementById(n) || ((r = e.createElement(t)).id = n, r.src = "//connect.facebook.net/en_US/sdk.js", i.parentNode.insertBefore(r, i))
@@ -8672,7 +8674,7 @@
                         }), XS.is.pwa && Host.Preferences.GetString("rcs.id", (function (e) {
                             e && (XS.is.rcs = e)
                         })), window.rcs = {
-                            url: XS.is.rcsKr ? "--https--frvr-rcs-kr.appspot.com" : "--https--frvr-rcs-235815.appspot.com",
+                            url: XS.is.rcsKr ? "--https--xyyx-rcs-kr.appspot.com" : "--https--xyyx-rcs-235815.appspot.com",
                             blockProgression: !1,
                             phone: null,
                             init: function (e, t) {
@@ -9077,7 +9079,7 @@
                             e = function (e, t) {
                                 e && console.error(e);
                                 var n = !e && t ? t.userId : null;
-                                XS.abtest.init(n || window.__FRVR.globalUserId())
+                                XS.abtest.init(n || window.__XYYX.globalUserId())
                             }, t = {event: "xsinit", id: i.register(e)}, window.system.postMessage(JSON.stringify(t))
                         })))
                     }, function () {
@@ -10210,7 +10212,7 @@
                             i.beginFill(16777215, .7), i.drawRect(0, 0, 800, 165), i.y = 0, n.setRatio = function (e) {
                                 i.x = 470, i.width = 330, i.height = 45
                             };
-                            var o = new Text2(Host.Localize.Translate("More great FRVR Games!", {}, "Cross-promo overlay text"), {
+                            var o = new Text2(Host.Localize.Translate("More great XYYX Games!", {}, "Cross-promo overlay text"), {
                                 weight: 400,
                                 size: 50,
                                 maxWidth: 300,
@@ -10269,24 +10271,24 @@
                                 s = !(!XS.crosspromo || !XS.crosspromo.getConfig("banner", !0)), l = [];
                             if (!XS.is.twitter) {
                                 for (var c = s ? XS.crosspromo.getConfig("banner") : a ? XS.remoteConfig.crosspromoteConfig : [{
-                                    facebookImage: "cdn.frvr.com/2021/banners/800x165/basketball.jpg",
-                                    facebookUrl: "--https--apps.facebook.com/basketballfrvr",
-                                    webImage: "cdn.frvr.com/2021/banners/800x165/basketball.jpg",
-                                    webUrl: "http://basketball.frvr.com/"
+                                    facebookImage: "cdn.xyyx.com/2021/banners/800x165/basketball.jpg",
+                                    facebookUrl: "--https--apps.facebook.com/basketballxyyx",
+                                    webImage: "cdn.xyyx.com/2021/banners/800x165/basketball.jpg",
+                                    webUrl: "http://basketball.xyyx.com/"
                                 }, {
-                                    facebookImage: "cdn.frvr.com/2021/banners/800x165/hex.jpg",
-                                    facebookUrl: "--https--apps.facebook.com/hexfrvr",
-                                    webImage: "cdn.frvr.com/2021/banners/800x165/hex.jpg",
-                                    webUrl: "http://hex.frvr.com/"
+                                    facebookImage: "cdn.xyyx.com/2021/banners/800x165/hex.jpg",
+                                    facebookUrl: "--https--apps.facebook.com/hexxyyx",
+                                    webImage: "cdn.xyyx.com/2021/banners/800x165/hex.jpg",
+                                    webUrl: "http://hex.xyyx.com/"
                                 }, {
-                                    facebookImage: "cdn.frvr.com/2021/banners/800x165/mahjong.jpg",
-                                    facebookUrl: "--https--apps.facebook.com/mahjongfrvr",
-                                    webImage: "cdn.frvr.com/2021/banners/800x165/mahjong.jpg",
-                                    webUrl: "http://mahjong.frvr.com/"
+                                    facebookImage: "cdn.xyyx.com/2021/banners/800x165/mahjong.jpg",
+                                    facebookUrl: "--https--apps.facebook.com/mahjongxyyx",
+                                    webImage: "cdn.xyyx.com/2021/banners/800x165/mahjong.jpg",
+                                    webUrl: "http://mahjong.xyyx.com/"
                                 }], d = [], u = 0; u < c.length; u++) {
                                     var h = c[u];
                                     if (XS.is.android && !XS.is.samsungBixby) XS.is.silk || (XS.is.samsungAppStore ? h.samsungUrl && h.samsungImage && d.push([h.samsungUrl, h.samsungImage]) : h.androidUrl && h.androidImage && d.push([h.androidUrl, h.androidImage])); else if (XS.is.iOS && h.iOSUrl && h.iOSImage) d.push([h.iOSUrl, h.iOSImage, "_top"]); else if (XS.is.facebookApp && h.facebookUrl && h.facebookImage) d.push([h.facebookUrl, h.facebookImage, "_top"]); else if (XS.is.chromeWrapper && h.chromeUrl && h.chromeImage) d.push([h.chromeUrl, h.chromeImage, "_blank"]); else if (!XS.is.chromeWrapper && h.webUrl && h.webImage) {
-                                        if (XS.is.samsungBixby && -1 != h.webUrl.indexOf("solitaire.frvr")) continue;
+                                        if (XS.is.samsungBixby && -1 != h.webUrl.indexOf("solitaire.xyyx")) continue;
                                         d.push([(o = h.webUrl, XS.is.samsungBixby ? r(o, "samsung", "") : XS.is.samsungBrowser ? r(o, "samsungbrowser", "") : o), h.webImage, XS.is.mobile ? "_blank" : "_top"])
                                     }
                                 }
@@ -10891,7 +10893,7 @@
                     ignoreScaleCache: !0
                 })
             }), !0), R = Host.bootstrapper.load((function () {
-                return XS.assets.__importATL("i/g/s/icon_frvr.svg", {
+                return XS.assets.__importATL("i/g/s/icon_xyyx.svg", {
                     data: '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" xml:space="preserve"><g style="opacity:1;fill:#fff"><path class="st0" d="M45.9 18.7c-.2-.3-.4-.7-.6-1-2.2-3.3-5.8-5.6-9.9-6-5.1-.5-10 2.1-12.8 6.3L18 25l-1.3 2c-2.9 4.1-8.9.4-6.5-4 1.1-1.8 3.6-2.4 5.4-1.1.4.3.8.7 1.1 1.2l4-6.1c-2-1.8-4.6-2.9-7.4-2.9-8.7 0-13.9 10-8.9 17.1 4.4 6.1 13.3 6.1 17.8.1l4.2-6.3c.3-.5 1-1.5 1.4-2 .8-1.2 1.5-2.3 2.7-3.2 4.2-2.9 9.8.1 9.9 5.2 0 4.5-4.6 7.5-8.8 5.8-1.8-.7-2.8-2.3-3.8-3.8 0-.1-.1-.1-.2-.2L23.2 33c.9 1.2 1.9 2.1 1.9 2.1 2.1 1.8 4.8 3 7.6 3.3C43.3 39.4 51 28 45.9 18.7Z" style="fill:#fff" transform="translate(.051 .814)"/></g></svg>',
                     width: 50,
                     height: 50,
@@ -11175,7 +11177,7 @@
                     }, e.addSocialBar = function () {
                         // if (XS.can.showSidebarSocial()) {
                         //     var t = new Container;
-                        //     t.addChild(H(new Sprite(R()), 20, 15, "http://frvr.com")), t.addChild(H(new Sprite(P()), 220, 15, "--https--twitter.com/frvrgames")), t.addChild(H(new Sprite(d()), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/frvrgames")), t.y = S, e.content.addChild(t), t.scrollHeight = 82, S += 82
+                        //     t.addChild(H(new Sprite(R()), 20, 15, "http://xyyx.com")), t.addChild(H(new Sprite(P()), 220, 15, "--https--twitter.com/xyyxgames")), t.addChild(H(new Sprite(d()), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/xyyxgames")), t.y = S, e.content.addChild(t), t.scrollHeight = 82, S += 82
                         // }
                     }, e.settings = [], e.addSetting = function (t) {
                         e.settings.push(t)
@@ -11190,7 +11192,7 @@
                         }
                     }, e.addLegal = function () {
                         var t, n;
-                        Host.supports.showSidebarLegal && (e.addMenuHeader(Host.Localize.Translate("Legal Information")), XS.is.samsung ? (t = "--https--frvr.com/legal/samsung/#TermsofService", n = "--https--frvr.com/legal/samsung/#PrivacyPolicy") : (t = "--https--frvr.com/legal/#TermsofService", n = "--https--frvr.com/legal/#PrivacyPolicy"), e.addMenuItem(new Sprite(I()), Host.Localize.Translate("Terms & Conditions"), (function () {
+                        Host.supports.showSidebarLegal && (e.addMenuHeader(Host.Localize.Translate("Legal Information")), XS.is.samsung ? (t = "--https--xyyx.com/legal/samsung/#TermsofService", n = "--https--xyyx.com/legal/samsung/#PrivacyPolicy") : (t = "--https--xyyx.com/legal/#TermsofService", n = "--https--xyyx.com/legal/#PrivacyPolicy"), e.addMenuItem(new Sprite(I()), Host.Localize.Translate("Terms & Conditions"), (function () {
                             XS.navigate(t)
                         })), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(G()), Host.Localize.Translate("Privacy Policy"), (function () {
                             XS.navigate(n)
@@ -11202,14 +11204,14 @@
                         //     })), void Sidebar.addMenuItem(new Sprite(I()), Host.Localize.Translate("Terms of Service"), (function () {
                         //         sc.presentTermsOfService()
                         //     }));
-                        //     Sidebar.addMenuHeader(Host.Localize.Translate("More")), XS.is.lgtv || Sidebar.addMenuItem(new Sprite(R()), Host.Localize.Translate("FRVR Games"), (function () {
-                        //         XS.is.samsung ? XS.navigate("--https--play.frvr.com") : XS.navigate("--https--frvr.com")
+                        //     Sidebar.addMenuHeader(Host.Localize.Translate("More")), XS.is.lgtv || Sidebar.addMenuItem(new Sprite(R()), Host.Localize.Translate("XYYX Games"), (function () {
+                        //         XS.is.samsung ? XS.navigate("--https--play.xyyx.com") : XS.navigate("--https--xyyx.com")
                         //     })),
                         //     XS.is.samsungGameLauncher || Sidebar.addMenuItem(new Sprite(F()), Host.Localize.Translate("Send Feedback"), (function () {
-                        //         XS.navigate("--https--frvr.com/support/?platform=" + window.__FRVR.getChannel() + "&game=" + Config.id)
+                        //         XS.navigate("--https--xyyx.com/support/?platform=" + window.__XYYX.getChannel() + "&game=" + Config.id)
                         //     })),
-                        //     window.__FRVR && window.__FRVR.consent && Sidebar.addMenuItem(new Sprite(B()), Host.Localize.Translate("Manage Consent"), window.__FRVR.consent.show), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(I()), Host.Localize.Translate("Credits"), (function () {
-                        //         XS.navigate("--https--frvr.com/credits/" + Config.id + ".html")
+                        //     window.__XYYX && window.__XYYX.consent && Sidebar.addMenuItem(new Sprite(B()), Host.Localize.Translate("Manage Consent"), window.__XYYX.consent.show), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(I()), Host.Localize.Translate("Credits"), (function () {
+                        //         XS.navigate("--https--xyyx.com/credits/" + Config.id + ".html")
                         //     }))
                         // }
                     }, e.addDownloadItem = function (t, n, r) {
@@ -11336,12 +11338,12 @@
                         })), e.addQaDebugItem("XS Data reset to defaults", (function () {
                             "function" == typeof window.debugResetData ? (window.debugResetData(), t()) : (console.warn("debugResetData function not implemented in game. Trying standard XS.data.resetToDefaults"), XS.data ? (XS.data.resetToDefaults(), t()) : console.warn("Game doesn't use XS.data")), Sidebar.hide()
                         })), e.addQaDebugItem("Force Reload", (function () {
-                            window.FRVRInterfaceCoreProxy && window.FRVRInterfaceCoreProxy.forceReload ? window.FRVRInterfaceCoreProxy.forceReload() : window.top.location.reload()
+                            window.XYYXInterfaceCoreProxy && window.XYYXInterfaceCoreProxy.forceReload ? window.XYYXInterfaceCoreProxy.forceReload() : window.top.location.reload()
                         }));
                         var n = null, r = 0;
                         e.addQaDebugItem("Start rotating languages", (function () {
                             if (!n) {
-                                var e = window.__FRVR.cohort().supportedLanguages.concat(["en"]);
+                                var e = window.__XYYX.cohort().supportedLanguages.concat(["en"]);
                                 n = setInterval((function () {
                                     Host.Localize.Load(e[++r % e.length])
                                 }), 2e3)
@@ -11350,9 +11352,9 @@
                             clearTimeout(n), n = null
                         }))
                     }, e.addBuildInfo = function () {
-                        var t, n = window.__FRVR.cohort();
-                        e.addMenuHeader("Game version: " + n.version), e.addMenuHeader("Engine version: " + window.__FRVR.XSEngineVersion), e.addMenuHeader("Engine branch: " + window.__FRVR.XSEngineBranch);
-                        var r = window.__FRVR.fsxBuildId;
+                        var t, n = window.__XYYX.cohort();
+                        e.addMenuHeader("Game version: " + n.version), e.addMenuHeader("Engine version: " + window.__XYYX.XSEngineVersion), e.addMenuHeader("Engine branch: " + window.__XYYX.XSEngineBranch);
+                        var r = window.__XYYX.fsxBuildId;
                         e.addMenuHeader("Fsx build id: " + r);
                         var i = new Date(null == n || null == (t = n.buildJson) ? void 0 : t.timeStamp);
                         e.addMenuHeader("Time: " + i.toDateString() + " " + i.toLocaleTimeString()), n.experiment && (e.addMenuHeader("------------------"), e.addMenuHeader("A/B: " + n.experiment.name), e.addMenuHeader("Cohort name: " + n.cohortName)), n.buildJson && e.addItem({
@@ -11596,48 +11598,48 @@
             Host.bootstrapper.mnemonicMap[j] = "i/web/android.png", Host.bootstrapper.mnemonicMap[W] = "i/web/ios.png", Host.bootstrapper.mnemonicMap[V] = "i/web/cx_hex_1440_3120.jpg", Host.bootstrapper.mnemonicMap[Y] = "i/web/cx_hex_2400_1176.jpg", Host.bootstrapper.mnemonicMap[q] = "i/web/cx_mahjong_1440_3120.jpg", Host.bootstrapper.mnemonicMap[Q] = "i/web/cx_mahjong_2400_1176.jpg", Host.bootstrapper.mnemonicMap[K] = "i/web/cx_remove_1440_3120.jpg", Host.bootstrapper.mnemonicMap[Z] = "i/web/cx_remove_2400_1176.jpg", Host.bootstrapper.mnemonicMap[J] = "i/web/cx_goldmahjong_1440_3120.jpg", Host.bootstrapper.mnemonicMap[$] = "i/web/cx_goldmahjong_2400_1176.jpg", Host.bootstrapper.mnemonicMap[ee] = "i/web/cx_solitaire_1440_3120.jpg", Host.bootstrapper.mnemonicMap[te] = "i/web/cx_solitaire_2400_1176.jpg", window.Config = ((N = {
                 id: "trim",
                 niceId: "trim",
-                domain: "trim.frvr.com",
+                domain: "trim.xyyx.com",
                 version: "1.4.5",
                 build: "145002",
                 stage: "gold",
-                androidApplicationId: "com.frvr.trim2",
+                androidApplicationId: "com.xyyx.trim2",
                 iosAppId: "1343915488",
                 adMobAppIdiOS: "ca-app-pub-6389174903462367~7020584325",
                 facebookAppId: "1833140240092449",
-                facebookAppUrl: "--https--apps.facebook.com/trimfrvr",
-                facebookPageUrl: "--https--www.facebook.com/Trim-FRVR-157136344943897/",
+                facebookAppUrl: "--https--apps.facebook.com/trimxyyx",
+                facebookPageUrl: "--https--www.facebook.com/Trim-XYYX-157136344943897/",
                 adMobInterstitialIdiOS: "ca-app-pub-6389174903462367/1051848445",
                 adMobAppIdAndroid: "ca-app-pub-6389174903462367~7763105767",
                 googleAdSiteId: "4942292965",
                 googleAdSpilgamesId: "5496116299",
-                shareUrl: "--https--trim.frvr.com/{{language_path}}",
-                playTitle: Host.Localize.Translate("Play Trim FRVR"),
-                shareText: Host.Localize.Translate("I think you will like Trim FRVR"),
-                shareTitle: Host.Localize.Translate("Trim FRVR"),
+                shareUrl: "--https--trim.xyyx.com/{{language_path}}",
+                playTitle: Host.Localize.Translate("Play Trim XYYX"),
+                shareText: Host.Localize.Translate("I think you will like Trim XYYX"),
+                shareTitle: Host.Localize.Translate("Trim XYYX"),
                 shortTitle: Host.Localize.Translate("Trim"),
-                buttonShareTitle: Host.Localize.Translate("Share Trim FRVR", {}, "Button text for sharing Trim FRVR"),
+                buttonShareTitle: Host.Localize.Translate("Share Trim XYYX", {}, "Button text for sharing Trim XYYX"),
                 buttonShareDescription: Host.Localize.Translate("Invite your friends?"),
                 iOSRemoveAdsProductIdentifier: "trimremoveads",
                 gameCenterEnabled: !1,
-                feedbackURL: "--https--frvr.com/support/",
+                feedbackURL: "--https--xyyx.com/support/",
                 fbInstantInterstitialIdAll: "209512122947536_221633785068703",
                 useFacebookInstantRichGameplayFeatures: !0,
-                backendPath: "--https--production-dot-frvr-chatbot.appspot.com/trim",
+                backendPath: "--https--production-dot-xyyx-chatbot.appspot.com/trim",
                 facebookInstantGameID: "209512122947536",
                 facebookInstantFillColor: "#202020",
                 facebookInstantScoreOverlayTextColor: "#000000",
                 facebookInstantScoreOverlayShadowColor: "#FFFFFF",
                 facebookInstantBannerStyleOverwrite: {style: {backgroundSize: "auto 310px"}},
                 iOSReviewURL: "--https--itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1343915488&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8",
-                androidReviewURL: "market://details?id=com.frvr.trim2",
+                androidReviewURL: "market://details?id=com.xyyx.trim2",
                 androidInstallBannerURL: j,
-                androidInstallURL: "market://details?id=com.frvr.trim2",
-                androidInstallURLWeb: "--https--play.google.com/store/apps/details?id=com.frvr.trim2",
+                androidInstallURL: "market://details?id=com.xyyx.trim2",
+                androidInstallURLWeb: "--https--play.google.com/store/apps/details?id=com.xyyx.trim2",
                 iOSInstallBannerURL: W,
                 iOSInstallURL: "http://itunes.apple.com/app/id1343915488",
                 gaId: "UA-54081731-1",
                 gaGameId: "UA-54081731-15"
-            }).gaId = "UA-54081731-1", N.chromeAppEnabled = !1, N.twitterTexts = [Host.Localize.Translate("My Trim FRVR score just shot through the roof - I rule!"), Host.Localize.Translate("Match blocks in Trim FRVR and sharpen up your skills"), Host.Localize.Translate("Trim FRVR is my mind of brain exercise - we're a match!"), Host.Localize.Translate("Trim FRVR is my new fave match game - I'm hooked!"), Host.Localize.Translate("Your worst opponent: your old score! Trim FRVR rules!")], N.pushNotificationText = Host.Localize.Translate("Your daily Trim level is ready to play!", {}, "This is a push notification used on mobile phones to show that their daily level is ready"), N.twitterRelated = "frvrgames,benjaminsen,brianmeidell", N.twitterHashTags = Host.Localize.Translate("remove,match,crush,pop,blast,bricks,blocks,trim", {}, "These are are hash tags for social networks such as twitter, E.g. #puzzle or #puzzle# for chinese sites"), N.twitterHTML = '<div style="padding-right:10px"><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="FRVRGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div>', N.twitterMobileHTML = '<div><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="FRVRGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div><div style="margin-left:10px"><a class="twitter-follow-button" href="--https--twitter.com/FRVRGames"></a></div>', N.enablePWA = !0, N.gplusHTML = '<div class="g-plusone" data-size="medium" data-href="{{shareUrl}}"></div>', N.remoteConfigVersion = "v3", N.plugins = "modal.js,scrollcontainer.js,sidebar.js,tutorial.js,bitmapfont.js,socialleaderboards.js,localnotifications.js", N.tagLine = "Easy paced puzzle game increases in speed as you play", N.tagLineFree = "Easy paced puzzle game increases in speed as you play", N.androidRemoveAdsProductIdentifier = "trimremoveads", N.oneliner = "Remove matching blocks and blast your way to your best score", N.twitterDescription = "Remove matching blocks and blast your way to your best score", N.huaweiQuickAppInterstitialAdUnitId = "b9ztetuxzj", N.huaweiQuickAppRewardAdUnitId = "j5npyp2msu", N.ads = {
+            }).gaId = "UA-54081731-1", N.chromeAppEnabled = !1, N.twitterTexts = [Host.Localize.Translate("My Trim XYYX score just shot through the roof - I rule!"), Host.Localize.Translate("Match blocks in Trim XYYX and sharpen up your skills"), Host.Localize.Translate("Trim XYYX is my mind of brain exercise - we're a match!"), Host.Localize.Translate("Trim XYYX is my new fave match game - I'm hooked!"), Host.Localize.Translate("Your worst opponent: your old score! Trim XYYX rules!")], N.pushNotificationText = Host.Localize.Translate("Your daily Trim level is ready to play!", {}, "This is a push notification used on mobile phones to show that their daily level is ready"), N.twitterRelated = "xyyxgames,benjaminsen,brianmeidell", N.twitterHashTags = Host.Localize.Translate("remove,match,crush,pop,blast,bricks,blocks,trim", {}, "These are are hash tags for social networks such as twitter, E.g. #puzzle or #puzzle# for chinese sites"), N.twitterHTML = '<div style="padding-right:10px"><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="XYYXGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div>', N.twitterMobileHTML = '<div><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="XYYXGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div><div style="margin-left:10px"><a class="twitter-follow-button" href="--https--twitter.com/XYYXGames"></a></div>', N.enablePWA = !0, N.gplusHTML = '<div class="g-plusone" data-size="medium" data-href="{{shareUrl}}"></div>', N.remoteConfigVersion = "v3", N.plugins = "modal.js,scrollcontainer.js,sidebar.js,tutorial.js,bitmapfont.js,socialleaderboards.js,localnotifications.js", N.tagLine = "Easy paced puzzle game increases in speed as you play", N.tagLineFree = "Easy paced puzzle game increases in speed as you play", N.androidRemoveAdsProductIdentifier = "trimremoveads", N.oneliner = "Remove matching blocks and blast your way to your best score", N.twitterDescription = "Remove matching blocks and blast your way to your best score", N.huaweiQuickAppInterstitialAdUnitId = "b9ztetuxzj", N.huaweiQuickAppRewardAdUnitId = "j5npyp2msu", N.ads = {
                 yandex: {
                     interstitial: {
                         maxfrequency: 4e4,
@@ -11827,7 +11829,7 @@
                 title: Host.Localize.Translate("Someone is missing you here!"),
                 message: Host.Localize.Translate("It's time to come back and have fun again!"),
                 seconds: 2592e3
-            }], N.samsungGameLauncher = {icon: "--https--cdn.frvr.com/2021/icons-center/128/trim.png"}, N), function (e) {
+            }], N.samsungGameLauncher = {icon: "--https--cdn.xyyx.com/2021/icons-center/128/trim.png"}, N), function (e) {
                 function t(e, n, r) {
                     if (n !== t.AD_TYPE_INTERSTITIAL && n !== t.AD_TYPE_REWARD) throw new Error(t.ERROR_INVALID_AD_TYPE);
                     this.platform = e, this.adType = n, this.config = r
@@ -11875,8 +11877,8 @@
                 }, t.prototype.preload = function (e) {
                 }, e.BaseProvider = t
             }(window);
-            var ne = "runtimedir/assets/frvr-vertical.8ab73c6f.svg", re = "runtimedir/assets/frvr-horizontal.a02bcf92.svg";
-            Host.bootstrapper.mnemonicMap[ne] = "i/g/s/frvr-vertical.svg", Host.bootstrapper.mnemonicMap[re] = "i/g/s/frvr-horizontal.svg", function (e) {
+            var ne = "runtimedir/assets/xyyx-vertical.8ab73c6f.svg", re = "runtimedir/assets/xyyx-horizontal.a02bcf92.svg";
+            Host.bootstrapper.mnemonicMap[ne] = "i/g/s/xyyx-vertical.svg", Host.bootstrapper.mnemonicMap[re] = "i/g/s/xyyx-horizontal.svg", function (e) {
                 if ((e = window).BaseProvider) {
                     var t, n, r = e.BaseProvider, i = 10 * Math.random() >> 0, o = !1, a = !1, s = function (e, t) {
                         var n, r = e;
@@ -11897,7 +11899,7 @@
                             this.callback && this.callback(!0, this.config)
                         }.bind(this);
                         var e = document.createElement("div");
-                        e.classList.add("ad-play-button-shine"), this.playButton.appendChild(e), this.frvrLogo = document.createElement("img"), this.frvrLogo.classList.add("ad-logo-base"), this.frvrLogo.setAttribute("src", window.__resolvePath(ne)), this.ad = document.createElement("img"), this.ad.setAttribute("rel", "preload"), this.ad.classList.add("ad-image-sm"), this.view.appendChild(this.header), this.view.appendChild(this.closeButton), this.view.appendChild(this.playButton), this.view.appendChild(this.frvrLogo), this.view.appendChild(this.footer), this.view.appendChild(this.ad), this.onResize(), this.view.style.visibility = "hidden", document.body.appendChild(this.view)
+                        e.classList.add("ad-play-button-shine"), this.playButton.appendChild(e), this.xyyxLogo = document.createElement("img"), this.xyyxLogo.classList.add("ad-logo-base"), this.xyyxLogo.setAttribute("src", window.__resolvePath(ne)), this.ad = document.createElement("img"), this.ad.setAttribute("rel", "preload"), this.ad.classList.add("ad-image-sm"), this.view.appendChild(this.header), this.view.appendChild(this.closeButton), this.view.appendChild(this.playButton), this.view.appendChild(this.xyyxLogo), this.view.appendChild(this.footer), this.view.appendChild(this.ad), this.onResize(), this.view.style.visibility = "hidden", document.body.appendChild(this.view)
                     }, l.prototype.Show = function (e) {
                         XS.muteAll(), XS.freeze(), this.view.style.visibility = "visible", this.muted = !1, XS.is.iOS && "video" === this.adType && this.SetAdAudio(), this.ad.muted = this.muted, XS.track.customEvent("house_ad_show", 1, {
                             gameid: this.config.data.gameid,
@@ -11922,7 +11924,7 @@
                         var e = height > width, t = this.calculateScreenSize(e);
                         this.view.style.width = width + "px", this.view.style.height = height + "px", this.removeClasses(this.closeButton, "ad-close-button-portrait", "ad-close-button-landscape"), e ? this.closeButton.classList.add("ad-close-button-portrait" + t) : this.closeButton.classList.add("ad-close-button-landscape" + t), this.header.style.width = width + "px", this.removeClasses(this.header, "ad-header-portrait", "ad-header-landscape"), e ? this.header.classList.add("ad-header-portrait" + t) : this.header.classList.add("ad-header-landscape" + t), this.footer.style.width = width + "px", this.removeClasses(this.footer, "ad-footer-portrait", "ad-footer-landscape"), e ? this.footer.classList.add("ad-footer-portrait" + t) : this.footer.classList.add("ad-footer-landscape" + t), this.removeClasses(this.playButton, "ad-portrait-play-button", "ad-landscape-play-button"), e ? this.playButton.classList.add("ad-portrait-play-button" + t) : this.playButton.classList.add("ad-landscape-play-button" + t);
                         var n = e ? ne : re;
-                        this.frvrLogo.setAttribute("src", window.__resolvePath(n)), this.removeClasses(this.frvrLogo, "ad-portrait-logo", "ad-landscape-logo"), e ? this.frvrLogo.classList.add("ad-portrait-logo" + t) : this.frvrLogo.classList.add("ad-landscape-logo" + t);
+                        this.xyyxLogo.setAttribute("src", window.__resolvePath(n)), this.removeClasses(this.xyyxLogo, "ad-portrait-logo", "ad-landscape-logo"), e ? this.xyyxLogo.classList.add("ad-portrait-logo" + t) : this.xyyxLogo.classList.add("ad-landscape-logo" + t);
                         var r = e ? this.config.portrait.path : this.config.landscape.path;
                         r = a ? r : window.__resolvePath(r), this.ad.setAttribute("src", r);
                         var i = 2400 * (height - 45) / 874, o = 3260 * width / 1440;
@@ -12007,7 +12009,7 @@
                                         }), o = !1, window.Social.Instant.hideLoadOverlay(), e
                                     })).catch(s)
                                 } else i()
-                            } else XS.is.huawei ? c.data.huaweiquickapp && window.open(c.data.huaweiquickapp) : c.data.gameid && window.open("--https--" + c.data.gameid + ".frvr.com/"); else i()
+                            } else XS.is.huawei ? c.data.huaweiquickapp && window.open(c.data.huaweiquickapp) : c.data.gameid && window.open("--https--" + c.data.gameid + ".xyyx.com/"); else i()
                         }))
                     }, c.prototype.getOrCreateInstance = function (e) {
                         return t || (t = this.makeInstance()), t
@@ -12045,7 +12047,7 @@
                         }
                         return t
                     }, c.prototype.catchHandler = function (e) {
-                        var t = window.__FRVR.createErrorHandler("hAd");
+                        var t = window.__XYYX.createErrorHandler("hAd");
                         return function (n) {
                             t('Promise failure"' + e + '" > ' + n.message, n)
                         }
@@ -12053,7 +12055,7 @@
                 }
 
                 function c(e) {
-                    r.call(this, "frvr", e)
+                    r.call(this, "xyyx", e)
                 }
             }(window), function (e) {
                 if (e.BaseProvider) {
@@ -12304,7 +12306,7 @@
                         n = !0, r = e.placementId, console.debug("adsbygoogle: placementId", r);
                         var a = document.createElement("script");
                         a.async = !0, a.setAttribute("data-ad-client", e.placementId), a.setAttribute("data-ad-frequency-hint", "30s"), Host.Web.GetQueryString("testads") && a.setAttribute("data-adbreak-test", "on");
-                        var s = window.__FRVR.getGoogleAdSenseGameChannelId();
+                        var s = window.__XYYX.getGoogleAdSenseGameChannelId();
                         s && ((i = c[s]) || (i = s, XS.track.customEvent("adsbygoogle_no_mapping", 1, {channel_id: s})), console.debug("adsbygoogle: mapped channel " + s + " to " + i), a.setAttribute("data-ad-channel", i)), a.onreadystatechange = a.onload = function () {
                             console.debug("adsbygoogle: loading progress", a.readyState), a.readyState && "loaded" !== a.readyState && "complete" !== a.readyState || (console.debug("adsbygoogle: loaded sdk"), a.onreadystatechange = null, a.onload = null, o(), XS.on("mutemusic", o), XS.on("mutesound", o), u({
                                 preloadAdBreaks: "on",
@@ -12340,8 +12342,8 @@
             }(window), function (e) {
                 if (!e.BaseProvider) throw new Error("PrebidGoogleAdManagerBaseProvider: Unable to inherit from window.BaseProvider, not defined.");
                 e.pbjs = e.pbjs || {}, e.pbjs.que = e.pbjs.que || [], e.googletag = e.googletag || {}, e.googletag.cmd = e.googletag.cmd || [];
-                var t = e.BaseProvider, n = [], r = "--https--cdn.frvr.com/fran/gpt_2021120601.js",
-                    i = "--https--cdn.frvr.com/fran/pubads_2021120601.js",
+                var t = e.BaseProvider, n = [], r = "--https--cdn.xyyx.com/fran/gpt_2021120601.js",
+                    i = "--https--cdn.xyyx.com/fran/pubads_2021120601.js",
                     o = [[1024, 768], [768, 1024], [480, 320], [336, 280], [320, 480], [300, 600], [300, 250], [250, 250], [728, 90]],
                     a = [[1024, 768], [768, 1024], [640, 480], [640, 390], [640, 360], [480, 320], [400, 300], [400, 225], [390, 640], [320, 480]],
                     s = !1, l = !1, c = !1, d = !1, u = !1;
@@ -12358,11 +12360,11 @@
                 }, h.prototype._getAdId = function () {
                     return this.adUnit.code
                 }, h.prototype._getAppId = function () {
-                    if (e.__FRVR && e.__FRVR.getGoogleAdSenseGameChannelId) return e.__FRVR.getGoogleAdSenseGameChannelId()
+                    if (e.__XYYX && e.__XYYX.getGoogleAdSenseGameChannelId) return e.__XYYX.getGoogleAdSenseGameChannelId()
                 }, h.prototype._expandAdUnitCode = function () {
-                    var t = this, n = "frvr";
-                    t.adUnit && t.adUnit.code && e.__FRVR && e.__FRVR.getChannel && (n = e.__FRVR.getChannel());
-                    var r = "frvr-" + n, i = t.adUnit.code.split("/").pop();
+                    var t = this, n = "xyyx";
+                    t.adUnit && t.adUnit.code && e.__XYYX && e.__XYYX.getChannel && (n = e.__XYYX.getChannel());
+                    var r = "xyyx-" + n, i = t.adUnit.code.split("/").pop();
                     t.adUnit.code = t.adUnit.code.replace(i, r + "-" + i)
                 }, h.prototype.ready = function () {
                     return this.isInitialized
@@ -12435,7 +12437,7 @@
                             return e()
                         }
                     };
-                    s || (fetch("--https--fran-cdn.frvr.com/configs/ads/vendor/fran.json").then((function (e) {
+                    s || (fetch("--https--fran-cdn.xyyx.com/configs/ads/vendor/fran.json").then((function (e) {
                         if (!e.ok) throw Error(e.statusText);
                         return e.json()
                     })).then((function (t) {
@@ -12453,7 +12455,7 @@
                     }
                 }, h.prototype.loadPrebid = function () {
                     if (!l) {
-                        var t = "--https--cdn.frvr.com/fran/prebid.7.22.0.js";
+                        var t = "--https--cdn.xyyx.com/fran/prebid.7.22.0.js";
                         e.Config && e.Config.prebid && (t = e.Config.prebid.url);
                         var n = this.loadScript(t);
                         return l = !0, n
@@ -12539,11 +12541,11 @@
                         e._unPause()
                     }
                 }, h.prototype.hasCookiesConsent = function () {
-                    return !(e && e.__FRVR && e.__FRVR.consent && e.__FRVR.consent.hasConsent) || e.__FRVR.consent.hasConsent(e.__FRVR.consent.COOKIES)
+                    return !(e && e.__XYYX && e.__XYYX.consent && e.__XYYX.consent.hasConsent) || e.__XYYX.consent.hasConsent(e.__XYYX.consent.COOKIES)
                 }, h.prototype.hasPersonalisedAdsConsent = function () {
-                    return !(e && e.__FRVR && e.__FRVR.consent && e.__FRVR.consent.hasConsent) || e.__FRVR.consent.hasConsent(e.__FRVR.consent.PERSONALISED_ADS)
+                    return !(e && e.__XYYX && e.__XYYX.consent && e.__XYYX.consent.hasConsent) || e.__XYYX.consent.hasConsent(e.__XYYX.consent.PERSONALISED_ADS)
                 }, h.prototype.hasGoogleConsent = function () {
-                    return !(e && e.__FRVR && e.__FRVR.consent && e.__FRVR.consent.hasVendorConsent) || e.__FRVR.consent.hasVendorConsent(e.__FRVR.consent.VENDORS.GOOGLE)
+                    return !(e && e.__XYYX && e.__XYYX.consent && e.__XYYX.consent.hasVendorConsent) || e.__XYYX.consent.hasVendorConsent(e.__XYYX.consent.VENDORS.GOOGLE)
                 }, h.prototype._onAdError = function () {
                 }, h.prototype.__init = function () {
                 }, h.prototype.__preload = function () {
@@ -12878,8 +12880,8 @@
                     return XS.is.spilGamesWrapper && Config.googleAdSpilgamesId ? Config.googleAdSpilgamesId : !!Config.googleAdSiteId && Config.googleAdSiteId
                 }
 
-                XS.data.addBoolWithLocalKey("samsungBixby", "samsungBixby.v1", {remote: !1}), XS.data.addBoolWithLocalKey("samsungGameLauncherPWA", "samsungGameLauncherPWA.v1", {remote: !1}), XS.data.addBoolWithLocalKey("samsungGalaxyStorePWA", "samsungGalaxyStorePWA.v1", {remote: !1}), XS.data.addIntWithLocalKey("fullScreenVideoCount", "fsvideocount.v2", {remote: !1}), XS.data.addIntWithLocalKey("interstitialPlayCount", "playCount8", {remote: !1}), XS.data.addBoolWithLocalKey("acontained", "acontained.v2", {remote: !1}), window.__FRVR.getGoogleAdSenseGameChannelId = e, XS.is.crazyGames ? console.log("Ad Provider Skipped on CrazyGames: web-adsense-interstitial") : (window.adProviders = window.adProviders || {}, window.adProviders["web-adsense-interstitial"] = new function () {
-                    window.__FRVR.createErrorHandler("Web iAd");
+                XS.data.addBoolWithLocalKey("samsungBixby", "samsungBixby.v1", {remote: !1}), XS.data.addBoolWithLocalKey("samsungGameLauncherPWA", "samsungGameLauncherPWA.v1", {remote: !1}), XS.data.addBoolWithLocalKey("samsungGalaxyStorePWA", "samsungGalaxyStorePWA.v1", {remote: !1}), XS.data.addIntWithLocalKey("fullScreenVideoCount", "fsvideocount.v2", {remote: !1}), XS.data.addIntWithLocalKey("interstitialPlayCount", "playCount8", {remote: !1}), XS.data.addBoolWithLocalKey("acontained", "acontained.v2", {remote: !1}), window.__XYYX.getGoogleAdSenseGameChannelId = e, XS.is.crazyGames ? console.log("Ad Provider Skipped on CrazyGames: web-adsense-interstitial") : (window.adProviders = window.adProviders || {}, window.adProviders["web-adsense-interstitial"] = new function () {
+                    window.__XYYX.createErrorHandler("Web iAd");
                     var t = this, n = window.GSInstant;
 
                     function r() {
@@ -12896,11 +12898,11 @@
                             var n = function (e, t, n) {
                                 var r = XS.is.mobile ? "video_text_image" : "video_text_image_flash";
                                 return e = e.split("{$ADTYPE}").join(r), t && (e = e.split("{$CHANNEL}").join(t)), e.split("{$GAMENAME}").join(Config.id)
-                            }(XS.is.spilGamesWrapper && Config.googleAdSpilgamesId ? "--https--googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.frvr.com%2F&channel={$CHANNEL}&hl=en&&max_ad_duration=60000&adsafe=high&videoad_start_delay=0&vpa=1" : "--https--googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.frvr.com%2F&channel={$CHANNEL}&hl=en&max_ad_duration=60000&videoad_start_delay=0&vpa=1", e);
+                            }(XS.is.spilGamesWrapper && Config.googleAdSpilgamesId ? "--https--googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.xyyx.com%2F&channel={$CHANNEL}&hl=en&&max_ad_duration=60000&adsafe=high&videoad_start_delay=0&vpa=1" : "--https--googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.xyyx.com%2F&channel={$CHANNEL}&hl=en&max_ad_duration=60000&videoad_start_delay=0&vpa=1", e);
                             return console.log("Showing Google Ad URL: " + n), n + a
                         }
 
-                        XS.is.samsungGameLauncher && "undefined" != typeof FRVRInstant && FRVRInstant.getADID().then((function (e) {
+                        XS.is.samsungGameLauncher && "undefined" != typeof XYYXInstant && XYYXInstant.getADID().then((function (e) {
                             a = "&rdid=" + e + "&idtype=adid&is_lat=0"
                         })).catch((function (e) {
                             console.warn("Unable to get rdid")
@@ -13094,7 +13096,7 @@
                             console.warn("XS.on('showFullscreenAd') is depricated")
                         }), {freezeGroup: ENG_FRZ_GRP}),
                         // x() && XS.loadScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"),
-                        r || ("" === Host.Web.GetQueryString("google_ads") ? XS.data.acontained = !0 : XS.data.acontained && !XS.is.facebookApp && (top.location.href = "//" + Config.id + ".frvr.com/g/")), this.show = function (e) {
+                        r || ("" === Host.Web.GetQueryString("google_ads") ? XS.data.acontained = !0 : XS.data.acontained && !XS.is.facebookApp && (top.location.href = "//" + Config.id + ".xyyx.com/g/")), this.show = function (e) {
                             t ? t({}, e) : C({}) ? S({}, e) : e && e(!1)
                         }
                     }
@@ -13513,18 +13515,18 @@
                 i.prototype = Object.create(r.prototype), i.prototype.constructor = i, window.adProviders = window.adProviders || {}, window.adProviders["pbgam-video-interstitial"] = new i
             })), function (e) {
                 var t = e.XS = e.XS || {}, n = {
-                    name: "frvr", oninit: function (e, t) {
-                        e.debug && console.log("XS.track > frvr.js > config: " + JSON.stringify(e))
+                    name: "xyyx", oninit: function (e, t) {
+                        e.debug && console.log("XS.track > xyyx.js > config: " + JSON.stringify(e))
                     }, onevent: function (t, n, r, i, o) {
                         var a = {}, s = (this.parseArgs(this.config.state, i) || [])[0];
                         for (var l in s) a[l] = s[l];
                         for (var l in r) a[l] = r[l];
                         a.protocol_version = 5, a.event = t, a.value = n, a.web_url = document && document.location && document.location.href ? document.location.href : void 0;
                         var c = 60 * (new Date).getTimezoneOffset() * 1e3;
-                        a.client_time = new Date(Date.now() - c).toISOString().slice(0, -1), e.__FRVR.analytics.logEvent(t, a)
+                        a.client_time = new Date(Date.now() - c).toISOString().slice(0, -1), e.__XYYX.analytics.logEvent(t, a)
                     }
                 };
-                t.track.addProvider("frvr", n)
+                t.track.addProvider("xyyx", n)
             }(window), function (e) {
                 var t = e.XS = e.XS || {}, n = {
                     globalState: void 0, oninit: function (e, t) {
@@ -13971,8 +13973,8 @@
             var Rt, Pt = "runtimedir/assets/_music.19e5686b.mp3";
 
             function Lt() {
-                var e = document.documentElement.getAttribute("data-frvr-alc"),
-                    t = [window.__FRVR.cohort().preferredLanguage];
+                var e = document.documentElement.getAttribute("data-xyyx-alc"),
+                    t = [window.__XYYX.cohort().preferredLanguage];
                 "alc" === e && (t = [].concat(t, function () {
                     tag = function () {
                         var e = window.navigator;
@@ -16085,9 +16087,9 @@
                 }
 
                 function n(e) {
-                    e ? (console.log("FRVRPreloader::setup(): Starting FSX-style build immediately"), Host.bootstrapper.start = function () {
-                        console.error("FRVRPreloader::reallyStart() already called!")
-                    }, Lt(), t(!0)) : (console.log("FRVRPreloader::setup(): Setting up FSX-style Host.bootstrapper.start"), Host.bootstrapper.start = function () {
+                    e ? (console.log("XYYXPreloader::setup(): Starting FSX-style build immediately"), Host.bootstrapper.start = function () {
+                        console.error("XYYXPreloader::reallyStart() already called!")
+                    }, Lt(), t(!0)) : (console.log("XYYXPreloader::setup(): Setting up FSX-style Host.bootstrapper.start"), Host.bootstrapper.start = function () {
                         Lt(), t(!0)
                     })
                 }
