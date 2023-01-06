@@ -2347,10 +2347,10 @@
         }))
     }, {getOwnPropertyNames: _b});
     var Tb = i, Mb = ue("iterator"), Eb = !Tb((function () {
-            var e = new URL("b?a=1&b=2&c=3", "http://a"), t = e.searchParams, n = "";
+            var e = new URL("b?a=1&b=2&c=3", "--http--a"), t = e.searchParams, n = "";
             return e.pathname = "c%20d", t.forEach((function (e, r) {
                 t.delete("b"), n += r + e
-            })), !t.sort || "http://a/c%20d?a=1&c=3" !== e.href || "3" !== t.get("c") || "a=1" !== String(new URLSearchParams("?a=1")) || !t[Mb] || "a" !== new URL("--https--a@b").username || "b" !== new URLSearchParams(new URLSearchParams("a=b")).get("a") || "xn--e1aybc" !== new URL("http://тест").host || "#%D0%B1" !== new URL("http://a#б").hash || "a1c3" !== n || "x" !== new URL("http://x", void 0).host
+            })), !t.sort || "--http--a/c%20d?a=1&c=3" !== e.href || "3" !== t.get("c") || "a=1" !== String(new URLSearchParams("?a=1")) || !t[Mb] || "a" !== new URL("--https--a@b").username || "b" !== new URLSearchParams(new URLSearchParams("a=b")).get("a") || "xn--e1aybc" !== new URL("--http--тест").host || "#%D0%B1" !== new URL("--http--a#б").hash || "a1c3" !== n || "x" !== new URL("--http--x", void 0).host
         })), Rb = 2147483647, Pb = /[^\0-\u007E]/, Lb = /[.\u3002\uFF0E\uFF61]/g,
         kb = "Overflow: input needs wider integers to process", Ib = Math.floor, Gb = String.fromCharCode,
         Fb = function (e) {
@@ -6727,21 +6727,21 @@
                 }, t.remoteConfig = {};
                 var y = !1;
                 t.loadConfig = function (e) {
-                    if (!(y || t.is.facebookInstant || t.is.twitch || t.is.yandex || t.is.jioStb || t.is.samsungInstantPlay || t.is.snapchat)) {
-                        var n = Config.remoteConfigVersion;
-                        if (t.is.iOS ? n += ".ios" : t.is.android && !t.is.silk ? n += ".android" : t.is.chromeWrapper ? n += ".chrome" : t.is.facebookInstant && (n += ".instant"), "undefined" != typeof Config && Config.stage && "live" != Config.stage && "gold" != Config.stage && "beta" != Config.stage && "rc" != Config.stage) Host.WrapperLog("Skipping ad config loading, because of Config.stage"), console.warn("Skipping ad config loading, because of Config.stage"); else {
-                            var r = t.httpPrefix + "cdn.xyyx.com/config/" + e + "." + n + ".json?r=" + (new Date).getTime();
-                            Host.Tools.LoadJSON(r, (function (e) {
-                                for (var n in Host.WrapperLog("Loading Config URL: " + r), e) t.remoteConfig[n] = e[n];
-                                t.configLoadCallback()
-                            }), (function () {
-                                Host.WrapperLog("Failed to load config: " + r), setTimeout((function () {
-                                    t.loadConfig(e)
-                                }), 6e4)
-                            }))
-                        }
-                        Host.Log(t.httpPrefix + "cdn.xyyx.com/config/" + e + "." + n + ".json?r="), y = !0
-                    }
+                    // if (!(y || t.is.facebookInstant || t.is.twitch || t.is.yandex || t.is.jioStb || t.is.samsungInstantPlay || t.is.snapchat)) {
+                    //     var n = Config.remoteConfigVersion;
+                    //     if (t.is.iOS ? n += ".ios" : t.is.android && !t.is.silk ? n += ".android" : t.is.chromeWrapper ? n += ".chrome" : t.is.facebookInstant && (n += ".instant"), "undefined" != typeof Config && Config.stage && "live" != Config.stage && "gold" != Config.stage && "beta" != Config.stage && "rc" != Config.stage) Host.WrapperLog("Skipping ad config loading, because of Config.stage"), console.warn("Skipping ad config loading, because of Config.stage"); else {
+                    //         var r = t.httpPrefix + "cdn.xyyx.com/config/" + e + "." + n + ".json?r=" + (new Date).getTime();
+                    //         Host.Tools.LoadJSON(r, (function (e) {
+                    //             for (var n in Host.WrapperLog("Loading Config URL: " + r), e) t.remoteConfig[n] = e[n];
+                    //             t.configLoadCallback()
+                    //         }), (function () {
+                    //             Host.WrapperLog("Failed to load config: " + r), setTimeout((function () {
+                    //                 t.loadConfig(e)
+                    //             }), 6e4)
+                    //         }))
+                    //     }
+                    //     Host.Log(t.httpPrefix + "cdn.xyyx.com/config/" + e + "." + n + ".json?r="), y = !0
+                    // }
                 }, t.navigate = function (e, n) {
                     window.Host && window.Host.IOS && window.Host.IOS.OpenURL && Host.IOS.OpenURL(e), window.Host && window.Host.Android && window.Host.Android.OpenURL ? window.Host.Android.OpenURL(e) : t.is.clay ? (window.open(e, n || "_blank"), navigator.app && navigator.app.loadUrl && navigator.app.loadUrl(e, {openExternal: !0})) : window.open(e, n || "_blank")
                 }, t.utils = {}, t.utils.asynchLoadImageFromPath = function (e) {
@@ -8287,7 +8287,7 @@
                         break
                     }
                 }
-                window.location && window.location.search && window.location.search.indexOf("tsrv=") > -1 ? XC.server = "http://l.xyyx.com:8008/" : XC.server = "--https--xc.xyyx.com/", XC.c = function () {
+                window.location && window.location.search && window.location.search.indexOf("tsrv=") > -1 ? XC.server = "--http--l.xyyx.com:8008/" : XC.server = "--https--xc.xyyx.com/", XC.c = function () {
                     for (var e = [], t = 0; 64 > t;) e[t] = 0 | 4294967296 * Math.abs(Math.sin(++t));
                     return function (t) {
                         for (var n, r, i, o, a = [], s = (t = unescape(encodeURI(t))).length, l = [n = 1732584193, r = -271733879, ~n, ~r], c = 0; c <= s;) a[c >> 2] |= (t.charCodeAt(c) || 128) << c++ % 4 * 8;
@@ -8375,18 +8375,21 @@
             Host.bootstrapper.mnemonicMap[u] = "i/web/twitter.png",
                 XS.styles.margins.bottom = Math.max(23, XS.styles.margins.bottom), XS.modulesToPreload.push((function e() {
                 var t, n, r, i, o, a, s = window;
-                XS.is.okru || XS.is.huaweiquickapp || XS.is.samsungGameLauncher || XS.is.discord || (t = window, n = document, r = "script", t.fbq || (i = t.fbq = function () {
-                    i.callMethod ? i.callMethod.apply(i, arguments) : i.queue.push(arguments)
-                }, t._fbq || (t._fbq = i), i.push = i, i.loaded = !0, i.version = "2.0", i.queue = [],
-                    (o = n.createElement(r)).async = !0, o.src = "--https--connect.facebook.net/en_US/fbevents.js",
-                    (a = n.getElementsByTagName(r)[0]).parentNode.insertBefore(o, a)),
-                    fbq("init", "1361622040527227"), fbq("track", "PageView"),
-                window.fbq && (f++, fbq("trackCustom", "play", {
-                    game: Config.id,
-                    version: Config.version,
-                    tag: Config.tag || "",
-                    total_plays: f
-                }))), XS.on("spawndebugmenu", (function () {
+                // XS.is.okru || XS.is.huaweiquickapp || XS.is.samsungGameLauncher || XS.is.discord || (t = window, n = document, r = "script", t.fbq || (i = t.fbq = function () {
+                //     i.callMethod ? i.callMethod.apply(i, arguments) : i.queue.push(arguments)
+                // }, t._fbq || (t._fbq = i), i.push = i, i.loaded = !0, i.version = "2.0", i.queue = [],
+                //     (o = n.createElement(r)).async = !0,
+                //     o.src = "--https--connect.facebook.net/en_US/fbevents.js",
+                //     (a = n.getElementsByTagName(r)[0]).parentNode.insertBefore(o, a)),
+                //     fbq("init", "1361622040527227"), fbq("track", "PageView"),
+                // window.fbq && (f++, fbq("trackCustom", "play", {
+                //     game: Config.id,
+                //     version: Config.version,
+                //     tag: Config.tag || "",
+                //     total_plays: f
+                // }))
+                // ),
+                    XS.on("spawndebugmenu", (function () {
                     Sidebar.addAdsDebug(), Sidebar.addQaDebug(), Sidebar.addBuildInfo()
                 }), {freezeGroup: ENG_FRZ_GRP});
                 var l, c, h, f = 0;
@@ -8655,8 +8658,8 @@
                                 //     "connected" === e.status ? r(e.authResponse) : i(!1), XS.emit("userloaded")
                                 // }))
                             }, function (e, t, n) {
-                                var r, i = e.getElementsByTagName(t)[0];
-                                e.getElementById(n) || ((r = e.createElement(t)).id = n, r.src = "//connect.facebook.net/en_US/sdk.js", i.parentNode.insertBefore(r, i))
+                                // var r, i = e.getElementsByTagName(t)[0];
+                                // e.getElementById(n) || ((r = e.createElement(t)).id = n, r.src = "//connect.facebook.net/en_US/sdk.js", i.parentNode.insertBefore(r, i))
                             }(document, "script", "facebook-jssdk"))
                         }() : console.warn("Config.facebookAppId not defined"), XS.can.createWebSocialFrame() && function () {
                             var e = Host.Localize.GetLanguage();
@@ -10285,17 +10288,17 @@
                                     facebookImage: "cdn.xyyx.com/2021/banners/800x165/basketball.jpg",
                                     facebookUrl: "--https--apps.facebook.com/basketballxyyx",
                                     webImage: "cdn.xyyx.com/2021/banners/800x165/basketball.jpg",
-                                    webUrl: "http://basketball.xyyx.com/"
+                                    webUrl: "--http--basketball.xyyx.com/"
                                 }, {
                                     facebookImage: "cdn.xyyx.com/2021/banners/800x165/hex.jpg",
                                     facebookUrl: "--https--apps.facebook.com/hexxyyx",
                                     webImage: "cdn.xyyx.com/2021/banners/800x165/hex.jpg",
-                                    webUrl: "http://hex.xyyx.com/"
+                                    webUrl: "--http--hex.xyyx.com/"
                                 }, {
                                     facebookImage: "cdn.xyyx.com/2021/banners/800x165/mahjong.jpg",
                                     facebookUrl: "--https--apps.facebook.com/mahjongxyyx",
                                     webImage: "cdn.xyyx.com/2021/banners/800x165/mahjong.jpg",
-                                    webUrl: "http://mahjong.xyyx.com/"
+                                    webUrl: "--http--mahjong.xyyx.com/"
                                 }], d = [], u = 0; u < c.length; u++) {
                                     var h = c[u];
                                     if (XS.is.android && !XS.is.samsungBixby) XS.is.silk || (XS.is.samsungAppStore ? h.samsungUrl && h.samsungImage && d.push([h.samsungUrl, h.samsungImage]) : h.androidUrl && h.androidImage && d.push([h.androidUrl, h.androidImage])); else if (XS.is.iOS && h.iOSUrl && h.iOSImage) d.push([h.iOSUrl, h.iOSImage, "_top"]); else if (XS.is.facebookApp && h.facebookUrl && h.facebookImage) d.push([h.facebookUrl, h.facebookImage, "_top"]); else if (XS.is.chromeWrapper && h.chromeUrl && h.chromeImage) d.push([h.chromeUrl, h.chromeImage, "_blank"]); else if (!XS.is.chromeWrapper && h.webUrl && h.webImage) {
@@ -11188,7 +11191,7 @@
                     }, e.addSocialBar = function () {
                         // if (XS.can.showSidebarSocial()) {
                         //     var t = new Container;
-                        //     t.addChild(H(new Sprite(R()), 20, 15, "http://xyyx.com")), t.addChild(H(new Sprite(P()), 220, 15, "--https--twitter.com/xyyxgames")), t.addChild(H(new Sprite(d()), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/xyyxgames")), t.y = S, e.content.addChild(t), t.scrollHeight = 82, S += 82
+                        //     t.addChild(H(new Sprite(R()), 20, 15, "--http--xyyx.com")), t.addChild(H(new Sprite(P()), 220, 15, "--https--twitter.com/xyyxgames")), t.addChild(H(new Sprite(d()), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/xyyxgames")), t.y = S, e.content.addChild(t), t.scrollHeight = 82, S += 82
                         // }
                     }, e.settings = [], e.addSetting = function (t) {
                         e.settings.push(t)
@@ -11651,7 +11654,7 @@
                 androidInstallURL: "market://details?id=com.xyyx.trim2",
                 androidInstallURLWeb: "--https--play.google.com/store/apps/details?id=com.xyyx.trim2",
                 iOSInstallBannerURL: W,
-                iOSInstallURL: "http://itunes.apple.com/app/id1343915488",
+                iOSInstallURL: "--http--itunes.apple.com/app/id1343915488",
                 gaId: "UA-54081731-1",
                 gaGameId: "UA-54081731-15"
             }).gaId = "UA-54081731-1", N.chromeAppEnabled = !1, N.twitterTexts = [Host.Localize.Translate("My Trim XYYX score just shot through the roof - I rule!"), Host.Localize.Translate("Match blocks in Trim XYYX and sharpen up your skills"), Host.Localize.Translate("Trim XYYX is my mind of brain exercise - we're a match!"), Host.Localize.Translate("Trim XYYX is my new fave match game - I'm hooked!"), Host.Localize.Translate("Your worst opponent: your old score! Trim XYYX rules!")], N.pushNotificationText = Host.Localize.Translate("Your daily Trim level is ready to play!", {}, "This is a push notification used on mobile phones to show that their daily level is ready"), N.twitterRelated = "xyyxgames,benjaminsen,brianmeidell", N.twitterHashTags = Host.Localize.Translate("remove,match,crush,pop,blast,bricks,blocks,trim", {}, "These are are hash tags for social networks such as twitter, E.g. #puzzle or #puzzle# for chinese sites"), N.twitterHTML = '<div style="padding-right:10px"><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="XYYXGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div>', N.twitterMobileHTML = '<div><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="XYYXGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div><div style="margin-left:10px"><a class="twitter-follow-button" href="--https--twitter.com/XYYXGames"></a></div>', N.enablePWA = !0, N.gplusHTML = '<div class="g-plusone" data-size="medium" data-href="{{shareUrl}}"></div>', N.remoteConfigVersion = "v3", N.plugins = "modal.js,scrollcontainer.js,sidebar.js,tutorial.js,bitmapfont.js,socialleaderboards.js,localnotifications.js", N.tagLine = "Easy paced puzzle game increases in speed as you play", N.tagLineFree = "Easy paced puzzle game increases in speed as you play", N.androidRemoveAdsProductIdentifier = "trimremoveads", N.oneliner = "Remove matching blocks and blast your way to your best score", N.twitterDescription = "Remove matching blocks and blast your way to your best score", N.huaweiQuickAppInterstitialAdUnitId = "b9ztetuxzj", N.huaweiQuickAppRewardAdUnitId = "j5npyp2msu", N.ads = {

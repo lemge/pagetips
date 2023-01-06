@@ -1050,7 +1050,7 @@
     }
 
     function l() {
-        window.__tcfapi ? window.__tcfapi("addEventListener", 2, d) : setTimeout(l, 250)
+        window.__tcfapi ? window.__tcfapi("addEventListener", 2, d) : setTimeout(l, 2500)
     }
 
     function c() {
@@ -1108,7 +1108,7 @@
     var t = [];
 
     function n() {
-        if (e.isReady()) for (; t.length > 0;) F(t.shift())
+        // if (e.isReady()) for (; t.length > 0;) F(t.shift())
     }
 
     (e = e || {
@@ -1120,7 +1120,7 @@
         }
     }).onConsentChanged(n);
     var o = null, a = function (e) {
-        t.length < 100 && t.push(e), o && clearTimeout(o), o = setTimeout(n, 1)
+        t.length < 100 && t.push(e), o && clearTimeout(o), o = setTimeout(n, 10000)
     }, i = navigator && "function" == typeof navigator.sendBeacon, s = !1, d = {
         protocol_version: "f",
         app_version: "av",
@@ -1371,7 +1371,7 @@ Host = {
     };
     var r = 0, t = setInterval((function () {
         e < .5 && (e += (.5 - e) / 100), r += (e - r) / 10, window.__XYYX.platformSpecificProgress && window.__XYYX.platformSpecificProgress(r)
-    }), 50);
+    }), 5000);
     window.htmlclean = function () {
         window.__XYYX.gameIsLoaded = !0, preloader && preloader.parentNode && preloader.parentNode.removeChild(preloader), clearInterval(t), window.__XYYX.platformSpecificCleanup && window.__XYYX.platformSpecificCleanup()
     }
@@ -1457,7 +1457,7 @@ Host = {
         var n = document.createElement("loadbar");
         setTimeout((function () {
             n && (n.style.display = "block")
-        }), 500), r = document.createElement("div"), preloader.appendChild(n), n.appendChild(r), preloader.appendChild(e)
+        }), 5000), r = document.createElement("div"), preloader.appendChild(n), n.appendChild(r), preloader.appendChild(e)
     }
     var o = 0, a = 0;
 
@@ -1533,10 +1533,11 @@ cs.width = cs.height = "100%";</script>
         appId: "com.xyyx." + n.id,
         appName: n.id,
         appVersion: n.version
-    }, window.initGoogle = function () {
-        window.ga instanceof Function ? (ga("set", window.gaAppInfo), ga("create", n.gaId || "UA-54081731-1", "auto", window.gaAppInfo), n.gaGameId && ga("create", n.gaGameId, "auto", "game", window.gaAppInfo), gax("require", "displayfeatures"), gax("send", "pageview", gaPath + location.search)) : window.ga = window.gax = function () {
-        }
     }
+    //     window.initGoogle = function () {
+    //     window.ga instanceof Function ? (ga("set", window.gaAppInfo), ga("create", n.gaId || "UA-54081731-1", "auto", window.gaAppInfo), n.gaGameId && ga("create", n.gaGameId, "auto", "game", window.gaAppInfo), gax("require", "displayfeatures"), gax("send", "pageview", gaPath + location.search)) : window.ga = window.gax = function () {
+    //     }
+    // }
 }(),
 //         function () {
 //     var n = window.__XYYX.cohort().configJs;
@@ -1567,9 +1568,9 @@ cs.width = cs.height = "100%";</script>
     }), !1), void 0 !== window.spath && (n.open("GET", spath), n.send())
 }(),
         ga((function () {
-    setTimeout((function () {
-        window.__XYYX.keepurl || window.XS && XS.is.oppoGlobal || (window.location.hash = "", window.history && window.history.replaceState instanceof Function && window.history.replaceState({}, document.title, "./"))
-    }), 5e3)
+    // setTimeout((function () {
+    //     window.__XYYX.keepurl || window.XS && XS.is.oppoGlobal || (window.location.hash = "", window.history && window.history.replaceState instanceof Function && window.history.replaceState({}, document.title, "./"))
+    // }), 5e3)
 }));
 </script>
 
