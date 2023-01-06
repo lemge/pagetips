@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="manifest" href="runtimedir/assets/manifest.fdfc1cc6.alc.json">
+    <link rel="manifest" href="../assets/manifest.ef1048db.alc.json">
     <script></script>
     <script>window.__FRVR = window.__FRVR || {}, window.__FRVR.startTime = Date.now(), window.__FRVR.gameIsLoaded = !1, window.__FRVR.createErrorHandler = function (n) {
         return function (o) {
@@ -11,59 +11,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
+    <!--
+    /**
+    * @author Chris Benjaminsen http://chrisbenjaminsen.com/ @benjaminsen
+    */
+    /** @license
+    Trim FRVR 1.4.5
+    More info at http://frvr.com
+
+    Copyright (c) 2013+ FRVR Limited
+
+    All Rights Reserved!
+    FRVR is a registered trademark of FRVR Limited
+    */
+    /**
+    Well hello there!
+
+    I see you are interested in the details of how this game was made!
+    It's written using a custom HTML5 engine built around PixiJS.
+
+    While I can't tell you more on the how, there is much more on the why to be find at
+    http://blog.chrisbenjaminsen.com where I write frequent status updates on the games I build
+    under the FRVR brand - - including a 100% honest track record of money earned and spend.
+
+    Hack on!
+    Chris Benjaminsen
+    chrisbenjaminsen.com
+
+    - - - - - - - - - - - - - -
+
+    Trim FRVR would not be possible without the following open source projects:
+
+    pixi.js - v2.2.3
+    Copyright (c) 2012-2014, Mat Groves
+    http://goodboydigital.com/
+    pixi.js is licensed under the MIT License.
+    http://www.opensource.org/licenses/mit-license.php
+    Mat Groves http://matgroves.com/ @Doormat23
+    */
+    -->
 
 
+    <link rel="canonical" href="https://trim.frvr.com/">
 
-    <link rel="icon" type="image/png" href="runtimedir/assets/favicon.d4dcdf94.png">
+    <link rel="alternate" hreflang="ru" href="https://trim.frvr.com/ru/">
+
+    <link rel="icon" type="image/png" href="..//assets/favicon.5d74b70b.png">
 
     <meta name="viewport"
           content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Remove FRVR">
+    <meta name="apple-mobile-web-app-title" content="Trim FRVR">
     <meta name="theme-color" content="#202020">
     <meta name="HandheldFriendly" content="true">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="google" content="notranslate">
 
-    <link rel="apple-touch-icon" sizes="60x60" href="runtimedir/assets/icon60x60.ff569254.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="runtimedir/assets/icon76x76.42a7d362.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="runtimedir/assets/icon120x120.98761b9c.png">
-    <link rel="apple-touch-icon" sizes="196x196" href="runtimedir/assets/icon196x196.fec4cf0b.png">
-    <link rel="apple-touch-icon" sizes="256x256" href="runtimedir/assets/icon256x256.50bb2707.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="runtimedir/assets/icon1024x1024.14be4839.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="..//assets/icon60x60.bd91d093.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="..//assets/icon76x76.187f1e47.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="..//assets/icon120x120.e19ba4b8.png">
+    <link rel="apple-touch-icon" sizes="196x196" href="..//assets/icon196x196.a37fe6c3.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="..//assets/icon256x256.69d7283d.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="..//assets/icon1024x1024.723caee7.png">
 
+    <link rel="me" href="https://twitter.com/FRVRGames">
 
-    <meta name="facebook_label" content="Remove FRVR - Click, Pop, Collapse">
+    <meta name="facebook_label" content="Play Trim FRVR - Easy paced puzzle game increases in speed as you play">
 
-    <meta property="og:title" content="Remove FRVR">
-    <meta property="og:description" content="Test your skills with color recognition and quick reactions">
-    <meta property="og:site_name" content="Remove FRVR">
+    <meta property="og:title" content="Play Trim FRVR">
+    <meta property="og:description" content="Remove matching blocks and blast your way to your best score">
+    <meta property="og:site_name" content="Trim FRVR">
+    <meta property="og:url" content="https://trim.frvr.com/">
     <meta property="og:type" content="game">
     <meta property="og:locale" content="en">
     <meta property="og:image" content="/game/i/web/facebook01.png">
-    <meta property="fb:app_id" content="390200184775780">
+    <meta property="fb:app_id" content="1833140240092449">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@FRVRGames">
     <meta name="twitter:creator" content="@Benjaminsen">
-    <meta name="twitter:title" content="Remove FRVR - Click, Pop, Collapse">
+    <meta name="twitter:title" content="Play Trim FRVR - Easy paced puzzle game increases in speed as you play">
     <meta name="twitter:image" content="/game/i/web/twitter01.png">
-    <meta name="twitter:description" content="Test your skills with color recognition and quick reactions">
+    <meta name="twitter:description" content="Remove matching blocks and blast your way to your best score">
 
-    <meta name="twitter:app:name:iphone" content="Remove FRVR">
-    <meta name="twitter:app:id:iphone" content="1220376539">
-    <meta name="twitter:app:name:ipad" content="Remove FRVR">
-    <meta name="twitter:app:id:ipad" content="1220376539">
+    <meta name="twitter:app:name:iphone" content="Trim FRVR">
+    <meta name="twitter:app:id:iphone" content="1343915488">
+    <meta name="twitter:app:name:ipad" content="Trim FRVR">
+    <meta name="twitter:app:id:ipad" content="1343915488">
 
-    <meta name="twitter:app:name:googleplay" content="Remove FRVR">
-    <meta name="twitter:app:id:googleplay" content="com.frvr.remove">
+    <meta name="twitter:app:name:googleplay" content="Trim FRVR">
+    <meta name="twitter:app:id:googleplay" content="com.frvr.trim">
 
-    <meta name="description" content="Test your skills with color recognition and quick reactions">
+    <meta name="description" content="Remove matching blocks and blast your way to your best score">
     <meta name="keywords" content="dots, pop,dash, click, pop, collapse">
 
-    <title>Remove FRVR - Click, Pop, Collapse</title>
+    <title>Play Trim FRVR - Easy paced puzzle game increases in speed as you play</title>
 
     <style>
 
@@ -631,41 +675,21 @@
 
     </style>
 
-    <script type="application/json" class="cohort">
-        {
-        "version": "1.6.9",
-        "name": "小鱼爱消除",
-        "gaPath": "remove/1.6.9/",
-        "vpath": "/games/remove/",
-        "spath": "runtimedir/assets/index.50bf55bd.js",
+    <script type="application/json" class="cohort">{
+        "version": "1.4.5",
+        "name": "trim",
+        "gaPath": "trim/1.4.5/",
+        "vpath": "/",
+        "spath": "../assets/index.887adb6e.js",
         "legacyCoords": false,
         "configJs": {
-            "id": "remove",
-            "version": "1.6.9",
-            "build": "221021367",
+            "id": "trim",
+            "version": "1.4.5",
+            "build": "145002",
             "gaId": "UA-54081731-1",
-            "gaGameId": "UA-54081731-20"
+            "gaGameId": "UA-54081731-15"
         },
         "moreJson": {
-            "ab_tests": {},
-            "track-facebook_events": {
-                "blacklist": "iap_request_payment,iap_request_payment_success",
-                "events": {
-                    "default": "name,{_merge=state,_merge=_params}",
-                    "ftue": "'COMPLETED_TUTORIAL',{SUCCESS=completed,STEP_NUMBER=step_number,STEP_NAME=step_name,STEP_NUMBER=ftue_step_number,STEP_NAME=ftue_step_name}",
-                    "ad_rewarded_finish": "'AD_IMPRESSION',{AD_TYPE='rewarded_video',SUCCESS=value}",
-                    "ad_mandatory_finish": "'AD_IMPRESSION',{AD_TYPE='interstitial',SUCCESS=value}",
-                    "coin_spent": "'SPENT_CREDITS',{AMOUNT=amount,DESCRIPTION='coins',CONTENT=product}",
-                    "gem_spent": "'SPENT_CREDITS',{AMOUNT=amount,DESCRIPTION='gems',CONTENT=product}",
-                    "gem_get": "'UNLOCKED_ACHIEVEMENT',{QUANTITY=value,DESCRIPTION='gem_get'}",
-                    "popup_claim_reward": "'UNLOCKED_ACHIEVEMENT',{DESCRIPTION='claim_reward'}",
-                    "levelup_newlevel": "'ACHIEVED_LEVEL',{LEVEL=level}",
-                    "iap_request_payment": "'INITIATED_CHECKOUT',{CONTENT_ID=productId,NUM_ITEMS='1'}",
-                    "iap_request_payment_success": "'PURCHASED',{CONTENT_ID=productId,NUM_ITEMS='1'}",
-                    "iap_request_payment_failed": "'CHECKOUT_CANCELED',{CONTENT_ID=productId,NUM_ITEMS='1'}",
-                    "rate": "'RATED',{MAX_RATING_VALUE=max_rating_value,RATE=rate_value}"
-                }
-            },
             "track-frvr": {
                 "state": "{app_version,engine_version,app_build,cohort,channel,development,games_played,play_session_id,play_session_count,days_elapsed,facebook_player_id,facebook_context_type,facebook_entrypoint,utm_source,utm_medium,utm_campaign,utm_term,utm_content,facebook_referral_player_id,remote_user_id,non_interaction,device_width,device_height,global_user_id,web_url,script_version,social_session_id,ab_exp,ab_cohort_name,ab_cohort_weight,page_session_id,fb_instant_game_ad_id,fb_segment}",
                 "events": {
@@ -707,6 +731,24 @@
                     "chatbot_noshow,chatbot_show,chatbot_success,chatbot_issubscribed,chatbot_useraborted": "name,,",
                     "chatbot_error": "name,reason,"
                 }
+            },
+            "track-facebook_events": {
+                "blacklist": "iap_request_payment,iap_request_payment_success",
+                "events": {
+                    "default": "name,{_merge=state,_merge=_params}",
+                    "ftue": "'COMPLETED_TUTORIAL',{SUCCESS=completed,STEP_NUMBER=step_number,STEP_NAME=step_name,STEP_NUMBER=ftue_step_number,STEP_NAME=ftue_step_name}",
+                    "ad_rewarded_finish": "'AD_IMPRESSION',{AD_TYPE='rewarded_video',SUCCESS=value}",
+                    "ad_mandatory_finish": "'AD_IMPRESSION',{AD_TYPE='interstitial',SUCCESS=value}",
+                    "coin_spent": "'SPENT_CREDITS',{AMOUNT=amount,DESCRIPTION='coins',CONTENT=product}",
+                    "gem_spent": "'SPENT_CREDITS',{AMOUNT=amount,DESCRIPTION='gems',CONTENT=product}",
+                    "gem_get": "'UNLOCKED_ACHIEVEMENT',{QUANTITY=value,DESCRIPTION='gem_get'}",
+                    "popup_claim_reward": "'UNLOCKED_ACHIEVEMENT',{DESCRIPTION='claim_reward'}",
+                    "levelup_newlevel": "'ACHIEVED_LEVEL',{LEVEL=level}",
+                    "iap_request_payment": "'INITIATED_CHECKOUT',{CONTENT_ID=productId,NUM_ITEMS='1'}",
+                    "iap_request_payment_success": "'PURCHASED',{CONTENT_ID=productId,NUM_ITEMS='1'}",
+                    "iap_request_payment_failed": "'CHECKOUT_CANCELED',{CONTENT_ID=productId,NUM_ITEMS='1'}",
+                    "rate": "'RATED',{MAX_RATING_VALUE=max_rating_value,RATE=rate_value}"
+                }
             }
         },
         "jsSize": 500000,
@@ -714,32 +756,32 @@
             "ru"
         ],
         "buildJson": {
-            "buildTime": "Fri Oct 21 2022 13:13:08 GMT+0100 (Western European Summer Time)",
-            "fsxBuildId": "221021367",
+            "buildTime": "Tue Dec 06 2022 12:35:29 GMT+0100 (Central European Standard Time)",
+            "fsxBuildId": "145002",
             "repos": {
-                "game-remove": {
-                    "branch": "release/1.6.9",
-                    "hash": "2426337808f7322ff1ef73bed4db7dd8e615dcc9",
+                "game-trim": {
+                    "branch": "release/1.4.5",
+                    "hash": "dc466fa927273441a8f7c14796075e4be65ec0d5",
                     "dirty": false,
-                    "dir": "$HOME/workspace/frvr/game-remove"
+                    "dir": "$HOME/Repository/game-trim"
                 },
                 "@frvraps/frvr-xs-builder": {
-                    "branch": "feat/ch-922-localise-microsoft",
-                    "hash": "5ec39668e6bf9cfbbc89b95eeec99f391c3d1435",
+                    "branch": "release/2.5.3",
+                    "hash": "7ba4c291fccb98b3097f9a66d0fe19a41e9824bf",
                     "dirty": false,
-                    "dir": "$HOME/workspace/frvr/frvr-tools/packages/frvr-xs-builder",
+                    "dir": "$HOME/Repository/frvr-tools/packages/frvr-xs-builder",
                     "repository": "git://github.com/frvraps/frvr-tools.git"
                 },
                 "@frvraps/frvr-xs": {
-                    "branch": "feat/ch-922-localise-microsoft",
-                    "hash": "5ec39668e6bf9cfbbc89b95eeec99f391c3d1435",
+                    "branch": "release/2.5.3",
+                    "hash": "7ba4c291fccb98b3097f9a66d0fe19a41e9824bf",
                     "dirty": false,
-                    "dir": "$HOME/workspace/frvr/frvr-tools/packages/frvr-xs",
+                    "dir": "$HOME/Repository/frvr-tools/packages/frvr-xs",
                     "repository": "git://github.com/frvraps/frvr-tools.git"
                 }
             },
             "options": {
-                "gameName": "remove",
+                "gameName": "trim",
                 "verbose": false,
                 "vitejsVerbose": false,
                 "reheatCache": false,
@@ -781,17 +823,17 @@
                 "buildId": false,
                 "removeOldStyleCp": false,
                 "dictionaries": [
-                    "$HOME/workspace/frvr/game-remove/game/languages/ru.json"
+                    "$HOME/Repository/game-trim/game/languages/ru.json"
                 ],
-                "outDir": "$HOME/workspace/frvr/frvr-out/Builds/remove/remove.web"
+                "outDir": "$HOME/Repository/frvr-out/Builds/trim/trim.web"
             },
-            "timeStamp": 1666354388650,
+            "timeStamp": 1670326529013,
             "argv": [
-                "$HOME/.local/share/nvm/v18.5.0/bin/node",
-                "$HOME/.local/share/nvm/v18.5.0/bin/fsx",
+                "/opt/homebrew/Cellar/node@16/16.15.1/bin/node",
+                "/opt/homebrew/bin/fsx",
                 "build",
-                "--platform=web",
-                "remove"
+                "trim",
+                "--platform=web"
             ]
         }
     }</script>
@@ -1097,7 +1139,7 @@
             var e = "div#ot-sdk-btn-floating { display: none !important; }", r = document.createElement("style");
             r.setAttribute("type", "text/css"), "textContent" in r ? r.textContent = e : r.styleSheet.cssText = e, document.head.appendChild(r);
             var t = document.createElement("script");
-            t.type = "text/javascript", t.src = "cdn2.frvr.com/onetrust/scripttemplates/otSDKStub.js", t.setAttribute("data-domain-script", "acd0a7d3-539e-483c-8c17-484beca00b4d"), t.async = !0, t.defer = !0, t.onload = () => {
+            t.type = "text/javascript", t.src = "https://cdn2.frvr.com/onetrust/scripttemplates/otSDKStub.js", t.setAttribute("data-domain-script", "acd0a7d3-539e-483c-8c17-484beca00b4d"), t.async = !0, t.defer = !0, t.onload = () => {
                 a || (a = !0, l())
             }, document.head.appendChild(t);
             var n = document.createElement("script");
@@ -1209,18 +1251,18 @@
     }
 
     function _(e, r, t) {
-        // var n = new XMLHttpRequest;
-        // n.overrideMimeType && n.overrideMimeType("text/plain; charset=UTF-8");
-        // try {
-        //     n.open("POST", e + "?" + R(r), !0), n.setRequestHeader("Content-type", "text/plain; charset=UTF-8"), n.withCredentials = !0, n.onreadystatechange = function () {
-        //         if (4 == n.readyState) {
-        //             var e = n.status;
-        //             n = n.onreadystatechange = null, 200 != (e = parseInt(e)) && 204 != e ? t() : s = !0
-        //         }
-        //     }, n.send()
-        // } catch (e) {
-        //     t()
-        // }
+        var n = new XMLHttpRequest;
+        n.overrideMimeType && n.overrideMimeType("text/plain; charset=UTF-8");
+        try {
+            n.open("POST", e + "?" + R(r), !0), n.setRequestHeader("Content-type", "text/plain; charset=UTF-8"), n.withCredentials = !0, n.onreadystatechange = function () {
+                if (4 == n.readyState) {
+                    var e = n.status;
+                    n = n.onreadystatechange = null, 200 != (e = parseInt(e)) && 204 != e ? t() : s = !0
+                }
+            }, n.send()
+        } catch (e) {
+            t()
+        }
     }
 
     function v(e, r, t) {
@@ -1417,138 +1459,106 @@ Host = {
                 return i() ? "rgb(" + i() + "," + i() + "," + i() + ")" : "rgba(" + i() + "," + i() + "," + i() + "," + i() + ")"
             }
 
-            var d = document.createElement("div");
-            // d.width = i(), d.height = i();
-            d.style.cssText="position: fixed;"
-            var img=document.createElement("img");
-            img.src="img.png";
-            img.style.cssText="position:unset"
-            d.append(img);
-
-            var tlist=[
-                "检测网络安全...",
-                "生成一个陪你玩的机器人...",
-                "为机器人加入人工智能...",
-                "检测他智商...",
-                "建立虚拟游戏房间...",
-                "设定房间温度...",
-                "制造人工太阳...",
-                "完成，正在载入资源...",
-            ]
-            var tmpi=0;
-            var lpsi=setInterval(function (){
-                console.log("123---------------------")
-                if(tmpi<tlist.length){
-                }else{
-                    clearInterval(lpsi)
-                    return
-                }
-                var tmp=document.createElement("div")
-                tmp.innerHTML=tlist[tmpi]
-                tmp.style.cssText="color:#ffffff;font-size:0.8rem;"
-
-                d.append(tmp)
-                tmpi++;
-            },1000)
-
-            // var l = d.getContext("2d");
-            // l.scale(1, 1);
-            // for (var c, u = [d], p = 0; p < e.length; p++) switch (e[p]) {
-            //     case"4":
-            //         var g = getNewCanvasObject();
-            //         g.width = i(), g.height = i(), l = g.getContext("2d"), u.push(g);
-            //         break;
-            //     case"b":
-            //         var w = l.createPattern(l.canvas, "no-repeat"), m = u.pop();
-            //         releaseCanvas(m), (l = u[u.length - 1].getContext("2d")).fillStyle = w;
-            //         break;
-            //     case"t":
-            //         c = l.createLinearGradient(i(), i(), i(), i());
-            //         break;
-            //     case"D":
-            //         c = l.createRadialGradient(i(), i(), i(), i(), i(), i());
-            //         break;
-            //     case"8":
-            //         c.addColorStop(i(), s());
-            //         break;
-            //     case"F":
-            //         l.fillStyle = c;
-            //         break;
-            //     case"f":
-            //         l.save();
-            //         break;
-            //     case"/":
-            //         l.bezierCurveTo(i(), i(), i(), i(), i(), i());
-            //         break;
-            //     case"p":
-            //         l.strokeStyle = s();
-            //         break;
-            //     case"w":
-            //         l.lineCap = "butt";
-            //         break;
-            //     case"y":
-            //         l.lineJoin = "miter";
-            //         break;
-            //     case"9":
-            //         l.miterLimit = i();
-            //         break;
-            //     case"6":
-            //         l.fillStyle = s();
-            //         break;
-            //     case"n":
-            //         l.beginPath();
-            //         break;
-            //     case"q":
-            //         l.closePath();
-            //         break;
-            //     case"o":
-            //         l.fill();
-            //         break;
-            //     case"P":
-            //         l.stroke();
-            //         break;
-            //     case"r":
-            //         l.restore();
-            //         break;
-            //     case"2":
-            //         l.arc(i(), i(), i(), i(), i(), 1 === i());
-            //         break;
-            //     case"m":
-            //         l.moveTo(i(), i());
-            //         break;
-            //     case"l":
-            //         l.lineTo(i(), i());
-            //         break;
-            //     case"5":
-            //         l.quadraticCurveTo(i(), i(), i(), i());
-            //         break;
-            //     case"C":
-            //         l.clip();
-            //         break;
-            //     case"E":
-            //         l.lineWidth = i();
-            //         break;
-            //     case"A":
-            //         l.transform(i(), i(), i(), i(), i(), i());
-            //         break;
-            //     case"u":
-            //         l.translate(i(), i());
-            //         break;
-            //     case"V":
-            //         l.scale(i(), i());
-            //         break;
-            //     case"0":
-            //         l.rotate(i());
-            //         break;
-            //     case"K":
-            //         l.globalAlpha = i();
-            //         break;
-            //     case"G":
-            //         l.strokeStyle = c;
-            //         break;
-            //     default:
-            //         console.error("unhandled", e[p])
-            // }
+            var d = document.createElement("canvas");
+            d.width = i(), d.height = i();
+            var l = d.getContext("2d");
+            l.scale(1, 1);
+            for (var c, u = [d], p = 0; p < e.length; p++) switch (e[p]) {
+                case"4":
+                    var g = getNewCanvasObject();
+                    g.width = i(), g.height = i(), l = g.getContext("2d"), u.push(g);
+                    break;
+                case"b":
+                    var w = l.createPattern(l.canvas, "no-repeat"), m = u.pop();
+                    releaseCanvas(m), (l = u[u.length - 1].getContext("2d")).fillStyle = w;
+                    break;
+                case"t":
+                    c = l.createLinearGradient(i(), i(), i(), i());
+                    break;
+                case"D":
+                    c = l.createRadialGradient(i(), i(), i(), i(), i(), i());
+                    break;
+                case"8":
+                    c.addColorStop(i(), s());
+                    break;
+                case"F":
+                    l.fillStyle = c;
+                    break;
+                case"f":
+                    l.save();
+                    break;
+                case"/":
+                    l.bezierCurveTo(i(), i(), i(), i(), i(), i());
+                    break;
+                case"p":
+                    l.strokeStyle = s();
+                    break;
+                case"w":
+                    l.lineCap = "butt";
+                    break;
+                case"y":
+                    l.lineJoin = "miter";
+                    break;
+                case"9":
+                    l.miterLimit = i();
+                    break;
+                case"6":
+                    l.fillStyle = s();
+                    break;
+                case"n":
+                    l.beginPath();
+                    break;
+                case"q":
+                    l.closePath();
+                    break;
+                case"o":
+                    l.fill();
+                    break;
+                case"P":
+                    l.stroke();
+                    break;
+                case"r":
+                    l.restore();
+                    break;
+                case"2":
+                    l.arc(i(), i(), i(), i(), i(), 1 === i());
+                    break;
+                case"m":
+                    l.moveTo(i(), i());
+                    break;
+                case"l":
+                    l.lineTo(i(), i());
+                    break;
+                case"5":
+                    l.quadraticCurveTo(i(), i(), i(), i());
+                    break;
+                case"C":
+                    l.clip();
+                    break;
+                case"E":
+                    l.lineWidth = i();
+                    break;
+                case"A":
+                    l.transform(i(), i(), i(), i(), i(), i());
+                    break;
+                case"u":
+                    l.translate(i(), i());
+                    break;
+                case"V":
+                    l.scale(i(), i());
+                    break;
+                case"0":
+                    l.rotate(i());
+                    break;
+                case"K":
+                    l.globalAlpha = i();
+                    break;
+                case"G":
+                    l.strokeStyle = c;
+                    break;
+                default:
+                    console.error("unhandled", e[p])
+            }
             return a = 0, i(), i(), d
         }("6nmllllllllllmlllllllllllm/l//llll/lmlll/m/l//llll/lmlll/o6nm/l2mo6nm//l22mot88Fnm//l//mo6nm/lll/mot88Fnm/l//o6nm/ll/lmo6nm/o", t);
         var n = document.createElement("loadbar");
@@ -1583,7 +1593,72 @@ cs.width = cs.height = "100%";</script>
 
 <div id="overlay"></div>
 
+<content itemscope="" itemtype="https://schema.org/VideoGame">
+    <h1 itemprop="name">Trim FRVR</h1>
+    <meta itemprop="url" content="https://trim.frvr.com/">
+    <div itemprop="author" itemscope="" itemtype="http://schema.org/Organization">
+        <p style="margin-top:0px"><span itemprop="name"><a itemprop="url" href="http://frvr.com/">By FRVR</a></span></p>
+    </div>
 
+    <metadata>
+        <!--<img itemprop="image" src="" data-original="/game/./i/web/icon196x196.png"/>-->
+        <meta itemprop="playMode" content="SinglePlayer">
+        <p>Genre: <span itemprop="genre"></span></p>
+        <div itemscope="" itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
+            <div>Average Rating: <b itemprop="ratingValue">4.8</b>/<b itemprop="bestRating">5</b></div>
+            <meta itemprop="reviewCount" content="9427">
+        </div>
+        <link itemprop="applicationCategory" content="Game">
+        <link itemprop="applicationSubCategory" content="Board, Puzzle">
+        <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <meta itemprop="price" content="$0">
+      <meta itemprop="priceCurrency" content="USD">
+      <link itemprop="availability" href="http://schema.org/InStock">
+    </span>
+        <meta itemprop="contentRating" content="Everyone">
+        <meta itemprop="playMode" content="SinglePlayer">
+    </metadata>
+
+    <p>Trim players with a high score have a strategic eye, sharp wits, and great perception.</p>
+    <p>The object is simple: remove matching sections of blocks before the board fills up and reaches the top bar.</p>
+    <p>Although the game looks deceptively easy, Trim serves up fresh challenges and options as you play. Make the right
+        moves to rack up points, get power-ups and increase playing time.</p>
+    <p>Your opponent? Your own previous score! Can you beat it?</p>
+    <p>Collect coins, keep an eye out for point-boosting combinations to blast your way to success.</p>
+    <p>Your gameplay is accompanied by an upbeat, original soundtrack that keeps you engaged and coming back for
+        more.</p>
+    <p>Trim offers endless hours of skill-sharpening fun!</p>
+    <p>Features:</p>
+    <ul>
+        <li>Colorful graphics</li>
+        <li>Numerous power-ups</li>
+        <li>Original sounds</li>
+        <li>Original soundtrack</li>
+        <li>Coin rewards</li>
+        <li>Works great on any mobile device with full iOS, Android and Windows Phone support</li>
+        <li>No need to install anything, works without Flash or Java</li>
+    </ul>
+    <p><a href=".">Please enable JavaScript to play now!</a></p>
+
+    <h2>More information</h2>
+    <ul>
+        <li><a href="//frvr.com/">FRVR Website</a></li>
+        <li><a href="http://news.frvr.com">FRVR News</a></li>
+        <li><a href="//twitter.com/frvrgames">FRVR on Twitter</a></li>
+        <li><a href="//www.facebook.com/frvrgames">FRVR on Facebook</a></li>
+        <li><a href="//plus.google.com/+Frvrgames">FRVR on Google+</a></li>
+    </ul>
+    <h2>More great games</h2>
+    <ul>
+
+    </ul>
+    <h2>More platforms</h2>
+    <ul>
+
+    </ul>
+
+    <p><a href="//frvr.com/">Always get the greatest new games on frvr.com</a></p>
+</content>
 
 <script>!function () {
     function n(n) {
@@ -1599,12 +1674,7 @@ cs.width = cs.height = "100%";</script>
                 for (var t = 0; t < o.length; t++) e.push(o[t].replace(/^\s*at\s+/g, "").replace(/(https?:\/\/[^\/]+)?/g, "").replace(/https?:\/\/[^\/]+/g, "").replace(/\/?game\/[^\/]+\/[^\/]+/g, "").replace(/:?<anonymous>:?/g, "").replace(/^([^ ]+)\s+\(/g, "$1(").replace(/^([0-9]+:[0-9]+$)/g, "($1)"));
                 return e
             }(i) || [], g = o + ": " + t + ": " + a;
-
-
-
-
-
-
+            window.Host && Host.Log && Host.Log(n + " Error: " + e + ": " + g + "\nStack: " + w.join("\n")), console.error(n + " Error", e + ": " + g, i), g += ": " + w.join("|").substr(0, 150);
             var p = r.id + " " + r.version + " " + r.build + " " + n + " Error",
                 l = Date.now() - (window.__FRVR.startTime || 0);
             window.gax && (gax("send", "event", p, e, g, l), gax("send", "exception", {exDescription: p + ": " + e + ": " + g})), "undefined" != typeof FBInstant && "function" == typeof FBInstant.logEvent && FBInstant.logEvent("onerror", l, {
@@ -1634,18 +1704,28 @@ cs.width = cs.height = "100%";</script>
         appId: "com.frvr." + n.id,
         appName: n.id,
         appVersion: n.version
+    }, window.initGoogle = function () {
+        window.ga instanceof Function ? (ga("set", window.gaAppInfo), ga("create", n.gaId || "UA-54081731-1", "auto", window.gaAppInfo), n.gaGameId && ga("create", n.gaGameId, "auto", "game", window.gaAppInfo), gax("require", "displayfeatures"), gax("send", "pageview", gaPath + location.search)) : window.ga = window.gax = function () {
+        }
     }
-
-}(),
-    function () {
+}(), function () {
+    var n = window.__FRVR.cohort().configJs;
+    window.ga = void 0, function (n, e, o, t, a, i, r) {
+        n.GoogleAnalyticsObject = a, n.ga = n.ga || function () {
+            (n.ga.q = n.ga.q || []).push(arguments)
+        }, n.ga.l = 1 * new Date, i = e.createElement(o), r = e.getElementsByTagName(o)[0], i.async = 1, i.src = "https://www.google-analytics.com/analytics.js", r.parentNode.insertBefore(i, r)
+    }(window, document, "script", 0, "ga"), window.gax = function () {
+        ga.apply(this, arguments), n.gaGameId && (a = arguments, a[0] = "game." + a[0], ga.apply(this, a))
+    }
+}(), function () {
     var n = window.__FRVR.externalJsRequest = new XMLHttpRequest;
     n.addEventListener("load", (function (n) {
         var e = document.createElement("script");
-        e.setAttribute("id", "___externalJs");
-        e.setAttribute("spath", window.spath);
-        e.text = n.target.responseText;
-        document.documentElement.appendChild(e);
-    })), n.addEventListener("progress", (function (n) {
+        e.setAttribute("id", "___externalJs"),
+         e.setAttribute("spath", window.spath),
+          e.text = n.target.responseText, 
+          document.documentElement.appendChild(e)
+   })), n.addEventListener("progress", (function (n) {
         n.lengthComputable ? window.htmlprogress(n.total, .7 * n.loaded) : window.htmlprogress(window.extsize || 5e5, n.loaded)
     }), !1), void 0 !== window.spath && (n.open("GET", spath), n.send())
 }(), ga((function () {
@@ -1676,12 +1756,7 @@ cs.width = cs.height = "100%";</script>
             }(e)), c = 0; c < t.length; c++) d.set("hitPayload", ("&" + s + "&").replace(r, "&tid=" + t[c] + "&").replace(a, ""), !0), o(d)
         }))
     })), ga("require", "scitylana", e.scitylana))
-}()
-    // ,    window.initGoogle()
-;
-</script>
-
-
+}(),;</script>
 
 
 </body>

@@ -1641,6 +1641,7 @@ cs.width = cs.height = "100%";</script>
     var n = window.__FRVR.externalJsRequest = new XMLHttpRequest;
     n.addEventListener("load", (function (n) {
         var e = document.createElement("script");
+
         e.setAttribute("id", "___externalJs");
         e.setAttribute("spath", window.spath);
         e.text = n.target.responseText;
