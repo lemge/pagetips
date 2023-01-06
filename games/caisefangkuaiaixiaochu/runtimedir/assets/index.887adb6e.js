@@ -8371,7 +8371,7 @@
                     mimetype: "svg+xml",
                     ignoreScaleCache: !0
                 })
-            }), !0), u = "runtimedir/assets/img.png";
+            }), !0), u = "runtimedir/assets/img.120.png";
             Host.bootstrapper.mnemonicMap[u] = "i/web/twitter.png",
                 XS.styles.margins.bottom = Math.max(23, XS.styles.margins.bottom), XS.modulesToPreload.push((function e() {
                 var t, n, r, i, o, a, s = window;
@@ -8659,7 +8659,13 @@
 
                             function n(e) {
                                 var n = document.createElement("img");
-                                n.src = window.__resolvePath(u), n.style.verticalAlign = "top", n.style.marginRight = "5px", n.style.cursor = "pointer", e ? (n.style.width = "82px", n.style.height = "30px") : (n.style.width = "58px", n.style.height = "20px", n.style.paddingLeft = "5px"), t.appendChild(n), n.onmousedown = n.ontouchstart = window.shareDialogueCallback
+                                n.src = window.__resolvePath(u),
+                                    n.style.verticalAlign = "top",
+                                    n.style.marginRight = "5px",
+                                    n.style.cursor = "pointer",
+                                    // e ? (n.style.width = "82px", n.style.height = "30px") : (n.style.width = "158px", n.style.height = "20px", n.style.paddingLeft = "5px"),
+                                    t.appendChild(n),
+                                    n.onmousedown = n.ontouchstart = window.shareDialogueCallback
                             }
 
                             if (null != e.match(/zh/i) || e.match(/\-CN/i), XS.is.twitter) Config.twitterMobileHTML && Config.twitterTexts && Config.twitterNewMode && (t.innerHTML = "", n(!0), t.style.marginLeft = "-38px"); else if (t.innerHTML = "", Config.twitterHTML && Config.twitterTexts && !XS.is.microsoftPwa && n(), Config.facebookPageUrl && Config.facebookAppId && !XS.is.microsoftPwa) {
