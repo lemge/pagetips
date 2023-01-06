@@ -8377,7 +8377,11 @@
                 var t, n, r, i, o, a, s = window;
                 XS.is.okru || XS.is.huaweiquickapp || XS.is.samsungGameLauncher || XS.is.discord || (t = window, n = document, r = "script", t.fbq || (i = t.fbq = function () {
                     i.callMethod ? i.callMethod.apply(i, arguments) : i.queue.push(arguments)
-                }, t._fbq || (t._fbq = i), i.push = i, i.loaded = !0, i.version = "2.0", i.queue = [], (o = n.createElement(r)).async = !0, o.src = "--https--connect.facebook.net/en_US/fbevents.js", (a = n.getElementsByTagName(r)[0]).parentNode.insertBefore(o, a)), fbq("init", "1361622040527227"), fbq("track", "PageView"), window.fbq && (f++, fbq("trackCustom", "play", {
+                }, t._fbq || (t._fbq = i), i.push = i, i.loaded = !0, i.version = "2.0", i.queue = [],
+                    (o = n.createElement(r)).async = !0, o.src = "--https--connect.facebook.net/en_US/fbevents.js",
+                    (a = n.getElementsByTagName(r)[0]).parentNode.insertBefore(o, a)),
+                    fbq("init", "1361622040527227"), fbq("track", "PageView"),
+                window.fbq && (f++, fbq("trackCustom", "play", {
                     game: Config.id,
                     version: Config.version,
                     tag: Config.tag || "",
@@ -8617,8 +8621,8 @@
                                     height / XS.devicePixelRatio > (e || 450) && (o = !0, n.style.bottom = "0px", XS.emit("toggleoverlayad", {visible: !0}))
                                 },
                                     XS.hideGameOverAd = function () {
-                                    n.style.bottom = "-500px", o && (o = !1, r.src = t()), XS.emit("toggleoverlayad", {visible: !1})
-                                }
+                                        n.style.bottom = "-500px", o && (o = !1, r.src = t()), XS.emit("toggleoverlayad", {visible: !1})
+                                    }
                             }("//" + Config.domain + "/ad/facebookLSM/");
                             var a = XS.setTimeout((function e() {
                                 XS.clearTimeout(a), t.className = "", XS.setTimeout((function () {
@@ -8750,34 +8754,35 @@
                                 })))
                             }))
                         }
-                        if (window.API_callback = function (e, t, n) {
-                            console.log(e, t, n)
-                        }, XS.is.okru) {
-                            var p = window.frames.document.URL;
-                            console.warn("Loading OK.ru..."), XS.loadScript("--https--api.ok.ru/js/fapi5.js"), XS.waitForSDK("FAPI", (function () {
-                                var e = FAPI.Util.getRequestParameters(), t = e.logged_user_id, n = e.application_key;
-                                FAPI.init(e.api_server, e.apiconnection, (function (e) {
-                                    console.warn("Initiated OK.ru!"), FAPI.invokeUIMethod("prepareMidroll"), XC.loginOKRU(t.toString(), n.toString())
-                                }))
-                            }))
-                        }
-                        if (Config.enablePWA || XS.is.microsoftPwa) {
-                            "serviceWorker" in navigator && (navigator.serviceWorker.register("./sw.js").then((function (e) {
-                                console.log("ServiceWorker registration successful with scope: ", e.scope)
-                            }), (function (e) {
-                                console.log("ServiceWorker registration failed: ", e)
-                            })), XS.is.pwa && XS.track.event("PWA Activated", "Activated"));
-                            var g = 0, v = !1;
-                            window.addEventListener("beforeinstallprompt", (function (e) {
-                                XS.track.event("PWA Install Prompt", "Install Prompt"), g = setTimeout(b, 5e3), e.userChoice && e.userChoice.then((function (e) {
-                                    "accepted" === (e = e.outcome) && XS.track.event("PWA Installed", "Successfully Installed"), "dismissed" === e && XS.track.event("PWA Dismissed", "Install Prompt Dismissed"), b()
-                                })).catch((function (e) {
-                                    console.log(e)
-                                }))
-                            })), window.addEventListener("appinstalled", (function (e) {
-                                XS.track.event("PWA Installed", "Successfully Installed"), b()
-                            }))
-                        }
+
+                        // if (window.API_callback = function (e, t, n) {
+                        //     console.log(e, t, n)
+                        // }, XS.is.okru) {
+                        //     var p = window.frames.document.URL;
+                        //     console.warn("Loading OK.ru..."), XS.loadScript("--https--api.ok.ru/js/fapi5.js"), XS.waitForSDK("FAPI", (function () {
+                        //         var e = FAPI.Util.getRequestParameters(), t = e.logged_user_id, n = e.application_key;
+                        //         FAPI.init(e.api_server, e.apiconnection, (function (e) {
+                        //             console.warn("Initiated OK.ru!"), FAPI.invokeUIMethod("prepareMidroll"), XC.loginOKRU(t.toString(), n.toString())
+                        //         }))
+                        //     }))
+                        // }
+                        // if (Config.enablePWA || XS.is.microsoftPwa) {
+                        //     "serviceWorker" in navigator && (navigator.serviceWorker.register("./sw.js").then((function (e) {
+                        //         console.log("ServiceWorker registration successful with scope: ", e.scope)
+                        //     }), (function (e) {
+                        //         console.log("ServiceWorker registration failed: ", e)
+                        //     })), XS.is.pwa && XS.track.event("PWA Activated", "Activated"));
+                        //     var g = 0, v = !1;
+                        //     window.addEventListener("beforeinstallprompt", (function (e) {
+                        //         XS.track.event("PWA Install Prompt", "Install Prompt"), g = setTimeout(b, 5e3), e.userChoice && e.userChoice.then((function (e) {
+                        //             "accepted" === (e = e.outcome) && XS.track.event("PWA Installed", "Successfully Installed"), "dismissed" === e && XS.track.event("PWA Dismissed", "Install Prompt Dismissed"), b()
+                        //         })).catch((function (e) {
+                        //             console.log(e)
+                        //         }))
+                        //     })), window.addEventListener("appinstalled", (function (e) {
+                        //         XS.track.event("PWA Installed", "Successfully Installed"), b()
+                        //     }))
+                        // }
                         Config.oneSignalWebId && !XS.is.iframed && (XS.is.android && !XS.is.pwa && Config.enablePWA || b())
                     }
 
@@ -11595,11 +11600,15 @@
                 }
             }));
             var N, j = "runtimedir/assets/android.8b85db0e.png", W = "runtimedir/assets/ios.cfc228b2.png",
-                V = "runtimedir/assets/cx_hex_1440_3120.ac469945.jpg", Y = "runtimedir/assets/cx_hex_2400_1176.cf920932.jpg",
-                q = "runtimedir/assets/cx_mahjong_1440_3120.54965f01.jpg", Q = "runtimedir/assets/cx_mahjong_2400_1176.caac3923.jpg",
-                K = "runtimedir/assets/cx_remove_1440_3120.2b6c2603.jpg", Z = "runtimedir/assets/cx_remove_2400_1176.04533cf2.jpg",
+                V = "runtimedir/assets/cx_hex_1440_3120.ac469945.jpg",
+                Y = "runtimedir/assets/cx_hex_2400_1176.cf920932.jpg",
+                q = "runtimedir/assets/cx_mahjong_1440_3120.54965f01.jpg",
+                Q = "runtimedir/assets/cx_mahjong_2400_1176.caac3923.jpg",
+                K = "runtimedir/assets/cx_remove_1440_3120.2b6c2603.jpg",
+                Z = "runtimedir/assets/cx_remove_2400_1176.04533cf2.jpg",
                 J = "runtimedir/assets/cx_goldmahjong_1440_3120.20f55db7.jpg",
-                $ = "runtimedir/assets/cx_goldmahjong_2400_1176.45b2c745.jpg", ee = "runtimedir/assets/cx_solitaire_1440_3120.4d05b159.jpg",
+                $ = "runtimedir/assets/cx_goldmahjong_2400_1176.45b2c745.jpg",
+                ee = "runtimedir/assets/cx_solitaire_1440_3120.4d05b159.jpg",
                 te = "runtimedir/assets/cx_solitaire_2400_1176.7e6d1392.jpg";
             Host.bootstrapper.mnemonicMap[j] = "i/web/android.png", Host.bootstrapper.mnemonicMap[W] = "i/web/ios.png", Host.bootstrapper.mnemonicMap[V] = "i/web/cx_hex_1440_3120.jpg", Host.bootstrapper.mnemonicMap[Y] = "i/web/cx_hex_2400_1176.jpg", Host.bootstrapper.mnemonicMap[q] = "i/web/cx_mahjong_1440_3120.jpg", Host.bootstrapper.mnemonicMap[Q] = "i/web/cx_mahjong_2400_1176.jpg", Host.bootstrapper.mnemonicMap[K] = "i/web/cx_remove_1440_3120.jpg", Host.bootstrapper.mnemonicMap[Z] = "i/web/cx_remove_2400_1176.jpg", Host.bootstrapper.mnemonicMap[J] = "i/web/cx_goldmahjong_1440_3120.jpg", Host.bootstrapper.mnemonicMap[$] = "i/web/cx_goldmahjong_2400_1176.jpg", Host.bootstrapper.mnemonicMap[ee] = "i/web/cx_solitaire_1440_3120.jpg", Host.bootstrapper.mnemonicMap[te] = "i/web/cx_solitaire_2400_1176.jpg", window.Config = ((N = {
                 id: "trim",
@@ -11883,7 +11892,8 @@
                 }, t.prototype.preload = function (e) {
                 }, e.BaseProvider = t
             }(window);
-            var ne = "runtimedir/assets/xyyx-vertical.8ab73c6f.svg", re = "runtimedir/assets/xyyx-horizontal.a02bcf92.svg";
+            var ne = "runtimedir/assets/xyyx-vertical.8ab73c6f.svg",
+                re = "runtimedir/assets/xyyx-horizontal.a02bcf92.svg";
             Host.bootstrapper.mnemonicMap[ne] = "i/g/s/xyyx-vertical.svg", Host.bootstrapper.mnemonicMap[re] = "i/g/s/xyyx-horizontal.svg", function (e) {
                 if ((e = window).BaseProvider) {
                     var t, n, r = e.BaseProvider, i = 10 * Math.random() >> 0, o = !1, a = !1, s = function (e, t) {
@@ -13101,7 +13111,7 @@
                         }), 50), XS.on("showFullscreenAd", (function (e) {
                             console.warn("XS.on('showFullscreenAd') is depricated")
                         }), {freezeGroup: ENG_FRZ_GRP}),
-                        // x() && XS.loadScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"),
+                            // x() && XS.loadScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"),
                         r || ("" === Host.Web.GetQueryString("google_ads") ? XS.data.acontained = !0 : XS.data.acontained && !XS.is.facebookApp && (top.location.href = "//" + Config.id + ".xyyx.com/g/")), this.show = function (e) {
                             t ? t({}, e) : C({}) ? S({}, e) : e && e(!1)
                         }
@@ -13874,22 +13884,30 @@
                         b64blob: "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",
                         mimetype: "png"
                     })
-                }), !0), Ke = "runtimedir/assets/_voice_1_beautiful.34847edd.mp3", Ze = "runtimedir/assets/_voice_2_goodjob.100ea6df.mp3",
-                Je = "runtimedir/assets/_voice_3_gettinggood.96926c2e.mp3", $e = "runtimedir/assets/_voice_4_ohyeah.c3abb83a.mp3",
-                et = "runtimedir/assets/_voice_9_gorgeous.9139c1cb.mp3", tt = "runtimedir/assets/_voice_8_terrific.5011f319.mp3",
-                nt = "runtimedir/assets/_voice_7_genius.ea2d26e6.mp3", rt = "runtimedir/assets/_voice_6_stunning.1f25a766.mp3",
+                }), !0), Ke = "runtimedir/assets/_voice_1_beautiful.34847edd.mp3",
+                Ze = "runtimedir/assets/_voice_2_goodjob.100ea6df.mp3",
+                Je = "runtimedir/assets/_voice_3_gettinggood.96926c2e.mp3",
+                $e = "runtimedir/assets/_voice_4_ohyeah.c3abb83a.mp3",
+                et = "runtimedir/assets/_voice_9_gorgeous.9139c1cb.mp3",
+                tt = "runtimedir/assets/_voice_8_terrific.5011f319.mp3",
+                nt = "runtimedir/assets/_voice_7_genius.ea2d26e6.mp3",
+                rt = "runtimedir/assets/_voice_6_stunning.1f25a766.mp3",
                 it = "runtimedir/assets/_voice_5_fantastic.1f4a8f98.mp3", ot = "runtimedir/assets/_clap1.5f944314.mp3",
                 at = "runtimedir/assets/_clap2.a08ae8aa.mp3", st = "runtimedir/assets/_clap3.c2007be4.mp3",
                 lt = "runtimedir/assets/_clap4.26ed9534.mp3", ct = "runtimedir/assets/_clap5.d5e6d3e5.mp3",
                 dt = "runtimedir/assets/_awww1.4bc1e235.mp3", ut = "runtimedir/assets/_awww2.1779c702.mp3",
-                ht = "runtimedir/assets/_hard_overlay_1.55275f84.mp3", ft = "runtimedir/assets/_hard_overlay_2.8ea00976.mp3",
-                pt = "runtimedir/assets/_hard_overlay_3.dc717be4.mp3", gt = "runtimedir/assets/_hard_overlay_4.5278069c.mp3",
-                vt = "runtimedir/assets/_hard_overlay_5.c6d71d0f.mp3", mt = "runtimedir/assets/_coinpickup.c3a8c9c0.mp3",
+                ht = "runtimedir/assets/_hard_overlay_1.55275f84.mp3",
+                ft = "runtimedir/assets/_hard_overlay_2.8ea00976.mp3",
+                pt = "runtimedir/assets/_hard_overlay_3.dc717be4.mp3",
+                gt = "runtimedir/assets/_hard_overlay_4.5278069c.mp3",
+                vt = "runtimedir/assets/_hard_overlay_5.c6d71d0f.mp3",
+                mt = "runtimedir/assets/_coinpickup.c3a8c9c0.mp3",
                 wt = "runtimedir/assets/_button.b5f4f3e3.mp3", yt = "runtimedir/assets/_wrong.85d4e10d.mp3",
                 bt = "runtimedir/assets/_game_over.cd839dc6.mp3", St = "runtimedir/assets/gravity.62ecc7ea.mp3",
                 xt = "runtimedir/assets/clear_1.3d9e6f11.mp3", Ct = "runtimedir/assets/ding.a1643557.mp3",
                 At = "runtimedir/assets/new_line.a9b302c9.mp3", _t = "runtimedir/assets/create_powerup.0270ea4d.mp3",
-                Tt = "runtimedir/assets/color_bomb.264f5f5a.mp3", Mt = "runtimedir/assets/line_column_power_wipe_1.12b44b42.mp3",
+                Tt = "runtimedir/assets/color_bomb.264f5f5a.mp3",
+                Mt = "runtimedir/assets/line_column_power_wipe_1.12b44b42.mp3",
                 Et = "runtimedir/assets/line_column_power_wipe_2.7b3ae3d2.mp3";
             Host.bootstrapper.load(function () {
                 var e = a(regeneratorRuntime.mark((function e(t) {

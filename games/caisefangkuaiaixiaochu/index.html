@@ -1101,8 +1101,11 @@
             t.type = "text/javascript", n.innerHTML = "function OptanonWrapper() { }", document.head.appendChild(n)
         }
     }())
-}(), function (e) {
-    var r = "/coeus.xyyx.com/v1/tm5", t = [];
+}(),
+    function (e) {
+
+    // var r = "/coeus.xyyx.com/v1/tm5";
+    var t = [];
 
     function n() {
         if (e.isReady()) for (; t.length > 0;) F(t.shift())
@@ -1191,14 +1194,14 @@
 
     var u = "in-memory", p = c(), g = c(), w = c();
 
-    function m(e, r, t) {
-        "localhost:8080" !== window.location.host && -1 == (window.location.search || "").indexOf("ci_run") && (t = void 0 !== t ? t : 5, e(r, (function () {
-            if (t > 0) {
-                var n = 5e3 * (Math.pow(2, 5 - t) + Math.random());
-                r.r = 5 - t + 1, setTimeout(m.bind(void 0, e, r, --t), n)
-            }
-        })))
-    }
+    // function m(e, r, t) {
+        // "localhost:8080" !== window.location.host && -1 == (window.location.search || "").indexOf("ci_run") && (t = void 0 !== t ? t : 5, e(r, (function () {
+        //     if (t > 0) {
+        //         var n = 5e3 * (Math.pow(2, 5 - t) + Math.random());
+        //         r.r = 5 - t + 1, setTimeout(m.bind(void 0, e, r, --t), n)
+        //     }
+        // })))
+    // }
 
     function f(e, r, t) {
         if (navigator.sendBeacon(e, JSON.stringify(r))) return !0;
@@ -1271,17 +1274,17 @@
     };
     var S = [], k = void 0;
 
-    function F(e) {
-        for (var t = e.channel, n = window.__XYYX.globalUserId(), o = (y(), 0); o < S.length; o++) S[o](e);
-        var a = "unknown://";
-        document && document.location && document.location.protocol && (a = document.location.protocol), a = k || a;
-        var i = void 0;
-        document && document.location && document.location.href && (i = document.location.href);
-        var s = [a, r, e.context || "_unspecified_", n].join("/");
-        e.app_version = e.app_version || "0.0.0", e.app_build = e.app_build || "000000", e.channel = t || e.channel, e.web_url = i, e.script_version = "2.0.0", e.protocol_version = 5, e.page_session_id = e.page_session_id || y(), e.play_session_id = e.play_session_id || null, e.cache_buster = Math.random(), e.global_user_id = n, e.global_user_id_source = u, e.facebook_player_id = window.__XYYX.platformIs.facebookInstant && FBInstant.player && FBInstant.player.getID ? FBInstant.player.getID() : null;
-        var d = 60 * (new Date).getTimezoneOffset() * 1e3;
-        e.client_time = new Date(Date.now() - d).toISOString().slice(0, -1), m(h(s, e), b(e))
-    }
+    // function F(e) {
+    //     for (var t = e.channel, n = window.__XYYX.globalUserId(), o = (y(), 0); o < S.length; o++) S[o](e);
+    //     var a = "unknown://";
+    //     document && document.location && document.location.protocol && (a = document.location.protocol), a = k || a;
+    //     var i = void 0;
+    //     document && document.location && document.location.href && (i = document.location.href);
+    //     var s = [a, r, e.context || "_unspecified_", n].join("/");
+    //     e.app_version = e.app_version || "0.0.0", e.app_build = e.app_build || "000000", e.channel = t || e.channel, e.web_url = i, e.script_version = "2.0.0", e.protocol_version = 5, e.page_session_id = e.page_session_id || y(), e.play_session_id = e.play_session_id || null, e.cache_buster = Math.random(), e.global_user_id = n, e.global_user_id_source = u, e.facebook_player_id = window.__XYYX.platformIs.facebookInstant && FBInstant.player && FBInstant.player.getID ? FBInstant.player.getID() : null;
+    //     var d = 60 * (new Date).getTimezoneOffset() * 1e3;
+    //     e.client_time = new Date(Date.now() - d).toISOString().slice(0, -1), m(h(s, e), b(e))
+    // }
 
     exports = window.__XYYX.analytics = {}, exports.logDiscoveryPageView = function (e) {
         (e = e || {}).event = "discovery_page_view", a(e)
@@ -1519,7 +1522,8 @@ cs.width = cs.height = "100%";</script>
         var o = n && n.reason || {};
         e(void 0, void 0, void 0, void 0, o)
     }
-}(), function () {
+}(),
+        function () {
     var n = window.__XYYX.cohort().configJs;
     window.ga = function () {
         console.warn("Stubbed ga() being called:", arguments)
@@ -1533,31 +1537,41 @@ cs.width = cs.height = "100%";</script>
         window.ga instanceof Function ? (ga("set", window.gaAppInfo), ga("create", n.gaId || "UA-54081731-1", "auto", window.gaAppInfo), n.gaGameId && ga("create", n.gaGameId, "auto", "game", window.gaAppInfo), gax("require", "displayfeatures"), gax("send", "pageview", gaPath + location.search)) : window.ga = window.gax = function () {
         }
     }
-}(), function () {
-    var n = window.__XYYX.cohort().configJs;
-    window.ga = void 0, function (n, e, o, t, a, i, r) {
-        n.GoogleAnalyticsObject = a, n.ga = n.ga || function () {
-            (n.ga.q = n.ga.q || []).push(arguments)
-        }, n.ga.l = 1 * new Date, i = e.createElement(o), r = e.getElementsByTagName(o)[0], i.async = 1, i.src = "--https--www.google-analytics.com/analytics.js", r.parentNode.insertBefore(i, r)
-    }(window, document, "script", 0, "ga"), window.gax = function () {
-        ga.apply(this, arguments), n.gaGameId && (a = arguments, a[0] = "game." + a[0], ga.apply(this, a))
-    }
-}(), function () {
+}(),
+//         function () {
+//     var n = window.__XYYX.cohort().configJs;
+//     window.ga = void 0, function (n, e, o, t, a, i, r) {
+//         n.GoogleAnalyticsObject = a, n.ga = n.ga || function () {
+//             (n.ga.q = n.ga.q || []).push(arguments)
+//         },
+//             n.ga.l = 1 * new Date,
+//             i = e.createElement(o),
+//             r = e.getElementsByTagName(o)[0],
+//             i.async = 1,
+//             i.src = "--https--www.google-analytics.com/analytics.js",
+//             r.parentNode.insertBefore(i, r)
+//     }(window, document, "script", 0, "ga"), window.gax = function () {
+//         ga.apply(this, arguments), n.gaGameId && (a = arguments, a[0] = "game." + a[0], ga.apply(this, a))
+//     }
+// }(),
+        function () {
     var n = window.__XYYX.externalJsRequest = new XMLHttpRequest;
     n.addEventListener("load", (function (n) {
         var e = document.createElement("script");
         e.setAttribute("id", "___externalJs"),
          e.setAttribute("spath", window.spath),
-          e.text = n.target.responseText, 
+          e.text = n.target.responseText,
           document.documentElement.appendChild(e)
    })), n.addEventListener("progress", (function (n) {
         n.lengthComputable ? window.htmlprogress(n.total, .7 * n.loaded) : window.htmlprogress(window.extsize || 5e5, n.loaded)
     }), !1), void 0 !== window.spath && (n.open("GET", spath), n.send())
-}(), ga((function () {
+}(),
+        ga((function () {
     setTimeout((function () {
         window.__XYYX.keepurl || window.XS && XS.is.oppoGlobal || (window.location.hash = "", window.history && window.history.replaceState instanceof Function && window.history.replaceState({}, document.title, "./"))
     }), 5e3)
-}));</script>
+}));
+</script>
 
 <script></script>
 
@@ -1580,8 +1594,9 @@ cs.width = cs.height = "100%";</script>
                 return "sl=1&u=" + (e.get("userId") || e.get("clientId")) + "&t=" + t + "&r=" + i
             }(e)), c = 0; c < t.length; c++) d.set("hitPayload", ("&" + s + "&").replace(r, "&tid=" + t[c] + "&").replace(a, ""), !0), o(d)
         }))
-    })), ga("require", "scitylana", e.scitylana))
-}(),;</script>
+    })),
+        ga("require", "scitylana", e.scitylana))
+}();</script>
 
 
 </body>
