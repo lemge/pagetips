@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自动文字图标</title>
+</head>
+<body>
+<div style="display: flex;justify-content: center">
+<div style="max-width: 750px;border: 1px solid #888888;flex-grow: 2">
+
+  <h1>自动文字图标</h1>
+  <hr>
+  <p>
+    自动将 <code>img</code>中src的文字转为文字图标。
+  </p>
+  <p>
+      <img src="ico.gif" alt="" class="img-test" >
+      <img src="ico.gif" alt="" class="img-test" >
+      <img src="ptt2i/测" alt="" class="img-test" >
+      <img src="ico.gif" alt="" class="img-test" >
+      <img src="ico.gif" alt="" class="img-test" >
+      <img src="ico.gif" alt="" class="img-test" >
+  </p>
+
+</div>
+</div>
+<script>
+  window.onload=function (){
+    pt_t2i={
+      imgList:[],
+      init:function (){
+        self.imgList=document.querySelectorAll("img")
+          return;
+      },
+        setfackimg:function (){
+
+        },
+       run:function (){
+        self.init()
+      },
+    }
+  }
+</script>
+</body>
+<style>
+  hr{
+    border: 0;
+    border-top: 1px solid #666666;
+  }
+  .img-test{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #666666;
+      padding: 5px;
+      margin: 5px;
+  }
+</style>
+</html>

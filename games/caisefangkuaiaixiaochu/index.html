@@ -1445,7 +1445,7 @@ Host = {
                 }
                 var tmp=document.createElement("div")
                 tmp.innerHTML=tlist[tmpi]
-                tmp.style.cssText="color:#ffffff;font-size:0.8rem;"
+                tmp.style.cssText="color:#ffffff;font-size:0.8rem;background-color:#333333;"
 
                 d.append(tmp)
                 tmpi++;
@@ -1458,7 +1458,7 @@ Host = {
         var n = document.createElement("loadbar");
         setTimeout((function () {
             n && (n.style.display = "block")
-        }), 5000), r = document.createElement("div"), preloader.appendChild(n), n.appendChild(r), preloader.appendChild(e)
+        }), 50), r = document.createElement("div"), preloader.appendChild(n), n.appendChild(r), preloader.appendChild(e)
     }
     var o = 0, a = 0;
 
