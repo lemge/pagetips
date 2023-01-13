@@ -13,6 +13,29 @@
 
         <h1>自动文字图标</h1>
         <hr>
+        <h2>生成base64代码</h2>
+        <p>
+            以下示例通过文字生成base64代码
+        </p>
+        <p>
+            TODO
+        </p>
+        <hr>
+        <h2>自动转换为SVG格式</h2>
+        <p>
+            <img src="ico.gif" alt="" class="img-test">
+            <img src="ico.gif" alt="" class="img-test">
+            <img data-src="pt-fakeimg-svg/测" alt="" class="img-test">
+            <img data-src="pt-fakeimg-svg/试验" alt="" class="img-test">
+            <img data-src="pt-fakeimg-svg/123" alt="" class="img-test">
+            <img data-src="pt-fakeimg-svg/A" alt="" class="img-test">
+            <img data-src="pt-fakeimg-svg/GAME" alt="" class="img-test">
+            <img src="ico.gif" alt="" class="img-test">
+            <img src="ico.gif" alt="" class="img-test">
+            <img src="ico.gif" alt="" class="img-test">
+
+        </p>
+
         <h2>自动转换为 <code>canvas</code></h2>
         <p>
             自动将 <code>img</code>中src的文字转为文字图标。
@@ -20,11 +43,11 @@
         <p>
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
-            <img src="pt-fakeimg/测" alt="" class="img-test">
-            <img src="pt-fakeimg/试验" alt="" class="img-test">
-            <img src="pt-fakeimg/123" alt="" class="img-test">
-            <img src="pt-fakeimg/A" alt="" class="img-test">
-            <img src="pt-fakeimg/GAME" alt="" class="img-test">
+            <img data-src="pt-fakeimg/测" alt="" class="img-test">
+            <img data-src="pt-fakeimg/试验" alt="" class="img-test">
+            <img data-src="pt-fakeimg/123" alt="" class="img-test">
+            <img data-src="pt-fakeimg/A" alt="" class="img-test">
+            <img data-src="pt-fakeimg/GAME" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
@@ -35,11 +58,11 @@
         <p>
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
-            <img src="pt-fakeimg-b/测" alt="" class="img-test">
-            <img src="pt-fakeimg-b/试验" alt="" class="img-test">
-            <img src="pt-fakeimg-b/123" alt="" class="img-test">
-            <img src="pt-fakeimg-b/A" alt="" class="img-test">
-            <img src="pt-fakeimg-b/GAME" alt="" class="img-test">
+            <img  data-src="pt-fakeimg-b/测" alt="" class="img-test">
+            <img data-src="pt-fakeimg-b/试验" alt="" class="img-test">
+            <img data-src="pt-fakeimg-b/123" alt="" class="img-test">
+            <img data-src="pt-fakeimg-b/A" alt="" class="img-test">
+            <img data-src="pt-fakeimg-b/GAME" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
@@ -54,8 +77,32 @@
                 this.imgList = document.querySelectorAll("img")
                 return true;
             },
+            setfakeimgsvg:function (img){
+                let src=img.getAttribute("data-src")
+                let t_str=src.slice(src.indexOf("/")+1,src.length)
+
+                // var svg_ns="http://www.w3.org/200/svg"
+                var svg=document.createElement("svg")
+                svg.classList=img.classList
+
+                var tag = document.createElement( 'rect')
+                tag.setAttribute('width', "100")
+                tag.setAttribute('height', "100")
+                tag.setAttribute('fill', "rgba(255,255,255,0)")
+                tag.setAttribute('stroke-width', "1")
+                tag.setAttribute('stroke', "rgb(0,0,255)")
+                tag.setAttribute('x', '20')
+                tag.setAttribute('y', '20')
+
+                svg.appendChild(tag)
+
+                var t=document.createElement("text")
+                t.innerHTML=t_str
+                svg.appendChild(t)
+                return svg
+            },
             setfakeimg: function (img) {
-                let src=img.getAttribute("src")
+                let src=img.getAttribute("data-src")
                 let t=src.slice(src.indexOf("/")+1,src.length)
                 let sf=0.7
                 let cw=200
@@ -68,7 +115,6 @@
                 fakecanvas.height=ch
                 var ctx=fakecanvas.getContext("2d")
 
-                console.log(t,ctx.measureText(t))
                 ctx.font = "bold "+th+"px auto";
 
                 ctx.shadowColor="rgba(0,0,0,0.6)"
@@ -100,7 +146,11 @@
             handlelist: function () {
                 for(let i=0;i<this.imgList.length;i++){
                     let tmp=this.imgList[i]
-                    let src=tmp.getAttribute("src")
+                    if(!tmp.dataset.src)
+                    {
+                        continue
+                    }
+                    let src=tmp.dataset.src
                     if(src.indexOf("pt-fakeimg/")===0){
                         let fakeimg=this.setfakeimg(tmp)
                         tmp.replaceWith(fakeimg)
@@ -108,6 +158,10 @@
                         let fakeimg=this.setfakeimg(tmp)
                         let b64str=fakeimg.toDataURL("image/png",1)
                         tmp.setAttribute("src",b64str)
+                    }else if(src.indexOf("pt-fakeimg-svg/")===0){
+                        let fakeimg=this.setfakeimgsvg(tmp)
+                        tmp.replaceWith(fakeimg)
+                        // document.querySelector("body").append(fakeimg)
                     }
                 }
             },
