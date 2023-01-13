@@ -23,6 +23,8 @@
         <hr>
         <h2>自动转换为SVG格式</h2>
         <p>
+
+
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
             <img data-src="pt-fakeimg-svg/测" alt="" class="img-test">
@@ -58,7 +60,7 @@
         <p>
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
-            <img  data-src="pt-fakeimg-b/测" alt="" class="img-test">
+            <img data-src="pt-fakeimg-b/测" alt="" class="img-test">
             <img data-src="pt-fakeimg-b/试验" alt="" class="img-test">
             <img data-src="pt-fakeimg-b/123" alt="" class="img-test">
             <img data-src="pt-fakeimg-b/A" alt="" class="img-test">
@@ -72,39 +74,79 @@
 <script>
     window.onload = function () {
         pt_t2i = {
+            sf:0.7,
             imgList: [],
             init: function () {
                 this.imgList = document.querySelectorAll("img")
                 return true;
             },
             setfakeimgsvg:function (img){
-                let src=img.getAttribute("data-src")
-                let t_str=src.slice(src.indexOf("/")+1,src.length)
 
-                // var svg_ns="http://www.w3.org/200/svg"
-                var svg=document.createElement("svg")
+                let src=img.dataset.src
+                let t_str=src.slice(src.indexOf("/")+1,src.length)
+                var svg_ns="http://www.w3.org/2000/svg"
+                var svg=document.createElementNS(svg_ns,"svg")
                 svg.classList=img.classList
 
-                var tag = document.createElement( 'rect')
-                tag.setAttribute('width', "100")
-                tag.setAttribute('height', "100")
-                tag.setAttribute('fill', "rgba(255,255,255,0)")
-                tag.setAttribute('stroke-width', "1")
-                tag.setAttribute('stroke', "rgb(0,0,255)")
-                tag.setAttribute('x', '20')
-                tag.setAttribute('y', '20')
+                let img_w=img.width
+                let img_h=img.height
+                let font_size=img_w*this.sf
 
-                svg.appendChild(tag)
+                let len=t_str.length
+                font_size=font_size/len
 
-                var t=document.createElement("text")
+
+                var defs=document.createElementNS(svg_ns,"defs")
+                svg.appendChild(defs)
+                var filter=document.createElementNS(svg_ns,"filter")
+                defs.appendChild(filter)
+                filter.setAttributeNS(null,"id","f1")
+                filter.setAttributeNS(null,"x","0")
+                filter.setAttributeNS(null,"y","0")
+                filter.setAttributeNS(null,"width","200%")
+                filter.setAttributeNS(null,"height","200%")
+
+                var feOffset=document.createElementNS(svg_ns,"feOffset")
+                filter.appendChild(feOffset)
+                feOffset.setAttributeNS(null,"result","offOut")
+                feOffset.setAttributeNS(null,"in","SourceAlpha")
+                feOffset.setAttributeNS(null,"dx","2")
+                feOffset.setAttributeNS(null,"dy","2")
+
+                var feGaussianBlur=document.createElementNS(svg_ns,"feGaussianBlur")
+                filter.appendChild(feGaussianBlur)
+                feGaussianBlur.setAttributeNS(null,"result","blurOut")
+                feGaussianBlur.setAttributeNS(null,"in","offOut")
+                feGaussianBlur.setAttributeNS(null,"stdDeviation","2")
+
+                var feBlend=document.createElementNS(svg_ns,"feBlend")
+                filter.appendChild(feBlend)
+                feBlend.setAttributeNS(null,"in","SourceGraphic")
+                feBlend.setAttributeNS(null,"in2","blurOut")
+                feBlend.setAttributeNS(null,"mode","normal")
+
+
+
+
+
+                var t=document.createElementNS(svg_ns,"text")
                 t.innerHTML=t_str
+                t.setAttributeNS(null,"x",img_w/2)
+                t.setAttributeNS(null,'y',img_h/2)
+                t.setAttributeNS(null,"font-size",font_size)
+                t.setAttributeNS(null,"font-weight","bold")
+                t.setAttributeNS(null,"fill","#5b21b6")
+                t.setAttributeNS(null,"style","dominant-baseline:middle;text-anchor:middle;")
+                t.setAttributeNS(null,'stroke',"#ddd6fe")
+                t.setAttributeNS(null,'stroke-width',font_size/40)
+                t.setAttributeNS(null,'filter',"url(#f1)")
                 svg.appendChild(t)
                 return svg
             },
             setfakeimg: function (img) {
                 let src=img.getAttribute("data-src")
                 let t=src.slice(src.indexOf("/")+1,src.length)
-                let sf=0.7
+                let sf=this.sf
                 let cw=200
                 let ch=200
                 let tw=cw*sf;
