@@ -20,11 +20,14 @@
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
             <img src="pt-fakeimg/测" alt="" class="img-test">
+            <img src="pt-fakeimg/试验" alt="" class="img-test">
+            <img src="pt-fakeimg/123" alt="" class="img-test">
+            <img src="pt-fakeimg/A" alt="" class="img-test">
+            <img src="pt-fakeimg/GAME" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
             <img src="ico.gif" alt="" class="img-test">
         </p>
-
     </div>
 </div>
 <script>
@@ -37,16 +40,40 @@
             },
             setfakeimg: function (img) {
                 let src=img.getAttribute("src")
-                let t=src.slice(src.indexOf("/")+1,src.indexOf("/")+2)
-                console.log(img.width,img.height)
-                let sf=0.9
-                let tw=img.width*sf;
-                let th=img.height*sf;
+                let t=src.slice(src.indexOf("/")+1,src.length)
+                let sf=0.8
+                let cw=200
+                let ch=200
+                let tw=cw*sf;
+                let th=ch*sf;
                 var fakecanvas=document.createElement("canvas")
                 fakecanvas.classList=img.classList
+                fakecanvas.width=cw
+                fakecanvas.height=ch
                 var ctx=fakecanvas.getContext("2d")
-                ctx.font = ""+th+"px Arial";
-                ctx.fillText(t, 0, th,tw);
+                console.log(ctx.measureText(t))
+                ctx.font = "bold "+th+"px auto";
+
+                ctx.shadowColor="rgba(0,0,0,0.6)"
+                ctx.shadowOffsetY=4;
+                ctx.shadowBlur=8;
+
+                let fx=cw*(1-sf)/2
+                let fy=th
+
+                // 实体文字
+                ctx.fillStyle = '#b76251';
+                ctx.fillText(t,fx,fy,tw);
+                // 实体描边文字
+                ctx.strokeStyle = '#f0d5bc';
+                ctx.lineWidth = 6;
+                ctx.strokeText(t,fx,fy,tw);
+                // 虚线描边
+                ctx.strokeStyle = '#000';
+                ctx.lineWidth = 1;
+                ctx.setLineDash([5, 3]);
+                ctx.strokeText(t,fx,fy,tw);
+
                 img.replaceWith(fakecanvas)
 
             },
