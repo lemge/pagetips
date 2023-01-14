@@ -1446,110 +1446,142 @@ Host = {
                 return e
             }
 
-            function s() {
-                return i() ? "rgb(" + i() + "," + i() + "," + i() + ")" : "rgba(" + i() + "," + i() + "," + i() + "," + i() + ")"
-            }
+            var d = document.createElement("div");
+            // d.width = i(), d.height = i();
+            d.style.cssText="position: fixed;text-align:center"
+            var logoimg=document.createElement("img")
+            logoimg.src="logo2.png"
+            logoimg.style.cssText="position:unset"
+            d.append(logoimg)
+            var tlist=[
+                "生成一个陪你玩的机器人...",
+                "为机器人加入人工智能...",
+                "检测他智商...",
+                "建立虚拟游戏房间...",
+                "设定房间温度适合游戏...",
+                "制造人工太阳...",
+                "完成，正在载入资源...",
+            ]
+            var tmpi=0;
+            var lpsi=setInterval(function (){
+                console.log("123---------------------")
+                if(tmpi<tlist.length){
+                }else{
+                    clearInterval(lpsi)
+                    return
+                }
+                var tmp=document.createElement("div")
+                tmp.innerHTML=tlist[tmpi]
+                tmp.style.cssText="color:#ffffff;font-size:0.8rem;background-color:#333333;"
 
-            var d = document.createElement("canvas");
-            d.width = i(), d.height = i();
-            var l = d.getContext("2d");
-            l.scale(1, 1);
-            for (var c, u = [d], p = 0; p < e.length; p++) switch (e[p]) {
-                case"4":
-                    var g = getNewCanvasObject();
-                    g.width = i(), g.height = i(), l = g.getContext("2d"), u.push(g);
-                    break;
-                case"b":
-                    var w = l.createPattern(l.canvas, "no-repeat"), m = u.pop();
-                    releaseCanvas(m), (l = u[u.length - 1].getContext("2d")).fillStyle = w;
-                    break;
-                case"t":
-                    c = l.createLinearGradient(i(), i(), i(), i());
-                    break;
-                case"D":
-                    c = l.createRadialGradient(i(), i(), i(), i(), i(), i());
-                    break;
-                case"8":
-                    c.addColorStop(i(), s());
-                    break;
-                case"F":
-                    l.fillStyle = c;
-                    break;
-                case"f":
-                    l.save();
-                    break;
-                case"/":
-                    l.bezierCurveTo(i(), i(), i(), i(), i(), i());
-                    break;
-                case"p":
-                    l.strokeStyle = s();
-                    break;
-                case"w":
-                    l.lineCap = "butt";
-                    break;
-                case"y":
-                    l.lineJoin = "miter";
-                    break;
-                case"9":
-                    l.miterLimit = i();
-                    break;
-                case"6":
-                    l.fillStyle = s();
-                    break;
-                case"n":
-                    l.beginPath();
-                    break;
-                case"q":
-                    l.closePath();
-                    break;
-                case"o":
-                    l.fill();
-                    break;
-                case"P":
-                    l.stroke();
-                    break;
-                case"r":
-                    l.restore();
-                    break;
-                case"2":
-                    l.arc(i(), i(), i(), i(), i(), 1 === i());
-                    break;
-                case"m":
-                    l.moveTo(i(), i());
-                    break;
-                case"l":
-                    l.lineTo(i(), i());
-                    break;
-                case"5":
-                    l.quadraticCurveTo(i(), i(), i(), i());
-                    break;
-                case"C":
-                    l.clip();
-                    break;
-                case"E":
-                    l.lineWidth = i();
-                    break;
-                case"A":
-                    l.transform(i(), i(), i(), i(), i(), i());
-                    break;
-                case"u":
-                    l.translate(i(), i());
-                    break;
-                case"V":
-                    l.scale(i(), i());
-                    break;
-                case"0":
-                    l.rotate(i());
-                    break;
-                case"K":
-                    l.globalAlpha = i();
-                    break;
-                case"G":
-                    l.strokeStyle = c;
-                    break;
-                default:
-                    console.error("unhandled", e[p])
-            }
+                d.append(tmp)
+                tmpi++;
+            },1000)
+
+            // function s() {
+            //     return i() ? "rgb(" + i() + "," + i() + "," + i() + ")" : "rgba(" + i() + "," + i() + "," + i() + "," + i() + ")"
+            // }
+            //
+            // var d = document.createElement("canvas");
+            // d.width = i(), d.height = i();
+            // var l = d.getContext("2d");
+            // l.scale(1, 1);
+            // for (var c, u = [d], p = 0; p < e.length; p++) switch (e[p]) {
+            //     case"4":
+            //         var g = getNewCanvasObject();
+            //         g.width = i(), g.height = i(), l = g.getContext("2d"), u.push(g);
+            //         break;
+            //     case"b":
+            //         var w = l.createPattern(l.canvas, "no-repeat"), m = u.pop();
+            //         releaseCanvas(m), (l = u[u.length - 1].getContext("2d")).fillStyle = w;
+            //         break;
+            //     case"t":
+            //         c = l.createLinearGradient(i(), i(), i(), i());
+            //         break;
+            //     case"D":
+            //         c = l.createRadialGradient(i(), i(), i(), i(), i(), i());
+            //         break;
+            //     case"8":
+            //         c.addColorStop(i(), s());
+            //         break;
+            //     case"F":
+            //         l.fillStyle = c;
+            //         break;
+            //     case"f":
+            //         l.save();
+            //         break;
+            //     case"/":
+            //         l.bezierCurveTo(i(), i(), i(), i(), i(), i());
+            //         break;
+            //     case"p":
+            //         l.strokeStyle = s();
+            //         break;
+            //     case"w":
+            //         l.lineCap = "butt";
+            //         break;
+            //     case"y":
+            //         l.lineJoin = "miter";
+            //         break;
+            //     case"9":
+            //         l.miterLimit = i();
+            //         break;
+            //     case"6":
+            //         l.fillStyle = s();
+            //         break;
+            //     case"n":
+            //         l.beginPath();
+            //         break;
+            //     case"q":
+            //         l.closePath();
+            //         break;
+            //     case"o":
+            //         l.fill();
+            //         break;
+            //     case"P":
+            //         l.stroke();
+            //         break;
+            //     case"r":
+            //         l.restore();
+            //         break;
+            //     case"2":
+            //         l.arc(i(), i(), i(), i(), i(), 1 === i());
+            //         break;
+            //     case"m":
+            //         l.moveTo(i(), i());
+            //         break;
+            //     case"l":
+            //         l.lineTo(i(), i());
+            //         break;
+            //     case"5":
+            //         l.quadraticCurveTo(i(), i(), i(), i());
+            //         break;
+            //     case"C":
+            //         l.clip();
+            //         break;
+            //     case"E":
+            //         l.lineWidth = i();
+            //         break;
+            //     case"A":
+            //         l.transform(i(), i(), i(), i(), i(), i());
+            //         break;
+            //     case"u":
+            //         l.translate(i(), i());
+            //         break;
+            //     case"V":
+            //         l.scale(i(), i());
+            //         break;
+            //     case"0":
+            //         l.rotate(i());
+            //         break;
+            //     case"K":
+            //         l.globalAlpha = i();
+            //         break;
+            //     case"G":
+            //         l.strokeStyle = c;
+            //         break;
+            //     default:
+            //         console.error("unhandled", e[p])
+            // }
             return a = 0, i(), i(), d
         }("6nmllllllllllmlllllllllllm/l//llll/lmlll/m/l//llll/lmlll/o6nm/l2mo6nm//l22mot88Fnm//l//mo6nm/lll/mot88Fnm/l//o6nm/ll/lmo6nm/o", t);
         var n = document.createElement("loadbar");
