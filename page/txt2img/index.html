@@ -18,7 +18,23 @@
             以下示例通过文字生成base64代码
         </p>
         <p>
-            TODO
+            请输入文字：
+            <input type="text" id="thistxt">
+            <button id="stru_img">生成图片</button>
+        </p>
+        <p>
+            Base64:
+            <br>
+            <img src="" alt="" id="si_img_b64" style="width: 100px;height: 100px">
+            <br>
+            <textarea id="si_base64" style="width: 80%"></textarea>
+        </p>
+        <p>
+            SVG:
+            <br>
+            <img src="" alt="" id="si_img_svg" style="width: 100px;height: 100px">
+            <br>
+            <textarea id="si_svg" style="width: 80%"></textarea>
         </p>
         <hr>
         <h2>自动转换为SVG格式</h2>
@@ -81,19 +97,17 @@
                 this.imgList = document.querySelectorAll("img")
                 return true;
             },
-            setfakeimgsvg:function (img){
+            strusvgimg:function (pars){
 
-                let src=img.dataset.src
-                let t_str=src.slice(src.indexOf("/")+1,src.length)
                 var svg_ns="http://www.w3.org/2000/svg"
                 var svg=document.createElementNS(svg_ns,"svg")
-                svg.classList=img.classList
 
-                let img_w=img.width
-                let img_h=img.height
+
+                let img_w=pars.width
+                let img_h=pars.height
                 let font_size=img_w*this.sf
 
-                let len=t_str.length
+                let len=pars.txt.length
                 font_size=font_size/len
 
 
@@ -131,7 +145,7 @@
 
 
                 var t=document.createElementNS(svg_ns,"text")
-                t.innerHTML=t_str
+                t.innerHTML=pars.txt
                 t.setAttributeNS(null,"x",img_w/2)
                 t.setAttributeNS(null,'y',img_h/2)
                 t.setAttributeNS(null,"font-size",font_size)
@@ -143,17 +157,32 @@
                 t.setAttributeNS(null,'filter',"url(#f1)")
                 svg.appendChild(t)
                 return svg
+
             },
-            setfakeimg: function (img) {
-                let src=img.getAttribute("data-src")
-                let t=src.slice(src.indexOf("/")+1,src.length)
+            setfakeimgsvg:function (img){
+
+                let src=img.dataset.src
+                let t_str=src.slice(src.indexOf("/")+1,src.length)
+
+                let svg=this.strusvgimg({
+                    width:img.width,
+                    height:img.height,
+                    txt:t_str,
+                })
+
+                svg.classList=img.classList
+                return svg
+            },
+            struCanvas:function (pars){
+
                 let sf=this.sf
                 let cw=200
                 let ch=200
                 let tw=cw*sf;
                 let th=ch*sf;
+
                 var fakecanvas=document.createElement("canvas")
-                fakecanvas.classList=img.classList
+
                 fakecanvas.width=cw
                 fakecanvas.height=ch
                 var ctx=fakecanvas.getContext("2d")
@@ -172,17 +201,28 @@
 
                 // 实体文字
                 ctx.fillStyle = '#b76251';
-                ctx.fillText(t,fx,fy,tw);
+                ctx.fillText(pars.txt,fx,fy,tw);
                 // 实体描边文字
                 ctx.strokeStyle = '#f0d5bc';
                 ctx.lineWidth = 6;
-                ctx.strokeText(t,fx,fy,tw);
+                ctx.strokeText(pars.txt,fx,fy,tw);
                 // 虚线描边
                 ctx.strokeStyle = '#000';
                 ctx.lineWidth = 1;
                 ctx.setLineDash([5, 3]);
-                ctx.strokeText(t,fx,fy,tw);
+                ctx.strokeText(pars.txt,fx,fy,tw);
 
+                return fakecanvas;
+
+
+            },
+            setfakeimg: function (img) {
+                let src=img.getAttribute("data-src")
+                let t=src.slice(src.indexOf("/")+1,src.length)
+                let fakecanvas=this.struCanvas({
+                    txt:t,
+                })
+                fakecanvas.classList=img.classList
                 return fakecanvas
 
             },
@@ -215,7 +255,27 @@
             },
         }
         pt_t2i.run()
+
     }
+    document.querySelector("#stru_img").addEventListener("click",function () {
+        var t=document.querySelector("#thistxt").value;
+        var svgObj=pt_t2i.strusvgimg({
+            width:100,
+            height:100,
+            txt:t
+        })
+        document.querySelector("#si_svg").value="<svg>"+svgObj.innerHTML+"</svg>"
+        let svg_rep_img=document.querySelector("#si_img_svg")
+        svgObj.setAttribute("id",svg_rep_img.getAttribute("id"))
+        svgObj.setAttribute("style",svg_rep_img.getAttribute("style"))
+        svg_rep_img.replaceWith(svgObj)
+        var canvasStr=pt_t2i.struCanvas({
+            txt:t,
+        })
+        let b64Str=canvasStr.toDataURL("image/png",1);
+        document.querySelector("#si_base64").value=b64Str
+        document.querySelector("#si_img_b64").setAttribute("src",b64Str)
+    })
 </script>
 </body>
 <style>
