@@ -9532,11 +9532,11 @@ var basedir="games/wujin/";
                                 }))
                             }
                             return XS.can.showModalLoginWithFacebook() && c.push((function (t) {
-                                t.addSocialButton(Host.Localize.Translate("Login with Facebook"), Host.Localize.Translate("Save your score!"), (function () {
-                                    window.requestFacebookLogin((function () {
-                                        Modal.hide(), i.mainActionCallback && i.mainActionCallback(), i.autoCallback && i.autoCallback()
-                                    }))
-                                }), 4675430, e).y = e
+                                // t.addSocialButton(Host.Localize.Translate("Login with Facebook"), Host.Localize.Translate("Save your score!"), (function () {
+                                //     window.requestFacebookLogin((function () {
+                                //         Modal.hide(), i.mainActionCallback && i.mainActionCallback(), i.autoCallback && i.autoCallback()
+                                //     }))
+                                // }), 4675430, e).y = e
                             })), XS.can.showModalShareDialog() && c.push((function (t) {
                                 t.addSocialButton(Host.Localize.Translate(Config.buttonShareTitle, {game_name: Config.shareTitle}), Host.Localize.Translate(Config.buttonShareDescription, {game_name: Config.shareTitle}), (function () {
                                     window.shareDialogueCallback(""), i.mainActionCallback && i.mainActionCallback()
