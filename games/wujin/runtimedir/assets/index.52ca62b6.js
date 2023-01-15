@@ -2352,7 +2352,7 @@ var basedir="games/wujin/";
             var e = new URL("b?a=1&b=2&c=3", "http://a"), t = e.searchParams, n = "";
             return e.pathname = "c%20d", t.forEach((function (e, r) {
                 t.delete("b"), n += r + e
-            })), !t.sort || "http://a/c%20d?a=1&c=3" !== e.href || "3" !== t.get("c") || "a=1" !== String(new URLSearchParams("?a=1")) || !t[Mb] || "a" !== new URL("https://a@b").username || "b" !== new URLSearchParams(new URLSearchParams("a=b")).get("a") || "xn--e1aybc" !== new URL("http://тест").host || "#%D0%B1" !== new URL("http://a#б").hash || "a1c3" !== n || "x" !== new URL("http://x", void 0).host
+            })), !t.sort || "http://a/c%20d?a=1&c=3" !== e.href || "3" !== t.get("c") || "a=1" !== String(new URLSearchParams("?a=1")) || !t[Mb] || "a" !== new URL("--https--a@b").username || "b" !== new URLSearchParams(new URLSearchParams("a=b")).get("a") || "xn--e1aybc" !== new URL("http://тест").host || "#%D0%B1" !== new URL("http://a#б").hash || "a1c3" !== n || "x" !== new URL("http://x", void 0).host
         })), Eb = 2147483647, Pb = /[^\0-\u007E]/, kb = /[.\u3002\uFF0E\uFF61]/g,
         Lb = "Overflow: input needs wider integers to process", Ib = Math.floor, Gb = String.fromCharCode,
         Fb = function (e) {
@@ -2996,7 +2996,7 @@ var basedir="games/wujin/";
     })
 }(), function () {
     function e(e, t) {
-        return (t || "") + " (SystemJS https://git.io/JvFET#" + e + ")"
+        return (t || "") + " (SystemJS --https--git.io/JvFET#" + e + ")"
     }
 
     function t(e, t) {
@@ -3123,7 +3123,7 @@ var basedir="games/wujin/";
             if (!t.sp) if ("systemjs-module" === t.type) {
                 if (t.sp = !0, !t.src) return;
                 System.import("import:" === t.src.slice(0, 7) ? t.src.slice(7) : n(t.src, u)).catch((function (e) {
-                    if (e.message.indexOf("https://git.io/JvFET#3") > -1) {
+                    if (e.message.indexOf("--https--git.io/JvFET#3") > -1) {
                         var n = document.createEvent("Event");
                         n.initEvent("error", !1, !1), t.dispatchEvent(n)
                     }
@@ -3765,7 +3765,7 @@ var basedir="games/wujin/";
                         XS.unfreeze()
                     }, XS.freeze(), e
                 }, i.makeGameShareURL = function () {
-                    return encodeURI("https://" + Config.domain + "/alc/")
+                    return encodeURI("--https--" + Config.domain + "/alc/")
                 }, i.Preferences = {}, i.Preferences.cache = {}, i.Preferences.QuickBool = function (e) {
                     return {
                         get: function () {
@@ -6004,7 +6004,7 @@ var basedir="games/wujin/";
 
                 n.audio = new t
             }(window), function (e) {
-                var t = "https://production-dot-XYYX-chatbot.appspot.com/refer";
+                var t = "--https--production-dot-XYYX-chatbot.appspot.com/refer";
 
                 function n(e, t) {
                     t || (t = !1);
@@ -6481,7 +6481,7 @@ var basedir="games/wujin/";
                     t.stageContainer.emit("stageup", e)
                 }), {freezeGroup: ENG_FRZ_GRP}), t.stageContainer.on("down", (function (e) {
                     t.currentInputField && t.currentInputField.blur && t.currentInputField.blur(), window.focus && window.focus()
-                }), {freezeGroup: ENG_FRZ_GRP}), t.httpPrefix = "https://", t.devicePixelRatio = Math.min(2, window.devicePixelRatio || 1), t.styles = {
+                }), {freezeGroup: ENG_FRZ_GRP}), t.httpPrefix = "--https--", t.devicePixelRatio = Math.min(2, window.devicePixelRatio || 1), t.styles = {
                     margins: {
                         top: (t.is.iOSWrapper || t.is.standalone) && t.is.iOS ? t.is.iPhoneXOrLater ? 0 : 20 : 0,
                         bottom: 0,
@@ -8165,7 +8165,7 @@ var basedir="games/wujin/";
                         var n = Config.ads[t];
                         n && (n.remote ? fetch(function (e) {
                             var t = Config.id, n = __XYYX.getChannel();
-                            return "https://fran-cdn.XYYX.com/configs/ads/{GAME}/{PLATFORM}/{CHANNEL}/xs.json".replace("{GAME}", t).replace("{PLATFORM}", e).replace("{CHANNEL}", n)
+                            return "--https--fran-cdn.XYYX.com/configs/ads/{GAME}/{PLATFORM}/{CHANNEL}/xs.json".replace("{GAME}", t).replace("{PLATFORM}", e).replace("{CHANNEL}", n)
                         }(t)).then((function (e) {
                             if (!e.ok) throw Error(e.statusText);
                             return e.json()
@@ -8177,7 +8177,7 @@ var basedir="games/wujin/";
                     }
                 }
             }(), function (e) {
-                var t = "https://bucket.XYYX.com/config/";
+                var t = "--https--bucket.XYYX.com/config/";
 
                 function n(e, t) {
                     var n, r, o,
@@ -8289,7 +8289,7 @@ var basedir="games/wujin/";
                         break
                     }
                 }
-                window.location && window.location.search && window.location.search.indexOf("tsrv=") > -1 ? XC.server = "http://l.XYYX.com:8008/" : XC.server = "https://xc.XYYX.com/", XC.c = function () {
+                window.location && window.location.search && window.location.search.indexOf("tsrv=") > -1 ? XC.server = "http://l.XYYX.com:8008/" : XC.server = "--https--xc.XYYX.com/", XC.c = function () {
                     for (var e = [], t = 0; 64 > t;) e[t] = 0 | 4294967296 * Math.abs(Math.sin(++t));
                     return function (t) {
                         for (var n, r, i, o, a = [], s = (t = unescape(encodeURI(t))).length, c = [n = 1732584193, r = -271733879, ~n, ~r], l = 0; l <= s;) a[l >> 2] |= (t.charCodeAt(l) || 128) << l++ % 4 * 8;
@@ -8372,13 +8372,15 @@ var basedir="games/wujin/";
                     mimetype: "svg+xml",
                     ignoreScaleCache: !0
                 })
-            }), !0), u = basedir+"runtimedir/assets/twitter.45db2608.png";
+            }), !0),
+                // u = basedir+"runtimedir/assets/twitter.45db2608.png";
+                u = basedir+"img.120.png";
             console.log("basedir",basedir)
             Host.bootstrapper.mnemonicMap[u] = "i/web/twitter.png", XS.styles.margins.bottom = Math.max(23, XS.styles.margins.bottom), XS.modulesToPreload.push((function e() {
                 var t, n, r, i, o, a, s = window;
                 XS.is.okru || XS.is.huaweiquickapp || XS.is.samsungGameLauncher || XS.is.discord || (t = window, n = document, r = "script", t.fbq || (i = t.fbq = function () {
                     i.callMethod ? i.callMethod.apply(i, arguments) : i.queue.push(arguments)
-                }, t._fbq || (t._fbq = i), i.push = i, i.loaded = !0, i.version = "2.0", i.queue = [], (o = n.createElement(r)).async = !0, o.src = "https://connect.facebook.net/en_US/fbevents.js", (a = n.getElementsByTagName(r)[0]).parentNode.insertBefore(o, a)), fbq("init", "1361622040527227"), fbq("track", "PageView"), window.fbq && (f++, fbq("trackCustom", "play", {
+                }, t._fbq || (t._fbq = i), i.push = i, i.loaded = !0, i.version = "2.0", i.queue = [], (o = n.createElement(r)).async = !0, o.src = "--https--connect.facebook.net/en_US/fbevents.js", (a = n.getElementsByTagName(r)[0]).parentNode.insertBefore(o, a)), fbq("init", "1361622040527227"), fbq("track", "PageView"), window.fbq && (f++, fbq("trackCustom", "play", {
                     game: Config.id,
                     version: Config.version,
                     tag: Config.tag || "",
@@ -8392,7 +8394,7 @@ var basedir="games/wujin/";
                         var e = Host.Web.GetQueryString("source");
                         return e || XS.is.samsungBixby && (e = "daily"), e || ""
                     };
-                    XS.track.customEvent("gl_enabled", 1, {source: p()}), XYYXInstant.trackPlay(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "https://play.XYYX.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/?method=trackPlay", p()), function (e) {
+                    XS.track.customEvent("gl_enabled", 1, {source: p()}), XYYXInstant.trackPlay(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "--https--play.XYYX.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/?method=trackPlay", p()), function (e) {
                         if ("undefined" != typeof XYYXInstant) return console.warn("Missing SDK XYYXInstant");
                         XYYXInstant.canCreateShortcut(Config.id).then((function (t, n) {
                             XS.track.customEvent("gl_shortcut_test_success", 1, {statusCode: t, state: n});
@@ -8403,7 +8405,7 @@ var basedir="games/wujin/";
                             })) : XS.track.customEvent("gl_shortcut_create_library", 1, {
                                 statusCode: t,
                                 state: n
-                            }), XYYXInstant.createShortcut(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "https://play.XYYX.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/" + r).then((function () {
+                            }), XYYXInstant.createShortcut(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "--https--play.XYYX.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/" + r).then((function () {
                                 0 == t ? XS.track.customEvent("gl_shortcut_create_native_success", 1, {
                                     statusCode: t,
                                     state: n
@@ -8484,8 +8486,8 @@ var basedir="games/wujin/";
                             config: {
                                 huaweidiscoverycard: {
                                     chance: 100,
-                                    portrait: {path: "https://cdn.XYYX.com/huawei/card/huawei_card_portrait.jpg"},
-                                    landscape: {path: "https://cdn.XYYX.com/huawei/card/huawei_card_landscape.jpg"},
+                                    portrait: {path: "--https--cdn.XYYX.com/huawei/card/huawei_card_portrait.jpg"},
+                                    landscape: {path: "--https--cdn.XYYX.com/huawei/card/huawei_card_landscape.jpg"},
                                     data: {huaweiquickapp: "com.huawei.intelligent://service.hag/service_detail?abilityId=889771d62614416aa230f417d93e2307&isNeedSubscribe=1"}
                                 }
                             }
@@ -8495,11 +8497,11 @@ var basedir="games/wujin/";
                             if (Config.ads.web.reward && Config.ads.web.reward.providers) for (var i in Config.ads.web.reward.providers) n.push(i);
                             for (var o = 0; o < n.length; o++) if (n[o] && -1 !== n[o].indexOf("pbgam")) {
                                 Config.prebid = {
-                                    url: "https://cdn.XYYX.com/fran/prebid.6.9.0.js",
+                                    url: "--https--cdn.XYYX.com/fran/prebid.6.9.0.js",
                                     analytics: {enabled: !0, provider: "XYYX", options: {}},
                                     config: {
                                         cache: {
-                                            url: "https://usc.cache.XYYX.com/cache",
+                                            url: "--https--usc.cache.XYYX.com/cache",
                                             vasttrack: !0,
                                             ignoreBidderCacheKey: !0
                                         },
@@ -8520,12 +8522,12 @@ var basedir="games/wujin/";
                                             accountId: "9a3c6c23-1111-1111-1111-123456789123",
                                             bidders: ["rubicon", "pubmatic", "openx"],
                                             endpoint: {
-                                                p1Consent: "https://fran.XYYX.com/openrtb2/auction",
-                                                noP1Consent: "https://fran.XYYX.com/openrtb2/auction"
+                                                p1Consent: "--https--fran.XYYX.com/openrtb2/auction",
+                                                noP1Consent: "--https--fran.XYYX.com/openrtb2/auction"
                                             },
                                             syncEndpoint: {
-                                                p1Consent: "https://fran.XYYX.com/cookie_sync",
-                                                noP1Consent: "https://fran.XYYX.com/cookie_sync"
+                                                p1Consent: "--https--fran.XYYX.com/cookie_sync",
+                                                noP1Consent: "--https--fran.XYYX.com/cookie_sync"
                                             }
                                         }],
                                         schain: {
@@ -8546,7 +8548,7 @@ var basedir="games/wujin/";
                                         bidderTimeout: 2500,
                                         currency: {
                                             adServerCurrency: "EUR",
-                                            conversionRateFile: "https://cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json",
+                                            conversionRateFile: "--https--cdn.jsdelivr.net/gh/prebid/currency-file@1/latest.json",
                                             granularityMultiplier: 1
                                         },
                                         enableSendAllBids: !1,
@@ -8560,7 +8562,7 @@ var basedir="games/wujin/";
                                 };
                                 var a = Config.gpt || {}, s = {};
                                 for (var c in a) s[c] = a[c];
-                                s.url = "https://cdn.XYYX.com/fran/gpt_2021120601.js", s.pubadsUrl = "https://cdn.XYYX.com/fran/pubads_2021120601.js", Config.gpt = s;
+                                s.url = "--https--cdn.XYYX.com/fran/gpt_2021120601.js", s.pubadsUrl = "--https--cdn.XYYX.com/fran/pubads_2021120601.js", Config.gpt = s;
                                 break
                             }
                         }
@@ -8570,9 +8572,10 @@ var basedir="games/wujin/";
                                 providers: {"crazygames-interstitial": {timeout: 500, priority: 1}}
                             }, reward: {providers: {"crazygames-reward": {timeout: 500, priority: 1}}}
                         }), Config.ads && XS.is.harman && (console.warn("social.web: overriding ads for harman"), Config.ads.web = {}), XS.ads && XS.ads._init && XS.ads._init("web"), Config.twitterTexts && (window.shareDialogueCallback = function (e) {
-                            XS.navigate("https://twitter.com/share?url=" + Host.makeGameShareURL() + "&via=XYYXGames&related=" + encodeURI(Config.twitterRelated) + "&hashtags=" + encodeURI(Config.twitterHashTags) + "&text=" + encodeURI(w()))
+                            // XS.navigate("--https--twitter.com/share?url=" + Host.makeGameShareURL() + "&via=XYYXGames&related=" + encodeURI(Config.twitterRelated) + "&hashtags=" + encodeURI(Config.twitterHashTags) + "&text=" + encodeURI(w()))
+                            XS.navigate("/games/index01ue.html")
                         }), XS.is.samsungGameLauncher && (window.shareDialogueCallback = function (e) {
-                            XYYXInstant.share(window.__requestOffset++, Config.shareTitle.toString(), "https://play.XYYX.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/?method=share")
+                            XYYXInstant.share(window.__requestOffset++, Config.shareTitle.toString(), "--https--play.XYYX.com/" + (Config.samsungGameLauncher.urlID || Config.id) + "/?method=share")
                         }), XS.is.kik ? window.shareDialogueCallback = function (e) {
                             top.postMessage("share_kik", "*")
                         } : XS.is.kongregate || XS.is.spilGamesWrapper || XS.is.twitch || XS.is.vkru || XS.is.okru || XS.is.rocketChat || (Config.facebookAppId ? function () {
@@ -8649,8 +8652,8 @@ var basedir="games/wujin/";
                                     "connected" === e.status ? r(e.authResponse) : i(!1), XS.emit("userloaded")
                                 }))
                             }, function (e, t, n) {
-                                var r, i = e.getElementsByTagName(t)[0];
-                                e.getElementById(n) || ((r = e.createElement(t)).id = n, r.src = "//connect.facebook.net/en_US/sdk.js", i.parentNode.insertBefore(r, i))
+                                // var r, i = e.getElementsByTagName(t)[0];
+                                // e.getElementById(n) || ((r = e.createElement(t)).id = n, r.src = "//connect.facebook.net/en_US/sdk.js", i.parentNode.insertBefore(r, i))
                             }(document, "script", "facebook-jssdk"))
                         }() : console.warn("Config.facebookAppId not defined"), XS.can.createWebSocialFrame() && function () {
                             var e = Host.Localize.GetLanguage();
@@ -8672,7 +8675,7 @@ var basedir="games/wujin/";
                         }), XS.is.pwa && Host.Preferences.GetString("rcs.id", (function (e) {
                             e && (XS.is.rcs = e)
                         })), window.rcs = {
-                            url: XS.is.rcsKr ? "https://XYYX-rcs-kr.appspot.com" : "https://XYYX-rcs-235815.appspot.com",
+                            url: XS.is.rcsKr ? "--https--XYYX-rcs-kr.appspot.com" : "--https--XYYX-rcs-235815.appspot.com",
                             blockProgression: !1,
                             phone: null,
                             init: function (e, t) {
@@ -8711,7 +8714,7 @@ var basedir="games/wujin/";
                         }, XS.is.rcs && XS.emit("RCS"), XS.is.vkru) {
                             y("access_token", p = window.frames.document.URL), y("auth_key", p);
                             var l = y("user_id", p), h = y("viewer_id", p), f = 6715022;
-                            console.warn("loading vk..."), XS.loadScript("https://vk.com/js/api/xd_connection.js?2"), XS.loadScript("https://ad.mail.ru/static/admanhtml/rbadman-html5.min.js"), XS.loadScript("https://vk.com/js/api/adman_init.js"), XS.loadScript("https://js.appscentrum.com/scr/preroll.js"), XS.waitForSDK("VK", (function () {
+                            console.warn("loading vk..."), XS.loadScript("--https--vk.com/js/api/xd_connection.js?2"), XS.loadScript("--https--ad.mail.ru/static/admanhtml/rbadman-html5.min.js"), XS.loadScript("--https--vk.com/js/api/adman_init.js"), XS.loadScript("--https--js.appscentrum.com/scr/preroll.js"), XS.waitForSDK("VK", (function () {
                                 VK.init((function () {
                                     VK.storage = {
                                         user: h, set: function (e, t) {
@@ -8746,7 +8749,7 @@ var basedir="games/wujin/";
                             console.log(e, t, n)
                         }, XS.is.okru) {
                             var p = window.frames.document.URL;
-                            console.warn("Loading OK.ru..."), XS.loadScript("https://api.ok.ru/js/fapi5.js"), XS.waitForSDK("FAPI", (function () {
+                            console.warn("Loading OK.ru..."), XS.loadScript("--https--api.ok.ru/js/fapi5.js"), XS.waitForSDK("FAPI", (function () {
                                 var e = FAPI.Util.getRequestParameters(), t = e.logged_user_id, n = e.application_key;
                                 FAPI.init(e.api_server, e.apiconnection, (function (e) {
                                     console.warn("Initiated OK.ru!"), FAPI.invokeUIMethod("prepareMidroll"), XC.loginOKRU(t.toString(), n.toString())
@@ -8795,7 +8798,7 @@ var basedir="games/wujin/";
                             autoRegister: !0,
                             notifyButton: {enable: !1},
                             welcomeNotification: {disable: !0}
-                        }]), XS.loadScript("https://cdn.onesignal.com/sdks/OneSignalSDK.js"), v = !0)
+                        }]), XS.loadScript("--https--cdn.onesignal.com/sdks/OneSignalSDK.js"), v = !0)
                     }
                 }, window.Social.ShowTryAgainModal = function (e, t) {
                     if (Config.testLocalCanvasAds || XS.is.facebookAppWeb || XS.is.chromeWrapper) {
@@ -9500,17 +9503,17 @@ var basedir="games/wujin/";
                             if (!XS.is.twitter) {
                                 for (var l = s ? XS.crosspromo.getConfig("banner") : a ? XS.remoteConfig.crosspromoteConfig : [{
                                     facebookImage: "cdn.XYYX.com/2021/banners/800x165/basketball.jpg",
-                                    facebookUrl: "https://apps.facebook.com/basketballXYYX",
+                                    facebookUrl: "--https--apps.facebook.com/basketballXYYX",
                                     webImage: "cdn.XYYX.com/2021/banners/800x165/basketball.jpg",
                                     webUrl: "http://basketball.XYYX.com/"
                                 }, {
                                     facebookImage: "cdn.XYYX.com/2021/banners/800x165/hex.jpg",
-                                    facebookUrl: "https://apps.facebook.com/hexXYYX",
+                                    facebookUrl: "--https--apps.facebook.com/hexXYYX",
                                     webImage: "cdn.XYYX.com/2021/banners/800x165/hex.jpg",
                                     webUrl: "http://hex.XYYX.com/"
                                 }, {
                                     facebookImage: "cdn.XYYX.com/2021/banners/800x165/mahjong.jpg",
-                                    facebookUrl: "https://apps.facebook.com/mahjongXYYX",
+                                    facebookUrl: "--https--apps.facebook.com/mahjongXYYX",
                                     webImage: "cdn.XYYX.com/2021/banners/800x165/mahjong.jpg",
                                     webUrl: "http://mahjong.XYYX.com/"
                                 }], d = [], u = 0; u < l.length; u++) {
@@ -10403,10 +10406,10 @@ var basedir="games/wujin/";
                         }
                         return n
                     }, e.addSocialBar = function () {
-                        if (XS.can.showSidebarSocial()) {
-                            var t = new Container;
-                            t.addChild(z(new Sprite(C()), 20, 15, "http://XYYX.com")), t.addChild(z(new Sprite(T()), 220, 15, "https://twitter.com/XYYXgames")), t.addChild(z(new Sprite(d()), 420, 15, Config.facebookPageUrl || "https://www.facebook.com/XYYXgames")), t.y = D, e.content.addChild(t), t.scrollHeight = 82, D += 82
-                        }
+                        // if (XS.can.showSidebarSocial()) {
+                        //     var t = new Container;
+                        //     t.addChild(z(new Sprite(C()), 20, 15, "http://XYYX.com")), t.addChild(z(new Sprite(T()), 220, 15, "--https--twitter.com/XYYXgames")), t.addChild(z(new Sprite(d()), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/XYYXgames")), t.y = D, e.content.addChild(t), t.scrollHeight = 82, D += 82
+                        // }
                     }, e.settings = [], e.addSetting = function (t) {
                         e.settings.push(t)
                     }, e.addSettings = function () {
@@ -10420,25 +10423,25 @@ var basedir="games/wujin/";
                         }
                     }, e.addLegal = function () {
                         var t, n;
-                        Host.supports.showSidebarLegal && (e.addMenuHeader(Host.Localize.Translate("Legal Information")), XS.is.samsung ? (t = "https://XYYX.com/legal/samsung/#TermsofService", n = "https://XYYX.com/legal/samsung/#PrivacyPolicy") : (t = "https://XYYX.com/legal/#TermsofService", n = "https://XYYX.com/legal/#PrivacyPolicy"), e.addMenuItem(new Sprite(R()), Host.Localize.Translate("Terms & Conditions"), (function () {
+                        Host.supports.showSidebarLegal && (e.addMenuHeader(Host.Localize.Translate("Legal Information")), XS.is.samsung ? (t = "--https--XYYX.com/legal/samsung/#TermsofService", n = "--https--XYYX.com/legal/samsung/#PrivacyPolicy") : (t = "--https--XYYX.com/legal/#TermsofService", n = "--https--XYYX.com/legal/#PrivacyPolicy"), e.addMenuItem(new Sprite(R()), Host.Localize.Translate("Terms & Conditions"), (function () {
                             XS.navigate(t)
                         })), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(E()), Host.Localize.Translate("Privacy Policy"), (function () {
                             XS.navigate(n)
                         })))
                     }, e.addMore = function () {
                         if (XS.can.showSidebarMore()) {
-                            if (XS.is.snapchat) return Sidebar.addMenuHeader(Host.Localize.Translate("More")), Sidebar.addMenuItem(new Sprite(E()), Host.Localize.Translate("Privacy Policy"), (function () {
-                                sc.presentPrivacyPolicy()
-                            })), void Sidebar.addMenuItem(new Sprite(R()), Host.Localize.Translate("Terms of Service"), (function () {
-                                sc.presentTermsOfService()
-                            }));
-                            Sidebar.addMenuHeader(Host.Localize.Translate("More")), XS.is.lgtv || Sidebar.addMenuItem(new Sprite(C()), Host.Localize.Translate("XYYX Games"), (function () {
-                                XS.is.samsung ? XS.navigate("https://play.XYYX.com") : XS.navigate("https://XYYX.com")
-                            })), XS.is.samsungGameLauncher || Sidebar.addMenuItem(new Sprite(P()), Host.Localize.Translate("Send Feedback"), (function () {
-                                XS.navigate("https://XYYX.com/support/?platform=" + window.__XYYX.getChannel() + "&game=" + Config.id)
-                            })), window.__XYYX && window.__XYYX.consent && Sidebar.addMenuItem(new Sprite(k()), Host.Localize.Translate("Manage Consent"), window.__XYYX.consent.show), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(R()), Host.Localize.Translate("Credits"), (function () {
-                                XS.navigate("https://XYYX.com/credits/" + Config.id + ".html")
-                            }))
+                            // if (XS.is.snapchat) return Sidebar.addMenuHeader(Host.Localize.Translate("More")), Sidebar.addMenuItem(new Sprite(E()), Host.Localize.Translate("Privacy Policy"), (function () {
+                            //     sc.presentPrivacyPolicy()
+                            // })), void Sidebar.addMenuItem(new Sprite(R()), Host.Localize.Translate("Terms of Service"), (function () {
+                            //     sc.presentTermsOfService()
+                            // }));
+                            // Sidebar.addMenuHeader(Host.Localize.Translate("More")), XS.is.lgtv || Sidebar.addMenuItem(new Sprite(C()), Host.Localize.Translate("XYYX Games"), (function () {
+                            //     XS.is.samsung ? XS.navigate("--https--play.XYYX.com") : XS.navigate("--https--XYYX.com")
+                            // })), XS.is.samsungGameLauncher || Sidebar.addMenuItem(new Sprite(P()), Host.Localize.Translate("Send Feedback"), (function () {
+                            //     XS.navigate("--https--XYYX.com/support/?platform=" + window.__XYYX.getChannel() + "&game=" + Config.id)
+                            // })), window.__XYYX && window.__XYYX.consent && Sidebar.addMenuItem(new Sprite(k()), Host.Localize.Translate("Manage Consent"), window.__XYYX.consent.show), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(R()), Host.Localize.Translate("Credits"), (function () {
+                            //     XS.navigate("--https--XYYX.com/credits/" + Config.id + ".html")
+                            // }))
                         }
                     }, e.addDownloadItem = function (t, n, r) {
                         e.downloadItems.push({image: t, text: n, callback: r})
@@ -10515,7 +10518,10 @@ var basedir="games/wujin/";
                             }, XS.is.facebookInstant || XS.is.spilGamesWrapper || (window.insertButton = function (t, n, r) {
                                 if (!(t instanceof Sprite)) throw"Please update your code to use the new SVG icons: " + n;
                                 return e.lastItem ? Sidebar.addMenuItemAfter(e.lastItem, t, n, r) : Sidebar.addMenuItem(t, n, r)
-                            }), XS.can.showSidebarShare() && Sidebar.addMenuItem(new Sprite(F()), Host.Localize.Translate("Share {game_name}", {game_name: Config.shareTitle}), (function () {
+                            }), XS.can.showSidebarShare() && Sidebar.addMenuItem(new Sprite(F()),
+                                // Host.Localize.Translate("Share {game_name}", {game_name: Config.shareTitle}),
+                                Host.Localize.Translate("More Games 更多游戏", {game_name: Config.shareTitle}),
+                                (function () {
                                 window.shareDialogueCallback()
                             }))
                         }
@@ -10824,11 +10830,11 @@ var basedir="games/wujin/";
                 facebookAppId: "355296384872184",
                 googleAdSiteId: "9167804042",
                 googleAdSpilgamesId: "3275762232",
-                facebookAppUrl: "https://apps.facebook.com/connectXYYX/",
-                facebookPageUrl: "https://www.facebook.com/connectXYYX/",
+                facebookAppUrl: "--https--apps.facebook.com/connectXYYX/",
+                facebookPageUrl: "--https--www.facebook.com/connectXYYX/",
                 adMobInterstitialIdiOS: "ca-app-pub-6389174903462367/9473839657",
                 adMobAppIdAndroid: "ca-app-pub-6389174903462367~2701801735",
-                shareUrl: "https://connect.XYYX.com/{{language_path}}",
+                shareUrl: "--https--connect.XYYX.com/{{language_path}}",
                 playTitle: Host.Localize.Translate("Play Connect XYYX"),
                 shareText: Host.Localize.Translate("I think you will like Connect XYYX"),
                 shareTitle: Host.Localize.Translate("Connect XYYX"),
@@ -10840,10 +10846,10 @@ var basedir="games/wujin/";
                 iOSRemoveAdsProductIdentifier: "connectremoveads",
                 androidRemoveAdsProductIdentifier: "connectremoveads",
                 gameCenterEnabled: !1,
-                feedbackURL: "https://XYYX.com/support/",
+                feedbackURL: "--https--XYYX.com/support/",
                 fbInstantInterstitialIdAll: "214147825919516_246266509374314",
                 useFacebookInstantRichGameplayFeatures: !0,
-                backendPath: "https://production-dot-XYYX-chatbot.appspot.com/connect",
+                backendPath: "--https--production-dot-XYYX-chatbot.appspot.com/connect",
                 facebookInstantGameID: "214147825919516",
                 facebookInstantFillColor: "#ffffff",
                 facebookInstantScoreOverlayTextColor: "#000000",
@@ -10854,7 +10860,7 @@ var basedir="games/wujin/";
                         backgroundPosition: "center center"
                     }
                 },
-                iOSReviewURL: "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1421799479&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8",
+                iOSReviewURL: "--https--itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1421799479&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8",
                 androidReviewURL: "market://details?id=com.XYYX.connect",
                 androidInstallBannerURL: O,
                 androidInstallURL: "market://details?id=com.XYYX.connect",
@@ -10868,8 +10874,8 @@ var basedir="games/wujin/";
                 pushNotificationText: Host.Localize.Translate("Your daily Connect level is ready to play!", {}, "This is a push notification used on mobile phones to show that their daily level is ready"),
                 twitterRelated: "XYYXgames,benjaminsen,brianmeidell",
                 twitterHashTags: Host.Localize.Translate("XYYX,connect,play", {}, "These are are hash tags for social networks such as twitter, E.g. #puzzle or #puzzle# for chinese sites"),
-                twitterHTML: '<div style="padding-right:10px"><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="XYYXGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div>',
-                twitterMobileHTML: '<div><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="XYYXGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div><div style="margin-left:10px"><a class="twitter-follow-button" href="https://twitter.com/XYYXGames"></a></div>',
+                twitterHTML: '<div style="padding-right:10px"><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="XYYXGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div>',
+                twitterMobileHTML: '<div><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="XYYXGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div><div style="margin-left:10px"><a class="twitter-follow-button" href="--https--twitter.com/XYYXGames"></a></div>',
                 enablePWA: !0,
                 gplusHTML: '<div class="g-plusone" data-size="medium" data-href="{{shareUrl}}"></div>',
                 remoteConfigVersion: "v4",
@@ -10983,7 +10989,7 @@ var basedir="games/wujin/";
                     message: Host.Localize.Translate("It's time to come back and have fun again!"),
                     seconds: 2592e3
                 }],
-                samsungGameLauncher: {icon: "https://cdn.XYYX.com/2021/icons-center/128/connect.png"}
+                samsungGameLauncher: {icon: "--https--cdn.XYYX.com/2021/icons-center/128/connect.png"}
             }, function (e) {
                 function t(e, n, r) {
                     if (n !== t.AD_TYPE_INTERSTITIAL && n !== t.AD_TYPE_REWARD) throw new Error(t.ERROR_INVALID_AD_TYPE);
@@ -11164,7 +11170,7 @@ var basedir="games/wujin/";
                                         }), o = !1, window.Social.Instant.hideLoadOverlay(), e
                                     })).catch(s)
                                 } else i()
-                            } else XS.is.huawei ? l.data.huaweiquickapp && window.open(l.data.huaweiquickapp) : l.data.gameid && window.open("https://" + l.data.gameid + ".XYYX.com/"); else i()
+                            } else XS.is.huawei ? l.data.huaweiquickapp && window.open(l.data.huaweiquickapp) : l.data.gameid && window.open("--https--" + l.data.gameid + ".XYYX.com/"); else i()
                         }))
                     }, l.prototype.getOrCreateInstance = function (e) {
                         return t || (t = this.makeInstance()), t
@@ -11218,7 +11224,7 @@ var basedir="games/wujin/";
                         var t, n = e.BaseProvider, r = null;
                         i.prototype = Object.create(n.prototype), i.prototype.constructor = i, i.prototype.skipPauseOnShow = !0, i.prototype._init = function (e) {
                             var t = this, n = document.getElementById("crazySdkScript");
-                            n || ((n = document.createElement("script")).setAttribute("id", "crazySdkScript"), n.setAttribute("type", "text/javascript"), n.setAttribute("src", "https://sdk.crazygames.com/crazygames-sdk-v1.js"), document.getElementsByTagName("head")[0].appendChild(n)), window.CrazyGames && window.CrazyGames.CrazySDK ? t.onSDKLoaded() : (XS.on("crazySdkLoaded", (function () {
+                            n || ((n = document.createElement("script")).setAttribute("id", "crazySdkScript"), n.setAttribute("type", "text/javascript"), n.setAttribute("src", "--https--sdk.crazygames.com/crazygames-sdk-v1.js"), document.getElementsByTagName("head")[0].appendChild(n)), window.CrazyGames && window.CrazyGames.CrazySDK ? t.onSDKLoaded() : (XS.on("crazySdkLoaded", (function () {
                                 t.onSDKLoaded()
                             })), n.onload = function () {
                                 XS.emit("crazySdkLoaded")
@@ -11469,7 +11475,7 @@ var basedir="games/wujin/";
                                     XS.emit("adsbygoogle:script_loaded")
                                 }
                             }))
-                        }, console.debug("adsbygoogle: loading sdk"), a.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", document.body.appendChild(a)
+                        }, console.debug("adsbygoogle: loading sdk"), a.src = "--https--pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", document.body.appendChild(a)
                     }, d.prototype._show = function (e, n) {
                         var r = this;
                         if (s) return n && n(!1), console.error("Already showing ad");
@@ -11497,8 +11503,8 @@ var basedir="games/wujin/";
             }(window), function (e) {
                 if (!e.BaseProvider) throw new Error("PrebidGoogleAdManagerBaseProvider: Unable to inherit from window.BaseProvider, not defined.");
                 e.pbjs = e.pbjs || {}, e.pbjs.que = e.pbjs.que || [], e.googletag = e.googletag || {}, e.googletag.cmd = e.googletag.cmd || [];
-                var t = e.BaseProvider, n = [], r = "https://cdn.XYYX.com/fran/gpt_2021120601.js",
-                    i = "https://cdn.XYYX.com/fran/pubads_2021120601.js",
+                var t = e.BaseProvider, n = [], r = "--https--cdn.XYYX.com/fran/gpt_2021120601.js",
+                    i = "--https--cdn.XYYX.com/fran/pubads_2021120601.js",
                     o = [[300, 250], [336, 280], [320, 480], [1024, 768], [768, 1024], [640, 1136], [773, 250], [300, 350], [970, 250], [300, 600], [900, 300], [900, 506], [250, 300], [280, 336], [480, 320], [1136, 640], [250, 773], [350, 300], [250, 970], [600, 300], [300, 900], [506, 900], [1320, 250], [4096, 2048], [3840, 2160], [1920, 1080], [1440, 1080], [1280, 720], [1200, 1900], [1200, 628], [1080, 1920], [1080, 1080]],
                     a = [[4096, 2048], [3840, 2160], [1920, 1080], [1440, 1080], [1280, 720], [1200, 1900], [1200, 628], [1080, 1920], [1080, 1080], [1024, 576], [854, 480], [720, 1280], [640, 480], [640, 400], [640, 360], [600, 900], [600, 600], [400, 300], [320, 240]],
                     s = !1, c = !1, l = !1, d = !1, u = !1;
@@ -11592,7 +11598,7 @@ var basedir="games/wujin/";
                             return e()
                         }
                     };
-                    s || (fetch("https://fran-cdn.XYYX.com/configs/ads/vendor/fran.json").then((function (e) {
+                    s || (fetch("--https--fran-cdn.XYYX.com/configs/ads/vendor/fran.json").then((function (e) {
                         if (!e.ok) throw Error(e.statusText);
                         return e.json()
                     })).then((function (t) {
@@ -11610,14 +11616,14 @@ var basedir="games/wujin/";
                     }
                 }, h.prototype.loadPrebid = function () {
                     if (!c) {
-                        var t = "https://cdn.XYYX.com/fran/prebid.6.9.0.js";
+                        var t = "--https--cdn.XYYX.com/fran/prebid.6.9.0.js";
                         e.Config && e.Config.prebid && (t = e.Config.prebid.url);
                         var n = this.loadScript(t);
                         return c = !0, n
                     }
                 }, h.prototype.loadIMA = function () {
                     // if (!u) {
-                    //     var t = "https://imasdk.googleapis.com/js/sdkloader/ima3.js";
+                    //     var t = "--https--imasdk.googleapis.com/js/sdkloader/ima3.js";
                     //     e.Config && e.Config.ima && e.Config.ima.url && (t = e.Config.ima.url);
                     //     var n = this.loadScript(t);
                     //     return u = !0, n
@@ -11858,8 +11864,16 @@ var basedir="games/wujin/";
                 }, e.PrebidGoogleAdManagerVideoBaseProvider = n
             }(window);
             var U = Host.bootstrapper.load((function () {
+                //广告载入画面
                 return XS.assets.__importATL("i/g/s/adloadingoverlay.svg", {
-                    data: '<svg xmlns="http://www.w3.org/2000/svg" width="364" height="364"><path data-name="Ellipse 1 copy" d="M182 0A182 182 0 1 1 0 182 182 182 0 0 1 182 0Zm0 10.584A171.416 171.416 0 1 1 10.584 182 171.416 171.416 0 0 1 182 10.584Z" style="opacity:.5;fill:#fff;fill-rule:evenodd"/><path data-name="Ad Loading" d="M165 94.411h-11.067l-20.184 51.821h11.1l4.277-11.771h20.714l4.525 11.771h11.382Zm-12.658 31.319 7-19.23 7.141 19.23h-14.14Zm73.314-31.319h-9.933v18.664a14.058 14.058 0 0 0-10.888-5.231 14.635 14.635 0 0 0-11.347 4.966Q189 117.777 189 127.321q0 9.332 4.613 14.546a14.3 14.3 0 0 0 11.082 5.214 13.932 13.932 0 0 0 6.31-1.573 14.928 14.928 0 0 0 5.426-4.79v5.514h9.226V94.411Zm-24.126 23.843a7.462 7.462 0 0 1 5.921-2.811 7.383 7.383 0 0 1 5.974 2.846q2.332 2.846 2.333 9.314 0 5.8-2.4 8.714a7.312 7.312 0 0 1-5.832 2.916 7.5 7.5 0 0 1-6.716-3.888q-1.662-2.686-1.662-8.7-.004-5.58 2.382-8.391ZM83.289 233.105v-8.731H57.272v-42.666H46.809v51.4h36.48Zm7.529-8.324a16.009 16.009 0 0 0 7.123 6.84 21.8 21.8 0 0 0 9.844 2.333 18.578 18.578 0 0 0 13.839-5.6 19.339 19.339 0 0 0 5.5-14.122 19.113 19.113 0 0 0-5.444-13.98 18.742 18.742 0 0 0-13.962-5.533 20.509 20.509 0 0 0-9.986 2.44 16.738 16.738 0 0 0-6.911 7.069 20.312 20.312 0 0 0-2.439 9.58 22.792 22.792 0 0 0 2.436 10.973Zm10.393-19a8.665 8.665 0 0 1 13.061 0q2.632 2.968 2.633 8.483 0 5.656-2.633 8.625a8.665 8.665 0 0 1-13.061 0q-2.652-2.969-2.652-8.554t2.652-8.554Zm43.514-2.422a7.11 7.11 0 0 1 4.136-1.043q3.923 0 5.337 1.22t1.414 4.083v.99a54.143 54.143 0 0 1-9.65 2.439 33.271 33.271 0 0 0-7.9 2.315 9.926 9.926 0 0 0-4.26 3.818 10.676 10.676 0 0 0-1.52 5.673 10.456 10.456 0 0 0 3.341 7.953q3.339 3.147 9.137 3.147a15.586 15.586 0 0 0 6.186-1.238 17.893 17.893 0 0 0 5.444-3.711q.107.284.353 1.166.566 1.945.955 2.934h9.827a21.282 21.282 0 0 1-1.785-5.037 40.156 40.156 0 0 1-.478-7.3l.106-11.594q0-6.468-1.325-8.89a9.871 9.871 0 0 0-4.578-3.994q-3.252-1.573-9.9-1.574-7.319 0-11.029 2.616a14.041 14.041 0 0 0-5.232 8.06l9.014 1.626a7.252 7.252 0 0 1 2.407-3.659Zm10.887 13.7a19.63 19.63 0 0 1-.389 4.843 6.218 6.218 0 0 1-2.368 3.287 8.6 8.6 0 0 1-5.126 1.767 5.428 5.428 0 0 1-3.959-1.52 4.867 4.867 0 0 1-1.555-3.6 4.143 4.143 0 0 1 1.944-3.5 18.256 18.256 0 0 1 5.409-1.732 61.461 61.461 0 0 0 6.044-1.52v1.98Zm53.978-35.773h-9.933v18.664a14.059 14.059 0 0 0-10.888-5.232 14.636 14.636 0 0 0-11.347 4.967q-4.489 4.966-4.489 14.511 0 9.332 4.613 14.546a14.3 14.3 0 0 0 11.082 5.214 13.932 13.932 0 0 0 6.31-1.573 14.928 14.928 0 0 0 5.426-4.79v5.514h9.226v-51.823Zm-24.126 23.843a7.462 7.462 0 0 1 5.921-2.811 7.383 7.383 0 0 1 5.974 2.846q2.332 2.845 2.333 9.314 0 5.8-2.4 8.714a7.312 7.312 0 0 1-5.832 2.916 7.5 7.5 0 0 1-6.716-3.888q-1.662-2.686-1.662-8.7-.004-5.582 2.382-8.393Zm43.85-14.652v-9.191h-9.933v9.191h9.933Zm0 42.63v-37.54h-9.933v37.54h9.933Zm44.327-23.33a31.05 31.05 0 0 0-.547-6.681 10.964 10.964 0 0 0-1.945-4.171 10.066 10.066 0 0 0-4.118-3.022 14.894 14.894 0 0 0-6.009-1.185q-7.46 0-12.372 6.363v-5.514h-9.226v37.54h9.933v-17q0-6.291.76-8.625a7.122 7.122 0 0 1 2.81-3.747 7.969 7.969 0 0 1 4.631-1.414 5.914 5.914 0 0 1 3.446.99 5.514 5.514 0 0 1 2.068 2.775q.636 1.785.636 7.865v19.159h9.933v-23.33Zm9.12 27.006a10.261 10.261 0 0 0 3.995 8.29q3.995 3.268 13.538 3.269a27.818 27.818 0 0 0 8.36-1.06 13.606 13.606 0 0 0 5.285-2.934 12.306 12.306 0 0 0 3.075-5.161 33.58 33.58 0 0 0 1.1-9.933v-33.689h-9.3v5.267q-4.524-6.115-11.488-6.116a14.658 14.658 0 0 0-11.294 4.985q-4.542 4.983-4.542 14.422a21.745 21.745 0 0 0 3.464 12.584 13.837 13.837 0 0 0 11.983 6.4q6.788 0 11.241-6.08v5.473a15.1 15.1 0 0 1-.459 4.56 4.81 4.81 0 0 1-1.98 2.51 11.561 11.561 0 0 1-5.832 1.166 7.466 7.466 0 0 1-4.454-1.06 3.87 3.87 0 0 1-1.308-2.722L282.8 235.58q-.036.706-.036 1.2Zm11.224-31.69a7.334 7.334 0 0 1 5.885-2.775 7.639 7.639 0 0 1 6.08 2.828q2.4 2.829 2.4 8.661 0 5.586-2.51 8.43a7.89 7.89 0 0 1-6.151 2.846 7.156 7.156 0 0 1-5.708-2.775q-2.316-2.775-2.316-8.749.004-5.693 2.32-8.468Z" style="fill:#fff;fill-rule:evenodd"/></svg>',
+                    data: '<?xml version="1.0" standalone="no"?>\n' +
+                        '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">\n' +
+                        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="125" height="121">\n' +
+                        '\n' +
+                        '<g transform="matrix(1.3333334 0 0 1.3333334 0 0)">\n' +
+                        '    <image  x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB5CAYAAAAUES4zAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAIABJREFUeJztnXm8XkV98L8zc855trslNwskYQlc9sgmFLFgxERbLRpaAlrL1sLb4FYL2jZYFZX2jfWj+FYslfd1bVBLpRSKrUWIBkEWEUFIWELCTUhCknuT3PVZzznze/+Y8zz3eZ773JubcFlcfnyGPGfOnJnfzG/mN79t5ioRYbrg49/+i3F5IoqUEfLxAHsqBZRojB/QbTKUolEqBLTLbPIaeojxRvrYEsNAZ5rOuI1MocyccISnu2Mk6CZdHEJ0iRGZgbYeEhdImT5Gyh4Deibaj0mHFksZrEeEh5An8kKy0Sw0EaFXwovb0BIwmh4gExpEMpR0Bo+Q2AyTigK8WHUr4hPLJpg/lAmPzsiek7ryuW+YOH27VfalDZZAKuWhUDz69EYGd4/QEWSoqAL9z+8gJW3kOroJvBSP3/rQS2urCbxpre1XFLQorGisAivqDCXeKaGWN4cm7hHkdaEpBZGJUKHCanu9qBDhwIluRcjmAoqlEk8/+yKDI3lSQTCNPZocfmOJrkWjrQHojIxdKjb8vdgvvwUrRxqxxFpAWWIFkVYE1hJEqVuN9e+NtYCoA2tYQVtbmuGBEk88tY2hkRFyWQ81fQx3n/AbR3QlCiWKyITvwMTnW23flTfRLM/G+FhQIErhSKrwBPwYBEGEz5ZNjCCwvzQXUFqRygTs2jXAc+v6GQ0j2tsyiES8gjT/TSG6uEEXPT8y4WWRkT8pBUPHgWCsh7E6KaNbfhsrIR1m1ucqqUdjbfd7VYoIxvfw0x7Pr3+BHZt3IZ4mmwsQCaejg/sFvxFEV2KOsabyF0Uvf5kosqIUfpRGAVbHbtW2YNeCAvERHVPUla+EYtlvuVcEL/AxEvLi073s2TpMKuUjvqIsB8AxpgF+bYmuHBGPsdr+tVL+ZZ5CW1NBoVGASla1mnBvVqAiQKEi3yqJ/91m9o/iIuAFBnzF87/cSP+2nXQEc/C0piL2VSE4/BoSXYlGieRKJvxbJfyN0lajQGHQomoDLfvg0YLCk4hYj+D5s9a0h9kd8f5I7AIm0Gilefbn2xjaMUCuM4uuKORVWuFV+PUhuiiUaGJdWlb2o/8TGjlcS4xxEvp+C9sKQSTAiKJSHvp+fzgAeqqVCEopUoHPwAshO18cJtuWwhLtHxIvE/zKEl0l/yEKI4JWsRYd/lPFL15JBF7sYY0lNgotABYBajaVfdJPEAVaMmRHsmvjMERNlegCqbaAnU/18eLGQVLtOdSruLKb4VeG6AqFUhpPORYtIrNRcgZaZpVVak6Yji5RFE8IIg9tBYt1+7VKWOkB6EQKsDbe5mdzT/g6w1SslyJCNpdmb/8gfS8OEaQD4tcQweE1T3SFhyYlGkV8dGTDc4aj+PQQecsQI3Ot1lnlV7AIIj4IaJuwcqWSf5261rCyp8ylFaB+VvSKrp59fCgieL6hGJZ59rleiCukgwzxgXT9ZYTXJNGNKAwaX9T8kkQX7AjKfzQglbNHSrsRpRGl0apMLIJYQWuLRgCN1QmxLbXVrRIDWjVNRc8WnEEmE6af1tbbp+AHoJTCx7Dhl9spj0R0ZH0kFF5TvJ3XENEFCNCk0ITGvqEglQ9W4l3nj6ZL6bKOsJHGKkFpV9oai7E4g4oT0AGIlSQEAw2YpkaqhNf7omGyJWhrNnlW71vaFyGdSbOnbzcDewZJ5QJEoldTSJ8QXiNEV6SVoRSXXveiKnzs2WzpPSU/IIUl0mCtwhOFqQ2hQkRhEw1MCckSHhtiGcfT9xeSaWO97TbWxNikCQXW1es0gsRgqw3FQsT23u1uYip1QHLEKwGvOtE9NClMuhiVP7tGXvxwOWPJmQyBjRHPSeZGKdzgahBJCApj/1QJrmr7t0bXihwo6RUKX6unjdYopQkUEEfYVIxS4EXOgCMI2VSK3p27GB7N46c7iV4j6lkreFWJ7qEpYN/RW9nxT3ukdHghE5FRKVQMgRg3oCpCRJA6u7go59is5dQIPkZepRSqxugPDESAVH5xV67t5hmpAJu35EcscVuEUZApajAlRCzt6ZgXTYlYafzX6AqvwqtGdF8Zyjr+38/b4WuKxpCzHjMrhlglunVCP/ePRilJiKhBOZu5AIh2qpk4lY6E/u4fSZKbF3asQpDJrWtKNLEXs0cqq4M4OG62Df62LBCJwsZOWAytAqURgYrVCGbq9ptXEV5xoisghQp2xfnbdsalP4hiS0p5GA1WINKCQqHFEGkhTlaxFScsSVUsjx3L9TB4NimjBIMQI1gFniQBEgrsfrrGFIIWTdE3bA1HP5az0alzVNf5GgovMWbmVYdXlOgK8ETNGiG8uy8snxzGGl+nsaKoWFA2Io5DYmOxWhPHPkoCfMBXTpjzEKxSxNoQWchHEXHCBQJryVjBGEU5rakY0Fg0FmP1frlEJflfJtRYLJvCkd8fjfxHZuD9vkG2ymtSLp8avGJEV4Cn9OxhsQ8PWrUwFgM2Jk8FTEy7jpmlNAd7KdLKkM16dGhDRhQprfENGBQGsKKItCKOhUJoGTYxJYRSPmJvHDGMx2AxZsTTFIkwfkygOvExKCwi4lS2Bhd6a5HPTRpNWRu2qeLxIblfzBZvsVLxU6/U2E03TCvRWy0kAbRSGLxgj8i9u5UslJIlp8rM9YSDs5r56TSHBD4H4dOJQVnBU0JGRWhCrAiWuKaDewJ+5DxYZDQlX1GygkqnKSgYQRguVdhR9HihlGZbeS/b1RBDKoNSATkvhU8JVEjZOPeqC6SYqE+KtPjgjbDbL84qm7b7Do3MmQa1YX9ldCXOF6AUXSCzgQ6cOSEPql+J2iORjSUJ/Hg5YFqJHjetFBEwGCIlbKsM/ddgYfdx8zM+Pd1dHJHrZp4R5hlFmwUvjJA4omLLRAYiKwwn1hRBoZRDtbYeVWI9sYKEgAWPmHaBdiUsSPscnU5TVBl2R1m2lIbZHMKzxRI7iwUqvqFNGRQaq0GLATQKmwiMDT3BNZnBKMtAVJzpl/2HjtDBiZ5lW0UiRAy+NuO+dP56jRZ1uBXeVvai342E11sdHa6UzYHFKiEyEUJUljjuM53BI6qi1wnymFjuA/ZMJ52mlejHmJGG55TW7K1UeHpP/IX5ncWlb50ZcIyZwWztoyUkrETY2FJEI1VHivYQsYk7bMzg4tS2uiCXOsMI4lS0CAgRR8hQQOXROs88chyRVtgcbOtM89RwyPp8xDNoIkmRVRqURYhRVVv9mJgPVO0xzpnjY9lumBHo0bULPO/EFJ0FbTRD5V1oVY2uqxJcloSm8uexlvOU6CD2KkRYtDiOZVUSf6cFkTilDYd0HtJ1iLXmj0zZ/DxV8i7mtUz0eV7jStcK0ib6nUPa1NVHtXXT4ZVQFUsUFyhTwSahxIJBe75bzWLQODXM1hm1rEgivatEBUvi2qogoJVFiFydSqNUjMIQ2SKjKkLHEQskxdFtGc7KKH4aCY/lY7ZWiox4ipxJJf73GFERscJF2shYI6LAwyPlQa8aOjKm465F2QVnQ0x//gk85QIvBX1GISj/vQSlJV6siLQzIhnreJWSqkYhzm+QePBEQRAHOwypj0pgvqPj1tvOS4FpJfoMk214ljhgdnb42x1+RLmSYqhsCbCUVInhYh4da7raujCeplipUKoU8XzIBmnSOiAWiKr6enUFqaoRxq0WIxorZUqVPGULxnP7NkAcx4TRKJ5vCNJZFGmsQFFKpAycq7Ockgp4sBLxs8ECfRWN9toJVAkxJWItiM0k4uPYBBMgJTGQYXu5dNYsdnz+oGz7R33tocUSmcrHQxNfJyZC2RiUxrMGW2dGrlcljFgibYnI4peCO/xK9Gfiy15rnENpumFaiW7YCzgd12LwTPwxo4d7RqxFmTJFWyYfKzJdBzH36KXkcqcwo20eJhVTLJcY3tPHwJ4nGel7nJHiNtqzHRjTRixxbYW7AbNOCjcwkh9ExTlyC05nxkEnkmk/nrRpQ0lMJRpkeO8zjOx+lOHd6wh0BS/oRMUpKrEmlhLdWnNeOscbZ3Vxx95hHox3MpxRZJQmW3G+O5sYeMaG3+WkxEd7sKGy9yNBKroFJY8UsP+pvNI7DRYVe1hraiu6UTJTieqQ2CLEw4uDz5nI/xskmpJX70BhWometpVkcDRQnmG9vZ+2BGgxFIcL0HYER57y+8yZfzqZ4DDqVSQf6JgDC3gHI3ufZstT32F371q6cxaTaiPEqVkKi7Y+ELKrPEh29vH09FxC16G/Mw6fHDBj/htAlrNny8/Yse52igPP0N6psRgiPGIBP64w24/443lpDh0tcvvQXgb9brLSDhKBCYmVRltNfUSGAJ72KJNmb8X/bqFS3DbqRYu7vJQzEVXNwlUhREnDt267sGjxSFUyf2/RH491vC9j4UuGaSV6yXQCIBhSceVjJrIefpHRQoVM+lSOf9MHCGYc4cpM4mZun3kci866jm3dq9n2i2/QodIQOJ+2AqJ4lHJUYP5R72DhyR9E68zkiKk2ug9/CzO7T2PjQ19nZNdt5GakUHYmygaEukxejZJVlt/LddBFB98bGWFvFJMxHkpKRKaEJxl3Kqa2CgURRUDM3tAe2dk9+0hv6HliURjRTR2s6h0JuUURaiEVxwRR6v/5UfDxoh/ySkRMTivRR70OBI3SlU6vEr7fi9spV/pIdx7NCWd+BL9rXq1sdTyefuppnnzyCQqFAm1t7Zx77rmkM2kAFhx3MZ5oNj/5DXJ+G4iHaCFfGWX2YUtZeOqHgbEzYI/+4lE2bXqe/GiBObNn8wfnvqP2TgDV3sFR57yfDT/ZysjAY6RTGmeuVwSxj40qWFvh7MxsulQbX9+9g+0autC0lS0VbbFoVEPYlBMwi0rRueBgugcH2btzD23pdiesSU0oqbP3O64VYohJPaGs/+ehsVilJl4J0wjTSnRPld1eLqVLAylmIysU6OT1Z1zRQHCA9evW8bd/+7fc8Z//WcsLghQHHzSXq666ig//5V8CcNDxf0L/8NMUNj9MZ24GI8UibXNex8IzPkSV4GvX/phPXvtp7vvJvbW6ZnTOZNasbj75yWu56JI/QQGxWIwX0HPWlTz6o88yPNpPW0rjSRI6TUAsimJ5mBODNt7d1c6392xlINNJLu4gxmLNeKOJUokrSGDBvPmM7BkithFG+9US4wx+Vkd4NoeOc39U0Yk/QQxaKZQyKLEv4Yjk5DCt+oAyfShvB2npvyKgRDHaxcwFbyY383cbyv30vvs55ZRTagT3fZ9bbvk3Bgf38g+f+xwrV67kkj+5uFb+iKMvx6qDKUej5C0cdMJ5YLoA+O6/fpdzznlLjeAdnZ3ce+99bN2+lQ9f9WEuvvQiPvHxTzj8lCUEdHAU83qWEhVH0LaIUAERIqUZDYTQ5ClGffxOR8Cy7nmENqIvCLCYplVe13egUinT3tVB95xZlMMyoiQRyKppTIePdAzYL/o22qRUiFIxmhh0RDkwzlKYcITphmklurWdKJs5Jh2p1yEFdMpwSM+bk7cO+7179vJ7v/c2wiiqRcIcftSRXHjhBWQyWd797nezfft2Vn/nZm788pcByM1cyKz5pzOUH6JzzsF0HXQ6ABs2PMd7//i9Sf2urje+8Sze9KazyOWyfOADH2D9+nX83d//HT+85y40Y1a9eQuXMGPGwUSFEqBdpKvEGCuIMpQ1FOM8p7V38HrSFKICkam6dyfov8SIFmYfNAcMxISIsoiqGpvq93U/tEp9upgqUfYrlP3yWAoqFANLydgDPhw7GUwr0f3ybDKlznemIkNUKdLWdiSds05M3jrsr//C58kXi0nsmhvAF7duY8vWrQDEIszs7uZTn7qWD3zoQ1R53KyDjqQcCbPmHoPGCYwf/9jHGuoGePzxxyiWSoAjwvHHn8All13ExZdc4nBMWlVmDl2zTkNCXQt0TbyAWDxC7ZGnQlby/GFuFgeVS+QpINrChIxXUa6Uaetqp2NGB+VKsYGlu58WQaPD3HeI00PEPsRBU/LRUYoQj6H09EfgTCvRgzgmFXnnxEoRRyNkcwtApRvK3Hnn95NfTo1RRpMfGeVd576TLS+8kIRGQRy5gX3s0ccAyHQdRMrPkc4eCsDoSIn//sEPmjBQ7NzxIu/8g3MZGBhAq2RqiaJvRx+bX3ihoXQ23YNRAVLnbHGWP3cyNYiFcjjC4e0BZ+basKU8cUL0aoBlY+sgsQWt6O7uTg5jjL2NlXLqrBVyVn2nw0KbVRMk6IgVgZn+AOppFeQUlZzooVNLXplYhRiv8XaFfD7PiztfBGqxhU5304onnvglxx13HH962WVEUcRXv/Y1ADY+9xynnH4K6BTapFDKqWe7+vrJF/IAaMYiYAHW/GgNxxxzDO95z3sYHR1h9bdWA9C/axeHH3pobfHpdIWYEKOyiQ5ZJb5TxSw+oVX4EvL6WV08tnMve+MSRqdB7NghSMYaF60I45COrnYyqSy24oImQYi0IhUrRNSwTnv3+cpgp3fdTQmm17Xq7z7B2vggUZpYUohqrN7zPNJBuukjkphHRbFQ4MYbb2x4nWvL1cpJPLaf+im/9rt+wSnlDgj29/dzww03NNRVveKjWt7qkPG+QWo2/ggFyqMURsxp66QnN4P7R/sxXgpfxq/0anfCOCKXyZLLZhkoDhNoZ9RJRyG+aES1PVYKdbEkcRP2rwxM6zQTM3ikWyUeyigqlSavWyrF8ccf78rW5StJUgsd9fQ3nAFAXC4QFvNE5SEA5s+by7E9R7u6Ev1WKeer1iiqtrNqnbNmzeKoo49uqHukWMROEtTmjlIJsY3JVGLmisZaN01MpGpOkvED4dypbe1tQCLEKYv1ilRMRKqkezsLivbi1NJ0w7QSPRV6h5okzijwMwzs2UihvCt56wZoxYo/Tx4nUH3qDBTLz/9DZs+ZBUB+eAMeFUZ3bwHAaMUVK/4XkOzDSQs22WsdwVTt/Nlll11GJjNmuQspMDD4c7TnJ2bjZqjWGIMukrK76TAR2ks4mDI1/bwBfwElgjGaIJvGYpO+CoJPpDShV9kT6jKRqRCZ8j7TdMO0Et0QHeR+KZTXQaWwheHtP0nexoDwR8uXs+xdywBaHAhUyfgIM7o6ufGf/inJ38ue7Q8zoy3FaP9GKqVtAHz4L/+SU089tVaXqEaN2Cb1H9VzFNddd11DS/mhpyjv3oCXChLzbs1J34SSBVVB6SK+b1AqjcIkrt0WxZXTrwWwYp2bVzt93cQeSgwVz1bKnjDVNN0wvewd1ZH8INaatIoZfeY+HME9wN2vcvsdt3PhhRe6olU/eSI1g3DEEUewdu29zJ57MACD2x9mtH8D2Uw7caGfnc/9CHAywl13/5DFb36zQ8CO1VW9uueMN5zB2nvXkk7XyxIxO9b9D5mixihDrGNnAhXdcqN2njbjBDer0FbVVq8jsNSkeVv3lbLVYApq5+kUCmNN1rOaqabphukOjPQUCtEGUYp0MIPC3o30r7+Z2SdcCgQIZRQpbrnlFt773vfy7e98l589/DO01ixcuJA/OPdcPvDB95PynaAWVfro/fn3CVRIpLJkfOjb8ENmznk9bXNPYNbMbtb++Mf8y7/czG3//h/88onHAWHRouNZtuxdXHFFdTuhtpD7t/yUoc0P0J3yiWTMylYfMFNTLpTbn1Oxhx+70zZGubh8F3DtVnZVOxPlVEREUFLnEK7Z4AWrZG6sDKLsqyDGTTfRE06k0GjxnJqVDel96jZiX3HQ0ZegSNUIsGzZMpYtW4aV1pc8xOVRnnjoBsqF9czIZrEi+NpDhYM8/uA/cPLZV9HWfQoAl1xyEZdcclGCRwyq7uhi3XGY/J5HeO7hf6XNVyjP4KJYdEJwaQzDSnqj0GjtE6kQjcJTGlSMUgYX1OXi6mqnYpWL7FEANgn7qhEfYmWPtqbuWO0rDNMcDZsc6UuC2WIFyqQwDLPxsZuJK5r5i/4IVGOETSuCl/s2senRb1MeXUtXm0GiAFEekbKk0wHFeDuPPHAti079C2bPX9r4sTKNzwnBd275D7at/y45I6R0GquoxbTZquZQtyIh0SaBkcCybTSPxBrjQWwccbVy2gLJxLXJqVqlFPl8vsbeq+ZXJR7Y9InpMD1HW/peDjPrvmBaie5bPVBp2IKcdJv2snimwHNP/T9e7HuQBUcsZe7Bp6FThzTVUGB48Hn2bnmIkQ0/Qds+ujM5bJzGkgFCxDhvVGfQzmg8xDMPf57Bg+5n/sIlZOecDqbJDmB3sGfnOrb3/oTBHT8nS0Q21ekiWpJ9ubYQE82jFpQpmsDGKBMyYBXbi2VEsiikdruEboqpMQKe8SnkR9mzdw+elwIx1eFwDhhlvdiMvtX65W9PfGjC1SvqNW6RE8Xzbqmr2gD6vkcYgiZNVzqisPsxtgw/R/9zh5DOHIbvdeAFgkSjFIZ2Mzg6hC3upSMdEqQCrGhE+WAihMSYoSxGFN26i1jKDG+5n9GtG0m3302mcyZKg40tMSGVcj8Doy8QR3vpNGkCnSYSJ4KhLH4QENsIicNEp3fJuUo1nq3Q5sNzRcW20MdPBW7Prm36Y/3X1nG5XCrF9oGd5PN5csEsZ1hS1dsoQ0SHlP3Kn3oSf1sYT3ZB3PYoBm2n/87YaSV6Xs/4mS8RSIQxhlKxyODgMIcsOITh/DDaZuhMtyESEQ5uJT+4GeIYqWiwoD1Dzg/w0j6YDJGoRGWP0OKOM1WPKbt9WKPxyWaEOBqiPPQAlSHrTjSj3EpWhrZUBi89ExVX/daKWGI6Ozvo6+snist0duaIYxfE6AIhFUosRkFZZfnFaIld4tGhDJFIUgaS6ZOIAwpjPMr5In0v7sIzXiKsVfmBO4tnUXhWLQnKM4/FZp+h6UZpbQPK6d1YXaRzZMF0ksjVP6212czDkbEblS6hKNLekWbL5j2s+dHTzOjuxGtTRFGRVJgmZ2aS8WeSzcwk29ZF0NGFybahfI9YucOMqn57lTFf9JiFPOmCUmhfCHKCn8vgZ+bgZ2YQ5NKksgpPqeRwJNi4gi8FDl8wjyd/8SIPP/gU2Wwaa11cvR+Did0BCyMROe3zYFjhp/kiKZNGxfF4+0IVV1EEfsCOF3ewZ89efD/l4uibAiK1aOe+9dT1ymbAphAJ3L05NoWKMxSCUcpeyXGIaYbp1dN12uq47f9mI0skBSIJ+Z3TTmTrC2U+94WfouJO5s9roxIMEJphSPTjyCisUYhWWK0Tk2riAxGSQXIrG9EoO7Z9oGOnBmlDTA6rfESFTua2ASIBSvnoOEAiaO8OmDX/CL6z+knuve9R3vDGY0mnU4SRoK3BRAYRwbcx7Xhs9TR3D+5lVPvuUgIRSGwKIoKySSSN8sim0+zu62PL5q1kgrbk1AyItrXoVi1u1cfKUPbLb6+kd73TeoNYbwR0gTAYppjdifVG0dbj5ZDwp5Xo6UiRqaT/SVk/H5k0xdASUeHPLj+L+d0z+NTH1rJmbZF5Cxcwc04KKyWsdeHESlRiMTc03RRT63ZLkUdVCa9RykOLwtgIIzFafIzNEBUjcsZw1BHzeGG34n3X3M0Tz+zl0ssWM2OWolgoYZJ9vOQ5jpAiReS1819hnqdtzAzlo0VakEAhid6eHx1lw4ZN2MgSeCnG3XhUQ9mdnfMsVEy4OlbMVNagxBBpS8VETsp/mWBaiR6bYUpBqTDgz/hzFXWQilJEdpSw1Mv7rziGdy4/nq9/95d8+Mqf8rMHupjdfQKz5/qk/FEUJayKEsnZNpxuEeUQrV0Jp+o13zGWXzWyKNxq9XSR7k7Nwp5D2W1TfOKLD/CxlT/m6CNzXPOpN5DJZRnZG2BUilh7VIygbcicUBGbDm4pjfDjgWG0156olXZsz0kwiBBSxhDk7Z71v3yKUqVAJpupWemSHtRUwCoEseDHQmRsp6jgh22ljtohSt3yNurpAzWdf87j8f94PwqhQjtpO/LNlH7h0tADpQxhJWT27CxDhTa+/i8bePTJQWbO8Hnz4g7OfsOhLJjXTVQcJMoPUyzHlGMPQ5CYMN1qGYs8GTOCULV5qRClIrSXJpOeSXsuRz4q87Mnd/Dfa3bw5DM7WTCzjRUXncnJpwgv7uglrLQRSAYRn6IvaDVCdzkm5c/gB4WQ744OYk1ATgXJOToXSqVRWO1T0pZMeS8Ldeed/X328p+t3/QBM6N8rRXBxCnA0qj3j11XaZKfFc9i8Wgrtt2dqaTeNpQdweqYSnoXXphi9sBR/PTbd08bjRwq00j0X/77R5NKfZTei/i9d6GDt2kxzjAVR6iUYe68uezeM8S/3raJB3+WZ6hU5uC5nZy6KMeJPVlOPOJgZmYzqJSFINkDKxaiClUuYJXC9z0CXyORB7FHsVJkc/8QTzw7xBNPDvL4phEGRkY4YX4n7/n9w1j8xoUMF/MMDO3G0wrBqUVK3Mn3dmWwWcW/je7mh4PDeMwijQ/EY0EfaGI8QlWiQyuO8PzP+GW59pmdFTZs2Es6zV+XzOg/xOIlHrYk3KkWI9comCkgUs4Dl67kHqx40R9q4l3l9M5fFaJf7X6IjzK7Cb1hUKlbjBm+UKygI41JTJaprDCnex4jw1nWPPIsd9+/mRe25RkcLJL125iVydM+E2bNnsusrnY6ugK07+Npd59cKY4oh5ahwQrDu4bo7xtlxzCUyxWMB7NmtPG7p83nLWfP4/gj2ikOFRgeymPFIxYPpWKsCRHKBKLImrlsi3P8V/EFHs4PYnVAWmfxouo9NopYLFYqpPVs2iRaN8uTD87Ktd07MjLIcztKPLOhnw4/RaQKbyngfcVqexSqgMXdKe9s8eOlcREfUQarCyhV2WXCmZcWstvv8sM0c/YePe1EfxlvohCUaCLa3x0jT+CN/l2KCiYMQHwqhZDthV0oE7DkzFm865w5hEXD871lnnh2iA1bdrKl3/LE83nyoxsp2wIl6yFiMAI5HaFVGcgU9vuTAAAZ90lEQVQxe+Y8umZ08aaTOzmpZxavOzrN3NlplA7ZOzBK79ZR0srdZqXEJNpAhVBXMJ6HJccj+SJ37d3F01FMJjOLdiuoKCLWQqghKhfIeB4dOj3UobquS/vRFyI7SMU2/mUGqywWfqStPjYV25UVoz6qFTNAiIwixKNZJBWtUMQYLFpkbmQq/6NtcLNngy8J8guY3ptGX+brRwSlQmLSfx+E5q50VPlCqHhTbApgk8sAbYXhPSGjyRVgB8/NcMhhczgvvRCjA8qVkEK5yEih4C7wkxgVW1J4ZH1IZ1N4uS48XxMWNWE4RLG4h76dw4gVYgxKB0QIojQelkCV8dKC8WbwbMnnkcFR1hUGGPU0M1PdKIkRbQmsj+cpPE+TDU1/t5lxk68zXy5VZFdoIlrJ8jVQ1prI/m9fzP+12rtEkOWR4kyNSnTvMcIrsaBCrHIqpm8j/HLuokibY2ITXQo8PZ1UeYXunInR1vyceMbism/fo7Af8ii80d3mYmoXAQiafLmClEMYGkLCGETjGY+sFjxfg42wvhBrSwWIyhG2OITEgopzzuZlDCgPpQXPWrS1ThE0HnEmTYmY3eUCDw/neXBEs7Mc0Z7uIGsqWFXEM2mM9tGxZvfADryY7/bMPPb92XR6cG8pj8VrUipbQ3JucTfo6/1YXy9ijw115exA5HXA0cA8IOfcNLYIuh/xnhNln1XIT6wvz6FkZPJW9h9eudullLiLAEn9q6XtX42Ol2hRl/m29K5I0xGrDJ5ESTii5w72aw8RiBL3ZFiKsST3xWlQWrvgRfGc7qliwKJwK1Wh8IwmhY+Hz7B4PFEq81hphOdHRhkKFTbVSXdbB12RQoIKRR1RHipSGBxl79Aoewb6yYT2GzI3HFx0zAl0tucYHo2JpbIfna+GS8kzwDNB1KySCY4UBisBoRe6aJ2XyfP6KtwjZ4EYwVujsWuMqIOKNvc2LeqtkVLnGPHme3oIpTUxfhKQkFz5qZz5RpSzuqs4sZKLoLWLiTMqwNNtREooWaFfx2xSMZvyg/SP5NlTURRTGUxuFjNDg40EG8WMlMsM7NnL6Eie/NAI5UKRUBTGC/AlYOOWnezoH+awBfM5dMGRdMzIEkdlPM+wv1FstqWVqToxXn4/+6t4TahTXyzeTiWpf0lHo/9SNJ0mlNwp4g+dEmt1qkQzTgB7iLL2ECOR0RIlN4KKu0xQuWNEKT+NUR7YgKGKYmto2aphQISd+QovhGV2Bx5k2ulSBn8kJN6bZ8fIKKVyhUJYIV8sUMqXCLwA3yhSfgpfK2I0Ok5JWyZNqVzmiac2sO3FPcyZ3UF3d4ae+V1k0z6pIH6VQiL2H171C4GrxE/CL2JQP4+U/3OLIWQOFlJKlRekKMzKycDBIjJfi+qKjOraZnTn82VJ7ekv9ewa3v3Gsokoh/DiUIkBP42fzaJLEakymDhmtFKkhFAYGiWqRFgtRAqUMWijyWXaXRSMuxAGxLqjzIoOUKSCFOlUilKpwHMbh3l+s8+mTRk629IIBk+ZOr/8axdeA0Svh7FgQ5ciFKqssJuATTW/WmIdK+MxYDM8snkLD2188c/CGaUvxl6pIwgDgnIOLxa0DvG0u3ZURLmYdd/Dy6TdJYJQ9xcXx9ykVe+WEqHkVQ53DwmaHnhZAxKzszDE9tEBlInpCmZj8F/D9z87eI0RfTKQcb8MQlpbcr6m3ct8XceZH2DVp2Lj/7nKeRhbRks58dhpQCe3OyXG3KqMMK4tJ3Yr94dCECW/48emRUmnzoG7KUrEnc9Xr+G73mG6/emvEigFWgtK2x0d5fYVs4a7TvWG9Dfiii1LEv7k/HcqOUyRfFjnox9L1V9jQ6NFnZ2OfBVEKYIoaJkyYRoTQWjLdbW9NuHXguj1EJsYIX6MkcqfxcX4OJH0p70w96wfeWiJsF6FYqpC6Idui1BpQuXXrg8fO44quJseDQLzyr6cFXvCRCnyLNZTVHRMKNb94b/XKPzaER0SmrlbP3s1/qf8csexJmw7V1T4dcTu1NYZgkSBLxYj1aD4+lWe/CvG/VEBFV2isLVLBlollAVtsSpCVFw71fpag1+hPf1AwSYXCaj/MpH6L0jnNJlzUpH9g6IXniV+uMjYaniiqrsuBBBnGtYWRMt7K378YVEUptImFJ21MVavOU7/G0D0KtROoeS19b7vR9H3Yy+FCCcQ82ZR6lSl4jdq4XCNTSvrTCWRl8S+6Eo2EPM36Si41k5FSlPiInhFvypn0CeD3yCij4Eod/MyCoyw3lqz3noKzyqCSB8quvK6SHGk1fYkL1YLgHnW6oPTkf+htlLunzVq56TOliooN2EKXvSyBDgeKEyrP/238KsBry2+81t4ReC3RP8NhN8S/TcQDliQa3U/zG/hVwN+u9J/A2G/V7pSaiFwePL4ODAwnQhNAPVtAmwGel+BdifCYaJ+V8sMJGVeLugBzkraezxJUx+PxjtfJk/Af1P1f46lO4HpP1rpYBFwX4s2JcHlnKY04yW0dX5dW5uB1bjBhX33+/IWeD7wEnCZDHqAQgt8/rsF/ue3qmDKerpSailw9+LFizn22GMBWLNmDRs3bgTYAZwI7D7groyHRcDPgEx9mwDPPPMM995770Tf3Q+8D1i3H22dD9zaIr8IvIuJ+/0D4N+BrwJUy+zZs4dbb70V4O9w9pn7gHv2gYMHnL2PMvcB1wIfX7VqFQsWLGD9+vU8+OCDk43H8gTHMdiPVf5pQFavXi1VyOfzsnLlyupMW70PhPcHlpLM5lWrVkkzrFq1SlasWDEu9fT0VHEpMLZKpwL/B5Dbb79dRET6+vpk1apVDSupud+LFy+uX9Fyzz331N6vW7duIs40ESwCnmrxTXN6ClgLyLp168bhU4//7bffXv/daQ2t7YPQJzPGOscRvdoAYyylWvbk/RjweujBTR5hAoLvC+qItT+T8HxAli9f3lDX4sWLaxOqnqgiIrfffrssX75cAFm8eHHDu97eXlm9enUt1U2Qj0zQ/n1Ay4lcn6ibAPVEFxFZvXr1OPxvvPHGavnG+1InIPb5JDO4OTUTXUQmmpUPMMGeMgHUVvdE7UwFmibh/sAgIPl8vmHQ6p9bwY033rjPyfnQQw9Vcbp9grYF2Gffent7a9ysFdGb8e/t7a22+1h9Y+Okd6VUbX9bvnw53d3dQMM+1hJ6enpYsmQJQHVPOzOpZ/yeMh6WAncDrFq1issvv5zZs2c3FFizZg3f+973xn143XXXNZR9/vnnqz+fxLG1n++j7SrcB5z75JNPcsYZ7j7aN73pTTz44IO1frWCN73pTcyZM2fSitva2qo/uyYo8jhw8ubNmzn88MMnrOfwww/n8ssv55prrpmwzJe+9KXa+NXVdTJuC1kHrVW2vwS4/fbbWbZsWS3zyiuvnJToS5Ys4Stf+Urt+Y477uC8886r1rcvoi8GWL16NRdddFHDi/7+fu666y7uv//+cR9dcMEF4yZH3ffnJul0pkb4tcC5n//857nxxhuZPXs2CxcuZNGiRfT29tYGsHnyvf3tb+eEE04AoFAocOmll1aFuFZw3wT59wMnv/Wtb+Xqq6+mvb299uLggw9umHSnn346q1evHjfRTjnlFFavdjvaXXfdBcDIyAjLly+v4vNDqsK2jGftLVlNdU+ZiL2vWLGiZT5TCxFcSx3L6uvr2ydbnQzy+Xz9fvYiMGsKOLTczmhipVU2SottqK+vT9atW1dL99xzT23fx6l4E8HS6hg2ywHN4/rQQw/t93jUCdt/CNBM8BmA9PT0jPuwisRERG8WZkSkXprel/58HYkgtXjx4pZ1HQjUdXYiAaoKJ1fbr8K6deta7p/NRF+5cqX09vZOiEM+n6+WHZyk/ZaaUavxPhDhtg7nT7ci+jmtZpeItJzZze+aoU7iPGcfgw51K625jXw+X1s9fX19U343BQGqHjYDDXVUuUWz0FSFqlq0fPnycW3XQ91qn0iruYwW2kp15TfnLV68eJw20dfX16Ax1Kc6OiyF8bb3w4BxwsTmzZunMGbjy9XVc9gUPn8j8JlWL6677joWLVrEokWLavtVFXp7e2vvLrjggoZ3UxCg6uE+gCeeeKKW8fa3v33SD5YtW8bKlSu59dZbmTNnDir5QwP141AoFKp76hATm2a3QOvxO+qooxrybrrpJu6991527NjRkN/X18fFF19cS9u2bau927On9pe4d8N4Qe71AMcdd1xD5qZNmybAtRE2bdrUMGHq6nk98M0pVdICDj30UFasWAE4waYecrlc7d1LhF8AF23YsKEmOLWSpNevX8/ChQvJZt39tlUhDke4w1asWNHw3W233Vb9OZEQV3t30003NQjDxx13HHPnzq099/f3T6kj69atq8eLr371q9Wf7s9iSCN7fwwYt0fVW6cmY+/N7GkiPXESaGkAOlCos4ytnULbp5HIM/fcc09ty1i+fPm4PX2yPb6ezefz+Xq5Zulkjbca+2Y63HPPPbV2mrfgal9Xrlw50RjUJl2NvSe29ZMXL148boZ/LfnLSfuC5nKHH344ixcvBreX7avTrzb8HPj+xo0bufLKK7nhhhu44YYbePzxxxtWzWSwfPnyBhXytttuq1dz/5PJTcP3A/zyl7+sZTTT4ZFHHpnw4yqOzSrvnXfWlIa1tUwZW+V30mKV1c2u+1q9F2m0yDWrFHUrYTKVpQotV/qNN944oTm0t7e3wVQ5wSxfO3mzgNvqxlnlmutcuXJlw0qfSMirhzpOOdkYnM8EQnQV6rhGSw2r+ds662SjL0IcwWusrVk/rpP8JmS99URvbriJxTUa/qdI9Hq7c/O7ZufGBO+mQvSWmkur53pCV50ck8EU1TaPFhpEFZoXX3NfRWTcdxM5w6rsfRnA1VdfXRNQAB5++GFuuukmmPpFN0/fdNNNPPzww7WMbDbL1VdfXX1c1vKrfcAFF1zA6tWrWb16NaecckrDuzlz5tTeVS1SBwgtr5Gpk3wBZ5Grh5GREa688kpuvvnmce/Wr1/PzTffPFVhLqq+b2XRq/vDQ98k2QrWr1/fUKZ+a1mzZg2f/exnwbm9r2ooKG6lr4Xx7rq6FfoRprbSP0ILjrEfK+7VFOQm5DL1K6l5nOoFuWau0CzksW+55jut6mly5d5Akyu4GeodM7gAjwaorvSTARYuXAiM2ZATIeT7IvKFKQwawBdIhKFLL72UQsEd+6rWy+Qu11f7tM1JQINevHnzZs4666zac70Ov5/wGeCtTB5I8RHgj3t6esb9ObFsNss3v/nN6uMHgQ8DPP30eAa8efNm3vrWt1Zp9zguwKO6LSyCsYHurFbe5DR4EHifUuo64M1T7OD7gO7Ey8a3vvWt+i2jc4JvFuAcAseB0ytbOVj2F+pYc4ATlCZz/JwMcMQRR9Qy8vl8wySYTHqeAkxG8B6cKZqbb755nBMJnCR/zz33sHSpYxY33ngjl1566bhyf/VXf1WvMdQvsrOAfwbOrq70+8HtAyeddFI9wS8EPgd8PPlo3J7aArYl3z146623ctJJJ9XvdRNR8p+B41asWMGKFSsaQqNeCnR3d7N8+XKAqpt3Iv9+D3DY4sWLGwb8scceq02CQqEwqUvzJcIyILNq1aqaWxfgs5/9bIOcsGTJElatWsWqVat43/ve1yB/VeGjH/1o7Xdvb2+9dgYJDasZl9O491SD/paS7NETqSaTSKYLknrq6x23vyQwTlWaTqgLHZpIZfoIE9i+q1D1fE2kki5fvnycOlnn6btqgnarcDtN6m69Qay+3qrhqAqtfA69vb0Nhp1xNJKxmXA5TjK8vC5vn4LVFPTwWr2TdPrO5k5PJ0xBZbqvuf3qN9VBnGgcqs6UVmpWnaNlX6rqWhIBMZ/P16uotUiiVatWNTiX1q1bVyu3fPnySRdMnbp3J9QJTyLyNWBqpjccu7v77ru5+OKLq1n/OEHRqdS7Fjj3oosu4tprr50qCgcCrVSmGcBZPT09Ndba39/P9ddfD7h+/tVf/VXDB4VCgd7eXm6++eaaetW8D99xxx312+S+gjjuAxb/5Cc/4bzzzqvuyU/jtskzgBuuueaazKOPPsqyZcv49Kc/Xb9vP33rrbce19/fzyc+8YlxUT7r16/nyiuvrD46b6NMHhi5lEb2PFHan1i4ieA7U2zrpaSJVKaJYusbrGATpBdhLKixbnXvz9ic1vRN81mCHsYHeazFCX8LaIrLr+JSp+ZJMr7AFOLeE5v8tVSFgDEYwg3WN9l3ONRUYSn7jv0+UJgs9nwRTpis9nFLUr4LF3L1fRwnq45D1U16H3AL8G8kmkcd3I/Tp6c6Nqfh+n4fE3OGpXVlmvtyOc4v30yn+3ET5BPVjAO+lOA36ADjDPZ9dKv+oMLLfaRpX1CPy2ZaHHf6LdF/C7+F38Jv4dcSmnl0D3Apbk84PMmrCiz/CC/rXbf1bd8HfKvFc3Pg/UeS961i4O7D4X5eXR3vA0b3A4dPTFJ2sm9Pxpmcq0JUK9xfE9BwrKhFeorEYP8yQKvjt62e6yNPJoxTnyRNdny4FQ5TPW58XYtvm3GfzDj1qkBNH191FbLuTqTvAZceugVZceGEAz9dcFl926uuasSl+kzilKAaJ/82h9+6O8enlVe4b27/suvH8rftU1dvwKGu/L5i5q+jaezyjyHyzDjchdcI4asWuQ8DrP4cXPQul7F5u/v3jJNcOnw+XPNFMsAXcZad+i1gIrgPuJcxnfIjOG/d2Tj2V9WHnwdYcDCckDi1rvni+GfGVJGzAT71Ife+UITesYhfADqTk0HLlo79e+sPAXeEqt7uUGXBth6Hj15eK//OJLXaYpbinFGsu3MM183bIV9wzyccBaefCEv/FHC+8C04B8tZjHnBqjj8Iy5MeWmC575sFpsTvKoWz8uTb05K6n48qfsOWtgonMMjmaGrPzc2O1dd5fLyj9XyBpmYjU1mCdsnO179ubEV0uqZsWCIteDym/FtTiuvQO75BtJzyD5xfHGCNpvZdD2nWF3/Tf6xBg4hy982NqZNK34yHA7EMvmdKXxX41iN/vSMe9hWF0d/zRfh0fXQ3QU9h8DGrXQuPg0+8QE4aB8nxB57Gi7+ayA5kbr8bW4Fve5o11b/XnjiWbjyk7Bx6+R1HQA8CJx50TIYrbvCd+UVcNGysVW5/jm4+Q747FdpCKhfuMCt3irc+aMap7ubsYCIswF+L+EZt91d4w6A+/3407DkTHjm+bH81Z+Ds17vuGcLHP645xC49kNwSrONrwl27q6N3R+Do89XPgNHHurq3rwd7n+0RoPPJ599oUr0+4Gz1j/nBmPlCseSNvTCjx5q7AjA974Es2eOsdVctrED1efqwF7817D4NPjWPzhiV9nfwgVuQG7+PLzh3ZN3cDI4eDasuHDsec8g3PpDzoQxHJacCfPnwqrE3fzwL91kWHKmyxsYhpv+bXzd9X1ZcHBtABcDjwKH9RzixgLg/sR4uuJCOKvOr7Z+A9ybvLv9y26rKRTHxuqEoxwOG19wY/2Vzzi8quNZ34/mreP2G2HROx3B7/6mw7V/r/tuTrfbro86rDa+5+Oim4BEGOk5xLHCKkuqpr4HxoS55W8by6/mrbhwLA/GBKh6NrnqKid0VQUsEtZb/92BsvdWqYpb/XM9nlU2vPg0l7/4tAnblHu+0RKPc5r7Xm3zxk+Ox6e6Ba27041N/XbTu6axTKtttrmN5rGrttn3wFjdPYeM1VW37ZxcXelLwLHYROBgxYVw0rGw/PfdTL7+Gseiuus04lYrowojTbeif+1WOO5IuPrPxlbbdMGaB+F7Pxif16rc5u1uNXzvS+73rt3w44cm78uO1qeJHp+onfd/xiWAe77hVm2VVd+wGj50MTw3yd/MrW6z90/ikB0Ybnw+NTmPkcu41d8MdXSb4eGkvDOXv829qHa++u/133AIZjNwxYWTIzIZfP5vHFvr3ws3/+dYflVbeCmwo39yolVh41ZYuARWXeW2ryMPHdNOjjsSzvvgfjU7AGzZuJXD+ve6hXHB28fjUT9hqnsuuMlSfXfKcWPse7qhdxts3NIwOR9vOLX6lc+4mbnyirG86t4CMDKZLWsf0HOY+/eBX7h9sZqmGT4DvCVJ42DVVS597VbH0RYugTvuacRvP8HFqf+Pe1hyJtz4ybGXi08bE/I2bmkcyys/OTYGj03Dn8/9RV0I/KducPv8onfCBz4NbbmaoPxdYMDDsakHb/0hZ6550CFWFW7qoVCEW/4bjj2CA4KfPOJm87KljVLxywA/nujF5u1uYq9c0SgQQaOEvx/wj8BF7/8MHL3Qjdv73uu2xL49Y3UXivDFbzph7vprHNd84BZXBpzA9VLh+m/A2xePbV39e13+7JljwiDuD/rWVLavAWcu/VO3l1/w9kaxf9ML8JXvOqSbKgGctNyct22Hy9u4xT2//zMwNALnvAHa6oI4679r/qb5mTE/9ePA4vpyCfTWoVDTSKo4VrWQav9OOGqsf1d+csI2J8Pj58AVwFerY/en58PcWU4zqX7z0X8YU0nf8b/gqssaOUvfHpeq/ajHuXmcqnnNY75xK7z1sjFV74SjHOHXPDjWN1qEi13Ovi+wa2VgaZXXyg49mW16qqkaenT+BPXXm4iva1FmX/2bKt7NIVBTGbs7aX3d6L7SVMd8X8aZWrhU/fmtx4CbgBcYixQ5CDer7wK+jDtd4SWVbAFuBi5qkXclMJzk3YEzDHwqqbsI7ErK1qebgZ80fbOh6bkaevQ07nqsHUC5rs16E+mPW+D1nn30b+UEeDfnNYdAVcduOOlfCcgAD9d98wng2014TzYGk41vq7wPAj9N+qeBQ5N33we+RGIuBvj/bAfQXzuffgkAAAAASUVORK5CYII=" preserveAspectRatio="none" width="93.75" height="90.75"/>\n' +
+                        '</g>\n' +
+                        '</svg>',
                     width: 364,
                     height: 364,
                     mimetype: "svg+xml"
@@ -12053,7 +12067,7 @@ var basedir="games/wujin/";
                             var n = function (e, t, n) {
                                 var r = XS.is.mobile ? "video_text_image" : "video_text_image_flash";
                                 return e = e.split("{$ADTYPE}").join(r), t && (e = e.split("{$CHANNEL}").join(t)), e.split("{$GAMENAME}").join(Config.id)
-                            }(XS.is.spilGamesWrapper && Config.googleAdSpilgamesId ? "https://googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.XYYX.com%2F&channel={$CHANNEL}&hl=en&&max_ad_duration=60000&adsafe=high&videoad_start_delay=0&vpa=1" : "https://googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.XYYX.com%2F&channel={$CHANNEL}&hl=en&max_ad_duration=60000&videoad_start_delay=0&vpa=1", e);
+                            }(XS.is.spilGamesWrapper && Config.googleAdSpilgamesId ? "--https--googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.XYYX.com%2F&channel={$CHANNEL}&hl=en&&max_ad_duration=60000&adsafe=high&videoad_start_delay=0&vpa=1" : "--https--googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.XYYX.com%2F&channel={$CHANNEL}&hl=en&max_ad_duration=60000&videoad_start_delay=0&vpa=1", e);
                             return console.log("Showing Google Ad URL: " + n), n + a
                         }
 
