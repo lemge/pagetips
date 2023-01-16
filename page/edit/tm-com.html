@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>后台面板</title>
+</head>
+<body>
+<div >
+
+
+  <div>
+    <div class="pt-navi ptNavi ptNavi-fix ptNavi-full">
+      <ul>
+        <li class="navi-title"><a href="/">PageTips</a></li>
+        <li><a href="/">首页</a></li>
+      </ul>
+    </div>
+    <div class="pt-b4"></div>
+  </div>
+
+  <!--    分组面板-->
+  <div class="pt-container">
+    <h1>所见即所得编辑器</h1>
+    <hr>
+    <div>
+      <p>所见即所得编辑器示例</p>
+      <p>本示例展示了所见即所得编辑器的用法</p>
+      <p>请点击展开左侧的目录查看</p>
+      <a class="pt-a pt-cell" href="index.html">返回</a>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<script src="menu.js"></script>
+<script type="text/javascript">
+
+  window.onload=function (){
+    autoCatalog2.init({'struType': 'json', 'dataS': jsonData, style: 'menu',leaveClose:false,title: "☰",top:40})
+  }
+</script>
+<link rel="stylesheet" href="../../lib/ptlib.css">
+<link rel="stylesheet" href="../../lib/ptlibex.css">
+<script src="../../lib/ptlib.js"></script>
+</html>

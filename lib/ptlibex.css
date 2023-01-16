@@ -2977,6 +2977,7 @@ ul ul {
   bottom: 0;
   max-width: 80%;
   border-right: 1px solid #e4e4e7;
+  background-color: #ffffff;
 }
 .acl-box-menu ul {
   list-style: none;
