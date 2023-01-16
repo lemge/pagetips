@@ -2919,11 +2919,11 @@ ul ul {
   background-color: #e4e4e7;
 }
 .acl-box > ul::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0%);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #a1a1aa;
 }
 .acl-box > ul::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0%);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #e4e4e7;
 }
 .acl-box ul {
@@ -3016,11 +3016,11 @@ ul ul {
   background-color: #e4e4e7;
 }
 .acl-box-menu > ul::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0%);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #a1a1aa;
 }
 .acl-box-menu > ul::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0%);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #e4e4e7;
 }
 .acl-box-menu > ul .acl-li-b-menu > a {
@@ -3060,7 +3060,7 @@ ul ul {
 }
 .acl-box-show-menu {
   transition: all 0.5s;
-  width: 20rem;
+  width: 12rem;
   max-width: 70%;
 }
 .acl-swb-touch {
