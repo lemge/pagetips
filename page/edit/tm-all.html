@@ -23,7 +23,7 @@
 
   <!--    分组面板-->
   <div class="pt-container">
-    <h1>Tiny默认的功能样式展示</h1>
+    <h1>TinyMCE比较全面的功能展示</h1>
     <hr>
     <div>
       <p>
@@ -51,7 +51,17 @@
 <script src="tinymce/js/tinymce/tinymce.min.js"></script>
 <script>
   tinymce.init({
-    selector: 'textarea#tm-e',  // change this value according to your HTML
+    selector: '#tm-e',  // change this value according to your HTML
+    language: 'zh-Hans',
+    plugins: [
+      'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+      'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+      'media', 'table', 'emoticons', 'template', 'help'
+    ],
+    menu: {
+      favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+    },
+    menubar: 'favs file edit view insert format tools table help',
   });
 </script>
 </html>
