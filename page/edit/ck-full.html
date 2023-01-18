@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>编辑器</title>
+</head>
+<body>
+<div >
+
+
+  <div>
+    <div class="pt-navi ptNavi ptNavi-fix ptNavi-full">
+      <ul>
+        <li class="navi-title"><a href="/">PageTips</a></li>
+        <li><a href="/">首页</a></li>
+      </ul>
+    </div>
+    <div class="pt-b4"></div>
+  </div>
+
+  <!--    分组面板-->
+  <div class="pt-container">
+    <h1>CKeditor 所有插件构建后示例</h1>
+    <hr>
+    <div>
+
+      <div id="editor">
+        <h2>The three greatest things you learn from traveling</h2>
+
+        <p>Like all the great things on earth traveling teaches us by example. Here are some of the most precious lessons I’ve learned over the years of traveling.</p>
+
+        <h3>Appreciation of diversity</h3>
+
+        <p>Getting used to an entirely different culture can be challenging. While it’s also nice to learn about cultures online or from books, nothing comes close to experiencing <a href="https://en.wikipedia.org/wiki/Cultural_diversity">cultural diversity</a> in person. You learn to appreciate each and every single one of the differences while you become more culturally fluid.</p>
+
+        <figure class="image image-style-side"><img src="ckeditor5-build-classic/sample/img/umbrellas.jpg" alt="Three Monks walking on ancient temple.">
+          <figcaption>Leaving your comfort zone might lead you to such beautiful sceneries like this one.</figcaption>
+        </figure>
+
+        <h3>Confidence</h3>
+
+        <p>Going to a new place can be quite terrifying. While change and uncertainty makes us scared, traveling teaches us how ridiculous it is to be afraid of something before it happens. The moment you face your fear and see there was nothing to be afraid of, is the moment you discover bliss.</p>
+      </div>
+
+
+      <p>
+      <hr>
+        <a class="pt-a pt-cell" href="index.html">返回</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<script src="menu.js"></script>
+<script type="text/javascript">
+
+  window.onload=function (){
+    autoCatalog2.init({'struType': 'json', 'dataS': jsonData, style: 'menu',leaveClose:false,title: "☰",top:40})
+  }
+</script>
+<link rel="stylesheet" href="../../lib/ptlib.css">
+<link rel="stylesheet" href="../../lib/ptlibex.css">
+<script src="../../lib/ptlib.js"></script>
+
+<script src="ckeditor5-35.4.0-13bzg99g4fqx/build/ckeditor.js"></script>
+
+<script>
+  const watchdog = new CKSource.EditorWatchdog();
+
+  window.watchdog = watchdog;
+
+  watchdog.setCreator( ( element, config ) => {
+    return CKSource.Editor
+            .create( element, config )
+            .then( editor => {
+
+              return editor;
+            } )
+  } );
+
+  watchdog.setDestructor( editor => {
+
+
+
+    return editor.destroy();
+  } );
+
+  watchdog.on( 'error', handleError );
+
+  watchdog
+          .create( document.querySelector( '#editor' ), {
+
+            licenseKey: '',
+
+
+
+          } )
+          .catch( handleError );
+
+  function handleError( error ) {
+    console.error( 'Oops, something went wrong!' );
+    console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+    console.warn( 'Build id: 13bzg99g4fqx-qqt79h46n0tj' );
+    console.error( error );
+  }
+  // ClassicEditor.create( document.querySelector( '#editor' ), {
+  //           // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+  //         } )
+  //         .then( editor => {
+  //           window.editor = editor;
+  //         } )
+  //         .catch( err => {
+  //           console.error( err.stack );
+  //         } );
+</script>
+</html>
