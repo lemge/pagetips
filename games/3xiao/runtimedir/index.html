@@ -183,8 +183,8 @@
 (function(scope){var queue=[];function async(callback){queue.push(callback);if(queue.length===1)async.async()}async.run=function(){while(queue.length){queue[0]();queue.shift()}};async.async=function(){setTimeout(async.run)};function P(executor){this.state=P.State.PENDING;this.value=undefined;this.deferred=[];var promise=this;try{executor(function(x){promise.resolve(x)},function(r){promise.reject(r)})}catch(e){promise.reject(e)}}P.State={RESOLVED:0,REJECTED:1,PENDING:2};P.reject=function(r){return new P(function(resolve,reject){reject(r)})};P.resolve=function(x){return new P(function(resolve,reject){resolve(x)})};P.all=function all(iterable){return new P(function(resolve,reject){var count=0,result=[];if(iterable.length===0)resolve(result);function resolver(i){return function(x){result[i]=x;count+=1;if(count===iterable.length)resolve(result)}}for(var i=0;i<iterable.length;i+=1){P.resolve(iterable[i]).then(resolver(i),reject)}})};P.race=function race(iterable){return new P(function(resolve,reject){for(var i=0;i<iterable.length;i+=1){P.resolve(iterable[i]).then(resolve,reject)}})};P.prototype.resolve=function resolve(x){var promise=this;if(promise.state===P.State.PENDING){if(x===promise)throw new TypeError;var called=false;try{var then=x&&x["then"];if(x!=null&&typeof x==="object"&&typeof then==="function"){then.call(x,function(x){if(!called)promise.resolve(x);called=true},function(r){if(!called)promise.reject(r);called=true});return}}catch(e){if(!called)promise.reject(e);return}promise.state=P.State.RESOLVED;promise.value=x;promise.notify()}};P.prototype.reject=function reject(reason){var promise=this;if(promise.state===P.State.PENDING){if(reason===promise)throw new TypeError;promise.state=P.State.REJECTED;promise.value=reason;promise.notify()}};P.prototype.notify=function notify(){var promise=this;async(function(){if(promise.state!=P.State.PENDING){while(promise.deferred.length){var deferred=promise.deferred.shift(),onResolved=deferred[0],onRejected=deferred[1],resolve=deferred[2],reject=deferred[3];try{if(promise.state===P.State.RESOLVED){if(typeof onResolved==="function")resolve(onResolved.call(undefined,promise.value));else resolve(promise.value)}else if(promise.state===P.State.REJECTED){if(typeof onRejected==="function")resolve(onRejected.call(undefined,promise.value));else reject(promise.value)}}catch(e){reject(e)}}}})};P.prototype.catch=function(onRejected){return this.then(undefined,onRejected)};P.prototype.then=function then(onResolved,onRejected){var promise=this;return new P(function(resolve,reject){promise.deferred.push([onResolved,onRejected,resolve,reject]);promise.notify()})};if(scope.Promise===undefined)scope.Promise=P})(this);
 ;
 	</script>
-	  <script defer src="--https--frvr.com/gdpr/frvrgdprclient.js"></script>
-  <script defer src="--https--frvr.com/grac/frvrgracclient.js"></script>
+<!--	  <script defer src="&#45;&#45;https&#45;&#45;frvr.com/gdpr/frvrgdprclient.js"></script>-->
+<!--  <script defer src="&#45;&#45;https&#45;&#45;frvr.com/grac/frvrgracclient.js"></script>-->
 
 	<script>
 		window.__FRVR = window.__FRVR || {};
@@ -490,7 +490,44 @@ h3{
 
 	<body>
 
+    <div id="logob2box" style="position: fixed;top: 0;"></div>
+
+
 	<script>
+
+        var d = document.createElement("div");
+        // d.width = i(), d.height = i();
+        d.style.cssText="position: fixed;text-align:center"
+        var logoimg=document.createElement("img")
+        logoimg.src="../logo2.png"
+        logoimg.style.cssText="position:unset"
+        d.append(logoimg)
+        document.querySelector("#logob2box").append(d)
+        var tlist=[
+            "生成一个陪你玩的机器人...",
+            "为机器人加入人工智能...",
+            "检测他智商...",
+            "建立虚拟游戏房间...",
+            "设定房间温度适合游戏...",
+            "制造人工太阳...",
+            "完成，正在载入资源...",
+        ]
+        var tmpi=0;
+        var lpsi=setInterval(function (){
+            console.log("123---------------------")
+            if(tmpi<tlist.length){
+            }else{
+                clearInterval(lpsi)
+                return
+            }
+            var tmp=document.createElement("div")
+            tmp.innerHTML=tlist[tmpi]
+            tmp.style.cssText="color:#ffffff;font-size:0.8rem;background-color:#333333;"
+
+            d.append(tmp)
+            tmpi++;
+        },1000)
+        sleep(3000)
 
 	if (window.location.href.indexOf('clearAllData') != -1) {
 
@@ -556,6 +593,9 @@ if(!(window.console && console.log)) {
 
   },dataUrlsSupported:(function(){
     var c = document.createElement("canvas");
+
+
+
     return c.toDataURL&&(c.toDataURL("image/png").indexOf("data:image/png") == 0);
   })()
 };
@@ -851,7 +891,7 @@ if(!window.FBInstant && !window.GSInstant) {
   progressbar = document.createElement('div');
   preloader.appendChild(loadbar);
   loadbar.appendChild(progressbar);
-  preloader.appendChild(canvas);
+  // preloader.appendChild(canvas);
 }
 
 var ow = 0
@@ -973,11 +1013,11 @@ window.__FRVR.platformSpecificCleanup = function () {
 
   <h2>More information</h2>
   <ul>
-    <li><a href="//frvr.com/">FRVR Website</a></li>
-    <li><a href="http://news.frvr.com">FRVR News</a></li>
-    <li><a href="//twitter.com/frvrgames">FRVR on Twitter</a></li>
-    <li><a href="//www.facebook.com/frvrgames">FRVR on Facebook</a></li>
-    <li><a href="//plus.google.com/+Frvrgames">FRVR on Google+</a></li>
+<!--    <li><a href="//frvr.com/">FRVR Website</a></li>-->
+<!--    <li><a href="http://news.frvr.com">FRVR News</a></li>-->
+<!--    <li><a href="//twitter.com/frvrgames">FRVR on Twitter</a></li>-->
+<!--    <li><a href="//www.facebook.com/frvrgames">FRVR on Facebook</a></li>-->
+<!--    <li><a href="//plus.google.com/+Frvrgames">FRVR on Google+</a></li>-->
   </ul>
   <h2>More great games</h2>
   <ul>
@@ -988,7 +1028,7 @@ window.__FRVR.platformSpecificCleanup = function () {
 
   </ul>
 
-  <p><a href="//frvr.com/">Always get the greatest new games on frvr.com</a></p>
+<!--  <p><a href="//frvr.com/">Always get the greatest new games on frvr.com</a></p>-->
 </content>
 
 		<script>
