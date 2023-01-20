@@ -50,7 +50,7 @@
   })();
 
   // Object.create()
-  // Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create
+  // Source: --https--developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create
   if(typeof Object.create !== 'function') (function() {
     Object.create = function(proto, propertiesObject) {
       if(typeof proto !== 'object' && typeof proto !== 'function') {
@@ -68,7 +68,7 @@
   })();
 
   // Object.assign()
-  // Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+  // Source: --https--developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
   if(typeof Object.assign !== 'function') (function() {
     // Must be writable: true, enumerable: false, configurable: true
     Object.defineProperty(Object, 'assign', {
@@ -94,7 +94,7 @@
   })();
 
   // Object.keys()
-  // Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+  // Source: --https--developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
   if(typeof Object.keys !== 'function') (function() {
     var hasOwnProperty = Object.prototype.hasOwnProperty;
     var hasDontEnumBug = !({toString: null}).propertyIsEnumerable('toString');
@@ -147,7 +147,7 @@
   })();
 
   // According to
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+  // --https--developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
   if(typeof Array.prototype.map !== 'function')
     Array.prototype.map = function (thunk,thisArg ) {
       thisArg  = thisArg || this;
@@ -183,8 +183,8 @@
 (function(scope){var queue=[];function async(callback){queue.push(callback);if(queue.length===1)async.async()}async.run=function(){while(queue.length){queue[0]();queue.shift()}};async.async=function(){setTimeout(async.run)};function P(executor){this.state=P.State.PENDING;this.value=undefined;this.deferred=[];var promise=this;try{executor(function(x){promise.resolve(x)},function(r){promise.reject(r)})}catch(e){promise.reject(e)}}P.State={RESOLVED:0,REJECTED:1,PENDING:2};P.reject=function(r){return new P(function(resolve,reject){reject(r)})};P.resolve=function(x){return new P(function(resolve,reject){resolve(x)})};P.all=function all(iterable){return new P(function(resolve,reject){var count=0,result=[];if(iterable.length===0)resolve(result);function resolver(i){return function(x){result[i]=x;count+=1;if(count===iterable.length)resolve(result)}}for(var i=0;i<iterable.length;i+=1){P.resolve(iterable[i]).then(resolver(i),reject)}})};P.race=function race(iterable){return new P(function(resolve,reject){for(var i=0;i<iterable.length;i+=1){P.resolve(iterable[i]).then(resolve,reject)}})};P.prototype.resolve=function resolve(x){var promise=this;if(promise.state===P.State.PENDING){if(x===promise)throw new TypeError;var called=false;try{var then=x&&x["then"];if(x!=null&&typeof x==="object"&&typeof then==="function"){then.call(x,function(x){if(!called)promise.resolve(x);called=true},function(r){if(!called)promise.reject(r);called=true});return}}catch(e){if(!called)promise.reject(e);return}promise.state=P.State.RESOLVED;promise.value=x;promise.notify()}};P.prototype.reject=function reject(reason){var promise=this;if(promise.state===P.State.PENDING){if(reason===promise)throw new TypeError;promise.state=P.State.REJECTED;promise.value=reason;promise.notify()}};P.prototype.notify=function notify(){var promise=this;async(function(){if(promise.state!=P.State.PENDING){while(promise.deferred.length){var deferred=promise.deferred.shift(),onResolved=deferred[0],onRejected=deferred[1],resolve=deferred[2],reject=deferred[3];try{if(promise.state===P.State.RESOLVED){if(typeof onResolved==="function")resolve(onResolved.call(undefined,promise.value));else resolve(promise.value)}else if(promise.state===P.State.REJECTED){if(typeof onRejected==="function")resolve(onRejected.call(undefined,promise.value));else reject(promise.value)}}catch(e){reject(e)}}}})};P.prototype.catch=function(onRejected){return this.then(undefined,onRejected)};P.prototype.then=function then(onResolved,onRejected){var promise=this;return new P(function(resolve,reject){promise.deferred.push([onResolved,onRejected,resolve,reject]);promise.notify()})};if(scope.Promise===undefined)scope.Promise=P})(this);
 ;
 	</script>
-	  <script defer src="https://frvr.com/gdpr/frvrgdprclient.js"></script>
-  <script defer src="https://frvr.com/grac/frvrgracclient.js"></script>
+	  <script defer src="--https--frvr.com/gdpr/frvrgdprclient.js"></script>
+  <script defer src="--https--frvr.com/grac/frvrgracclient.js"></script>
 
 	<script>
 		window.__FRVR = window.__FRVR || {};
@@ -238,9 +238,9 @@
 
 		<link rel="manifest" href="./manifest.json">
 
-	<link rel="canonical" href="https://stackthree.frvr.com/" />
+	<link rel="canonical" href="--https--stackthree.frvr.com/" />
 
-    	<link rel="alternate" hreflang="ru" href="https://stackthree.frvr.com/ru/" />
+    	<link rel="alternate" hreflang="ru" href="--https--stackthree.frvr.com/ru/" />
 
 		<link rel="icon" type="image/png" href="./v/1616566216083/i/web/favicon.png" />
 
@@ -261,24 +261,24 @@
 <link rel="apple-touch-icon" sizes="256x256" href="./v/1616566216083/i/web/icon256x256.png"/>
 <link rel="apple-touch-icon" sizes="1024x1024" href="./v/1616566216083/i/web/icon1024x1024.png"/>
 
-<link rel="me" href="https://twitter.com/FRVRGames">
+<link rel="me" href="--https--twitter.com/FRVRGames">
 
 <meta name="facebook_label" content="Play Stack Three FRVR - Match Three Puzzle Fun">
 
 <meta property="og:title" content="Play Stack Three FRVR" />
 <meta property="og:description" content="Match and stack the tiles to beat your best score" />
 <meta property="og:site_name" content="Stack Three FRVR"/>
-<meta property="og:url" content="https://stackthree.frvr.com/" />
+<meta property="og:url" content="--https--stackthree.frvr.com/" />
 <meta property="og:type" content="game" />
 <meta property="og:locale" content="en" />
-<meta property="og:image" content="https://stackthree.frvr.com/v/1616566216083/i/web/facebook01.png" />
+<meta property="og:image" content="--https--stackthree.frvr.com/v/1616566216083/i/web/facebook01.png" />
 <meta property="fb:app_id" content="1584700764983406" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@FRVRGames" />
 <meta name="twitter:creator" content="@Benjaminsen" />
 <meta name="twitter:title" content="Play Stack Three FRVR - Match Three Puzzle Fun" />
-<meta name="twitter:image" content="https://stackthree.frvr.com/v/1616566216083/i/web/twitter01.png" />
+<meta name="twitter:image" content="--https--stackthree.frvr.com/v/1616566216083/i/web/twitter01.png" />
 <meta name="twitter:description" content="Match and stack the tiles to beat your best score" />
 
 <meta name="twitter:app:name:iphone" content="Stack Three FRVR" />
@@ -568,7 +568,7 @@ if(!(window.console && console.log)) {
 window._jsonData['track-facebook_events'] = {"blacklist":"iap_request_payment,iap_request_payment_success","events":{"default":"name,{_merge=state,_merge=_params}","ftue":"'COMPLETED_TUTORIAL',{SUCCESS=completed,STEP_NUMBER=step_number,STEP_NAME=step_name,STEP_NUMBER=ftue_step_number,STEP_NAME=ftue_step_name}","ad_rewarded_finish":"'AD_IMPRESSION',{AD_TYPE='rewarded_video',SUCCESS=value}","ad_mandatory_finish":"'AD_IMPRESSION',{AD_TYPE='interstitial',SUCCESS=value}","coin_spent":"'SPENT_CREDITS',{AMOUNT=amount,DESCRIPTION='coins',CONTENT=product}","gem_spent":"'SPENT_CREDITS',{AMOUNT=amount,DESCRIPTION='gems',CONTENT=product}","gem_get":"'UNLOCKED_ACHIEVEMENT',{QUANTITY=value,DESCRIPTION='gem_get'}","popup_claim_reward":"'UNLOCKED_ACHIEVEMENT',{DESCRIPTION='claim_reward'}","levelup_newlevel":"'ACHIEVED_LEVEL',{LEVEL=level}","iap_request_payment":"'INITIATED_CHECKOUT',{CONTENT_ID=productId,NUM_ITEMS='1'}","iap_request_payment_success":"'PURCHASED',{CONTENT_ID=productId,NUM_ITEMS='1'}","iap_request_payment_failed":"'CHECKOUT_CANCELED',{CONTENT_ID=productId,NUM_ITEMS='1'}","rate":"'RATED',{MAX_RATING_VALUE=max_rating_value,RATE=rate_value}"}};
 window._jsonData['track-frvr'] = {"state":"{app_version,app_build,cohort,channel,games_played,play_session_id,play_session_count,days_elapsed,facebook_player_id,facebook_context_type,facebook_entrypoint,utm_source,utm_medium,utm_campaign,utm_term,utm_content,facebook_referral_player_id,remote_user_id,non_interaction,device_width,device_height,global_user_id,web_url,xstrack_version}","events":{"default":"name,value,{_merge=state,_merge=_params}"}};
 window._jsonData['track-ga'] = {"gaIds":{"all":"UA-54081731-1"},"state":"{appId=app_id,appName=app_name,appVersion=app_version,metric1=play_session_count,dimension2=cohort,dimension4=play_session_id,dimension3=device_id,metric2=days_elapsed,metric3=days_played,dimension5=channel,dimension6=entry_point,dimension7=utm_string,dimension8=screen,dimension9=facebook_context,metric4=currency_amount,metric5=missions_completed,metric6=progression,metric7=games_played}","events":{"default":"name,,value,_params","options_change":"name,option_name:option_value","game_end":"name,level_id,game_duration","game_play_start,game_continue_used":"name,level_id","keepalive,new_user,mission_success":"name","coin_spent,tutorial_step_completed,session_start":"name,,value","game_loaded":"name,,loading_time","social_engage,engage":"'engage',engage_id:button_placement,1","play_with_friend":"name,,1","share,invite":"name,button_placement,1","cross_promotion_show":"name,button_placement,1","cross_promotion_click,cross_promotion_success,cross_promotion_failure":"name,target_game,1","ad_mandatory_request":"name,,value,{_merge=_params,dimension13=provider}","ad_mandatory_response":"name,ad_response,value,{_merge=_params,dimension13=provider}","ad_mandatory_show":"name,,value,{_merge=_params,dimension13=provider}","ad_mandatory_finish":"name,ad_result,value,{_merge=_params,dimension13=provider}","ad_mandatory_blocked":"name,,value,{_merge=_params,dimension13=provider}","ad_mandatory_pass":"name,,value,{_merge=_params,dimension13=provider}","ad_mandatory_throttled":"name,throttle_type,value,{_merge=_params,dimension13=provider}","ad_rewarded_request":"name,,value,{_merge=_params,dimension13=provider}","ad_rewarded_response":"name,ad_response,value,{_merge=_params,dimension13=provider}","ad_rewarded_show":"name,,value,{_merge=_params,dimension13=provider}","ad_rewarded_finish":"name,ad_result,value,{_merge=_params,dimension13=provider}","ad_rewarded_blocked":"name,,value,{_merge=_params,dimension13=provider}","ad_rewarded_pass":"name,,value,{_merge=_params,dimension13=provider}","ad_rewarded_throttled":"name,throttle_type,value,{_merge=_params,dimension13=provider}","chatbot_noshow,chatbot_show,chatbot_success,chatbot_issubscribed,chatbot_useraborted":"name,,","chatbot_error":"name,reason,"}};
-window._jsonData['track-gma'] = {"url":"https://cdn.frvr.com/utils/gameanalytics310.js","currencies":"coin","itemtypes":"unknown","channelMapping":{"web_edge,web_firefox,web_opera,web_safari,web_chrome,":"web","web_safari_ios,web_chrome_ios":"web_ios","vkru,okru,twitch,hago":"other"},"customDimensions01":"web,web_ios,web_samsung,web_samsung_m4s,web_silk,chromeos,android,ios,rcs,samsung,facebook_instant,facebook_canvasweb,facebook_canvas,bixby,imessage,spil,kongregate,kik,twitter,other","events":{"new_user":"'addDesignEvent',name","game_loaded":"'addProgressionEvent','Complete',name,,,loading_time","keepalive":"'addDesignEvent',name","game_play_start":"'addProgressionEvent','Start',level_id","game_continue_used":"'addProgressionEvent','Start',level_id","game_end":"'addProgressionEvent','Complete',level_id,,,value","game_end-lose":"'addProgressionEvent','Fail',level_id,,,value","mission_success":"'addDesignEvent',name","ad_rewarded_request":"'addDesignEvent',name:screen","ad_rewarded_response":"'addDesignEvent',name:screen:ad_response","ad_rewarded_show":"'addDesignEvent',name:screen","ad_rewarded_finish":"'addDesignEvent',name:screen:ad_result,value","ad_mandatory_request":"'addDesignEvent',name:screen","ad_mandatory_response":"'addDesignEvent',name:screen:ad_response","ad_mandatory_show":"'addDesignEvent',name:screen","ad_mandatory_finish":"'addDesignEvent',name:screen:ad_result,value","coin_spent":"'addResourceEvent','Sink','coin',value,'unknown','consumed'","play_with_friend":"'addDesignEvent',name:screen,1","share,invite":"'addDesignEvent',name:button_placement,1","crosspromotion":"'addDesignEvent',name:screen","cross_promotion_show":"'addDesignEvent',name:button_placement,1","cross_promotion_success":"'addDesignEvent',name:target_game,1","engage":"'addDesignEvent',name:engage_id","iap_interaction":"'addDesignEvent',name:iap_id,value","iap_completed":"'addDesignEvent',name:iap_id,value","iap_failed":"'addDesignEvent',name:iap_id,value","tutorial_step_completed":"'addDesignEvent',name:value","options_change":"'addDesignEvent',option_name:option_value","social_engage":"'addDesignEvent','engage':engage_id:button_placement,1"}};
+window._jsonData['track-gma'] = {"url":"--https--cdn.frvr.com/utils/gameanalytics310.js","currencies":"coin","itemtypes":"unknown","channelMapping":{"web_edge,web_firefox,web_opera,web_safari,web_chrome,":"web","web_safari_ios,web_chrome_ios":"web_ios","vkru,okru,twitch,hago":"other"},"customDimensions01":"web,web_ios,web_samsung,web_samsung_m4s,web_silk,chromeos,android,ios,rcs,samsung,facebook_instant,facebook_canvasweb,facebook_canvas,bixby,imessage,spil,kongregate,kik,twitter,other","events":{"new_user":"'addDesignEvent',name","game_loaded":"'addProgressionEvent','Complete',name,,,loading_time","keepalive":"'addDesignEvent',name","game_play_start":"'addProgressionEvent','Start',level_id","game_continue_used":"'addProgressionEvent','Start',level_id","game_end":"'addProgressionEvent','Complete',level_id,,,value","game_end-lose":"'addProgressionEvent','Fail',level_id,,,value","mission_success":"'addDesignEvent',name","ad_rewarded_request":"'addDesignEvent',name:screen","ad_rewarded_response":"'addDesignEvent',name:screen:ad_response","ad_rewarded_show":"'addDesignEvent',name:screen","ad_rewarded_finish":"'addDesignEvent',name:screen:ad_result,value","ad_mandatory_request":"'addDesignEvent',name:screen","ad_mandatory_response":"'addDesignEvent',name:screen:ad_response","ad_mandatory_show":"'addDesignEvent',name:screen","ad_mandatory_finish":"'addDesignEvent',name:screen:ad_result,value","coin_spent":"'addResourceEvent','Sink','coin',value,'unknown','consumed'","play_with_friend":"'addDesignEvent',name:screen,1","share,invite":"'addDesignEvent',name:button_placement,1","crosspromotion":"'addDesignEvent',name:screen","cross_promotion_show":"'addDesignEvent',name:button_placement,1","cross_promotion_success":"'addDesignEvent',name:target_game,1","engage":"'addDesignEvent',name:engage_id","iap_interaction":"'addDesignEvent',name:iap_id,value","iap_completed":"'addDesignEvent',name:iap_id,value","iap_failed":"'addDesignEvent',name:iap_id,value","tutorial_step_completed":"'addDesignEvent',name:value","options_change":"'addDesignEvent',option_name:option_value","social_engage":"'addDesignEvent','engage':engage_id:button_placement,1"}};
 ;
 		;(function () {
   // Implicit exports here:
@@ -929,9 +929,9 @@ window.__FRVR.platformSpecificCleanup = function () {
 
 		<div id="overlay"></div>
 
-		<content itemscope="" itemtype="https://schema.org/VideoGame">
+		<content itemscope="" itemtype="--https--schema.org/VideoGame">
   <h1 itemprop="name">Stack Three FRVR</h1>
-  <meta itemprop="url" content="https://stackthree.frvr.com/">
+  <meta itemprop="url" content="--https--stackthree.frvr.com/">
   <div itemprop="author" itemscope itemtype="http://schema.org/Organization">
     <p style="margin-top:0px"><span itemprop="name"><a itemprop="url" href="http://frvr.com/">By FRVR</a></span></p>
   </div>
@@ -1080,7 +1080,7 @@ window.initGoogle = function(){
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();;a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','--https--www.google-analytics.com/analytics.js','ga');
 
   window.gax=function() {
     ga.apply(this,arguments)
