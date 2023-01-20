@@ -115,7 +115,7 @@ window.eventTypes = {
             XS.unfreeze()
         }, XS.freeze(), e
     }, i.makeGameShareURL = function () {
-        return encodeURI("https://" + Config.domain + "/alc/")
+        return encodeURI("--https--" + Config.domain + "/alc/")
     }, i.Preferences = {}, i.Preferences.cache = {}, i.Preferences.QuickBool = function (e) {
         return {
             get: function () {
@@ -2261,7 +2261,7 @@ window.eventTypes = {
     var i = e.XS;
     i.audio = new t
 }(window), function (e) {
-    var t = "https://production-dot-frvr-chatbot.appspot.com/refer";
+    var t = "--https--production-dot-frvr-chatbot.appspot.com/refer";
 
     function i(e, t) {
         t || (t = !1);
@@ -2398,7 +2398,7 @@ function Social() {
     var e, t, i, n, r, o = window;
     XS.is.okru || XS.is.huaweiquickapp || XS.is.samsungGameLauncher || (e = window, t = document, e.fbq || (i = e.fbq = function () {
         i.callMethod ? i.callMethod.apply(i, arguments) : i.queue.push(arguments)
-    }, e._fbq || (e._fbq = i), i.push = i, i.loaded = !0, i.version = "2.0", i.queue = [], (n = t.createElement("script")).async = !0, n.src = "https://connect.facebook.net/en_US/fbevents.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(n, r)), fbq("init", "1361622040527227"), fbq("track", "PageView"), window.fbq && (a++, fbq("trackCustom", "play", {
+    }, e._fbq || (e._fbq = i), i.push = i, i.loaded = !0, i.version = "2.0", i.queue = [], (n = t.createElement("script")).async = !0, n.src = "--https--connect.facebook.net/en_US/fbevents.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(n, r)), fbq("init", "1361622040527227"), fbq("track", "PageView"), window.fbq && (a++, fbq("trackCustom", "play", {
         game: Config.id,
         version: Config.version,
         tag: Config.tag || "",
@@ -2415,7 +2415,7 @@ function Social() {
             return e || XS.is.samsungBixby && (e = "daily"), e || ""
         }
 
-        XS.track.customEvent("gl_enabled", 1, {source: d()}), FRVRInstant.trackPlay(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "https://play.frvr.com/" + Config.id + "/?method=trackPlay", d()), function (e) {
+        XS.track.customEvent("gl_enabled", 1, {source: d()}), FRVRInstant.trackPlay(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "--https--play.frvr.com/" + Config.id + "/?method=trackPlay", d()), function (e) {
             if ("undefined" != typeof FRVRInstant) return console.warn("Missing SDK FRVRInstant");
             FRVRInstant.canCreateShortcut(Config.id).then(function (t, i) {
                 XS.track.customEvent("gl_shortcut_test_success", 1, {statusCode: t, state: i});
@@ -2426,7 +2426,7 @@ function Social() {
                 })) : XS.track.customEvent("gl_shortcut_create_library", 1, {
                     statusCode: t,
                     state: i
-                }), FRVRInstant.createShortcut(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "https://play.frvr.com/" + Config.id + "/" + n).then(function () {
+                }), FRVRInstant.createShortcut(Config.id, Config.shareTitle.toString(), Config.samsungGameLauncher.icon, "--https--play.frvr.com/" + Config.id + "/" + n).then(function () {
                     0 == t ? XS.track.customEvent("gl_shortcut_create_native_success", 1, {
                         statusCode: t,
                         state: i
@@ -2505,15 +2505,16 @@ function Social() {
                 config: {
                     huaweidiscoverycard: {
                         chance: 100,
-                        portrait: {path: "https://cdn.frvr.com/huawei/card/huawei_card_portrait.jpg"},
-                        landscape: {path: "https://cdn.frvr.com/huawei/card/huawei_card_landscape.jpg"},
+                        portrait: {path: "--https--cdn.frvr.com/huawei/card/huawei_card_portrait.jpg"},
+                        landscape: {path: "--https--cdn.frvr.com/huawei/card/huawei_card_landscape.jpg"},
                         data: {huaweiquickapp: "com.huawei.intelligent://service.hag/service_detail?abilityId=889771d62614416aa230f417d93e2307&isNeedSubscribe=1"}
                     }
                 }
             }), XS.ads && XS.ads._init && XS.ads._init("web"), Config.twitterTexts && (window.shareDialogueCallback = function (e) {
-                XS.navigate("https://twitter.com/share?url=" + Host.makeGameShareURL() + "&via=FRVRGames&related=" + encodeURI(Config.twitterRelated) + "&hashtags=" + encodeURI(Config.twitterHashTags) + "&text=" + encodeURI(c()))
+                // XS.navigate("--https--twitter.com/share?url=" + Host.makeGameShareURL() + "&via=FRVRGames&related=" + encodeURI(Config.twitterRelated) + "&hashtags=" + encodeURI(Config.twitterHashTags) + "&text=" + encodeURI(c()))
+                XS.navigate("/games/index01ue.html")
             }), XS.is.samsungGameLauncher && (window.shareDialogueCallback = function (e) {
-                FRVRInstant.share(window.__requestOffset++, Config.shareTitle.toString(), "https://play.frvr.com/" + Config.id + "/?method=share")
+                FRVRInstant.share(window.__requestOffset++, Config.shareTitle.toString(), "--https--play.frvr.com/" + Config.id + "/?method=share")
             }), XS.is.kik ? window.shareDialogueCallback = function (e) {
                 top.postMessage("share_kik", "*")
             } : XS.is.kongregate || XS.is.spilGamesWrapper || XS.is.twitch || XS.is.vkru || XS.is.okru || (Config.facebookAppId ? function () {
@@ -2584,19 +2585,27 @@ function Social() {
                     }), FB.AppEvents.logPageView(), XS.is.facebookApp || XS.is.nosoc || XS.is.rcs || XS.is.huawei || XS.is.miniclip || XS.is.tMobile || Sidebar.addMenuHeader(Host.Localize.Translate("Save your progress!")), FB.getLoginStatus(function (e) {
                         "connected" === e.status ? n(e.authResponse) : r(!1)
                     })
-                }, a = document, s = "facebook-jssdk", c = a.getElementsByTagName("script")[0], a.getElementById(s) || ((l = a.createElement("script")).id = s, l.src = "//connect.facebook.net/en_US/sdk.js", c.parentNode.insertBefore(l, c)))
+                },
+                    a = document, s = "facebook-jssdk",
+                    c = a.getElementsByTagName("script")[0],
+                a.getElementById(s) || ((l = a.createElement("script")).id = s,
+                    l.src = "---",
+                    c.parentNode.insertBefore(l, c))
+                )
             }() : console.warn("Config.facebookAppId not defined"), XS.is.nosoc || XS.is.rcs || XS.is.huawei || XS.is.miniclip || XS.is.tMobile || XS.is.lgtv || function () {
                 var t = Host.Localize.GetLanguage();
 
                 function i(t) {
                     var i = document.createElement("img");
-                    i.src = vpath + "i/web/twitter.png", i.style.verticalAlign = "top", i.style.marginRight = "5px", i.style.cursor = "pointer", t ? (i.style.width = "82px", i.style.height = "30px") : (i.style.width = "58px", i.style.height = "20px", i.style.paddingLeft = "5px"), e.appendChild(i), i.onmousedown = i.ontouchstart = window.shareDialogueCallback
+                    // i.src = vpath + "i/twitter.pngweb/",
+                    i.src="../img.120.png",
+                        i.style.verticalAlign = "top", i.style.marginRight = "5px", i.style.cursor = "pointer", t ? (i.style.width = "120px", i.style.height = "30px") : (i.style.width = "80px", i.style.height = "20px", i.style.paddingLeft = "5px"), e.appendChild(i), i.onmousedown = i.ontouchstart = window.shareDialogueCallback
                 }
 
                 if (null != t.match(/zh/i) || t.match(/\-CN/i), XS.is.twitter) Config.twitterMobileHTML && Config.twitterTexts && Config.twitterNewMode && (e.innerHTML = "", i(!0), e.style.marginLeft = "-38px"); else if (e.innerHTML = "", Config.twitterHTML && Config.twitterTexts && i(), Config.facebookHTML2 || Config.facebookPageUrl && Config.facebookAppId) {
-                    var n = Config.facebookHTML2 || '<iframe src="https://www.facebook.com/plugins/like.php?href=' + encodeURIComponent(Config.facebookPageUrl) + "&width=120&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId=" + Config.facebookAppId + '" width="120" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>',
-                        r = document.createElement("span");
-                    r.innerHTML = l(n), e.appendChild(r)
+                    // var n = Config.facebookHTML2 || '<iframe src="--https--www.facebook.com/plugins/like.php?href=' + encodeURIComponent(Config.facebookPageUrl) + "&width=120&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId=" + Config.facebookAppId + '" width="120" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>',
+                    //     r = document.createElement("span");
+                    // r.innerHTML = l(n), e.appendChild(r)
                 }
             }()), XS.is.samsungBixby && window.fbq && fbq("trackCustom", "samsung", {
                 game: Config.id,
@@ -2605,7 +2614,7 @@ function Social() {
             }), XS.is.pwa && Host.Preferences.GetString("rcs.id", function (e) {
                 e && (XS.is.rcs = e)
             }), window.rcs = {
-                url: XS.is.rcsKr ? "https://frvr-rcs-kr.appspot.com" : "https://frvr-rcs-235815.appspot.com",
+                url: XS.is.rcsKr ? "--https--frvr-rcs-kr.appspot.com" : "--https--frvr-rcs-235815.appspot.com",
                 blockProgression: !1,
                 phone: null,
                 init: function (e, t) {
@@ -2672,7 +2681,7 @@ function Social() {
                     }))
                 }
 
-                console.warn("loading vk..."), XS.loadScript("https://vk.com/js/api/xd_connection.js?2"), XS.loadScript("https://ad.mail.ru/static/admanhtml/rbadman-html5.min.js"), XS.loadScript("https://vk.com/js/api/adman_init.js"), XS.loadScript("https://js.appscentrum.com/scr/preroll.js"), XS.waitForSDK("VK", r)
+                console.warn("loading vk..."), XS.loadScript("--https--vk.com/js/api/xd_connection.js?2"), XS.loadScript("--https--ad.mail.ru/static/admanhtml/rbadman-html5.min.js"), XS.loadScript("--https--vk.com/js/api/adman_init.js"), XS.loadScript("--https--js.appscentrum.com/scr/preroll.js"), XS.waitForSDK("VK", r)
             }
             if (window.API_callback = function (e, t, i) {
                 console.log(e, t, i)
@@ -2686,7 +2695,7 @@ function Social() {
                     })
                 }
 
-                console.warn("Loading OK.ru..."), XS.loadScript("https://api.ok.ru/js/fapi5.js"), XS.waitForSDK("FAPI", r)
+                console.warn("Loading OK.ru..."), XS.loadScript("--https--api.ok.ru/js/fapi5.js"), XS.waitForSDK("FAPI", r)
             }
             if (Config.enablePWA) {
                 "serviceWorker" in navigator && (navigator.serviceWorker.register("./sw.js").then(function (e) {
@@ -2730,7 +2739,7 @@ function Social() {
                 autoRegister: !0,
                 notifyButton: {enable: !1},
                 welcomeNotification: {disable: !0}
-            }]), XS.loadScript("https://cdn.onesignal.com/sdks/OneSignalSDK.js"), s = !0)
+            }]), XS.loadScript("--https--cdn.onesignal.com/sdks/OneSignalSDK.js"), s = !0)
         }
     }, window.Social.ShowTryAgainModal = function (e, t) {
         if (Config.testLocalCanvasAds || XS.is.facebookAppWeb || XS.is.chromeWrapper) {
@@ -3161,7 +3170,7 @@ window.ga || (window.ga = function () {
         antialias: u,
         transparent: !1,
         clearBeforeRender: !0
-    }), t.is.usingCanvasRenderer = t.renderer.type === i.CANVAS_RENDERER, t.is.usingWebGLRenderer = t.renderer.type === i.WEBGL_RENDERER, t.httpPrefix = "https://", t.devicePixelRatio = Math.min(2, window.devicePixelRatio || 1), t.styles = {
+    }), t.is.usingCanvasRenderer = t.renderer.type === i.CANVAS_RENDERER, t.is.usingWebGLRenderer = t.renderer.type === i.WEBGL_RENDERER, t.httpPrefix = "--https--", t.devicePixelRatio = Math.min(2, window.devicePixelRatio || 1), t.styles = {
         margins: {
             top: (t.is.iOSWrapper || t.is.standalone) && t.is.iOS ? t.is.iPhoneXOrLater ? 0 : 20 : 0,
             bottom: 0,
@@ -4907,7 +4916,7 @@ window.ga || (window.ga = function () {
         }
     }
 }(), function (e) {
-    var t = "https://bucket.frvr.com/config/";
+    var t = "--https--bucket.frvr.com/config/";
 
     function i(e, t) {
         var i, n, o,
@@ -4999,7 +5008,7 @@ window.ga || (window.ga = function () {
             break
         }
     }
-    window.location && window.location.search && window.location.search.indexOf("tsrv=") > -1 ? XC.server = "http://l.frvr.com:8008/" : XC.server = "https://xc.frvr.com/", XC.c = function () {
+    window.location && window.location.search && window.location.search.indexOf("tsrv=") > -1 ? XC.server = "http://l.frvr.com:8008/" : XC.server = "--https--xc.frvr.com/", XC.c = function () {
         for (var e = [], t = 0; 64 > t;) e[t] = 0 | 4294967296 * Math.abs(Math.sin(++t));
         return function (t) {
             for (var i, n, r, o, a = [], s = (t = unescape(encodeURI(t))).length, l = [i = 1732584193, n = -271733879, ~i, ~n], c = 0; c <= s;) a[c >> 2] |= (t.charCodeAt(c) || 128) << c++ % 4 * 8;
@@ -5397,17 +5406,17 @@ window.ga || (window.ga = function () {
                 if (!XS.is.twitter) {
                     for (var c = s ? XS.crosspromo.getConfig("banner") : a ? XS.remoteConfig.crosspromoteConfig : [{
                         facebookImage: "cdn.frvr.com/2021/banners/800x165/basketball.jpg",
-                        facebookUrl: "https://apps.facebook.com/basketballfrvr",
+                        facebookUrl: "--https--apps.facebook.com/basketballfrvr",
                         webImage: "cdn.frvr.com/2021/banners/800x165/basketball.jpg",
                         webUrl: "http://basketball.frvr.com/"
                     }, {
                         facebookImage: "cdn.frvr.com/2021/banners/800x165/hex.jpg",
-                        facebookUrl: "https://apps.facebook.com/hexfrvr",
+                        facebookUrl: "--https--apps.facebook.com/hexfrvr",
                         webImage: "cdn.frvr.com/2021/banners/800x165/hex.jpg",
                         webUrl: "http://hex.frvr.com/"
                     }, {
                         facebookImage: "cdn.frvr.com/2021/banners/800x165/mahjong.jpg",
-                        facebookUrl: "https://apps.facebook.com/mahjongfrvr",
+                        facebookUrl: "--https--apps.facebook.com/mahjongfrvr",
                         webImage: "cdn.frvr.com/2021/banners/800x165/mahjong.jpg",
                         webUrl: "http://mahjong.frvr.com/"
                     }], d = [], h = 0; h < c.length; h++) {
@@ -5858,7 +5867,7 @@ window.ga || (window.ga = function () {
         }, e.addSocialBar = function () {
             if (!("1" == Host.Web.GetQueryString("nosoc") || XS.is.okru || XS.is.rcs || XS.is.huawei || XS.is.miniclip || XS.is.samsungGameLauncher || XS.is.samsungInstantPlay || XS.is.tMobile || XS.is.lgtv)) {
                 var t = new Container;
-                t.addChild(_(new Sprite(fetch("i/g/s/icon_frvr.svg", !0)), 20, 15, "http://frvr.com")), t.addChild(_(new Sprite(fetch("i/g/s/icon_twitter.svg", !0)), 220, 15, "https://twitter.com/frvrgames")), t.addChild(_(new Sprite(fetch("i/g/s/icon_facebook.svg", !0)), 420, 15, Config.facebookPageUrl || "https://www.facebook.com/frvrgames")), t.y = T, e.content.addChild(t), t.scrollHeight = 82, T += 82
+                t.addChild(_(new Sprite(fetch("i/g/s/icon_frvr.svg", !0)), 20, 15, "http://frvr.com")), t.addChild(_(new Sprite(fetch("i/g/s/icon_twitter.svg", !0)), 220, 15, "--https--twitter.com/frvrgames")), t.addChild(_(new Sprite(fetch("i/g/s/icon_facebook.svg", !0)), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/frvrgames")), t.y = T, e.content.addChild(t), t.scrollHeight = 82, T += 82
             }
         }, e.settings = [], e.addSetting = function (t) {
             e.settings.push(t)
@@ -5873,13 +5882,13 @@ window.ga || (window.ga = function () {
             }
         }, e.addMore = function () {
             XS.is.facebookInstant || XS.is.twitch || XS.is.okru || XS.is.samsungInstantPlay || (Sidebar.addMenuHeader(Host.Localize.Translate("More")), XS.is.lgtv || Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_frvr.svg", !0)), Host.Localize.Translate("FRVR Games"), function () {
-                XS.is.samsung ? XS.navigate("https://play.frvr.com") : XS.navigate("https://frvr.com")
+                XS.is.samsung ? XS.navigate("--https--play.frvr.com") : XS.navigate("--https--frvr.com")
             }), XS.is.samsungGameLauncher || Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_feedback.svg", !0)), Host.Localize.Translate("Send Feedback"), function () {
                 XS.navigate(Config.feedbackURL)
             }), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_legal.svg", !0)), Host.Localize.Translate("Legal"), function () {
-                XS.navigate("https://frvr.com/legal/")
+                XS.navigate("--https--frvr.com/legal/")
             }), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_credits.svg", !0)), Host.Localize.Translate("Credits"), function () {
-                XS.navigate("https://frvr.com/credits/" + Config.id + ".html")
+                XS.navigate("--https--frvr.com/credits/" + Config.id + ".html")
             }))
         }, e.addDownloadItem = function (t, i, n) {
             e.downloadItems.push({image: t, text: i, callback: n})
@@ -6147,11 +6156,11 @@ var Config = {
     build: "74",
     stage: "gold",
     facebookAppId: "1584700764983406",
-    facebookPageUrl: "https://www.facebook.com/stackthreefrvr/",
-    facebookAppUrl: "https://apps.facebook.com/stackthreefrvr",
+    facebookPageUrl: "--https--www.facebook.com/stackthreefrvr/",
+    facebookAppUrl: "--https--apps.facebook.com/stackthreefrvr",
     adMobInterstitialIdiOS: "ca-app-pub-6389174903462367/5673294085",
     adMobInterstitialIdAndroid: "ca-app-pub-6389174903462367/6411660687",
-    shareUrl: "https://stackthree.frvr.com/{{language_path}}",
+    shareUrl: "--https--stackthree.frvr.com/{{language_path}}",
     playTitle: Host.Localize.Translate("Play Stack Three FRVR"),
     shareText: Host.Localize.Translate("I think you will like Stack Three FRVR"),
     shareTitle: Host.Localize.Translate("Stack Three FRVR"),
@@ -6166,21 +6175,21 @@ var Config = {
     iOSRemoveAdsProductIdentifier: "stackthreeremoveads",
     androidRemoveAdsProductIdentifier: "stackthreeremoveads",
     gameCenterEnabled: !1,
-    feedbackURL: "https://frvr.com/support/",
+    feedbackURL: "--https--frvr.com/support/",
     facebookInstantGameID: "213428599445340",
     facebookInstantNamespace: "stackthrfrvrinstant",
     useFacebookInstantRichGameplayFeatures: !0,
     fbInstantInterstitialIdAll: "213428599445340_319479215506944",
-    backendPath: "https://production-dot-frvr-chatbot.appspot.com/stackthree",
+    backendPath: "--https--production-dot-frvr-chatbot.appspot.com/stackthree",
     facebookInstantFillColor: "#9cbdd1",
     facebookInstantScoreOverlayTextColor: "#694f56",
     facebookInstantScoreOverlayShadowColor: "#FFFFFF",
     facebookInstantBannerStyleOverwrite: {style: {backgroundSize: "auto 260px", backgroundPosition: "center top"}},
-    iOSReviewURL: "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1355649105&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8",
+    iOSReviewURL: "--https--itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1355649105&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8",
     androidReviewURL: "market://details?id=com.frvr.stackthree",
     androidInstallBannerURL: "i/web/android.png",
     androidInstallURL: "market://details?id=com.frvr.stackthree",
-    androidInstallURLWeb: "https://play.google.com/store/apps/details?id=com.frvr.stackthree",
+    androidInstallURLWeb: "--https--play.google.com/store/apps/details?id=com.frvr.stackthree",
     iOSInstallBannerURL: "i/web/ios.png",
     iOSInstallURL: "http://itunes.apple.com/app/id1355649105",
     gaId: "UA-54081731-1",
@@ -6190,8 +6199,8 @@ var Config = {
     pushNotificationText: Host.Localize.Translate("Your daily Stack Three level is ready to play!", {}, "This is a push notification used on mobile phones to show that their daily level is ready"),
     twitterRelated: "frvrgames,benjaminsen,brianmeidell",
     twitterHashTags: Host.Localize.Translate("match3, Stack Three, arcadegame, game, mobilegame", {}, "These are are hash tags for social networks such as twitter, E.g. #puzzle or #puzzle# for chinese sites"),
-    twitterHTML: '<div style="padding-right:10px"><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="FRVRGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div>',
-    twitterMobileHTML: '<div><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="FRVRGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div><div style="margin-left:10px"><a class="twitter-follow-button" href="https://twitter.com/FRVRGames"></a></div>',
+    twitterHTML: '<div style="padding-right:10px"><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="FRVRGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div>',
+    twitterMobileHTML: '<div><a href="--https--twitter.com/share" class="twitter-share-button" data-url="{{shareUrl}}" data-text="{{TEXT}}" data-via="FRVRGames" data-hashtags="{{twitterHashTags}}" data-related="{{twitterRelated}}" target="_new"></a></div><div style="margin-left:10px"><a class="twitter-follow-button" href="--https--twitter.com/FRVRGames"></a></div>',
     enablePWA: !0,
     gplusHTML: '<div class="g-plusone" data-size="medium" data-href="{{shareUrl}}"></div>',
     remoteConfigVersion: "v4",
@@ -6315,7 +6324,7 @@ var Config = {
         message: Host.Localize.Translate("It's time to come back and have fun again!"),
         seconds: 2592e3
     }],
-    samsungGameLauncher: {icon: "https://cdn.frvr.com/2021/icons-center/128/stackthree.png"}
+    samsungGameLauncher: {icon: "--https--cdn.frvr.com/2021/icons-center/128/stackthree.png"}
 };
 XS.modulesToPreload.push(function () {
     XS.is.crazyGames ? console.log("Ad Provider Skipped on CrazyGames: web-adsense-interstitial") : (window.adProviders = window.adProviders || {}, window.adProviders["web-adsense-interstitial"] = new function () {
@@ -6331,8 +6340,8 @@ XS.modulesToPreload.push(function () {
                 !1
             }
             var o = XS.is.iframed || n,
-                a = "https://googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.frvr.com%2F&channel={$CHANNEL}&hl=en&max_ad_duration=60000&videoad_start_delay=0&vpa=1",
-                s = "https://googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.frvr.com%2F&channel={$CHANNEL}&hl=en&&max_ad_duration=60000&adsafe=high&videoad_start_delay=0&vpa=1",
+                a = "--https--googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.frvr.com%2F&channel={$CHANNEL}&hl=en&max_ad_duration=60000&videoad_start_delay=0&vpa=1",
+                s = "--https--googleads.g.doubleclick.net/pagead/ads?ad_type={$ADTYPE}&client=ca-games-pub-6389174903462367&description_url=https%3A%2F%2F{$GAMENAME}.frvr.com%2F&channel={$CHANNEL}&hl=en&&max_ad_duration=60000&adsafe=high&videoad_start_delay=0&vpa=1",
                 l = "";
 
             function c() {
@@ -6754,7 +6763,7 @@ XS.modulesToPreload.push(function () {
                             }), i = !1, window.Social.Instant.hideLoadOverlay(), e
                         }).catch(c)
                     } else s()
-                } else XS.is.huawei ? d.data.huaweiquickapp && window.open(d.data.huaweiquickapp) : d.data.gameid && window.open("https://" + d.data.gameid + ".frvr.com/"); else s();
+                } else XS.is.huawei ? d.data.huaweiquickapp && window.open(d.data.huaweiquickapp) : d.data.gameid && window.open("--https--" + d.data.gameid + ".frvr.com/"); else s();
                 var g
             });
             return h
@@ -6855,7 +6864,7 @@ XS.modulesToPreload.push(function () {
     }
 }), XS.modulesToPreload.push(function () {
     if (XS.is.crazyGames) {
-        var e = "https://sdk.crazygames.com/crazygames-sdk-v1.js";
+        var e = "--https--sdk.crazygames.com/crazygames-sdk-v1.js";
         window.adProviders = window.adProviders || {}, window.adProviders["crazygames-interstitial"] = new function () {
             var t, i = this, n = null;
 
@@ -6904,7 +6913,7 @@ XS.modulesToPreload.push(function () {
     }
 }), XS.modulesToPreload.push(function () {
     if (XS.is.crazyGames) {
-        var e = "https://sdk.crazygames.com/crazygames-sdk-v1.js";
+        var e = "--https--sdk.crazygames.com/crazygames-sdk-v1.js";
         window.adProviders = window.adProviders || {}, window.adProviders["crazygames-reward"] = new function () {
             var t, i = this, n = null;
 
@@ -7235,7 +7244,7 @@ XS.modulesToPreload.push(function () {
                         r.r = i - o + 1, setTimeout(t.bind(e, n, r, --o), a)
                     }
                 })
-            }(s("https://coeus.frvr.com/v1/tm5/" + Config.id + "/" + o._userId, c), function (e) {
+            }(s("--https--coeus.frvr.com/v1/tm5/" + Config.id + "/" + o._userId, c), function (e) {
                 var t = {};
                 for (var i in e) void 0 !== e[i] && null != e[i] && (t[a[i] || i] = e[i]);
                 return t
