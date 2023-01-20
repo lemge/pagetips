@@ -1,0 +1,21 @@
+{
+	"short_name": "Stack Three FRVR",
+	"name": "Stack Three FRVR",
+	"icons": [
+		{
+		"src": "./v/1616566216083/i/web/pwa-icon192x192.png",
+		"type": "image/png",
+		"sizes": "192x192"
+		},
+		{
+		"src": "./v/1616566216083/i/web/pwa-icon512x512.png",
+		"type": "image/png",
+		"sizes": "512x512"
+		}
+	],
+	"start_url": "./?pwa",
+	"background_color": "#3367D6",
+	"display": "standalone",
+	"gcm_sender_id": "482941778795",
+	"theme_color": "#3367D6"
+}				

@@ -2186,6 +2186,12 @@ p {
   margin-left: 0.5rem;
   margin-right: -0.5rem;
 }
+.pt-tag-min {
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+}
 .pt-btn-def {
   font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
