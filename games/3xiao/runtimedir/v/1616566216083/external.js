@@ -5865,10 +5865,10 @@ window.ga || (window.ga = function () {
             }
             return i
         }, e.addSocialBar = function () {
-            if (!("1" == Host.Web.GetQueryString("nosoc") || XS.is.okru || XS.is.rcs || XS.is.huawei || XS.is.miniclip || XS.is.samsungGameLauncher || XS.is.samsungInstantPlay || XS.is.tMobile || XS.is.lgtv)) {
-                var t = new Container;
-                t.addChild(_(new Sprite(fetch("i/g/s/icon_frvr.svg", !0)), 20, 15, "http://frvr.com")), t.addChild(_(new Sprite(fetch("i/g/s/icon_twitter.svg", !0)), 220, 15, "--https--twitter.com/frvrgames")), t.addChild(_(new Sprite(fetch("i/g/s/icon_facebook.svg", !0)), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/frvrgames")), t.y = T, e.content.addChild(t), t.scrollHeight = 82, T += 82
-            }
+            // if (!("1" == Host.Web.GetQueryString("nosoc") || XS.is.okru || XS.is.rcs || XS.is.huawei || XS.is.miniclip || XS.is.samsungGameLauncher || XS.is.samsungInstantPlay || XS.is.tMobile || XS.is.lgtv)) {
+            //     var t = new Container;
+            //     t.addChild(_(new Sprite(fetch("i/g/s/icon_frvr.svg", !0)), 20, 15, "http://frvr.com")), t.addChild(_(new Sprite(fetch("i/g/s/icon_twitter.svg", !0)), 220, 15, "--https--twitter.com/frvrgames")), t.addChild(_(new Sprite(fetch("i/g/s/icon_facebook.svg", !0)), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/frvrgames")), t.y = T, e.content.addChild(t), t.scrollHeight = 82, T += 82
+            // }
         }, e.settings = [], e.addSetting = function (t) {
             e.settings.push(t)
         }, e.addSettings = function (t) {
@@ -5881,15 +5881,15 @@ window.ga || (window.ga = function () {
                 e.lastMenuItem = e.addMenuToggle(n.image, n.text, n.state, n.callback)
             }
         }, e.addMore = function () {
-            XS.is.facebookInstant || XS.is.twitch || XS.is.okru || XS.is.samsungInstantPlay || (Sidebar.addMenuHeader(Host.Localize.Translate("More")), XS.is.lgtv || Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_frvr.svg", !0)), Host.Localize.Translate("FRVR Games"), function () {
-                XS.is.samsung ? XS.navigate("--https--play.frvr.com") : XS.navigate("--https--frvr.com")
-            }), XS.is.samsungGameLauncher || Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_feedback.svg", !0)), Host.Localize.Translate("Send Feedback"), function () {
-                XS.navigate(Config.feedbackURL)
-            }), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_legal.svg", !0)), Host.Localize.Translate("Legal"), function () {
-                XS.navigate("--https--frvr.com/legal/")
-            }), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_credits.svg", !0)), Host.Localize.Translate("Credits"), function () {
-                XS.navigate("--https--frvr.com/credits/" + Config.id + ".html")
-            }))
+            // XS.is.facebookInstant || XS.is.twitch || XS.is.okru || XS.is.samsungInstantPlay || (Sidebar.addMenuHeader(Host.Localize.Translate("More")), XS.is.lgtv || Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_frvr.svg", !0)), Host.Localize.Translate("FRVR Games"), function () {
+            //     XS.is.samsung ? XS.navigate("--https--play.frvr.com") : XS.navigate("--https--frvr.com")
+            // }), XS.is.samsungGameLauncher || Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_feedback.svg", !0)), Host.Localize.Translate("Send Feedback"), function () {
+            //     XS.navigate(Config.feedbackURL)
+            // }), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_legal.svg", !0)), Host.Localize.Translate("Legal"), function () {
+            //     XS.navigate("--https--frvr.com/legal/")
+            // }), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_credits.svg", !0)), Host.Localize.Translate("Credits"), function () {
+            //     XS.navigate("--https--frvr.com/credits/" + Config.id + ".html")
+            // }))
         }, e.addDownloadItem = function (t, i, n) {
             e.downloadItems.push({image: t, text: i, callback: n})
         }, e.addRestartItem = function (t, i) {
