@@ -2531,13 +2531,13 @@ function Social() {
                 }
 
                 function r(e) {
-                    XS.is.nosoc || XS.is.rcs || XS.is.huawei || XS.is.miniclip || XS.is.samsungGameLauncher || XS.is.samsungInstantPlay || XS.is.tMobile || (XS.is.facebookApp ? e || i() : e ? (window.facebookAuthed = !0, t = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_facebook.svg", !0)), Host.Localize.Translate("Logout"), function () {
-                        Sidebar.removeMenuItem(t), FB.logout(function (e) {
-                            XC.onFBDeauth(), r(!1)
-                        })
-                    })) : (window.facebookAuthed = !1, t = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_facebook.svg", !0)), Host.Localize.Translate("Login with Facebook"), function () {
-                        requestFacebookLogin()
-                    })))
+                    // XS.is.nosoc || XS.is.rcs || XS.is.huawei || XS.is.miniclip || XS.is.samsungGameLauncher || XS.is.samsungInstantPlay || XS.is.tMobile || (XS.is.facebookApp ? e || i() : e ? (window.facebookAuthed = !0, t = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_facebook.svg", !0)), Host.Localize.Translate("Logout"), function () {
+                    //     Sidebar.removeMenuItem(t), FB.logout(function (e) {
+                    //         XC.onFBDeauth(), r(!1)
+                    //     })
+                    // })) : (window.facebookAuthed = !1, t = Sidebar.addMenuItem(new Sprite(fetch("i/g/s/icon_facebook.svg", !0)), Host.Localize.Translate("Login with Facebook"), function () {
+                    //     requestFacebookLogin()
+                    // })))
                 }
 
                 window.facebookAuthed = !1, window.requestFacebookLogin = function (e) {
@@ -5434,11 +5434,11 @@ window.ga || (window.ga = function () {
                     })
                 }
                 return !window.requestFacebookLogin || !1 !== window.facebookAuthed || !Config.facebookAppId || XS.is.twitter || XS.is.nosoc || XS.is.rcs || XS.is.huawei || XS.is.miniclip || XS.is.tMobile || l.push(function (e) {
-                    e.addSocialButton(Host.Localize.Translate("Login with Facebook"), Host.Localize.Translate("Save your score!"), function () {
-                        window.requestFacebookLogin(function () {
-                            Modal.hide(), r.mainActionCallback && r.mainActionCallback(), r.autoCallback && r.autoCallback()
-                        })
-                    }, 4675430, t).y = t
+                    // e.addSocialButton(Host.Localize.Translate("Login with Facebook"), Host.Localize.Translate("Save your score!"), function () {
+                    //     window.requestFacebookLogin(function () {
+                    //         Modal.hide(), r.mainActionCallback && r.mainActionCallback(), r.autoCallback && r.autoCallback()
+                    //     })
+                    // }, 4675430, t).y = t
                 }), !window.shareDialogueCallback || XS.is.nosoc || XS.is.rcs || XS.is.huawei || XS.is.miniclip || XS.is.tMobile || l.push(function (e) {
                     e.addSocialButton(Host.Localize.Translate(Config.buttonShareTitle, {game_name: Config.shareTitle}), Host.Localize.Translate(Config.buttonShareDescription, {game_name: Config.shareTitle}), function () {
                         window.shareDialogueCallback(""), r.mainActionCallback && r.mainActionCallback()
