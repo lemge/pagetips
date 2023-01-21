@@ -11864,6 +11864,7 @@ var basedir="games/wujin/";
                 }, e.PrebidGoogleAdManagerVideoBaseProvider = n
             }(window);
             var U = Host.bootstrapper.load((function () {
+                //广告 Ad Loading  广告载入
                 return XS.assets.__importATL("i/g/s/adloadingoverlay.svg", {
                     data: '<?xml version="1.0" standalone="no"?>\n' +
                         '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">\n' +

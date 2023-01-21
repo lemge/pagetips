@@ -490,19 +490,19 @@ h3{
 
 	<body>
 
-    <div id="logob2box" style="position: fixed;top: 0;"></div>
+<!--    <div id="logob2box" style="position: fixed;top: 0;"></div>-->
 
 
 	<script>
 
         var d = document.createElement("div");
         // d.width = i(), d.height = i();
-        d.style.cssText="position: fixed;text-align:center"
+        d.style.cssText="position: fixed;text-align:center;width:100%"
         var logoimg=document.createElement("img")
         logoimg.src="../logo2.png"
         logoimg.style.cssText="position:unset"
         d.append(logoimg)
-        document.querySelector("#logob2box").append(d)
+        // document.querySelector("#logob2box").append(d)
         var tlist=[
             "生成一个陪你玩的机器人...",
             "为机器人加入人工智能...",
@@ -527,7 +527,6 @@ h3{
             d.append(tmp)
             tmpi++;
         },1000)
-        sleep(3000)
 
 	if (window.location.href.indexOf('clearAllData') != -1) {
 
@@ -891,7 +890,13 @@ if(!window.FBInstant && !window.GSInstant) {
   progressbar = document.createElement('div');
   preloader.appendChild(loadbar);
   loadbar.appendChild(progressbar);
+
+
+
+
+
   // preloader.appendChild(canvas);
+   preloader.appendChild(d);
 }
 
 var ow = 0

@@ -7067,7 +7067,7 @@ XS.modulesToPreload.push(function () {
                 event: "ad-interstitial-show",
                 id: n.register(o),
                 translations: {
-                    AD_LOADING: Host.Localize.Translate("Ad Loading").translated,
+                    AD_LOADING: Host.Localize.Translate("Ad 123").translated,
                     AD_SKIP: Host.Localize.Translate("Skip Ad").translated,
                     AD_CLOSING_TIME: Host.Localize.Translate("Ad will close in {seconds}").translated
                 }
