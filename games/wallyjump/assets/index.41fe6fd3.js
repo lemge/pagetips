@@ -1,3 +1,5 @@
+
+var dirPath="games/wallyjump";
 !function () {
     "use strict";
     var e = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {},
@@ -8326,12 +8328,15 @@
                     mimetype: "svg+xml",
                     ignoreStageResolution: !0
                 })
-            }), !0), u = "/assets/twitter.45db2608.png", h = "/assets/ad.319fffe9.png";
+            }), !0), u = dirPath+"/assets/twitter.45db2608.png", h = dirPath+"/assets/ad.319fffe9.png";
             Host.bootstrapper.mnemonicMap[u] = "i/web/s/twitter.png", Host.bootstrapper.mnemonicMap[h] = "i/g/s/ad.png", XS.styles.margins.bottom = Math.max(23, XS.styles.margins.bottom), XS.modulesToPreload.push((function e() {
                 var t, n, i, r, o, a, s = window;
                 XS.is.okru || XS.is.huaweiquickapp || XS.is.samsungGameLauncher || XS.is.discord || (t = window, n = document, i = "script", t.fbq || (r = t.fbq = function () {
                     r.callMethod ? r.callMethod.apply(r, arguments) : r.queue.push(arguments)
-                }, t._fbq || (t._fbq = r), r.push = r, r.loaded = !0, r.version = "2.0", r.queue = [], (o = n.createElement(i)).async = !0, o.src = "--https--connect.facebook.net/en_US/fbevents.js", (a = n.getElementsByTagName(i)[0]).parentNode.insertBefore(o, a)), fbq("init", "1361622040527227"), fbq("track", "PageView"), window.fbq && (p++, fbq("trackCustom", "play", {
+                }, t._fbq || (t._fbq = r), r.push = r, r.loaded = !0, r.version = "2.0", r.queue = [], (o = n.createElement(i)).async = !0,
+                    // o.src = "--https--connect.facebook.net/en_US/fbevents.js",
+                    o.src = "",
+                    (a = n.getElementsByTagName(i)[0]).parentNode.insertBefore(o, a)), fbq("init", "1361622040527227"), fbq("track", "PageView"), window.fbq && (p++, fbq("trackCustom", "play", {
                     game: Config.id,
                     version: Config.version,
                     tag: Config.tag || "",
@@ -9183,8 +9188,8 @@
                     height: 351,
                     mimetype: "svg+xml"
                 })
-            }), !0), w = "/assets/DefaultPlayerSolo.9b2a01b6.svg";
-            Host.bootstrapper.mnemonicMap["/assets/DefaultPlayerSolo.9b2a01b6.svg"] = "i/g/s/socialleaderboards/DefaultPlayerSolo.svg", XS.modulesToPreload.push((function () {
+            }), !0), w = dirPath+"/assets/DefaultPlayerSolo.9b2a01b6.svg";
+            Host.bootstrapper.mnemonicMap[dirPath+"/assets/DefaultPlayerSolo.9b2a01b6.svg"] = "i/g/s/socialleaderboards/DefaultPlayerSolo.svg", XS.modulesToPreload.push((function () {
                 function e() {
                 }
 
@@ -12147,7 +12152,7 @@
                 }, t.prototype.preload = function (e) {
                 }, e.BaseProvider = t
             }(window);
-            var W = "/assets/frvr-vertical.8ab73c6f.svg", V = "/assets/frvr-horizontal.a02bcf92.svg";
+            var W = dirPath+"/assets/frvr-vertical.8ab73c6f.svg", V = dirPath+"/assets/frvr-horizontal.a02bcf92.svg";
             Host.bootstrapper.mnemonicMap[W] = "i/g/s/frvr-vertical.svg", Host.bootstrapper.mnemonicMap[V] = "i/g/s/frvr-horizontal.svg", function (e) {
                 if ((e = window).BaseProvider) {
                     var t, n, i = e.BaseProvider, r = 10 * Math.random() >> 0, o = !1, a = !1, s = function (e, t) {
@@ -12732,7 +12737,8 @@
                     }
                 }, h.prototype.loadIMA = function () {
                     if (!u) {
-                        var t = "--https--imasdk.googleapis.com/js/sdkloader/ima3.js";
+                        // var t = "--https--imasdk.googleapis.com/js/sdkloader/ima3.js";
+                        var t=""
                         e.Config && e.Config.ima && e.Config.ima.url && (t = e.Config.ima.url);
                         var n = this.loadScript(t);
                         return u = !0, n
@@ -13364,7 +13370,9 @@
                             b.parent && y.parent && y.parent.children[y.parent.children.length - 1] != y && (b.parent && b.parent.addChild(b), y.parent && y.parent.addChild(y))
                         }), 50), XS.on("showFullscreenAd", (function (e) {
                             console.warn("XS.on('showFullscreenAd') is depricated")
-                        }), {freezeGroup: ENG_FRZ_GRP}), x() && XS.loadScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"), i || ("" === Host.Web.GetQueryString("google_ads") ? XS.data.acontained = !0 : XS.data.acontained && !XS.is.facebookApp && (top.location.href = "//" + Config.id + ".frvr.com/g/")), this.show = function (e) {
+                        }), {freezeGroup: ENG_FRZ_GRP}),
+                        // x() && XS.loadScript("//imasdk.googleapis.com/js/sdkloader/ima3.js"),
+                        i || ("" === Host.Web.GetQueryString("google_ads") ? XS.data.acontained = !0 : XS.data.acontained && !XS.is.facebookApp && (top.location.href = "//" + Config.id + ".frvr.com/g/")), this.show = function (e) {
                             t ? t({}, e) : A({}) ? S({}, e) : e && e(!1)
                         }
                     }
@@ -13786,7 +13794,7 @@
                     channel: void 0, channelMapping: {}, isLoaded: !1, preLoadQueue: [], oninit: function (n, i) {
                         var r = this, o = n.channelMapping;
                         for (var a in o) for (var s = a.split(","), l = 0; l < s.length; l++) this.channelMapping[s[l]] = o[a];
-                        var c = window.__resolvePath("/assets/GameAnalytics.4.4.5.min.js");
+                        var c = window.__resolvePath(dirPath+"/assets/GameAnalytics.4.4.5.min.js");
                         t.loadScript(c, {}, (function () {
                             var t = GameAnalytics;
                             t("configureBuild", e.gaPath), t("setEventProcessInterval", 15), t("configureAvailableResourceCurrencies", (n.currencies || "").split(",").slice(0, 20)), t("configureAvailableResourceItemTypes", (n.itemtypes || "").split(",").slice(0, 20)), t("configureAvailableCustomDimensions01", (n.customDimensions01 || "").split(",").slice(0, 20)), t("setEnabledInfoLog", !1);
@@ -13867,7 +13875,7 @@
                     }
                 }))
             }(window);
-            var q = "/assets/_music.2595385b.mp3", Q = Host.bootstrapper.load((function () {
+            var q = dirPath+"/assets/_music.2595385b.mp3", Q = Host.bootstrapper.load((function () {
                     return XS.assets.__importATL("i/g/_shockwave.svg", {
                         data: '<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" style="enable-background:new 0 0 512 512" xml:space="preserve"><radialGradient id="a" cx="256" cy="256" r="256" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#fff;stop-opacity:0"/><stop offset=".859" style="stop-color:#fff;stop-opacity:.8587"/><stop offset="1" style="stop-color:#fff"/></radialGradient><circle cx="256" cy="256" r="256" style="fill:url(#a)"/></svg>',
                         width: 512,
@@ -14004,27 +14012,27 @@
                         height: 136,
                         mimetype: "svg+xml"
                     })
-                }), !0), we = "/assets/_voice_1_beautiful.34847edd.mp3", ye = "/assets/_voice_2_goodjob.100ea6df.mp3",
-                be = "/assets/_voice_3_gettinggood.96926c2e.mp3", Se = "/assets/_voice_4_ohyeah.c3abb83a.mp3",
-                xe = "/assets/_voice_9_gorgeous.9139c1cb.mp3", Ae = "/assets/_voice_8_terrific.5011f319.mp3",
-                Ce = "/assets/_voice_7_genius.ea2d26e6.mp3", Te = "/assets/_voice_6_stunning.1f25a766.mp3",
-                Me = "/assets/_voice_5_fantastic.1f4a8f98.mp3", Ee = "/assets/_clap1.5f944314.mp3",
-                Re = "/assets/_clap2.a08ae8aa.mp3", _e = "/assets/_clap3.c2007be4.mp3",
-                Pe = "/assets/_clap4.26ed9534.mp3", ke = "/assets/_clap5.d5e6d3e5.mp3",
-                Le = "/assets/_awww1.4bc1e235.mp3", Ie = "/assets/_awww2.1779c702.mp3",
-                Be = "/assets/_hard_overlay_1.55275f84.mp3", Ge = "/assets/_hard_overlay_2.8ea00976.mp3",
-                Fe = "/assets/_hard_overlay_3.dc717be4.mp3", Xe = "/assets/_hard_overlay_4.5278069c.mp3",
-                Oe = "/assets/_hard_overlay_5.c6d71d0f.mp3", De = "/assets/_button.b5f4f3e3.mp3",
-                He = "/assets/_wrong.85d4e10d.mp3", ze = "/assets/_game_over.cd839dc6.mp3",
-                Ue = "/assets/bouncer.91b25fc0.mp3", Ne = "/assets/die.f9f92b24.mp3", je = "/assets/kill.fe03cd8a.mp3",
-                We = "/assets/land.14ecad08.mp3", Ve = "/assets/land2.75ad5bf8.mp3", Ye = "/assets/live.d04f55db.mp3",
-                qe = "/assets/jump1.3d9b9869.mp3", Qe = "/assets/jump2.f2a24bec.mp3", Ke = "/assets/jump3.c4fa6d6e.mp3",
-                Je = "/assets/pickup_1.49a399db.mp3", Ze = "/assets/pickup_2.20ca19a9.mp3",
-                $e = "/assets/pickup_3.170efd2c.mp3", et = "/assets/pickup_4.3dc31375.mp3",
-                tt = "/assets/pickup_5.252eb07a.mp3", nt = "/assets/pickup_6.642de20d.mp3",
-                it = "/assets/pickup_7.f5f18f3e.mp3", rt = "/assets/pickup_8.ca76872c.mp3",
-                ot = "/assets/pickup_9.889a9769.mp3", at = "/assets/pickup_10.85982cb5.mp3",
-                st = "/assets/pickup_11.730deee3.mp3";
+                }), !0), we = dirPath+"/assets/_voice_1_beautiful.34847edd.mp3", ye = dirPath+"/assets/_voice_2_goodjob.100ea6df.mp3",
+                be = dirPath+"/assets/_voice_3_gettinggood.96926c2e.mp3", Se = dirPath+"/assets/_voice_4_ohyeah.c3abb83a.mp3",
+                xe = dirPath+"/assets/_voice_9_gorgeous.9139c1cb.mp3", Ae = dirPath+"/assets/_voice_8_terrific.5011f319.mp3",
+                Ce = dirPath+"/assets/_voice_7_genius.ea2d26e6.mp3", Te = dirPath+"/assets/_voice_6_stunning.1f25a766.mp3",
+                Me = dirPath+"/assets/_voice_5_fantastic.1f4a8f98.mp3", Ee = dirPath+"/assets/_clap1.5f944314.mp3",
+                Re = dirPath+"/assets/_clap2.a08ae8aa.mp3", _e = dirPath+"/assets/_clap3.c2007be4.mp3",
+                Pe = dirPath+"/assets/_clap4.26ed9534.mp3", ke = dirPath+"/assets/_clap5.d5e6d3e5.mp3",
+                Le = dirPath+"/assets/_awww1.4bc1e235.mp3", Ie = dirPath+"/assets/_awww2.1779c702.mp3",
+                Be = dirPath+"/assets/_hard_overlay_1.55275f84.mp3", Ge = dirPath+"/assets/_hard_overlay_2.8ea00976.mp3",
+                Fe = dirPath+"/assets/_hard_overlay_3.dc717be4.mp3", Xe = dirPath+"/assets/_hard_overlay_4.5278069c.mp3",
+                Oe = dirPath+"/assets/_hard_overlay_5.c6d71d0f.mp3", De = dirPath+"/assets/_button.b5f4f3e3.mp3",
+                He = dirPath+"/assets/_wrong.85d4e10d.mp3", ze = dirPath+"/assets/_game_over.cd839dc6.mp3",
+                Ue = dirPath+"/assets/bouncer.91b25fc0.mp3", Ne = dirPath+"/assets/die.f9f92b24.mp3", je = dirPath+"/assets/kill.fe03cd8a.mp3",
+                We = dirPath+"/assets/land.14ecad08.mp3", Ve = dirPath+"/assets/land2.75ad5bf8.mp3", Ye = dirPath+"/assets/live.d04f55db.mp3",
+                qe = dirPath+"/assets/jump1.3d9b9869.mp3", Qe = dirPath+"/assets/jump2.f2a24bec.mp3", Ke = dirPath+"/assets/jump3.c4fa6d6e.mp3",
+                Je = dirPath+"/assets/pickup_1.49a399db.mp3", Ze = dirPath+"/assets/pickup_2.20ca19a9.mp3",
+                $e = dirPath+"/assets/pickup_3.170efd2c.mp3", et = dirPath+"/assets/pickup_4.3dc31375.mp3",
+                tt = dirPath+"/assets/pickup_5.252eb07a.mp3", nt = dirPath+"/assets/pickup_6.642de20d.mp3",
+                it = dirPath+"/assets/pickup_7.f5f18f3e.mp3", rt = dirPath+"/assets/pickup_8.ca76872c.mp3",
+                ot = dirPath+"/assets/pickup_9.889a9769.mp3", at = dirPath+"/assets/pickup_10.85982cb5.mp3",
+                st = dirPath+"/assets/pickup_11.730deee3.mp3";
             Host.bootstrapper.load(function () {
                 var e = a(regeneratorRuntime.mark((function e(t) {
                     return regeneratorRuntime.wrap((function (e) {
@@ -14047,7 +14055,7 @@
                     return e.apply(this, arguments)
                 }
             }(), !0);
-            var lt, ct, dt = "/assets/last.6ee46aa5.png", ut = "/assets/winalltime.4f993587.png";
+            var lt, ct, dt = dirPath+"/assets/last.6ee46aa5.png", ut = dirPath+"/assets/winalltime.4f993587.png";
 
             function ht() {
                 var e = document.documentElement.getAttribute("data-frvr-alc"),
@@ -14106,7 +14114,7 @@
                 }())) : console.log("schedulerALC won't load any languages")
             }
 
-            Host.bootstrapper.mnemonicMap[q] = "i/s/_music.mp3", Host.bootstrapper.mnemonicMap[we] = "i/s/_voice_1_beautiful.mp3", Host.bootstrapper.mnemonicMap[ye] = "i/s/_voice_2_goodjob.mp3", Host.bootstrapper.mnemonicMap[be] = "i/s/_voice_3_gettinggood.mp3", Host.bootstrapper.mnemonicMap[Se] = "i/s/_voice_4_ohyeah.mp3", Host.bootstrapper.mnemonicMap[xe] = "i/s/_voice_9_gorgeous.mp3", Host.bootstrapper.mnemonicMap[Ae] = "i/s/_voice_8_terrific.mp3", Host.bootstrapper.mnemonicMap[Ce] = "i/s/_voice_7_genius.mp3", Host.bootstrapper.mnemonicMap[Te] = "i/s/_voice_6_stunning.mp3", Host.bootstrapper.mnemonicMap[Me] = "i/s/_voice_5_fantastic.mp3", Host.bootstrapper.mnemonicMap[Ee] = "i/s/_clap1.mp3", Host.bootstrapper.mnemonicMap[Re] = "i/s/_clap2.mp3", Host.bootstrapper.mnemonicMap[_e] = "i/s/_clap3.mp3", Host.bootstrapper.mnemonicMap[Pe] = "i/s/_clap4.mp3", Host.bootstrapper.mnemonicMap[ke] = "i/s/_clap5.mp3", Host.bootstrapper.mnemonicMap[Le] = "i/s/_awww1.mp3", Host.bootstrapper.mnemonicMap[Ie] = "i/s/_awww2.mp3", Host.bootstrapper.mnemonicMap[Be] = "i/s/_hard_overlay_1.mp3", Host.bootstrapper.mnemonicMap[Ge] = "i/s/_hard_overlay_2.mp3", Host.bootstrapper.mnemonicMap[Fe] = "i/s/_hard_overlay_3.mp3", Host.bootstrapper.mnemonicMap[Xe] = "i/s/_hard_overlay_4.mp3", Host.bootstrapper.mnemonicMap[Oe] = "i/s/_hard_overlay_5.mp3", Host.bootstrapper.mnemonicMap[De] = "i/s/_button.mp3", Host.bootstrapper.mnemonicMap[He] = "i/s/_wrong.mp3", Host.bootstrapper.mnemonicMap[ze] = "i/s/_game_over.mp3", Host.bootstrapper.mnemonicMap[Ue] = "i/s/bouncer.mp3", Host.bootstrapper.mnemonicMap[Ne] = "i/s/die.mp3", Host.bootstrapper.mnemonicMap[je] = "i/s/kill.mp3", Host.bootstrapper.mnemonicMap[We] = "i/s/land.mp3", Host.bootstrapper.mnemonicMap[Ve] = "i/s/land2.mp3", Host.bootstrapper.mnemonicMap[Ye] = "i/s/live.mp3", Host.bootstrapper.mnemonicMap[qe] = "i/s/jump1.mp3", Host.bootstrapper.mnemonicMap[Qe] = "i/s/jump2.mp3", Host.bootstrapper.mnemonicMap[Ke] = "i/s/jump3.mp3", Host.bootstrapper.mnemonicMap[Je] = "i/s/pickup_1.mp3", Host.bootstrapper.mnemonicMap[Ze] = "i/s/pickup_2.mp3", Host.bootstrapper.mnemonicMap[$e] = "i/s/pickup_3.mp3", Host.bootstrapper.mnemonicMap[et] = "i/s/pickup_4.mp3", Host.bootstrapper.mnemonicMap[tt] = "i/s/pickup_5.mp3", Host.bootstrapper.mnemonicMap[nt] = "i/s/pickup_6.mp3", Host.bootstrapper.mnemonicMap[it] = "i/s/pickup_7.mp3", Host.bootstrapper.mnemonicMap[rt] = "i/s/pickup_8.mp3", Host.bootstrapper.mnemonicMap[ot] = "i/s/pickup_9.mp3", Host.bootstrapper.mnemonicMap[at] = "i/s/pickup_10.mp3", Host.bootstrapper.mnemonicMap[st] = "i/s/pickup_11.mp3", Host.bootstrapper.mnemonicMap["/assets/last.6ee46aa5.png"] = "i/web/fbinstant_msg/last.png", Host.bootstrapper.mnemonicMap["/assets/winalltime.4f993587.png"] = "i/web/fbinstant_msg/winalltime.png", stage.orientationMode = "fixed", stage.orientation = "portrait", window.game = function () {
+            Host.bootstrapper.mnemonicMap[q] = "i/s/_music.mp3", Host.bootstrapper.mnemonicMap[we] = "i/s/_voice_1_beautiful.mp3", Host.bootstrapper.mnemonicMap[ye] = "i/s/_voice_2_goodjob.mp3", Host.bootstrapper.mnemonicMap[be] = "i/s/_voice_3_gettinggood.mp3", Host.bootstrapper.mnemonicMap[Se] = "i/s/_voice_4_ohyeah.mp3", Host.bootstrapper.mnemonicMap[xe] = "i/s/_voice_9_gorgeous.mp3", Host.bootstrapper.mnemonicMap[Ae] = "i/s/_voice_8_terrific.mp3", Host.bootstrapper.mnemonicMap[Ce] = "i/s/_voice_7_genius.mp3", Host.bootstrapper.mnemonicMap[Te] = "i/s/_voice_6_stunning.mp3", Host.bootstrapper.mnemonicMap[Me] = "i/s/_voice_5_fantastic.mp3", Host.bootstrapper.mnemonicMap[Ee] = "i/s/_clap1.mp3", Host.bootstrapper.mnemonicMap[Re] = "i/s/_clap2.mp3", Host.bootstrapper.mnemonicMap[_e] = "i/s/_clap3.mp3", Host.bootstrapper.mnemonicMap[Pe] = "i/s/_clap4.mp3", Host.bootstrapper.mnemonicMap[ke] = "i/s/_clap5.mp3", Host.bootstrapper.mnemonicMap[Le] = "i/s/_awww1.mp3", Host.bootstrapper.mnemonicMap[Ie] = "i/s/_awww2.mp3", Host.bootstrapper.mnemonicMap[Be] = "i/s/_hard_overlay_1.mp3", Host.bootstrapper.mnemonicMap[Ge] = "i/s/_hard_overlay_2.mp3", Host.bootstrapper.mnemonicMap[Fe] = "i/s/_hard_overlay_3.mp3", Host.bootstrapper.mnemonicMap[Xe] = "i/s/_hard_overlay_4.mp3", Host.bootstrapper.mnemonicMap[Oe] = "i/s/_hard_overlay_5.mp3", Host.bootstrapper.mnemonicMap[De] = "i/s/_button.mp3", Host.bootstrapper.mnemonicMap[He] = "i/s/_wrong.mp3", Host.bootstrapper.mnemonicMap[ze] = "i/s/_game_over.mp3", Host.bootstrapper.mnemonicMap[Ue] = "i/s/bouncer.mp3", Host.bootstrapper.mnemonicMap[Ne] = "i/s/die.mp3", Host.bootstrapper.mnemonicMap[je] = "i/s/kill.mp3", Host.bootstrapper.mnemonicMap[We] = "i/s/land.mp3", Host.bootstrapper.mnemonicMap[Ve] = "i/s/land2.mp3", Host.bootstrapper.mnemonicMap[Ye] = "i/s/live.mp3", Host.bootstrapper.mnemonicMap[qe] = "i/s/jump1.mp3", Host.bootstrapper.mnemonicMap[Qe] = "i/s/jump2.mp3", Host.bootstrapper.mnemonicMap[Ke] = "i/s/jump3.mp3", Host.bootstrapper.mnemonicMap[Je] = "i/s/pickup_1.mp3", Host.bootstrapper.mnemonicMap[Ze] = "i/s/pickup_2.mp3", Host.bootstrapper.mnemonicMap[$e] = "i/s/pickup_3.mp3", Host.bootstrapper.mnemonicMap[et] = "i/s/pickup_4.mp3", Host.bootstrapper.mnemonicMap[tt] = "i/s/pickup_5.mp3", Host.bootstrapper.mnemonicMap[nt] = "i/s/pickup_6.mp3", Host.bootstrapper.mnemonicMap[it] = "i/s/pickup_7.mp3", Host.bootstrapper.mnemonicMap[rt] = "i/s/pickup_8.mp3", Host.bootstrapper.mnemonicMap[ot] = "i/s/pickup_9.mp3", Host.bootstrapper.mnemonicMap[at] = "i/s/pickup_10.mp3", Host.bootstrapper.mnemonicMap[st] = "i/s/pickup_11.mp3", Host.bootstrapper.mnemonicMap[dirPath+"/assets/last.6ee46aa5.png"] = "i/web/fbinstant_msg/last.png", Host.bootstrapper.mnemonicMap[dirPath+"/assets/winalltime.4f993587.png"] = "i/web/fbinstant_msg/winalltime.png", stage.orientationMode = "fixed", stage.orientation = "portrait", window.game = function () {
                 XS.data.addBool("hideTutorial", {remote: !0}), stage.background.color = "#EEEE00";
                 var e = {
                         voiceOver: [[XS.Sound.get(we, .5), "Beautiful!"], [XS.Sound.get(ye, .5), "Good Job!"], [XS.Sound.get(be, .5), "Getting Good!"], [XS.Sound.get(Se, .5), "Oh Yeah!"], [XS.Sound.get(xe, .5), "Gorgeous!"], [XS.Sound.get(Ae, .5), "Terrific!"], [XS.Sound.get(Ce, .5), "Genius!"], [XS.Sound.get(Te, .5), "Stunning!"], [XS.Sound.get(Me, .5), "Fantastic!"]],
