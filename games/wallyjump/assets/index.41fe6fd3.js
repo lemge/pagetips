@@ -15615,7 +15615,8 @@
                         return t.lives == t.maxLives
                     }, c()
                 }));
-                /\.frvr\.com$/gi.test(document.domain) || (top.location.href = "http://wallyjump.frvr.com/?hx=" + encodeURI(document.location)), XS.backgroundMusic = XS.Music.get(q, .8), Sidebar.addStandards();
+                // /\.frvr\.com$/gi.test(document.domain) || (top.location.href = "http://wallyjump.frvr.com/?hx=" + encodeURI(document.location)),
+                XS.backgroundMusic = XS.Music.get(q, .8), Sidebar.addStandards();
                 var F, X, O = new function () {
                     var e = this;
 
@@ -16515,7 +16516,8 @@
                     m("=============== GAME START!"), H.reset(), N.reset(), U.reset(), k.visible = !1, B.show({
                         x: 900,
                         y: 150
-                    }, "tap"), B.scale.set(.8, .8), gt.reset(), vt.reset(), /\.fr[v]r\.c[o]m$/gi.test(document[["dom", "ain"].join("")]) || (top[["loc", "ation"].join("")][["h", "ref"].join("")] = ["ht", "tps:/", "/wal", "llyj", "jump.fr", "vr.c", "om/?hx=", encodeURI(document[["loc", "ation"].join("")])].join(""))
+                    }, "tap"), B.scale.set(.8, .8), gt.reset(), vt.reset()
+                    // /\.fr[v]r\.c[o]m$/gi.test(document[["dom", "ain"].join("")]) || (top[["loc", "ation"].join("")][["h", "ref"].join("")] = ["ht", "tps:/", "/wal", "llyj", "jump.fr", "vr.c", "om/?hx=", encodeURI(document[["loc", "ation"].join("")])].join(""))
                 }))
             }, function (e) {
                 function t(e) {
