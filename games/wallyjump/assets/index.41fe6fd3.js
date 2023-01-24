@@ -11114,18 +11114,18 @@ var dirPath="games/wallyjump";
                         })))
                     }, e.addMore = function () {
                         if (XS.can.showSidebarMore()) {
-                            if (XS.is.snapchat) return Sidebar.addMenuHeader(Host.Localize.Translate("More")), Sidebar.addMenuItem(new Sprite(F()), Host.Localize.Translate("Privacy Policy"), (function () {
-                                sc.presentPrivacyPolicy()
-                            })), void Sidebar.addMenuItem(new Sprite(G()), Host.Localize.Translate("Terms of Service"), (function () {
-                                sc.presentTermsOfService()
-                            }));
-                            Sidebar.addMenuHeader(Host.Localize.Translate("More")), XS.is.lgtv || Sidebar.addMenuItem(new Sprite(k()), Host.Localize.Translate("FRVR Games"), (function () {
-                                XS.is.samsung ? XS.navigate("--https--play.frvr.com") : XS.navigate("--https--frvr.com")
-                            })), XS.is.samsungGameLauncher || Sidebar.addMenuItem(new Sprite(X()), Host.Localize.Translate("Send Feedback"), (function () {
-                                XS.navigate("--https--frvr.com/support/?platform=" + window.__FRVR.getChannel() + "&game=" + Config.id)
-                            })), window.__FRVR && window.__FRVR.consent && Sidebar.addMenuItem(new Sprite(O()), Host.Localize.Translate("Manage Consent"), window.__FRVR.consent.show), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(G()), Host.Localize.Translate("Credits"), (function () {
-                                XS.navigate("--https--frvr.com/credits/" + Config.id + ".html")
-                            }))
+                            // if (XS.is.snapchat) return Sidebar.addMenuHeader(Host.Localize.Translate("More")), Sidebar.addMenuItem(new Sprite(F()), Host.Localize.Translate("Privacy Policy"), (function () {
+                            //     sc.presentPrivacyPolicy()
+                            // })), void Sidebar.addMenuItem(new Sprite(G()), Host.Localize.Translate("Terms of Service"), (function () {
+                            //     sc.presentTermsOfService()
+                            // }));
+                            // Sidebar.addMenuHeader(Host.Localize.Translate("More")), XS.is.lgtv || Sidebar.addMenuItem(new Sprite(k()), Host.Localize.Translate("FRVR Games"), (function () {
+                            //     XS.is.samsung ? XS.navigate("--https--play.frvr.com") : XS.navigate("--https--frvr.com")
+                            // })), XS.is.samsungGameLauncher || Sidebar.addMenuItem(new Sprite(X()), Host.Localize.Translate("Send Feedback"), (function () {
+                            //     XS.navigate("--https--frvr.com/support/?platform=" + window.__FRVR.getChannel() + "&game=" + Config.id)
+                            // })), window.__FRVR && window.__FRVR.consent && Sidebar.addMenuItem(new Sprite(O()), Host.Localize.Translate("Manage Consent"), window.__FRVR.consent.show), e.lastMenuItem = Sidebar.addMenuItem(new Sprite(G()), Host.Localize.Translate("Credits"), (function () {
+                            //     XS.navigate("--https--frvr.com/credits/" + Config.id + ".html")
+                            // }))
                         }
                     }, e.addDownloadItem = function (t, n, i) {
                         e.downloadItems.push({image: t, text: n, callback: i})
