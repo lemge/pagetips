@@ -11091,8 +11091,8 @@ var dirPath="games/wallyjump";
                         return n
                     }, e.addSocialBar = function () {
                         if (XS.can.showSidebarSocial()) {
-                            var t = new Container;
-                            t.addChild(x(new Sprite(k()), 20, 15, "http://frvr.com")), t.addChild(x(new Sprite(L()), 220, 15, "--https--twitter.com/frvrgames")), t.addChild(x(new Sprite(d()), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/frvrgames")), t.y = S, e.content.addChild(t), t.scrollHeight = 82, S += 82
+                            // var t = new Container;
+                            // t.addChild(x(new Sprite(k()), 20, 15, "http://frvr.com")), t.addChild(x(new Sprite(L()), 220, 15, "--https--twitter.com/frvrgames")), t.addChild(x(new Sprite(d()), 420, 15, Config.facebookPageUrl || "--https--www.facebook.com/frvrgames")), t.y = S, e.content.addChild(t), t.scrollHeight = 82, S += 82
                         }
                     }, e.settings = [], e.addSetting = function (t) {
                         e.settings.push(t)
