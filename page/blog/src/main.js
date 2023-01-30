@@ -15,9 +15,11 @@ var Found={
     },
     initDomList:function (){
         let dl=document.querySelectorAll(".jss")
+        console.log(dl)
         for(let i=0;i<dl.length;i++){
-            this.domList[dl[i]]
+            this.domList[dl[i].dataset.sor]=dl[i]
         }
+        console.log(this.domList)
     },
     struLinkList:function (l,domObj){
         for(let i=0;i<l.length;i++){
@@ -35,9 +37,9 @@ var Found={
             let tmpDict=this.fillData[i]
             for(var key in tmpDict){
                 if(key =="naviList"){
-                    this.struLinkList(tmpDict[key],document.querySelector("#"+key))
+                    this.struLinkList(tmpDict[key],this.domList[key])
                 }else{
-                    document.querySelector("#"+key).innerHTML=tmpDict[key]
+                    this.domList[key].innerHTML=tmpDict[key]
                 }
             }
         }
