@@ -52,6 +52,7 @@ var Found={
             bl.innerHTML="没有数据"
         }else{
             for(let i=0;i<this.blogListData.length;i++){
+
                 let ele_data=this.blogListData[i]
                 var lidom=document.createElement("li")
                 var adom=document.createElement("a")
@@ -74,7 +75,14 @@ var Found={
 
                 var imgobj=document.createElement("img")
                 imgobj.setAttribute("src",ele_data["cover"])
+                imgdiv.append(imgobj)
 
+                var exdiv=document.createElement("div")
+                adom.append(exdiv)
+                exdiv.classList.add("list-ex")
+                exdiv.innerHTML=ele_data["ex"]
+
+                bl.append(lidom)
 
             }
         }
