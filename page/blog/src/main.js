@@ -51,8 +51,8 @@ var Found={
             return false;
         }
         let bl=this.domList["blogList"]
-        console.log(bl)
-        console.log(this.blogListData)
+        // console.log(bl)
+        // console.log(this.blogListData)
         if (this.blogListData.length<1){
             bl.innerHTML="没有数据"
         }else{
@@ -94,13 +94,48 @@ var Found={
         return true;
     },
     struBlogCont:function(){
+        console.log(this.domList)
         if(this.contInfo && this.domList["continfo"])
         {
-            console.log("has blog list")
+            console.log("has blog cont")
         }else{
-            console.log("no blog list")
+            console.log("no blog cont")
             return false;
         }
+        let ci=this.domList['continfo']
+
+        var contdiv=document.createElement("div")
+        ci.append(contdiv)
+
+        var titlediv=document.createElement("h1")
+        contdiv.append(titlediv)
+        titlediv.innerHTML=this.contInfo.title;
+
+        var bodydiv=document.createElement("div")
+        contdiv.append(bodydiv)
+        bodydiv.innerHTML=this.contInfo.body;
+
+        var Infodiv=document.createElement("div")
+        contdiv.append(Infodiv)
+        infodivHtml="<ul>"
+        for(let k in this.contInfo.info){
+            infodivHtml+="<li>" +
+                "<b>"+k+"<b>:" +this.contInfo.info[k]+
+                "</li>"
+        }
+        infodivHtml+="</ul>"
+        Infodiv.innerHTML=infodivHtml;
+
+        var tagdiv=document.createElement("div")
+        contdiv.append(tagdiv)
+
+        for(let i=0;i<this.contInfo.tag.length;i++){
+            let l=document.createElement("label")
+            l.classList.add("pt-tag-def")
+            l.innerHTML=this.contInfo.tag[i]
+            tagdiv.append(l)
+        }
+
 
 
     },

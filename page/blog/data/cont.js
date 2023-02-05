@@ -19,7 +19,6 @@ var contInfo={
     info:{
         "时间":"2023年2月5日19:49:57",
         "作者":"PageTips开发者",
-        "":"",
     },
     tag:["PageTips","WEB开发","程序开发课程"]
 }
