@@ -1,6 +1,7 @@
 var Found={
     fillData:[],
     blogListData:[],
+    contInfo:{},
     domList:{},
     run:function (){
         this.initDomList();
@@ -14,8 +15,12 @@ var Found={
         if(typeof(blogList)!=="undefined"){
             this.blogListData=blogList;
         }
+        if(typeof(contInfo)!=="undefined"){
+            this.contInfo=contInfo;
+        }
         this.fillCont();//填充博客配置内容
         this.struBlogList();//填充博客列表
+        this.struBlogCont();//填充博客文章。
         return true;
     },
     initDomList:function (){
@@ -87,6 +92,17 @@ var Found={
             }
         }
         return true;
+    },
+    struBlogCont:function(){
+        if(this.contInfo && this.domList["continfo"])
+        {
+            console.log("has blog list")
+        }else{
+            console.log("no blog list")
+            return false;
+        }
+
+
     },
     fillCont:function (){
         for(let i=0;i<this.fillData.length;i++){

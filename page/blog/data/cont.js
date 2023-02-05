@@ -1,4 +1,4 @@
-var contBody={
+var contInfo={
     title:"标题：Pagetips是一个web端的程序集合",
     body:"<p>PageTips是一个web端的程序集合，通过低耦合的组件，建立功能完成的web程序。</p>\n" +
         "<p>PageTips不是一个巨大的框架，但它包含了一套前端的样式标准，以及一些Js程序。</p>\n" +
