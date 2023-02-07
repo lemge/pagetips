@@ -124,6 +124,7 @@ var Found={
         bodydiv.innerHTML=this.contInfo.body;
 
         var Infodiv=document.createElement("div")
+        Infodiv.classList.add("pm-def")
         contdiv.append(Infodiv)
         infodivHtml="<ul>"
         for(let k in this.contInfo.info){

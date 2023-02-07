@@ -1847,6 +1847,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
 }
 .pt-tag-def span {
   display: inline-flex;
@@ -1868,6 +1869,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   color: #3f3f46;
   background-color: #ffffff;
 }
@@ -1891,6 +1893,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   border: 1px solid #2563eb;
   background-color: #2563eb;
 }
@@ -1917,6 +1920,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   color: #3f3f46;
   background-color: #ffffff;
   border: 1px solid #2563eb;
@@ -1942,6 +1946,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   border: 1px solid #dc2626;
   background-color: #dc2626;
 }
@@ -1968,6 +1973,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   color: #3f3f46;
   background-color: #ffffff;
   border: 1px solid #dc2626;
@@ -1993,6 +1999,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   border: 1px solid #f59e0b;
   background-color: #f59e0b;
 }
@@ -2019,6 +2026,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   color: #3f3f46;
   background-color: #ffffff;
   border: 1px solid #f59e0b;
@@ -2044,6 +2052,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   border: 1px solid #10b981;
   background-color: #10b981;
 }
@@ -2070,6 +2079,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   color: #3f3f46;
   background-color: #ffffff;
   border: 1px solid #10b981;
@@ -2095,6 +2105,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   border: 1px solid #8b5cf6;
   background-color: #8b5cf6;
 }
@@ -2121,6 +2132,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   color: #3f3f46;
   background-color: #ffffff;
   border: 1px solid #8b5cf6;
@@ -2146,6 +2158,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   border: 1px solid #f472b6;
   background-color: #f472b6;
 }
@@ -2172,6 +2185,7 @@ p {
   overflow: hidden;
   margin-bottom: 0.5rem;
   line-height: 1.6rem;
+  margin-right: 5px;
   color: #3f3f46;
   background-color: #ffffff;
   border: 1px solid #f472b6;
