@@ -9,14 +9,23 @@ var Found={
 
     },
     initFillData:function (){
-        if(blogConfig){
-            this.fillData.push(blogConfig)
-        }
+        var self=this;
+
+        //载入博客配置
+        axios.get('data/config.json')
+            .then(function (response) {
+                self.fillData.push(response.data)
+                self.fillCont();//填充博客配置内容
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+
         if(typeof(blogList)!=="undefined"){
             this.blogListData=blogList;
         }
         //载入博客文章
-        var self=this;
         axios.get('data/cont.json')
             .then(function (response) {
                 console.log(response.data);
@@ -27,7 +36,6 @@ var Found={
             .catch(function (error) {
                 console.log(error);
             });
-        this.fillCont();//填充博客配置内容
         this.struBlogList();//填充博客列表
         return true;
     },
