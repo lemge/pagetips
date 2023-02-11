@@ -21,10 +21,17 @@ var Found={
                 console.log(error);
             });
 
+        //载入博客文章列表
 
-        if(typeof(blogList)!=="undefined"){
-            this.blogListData=blogList;
-        }
+        axios.get('data/list.json')
+            .then(function (response) {
+                self.blogListData=response.data;
+                self.struBlogList();//填充博客列表
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
         //载入博客文章
         axios.get('data/cont.json')
             .then(function (response) {
@@ -36,7 +43,6 @@ var Found={
             .catch(function (error) {
                 console.log(error);
             });
-        this.struBlogList();//填充博客列表
         return true;
     },
     initDomList:function (){
