@@ -1,0 +1,62 @@
+[
+  {
+    "title": "标签1",
+    "class": "pt-tag-def",
+    "style": ""
+  },
+  {
+    "title": "标签2标签2标签2标签2",
+    "class": "pt-tag-def",
+    "style": ""
+  },
+  {
+    "title": "标签3标签3标签3",
+    "class": "pt-tag-def",
+    "style": ""
+  },
+  {
+    "title": "标签4",
+    "class": "pt-tag-blue",
+    "style": ""
+  },
+  {
+    "title": "标签1",
+    "class": "pt-tag-def",
+    "style": ""
+  },
+  {
+    "title": "标签1标签1标签1标签1",
+    "class": "pt-tag-yellow",
+    "style": ""
+  },
+  {
+    "title": "标签1",
+    "class": "pt-tag-def",
+    "style": ""
+  },
+  {
+    "title": "标签1",
+    "class": "pt-tag-purple",
+    "style": ""
+  },
+  {
+    "title": "标签1",
+    "class": "pt-tag-purple",
+    "style": ""
+  },
+  {
+    "title": "标签1",
+    "class": "pt-tag-purple-p",
+    "style": ""
+  },
+  {
+    "title": "标签1",
+    "class": "pt-tag-def-p",
+    "style": ""
+  },
+  {
+    "title": "标签1",
+    "class": "pt-tag-green-p",
+    "style": ""
+  }
+]

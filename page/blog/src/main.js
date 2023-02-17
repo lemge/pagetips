@@ -35,23 +35,44 @@ var Found={
         //载入博客文章
         axios.get('data/cont.json')
             .then(function (response) {
-                console.log(response.data);
                 self.contInfo=response.data;
-                console.log(self.contInfo);
                 self.struBlogCont();//填充博客文章。
             })
             .catch(function (error) {
                 console.log(error);
             });
+        //载入标签内容
+        axios.get('data/tags.json')
+            .then(
+                function (response) {
+                    self.struTags(response.data)
+                }
+            )
+            .catch(
+                function (error) {
+                    console.log(error)
+
+                }
+            );
         return true;
     },
     initDomList:function (){
         let dl=document.querySelectorAll(".jss")
-        console.log(dl)
         for(let i=0;i<dl.length;i++){
             this.domList[dl[i].dataset.sor]=dl[i]
         }
-        console.log(this.domList)
+    },
+    struTags:function (tagData){
+        var tagsbox=this.domList["Tags"];
+
+        for(let i=0;i<tagData.length;i++){
+            var taglabel=document.createElement("label")
+            taglabel.classList.add(tagData[i]["class"])
+            taglabel.innerHTML=tagData[i]["title"]
+            taglabel.setAttribute("style",tagData[i]["style"])
+            tagsbox.append(taglabel)
+        }
+
     },
     struLinkList:function (l,domObj){
         for(let i=0;i<l.length;i++){
@@ -73,8 +94,6 @@ var Found={
             return false;
         }
         let bl=this.domList["blogList"]
-        // console.log(bl)
-        // console.log(this.blogListData)
         if (this.blogListData.length<1){
             bl.innerHTML="没有数据"
         }else{
@@ -116,7 +135,6 @@ var Found={
         return true;
     },
     struBlogCont:function(){
-        console.log(this.domList)
         if(this.contInfo && this.domList["continfo"])
         {
             console.log("has blog cont")
