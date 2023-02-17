@@ -1,12 +1,15 @@
 var Found={
     cdomList:[],//存储博客配置
     domList:[],//存储动态内容配置
+    contInfo:{},//存储当前文章内容
     sorFunc:{
       },
     run:function (){
         this.initDomList();
         this.sorFunc={
             "data/tags.json":this.struTags,
+            "data/list.json":this.struBlogList,
+            "data/cont.json":this.struBlogCont,
         }
       this.initFillData();
 
@@ -36,26 +39,7 @@ var Found={
                 console.log(error);
             });
 
-        // //载入博客文章列表
-        //
-        // axios.get('data/list.json')
-        //     .then(function (response) {
-        //         self.blogListData=response.data;
-        //         self.struBlogList();//填充博客列表
-        //     })
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     });
-        //
-        // //载入博客文章
-        // axios.get('data/cont.json')
-        //     .then(function (response) {
-        //         self.contInfo=response.data;
-        //         self.struBlogCont();//填充博客文章。
-        //     })
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     });
+
 
 
         return true;
@@ -102,21 +86,15 @@ var Found={
         }
         return domObj
     },
-    struBlogList:function (){
-        if(this.blogListData && this.domList["blogList"])
-        {
-            console.log("has blog list")
-        }else{
-            console.log("no blog list")
-            return false;
-        }
-        let bl=this.domList["blogList"]
-        if (this.blogListData.length<1){
+    struBlogList:function (dom,listdata){
+
+        let bl=dom
+        if (listdata.length<1){
             bl.innerHTML="没有数据"
         }else{
-            for(let i=0;i<this.blogListData.length;i++){
+            for(let i=0;i<listdata.length;i++){
 
-                let ele_data=this.blogListData[i]
+                let ele_data=listdata[i]
                 var lidom=document.createElement("li")
                 var adom=document.createElement("a")
                 adom.setAttribute("href","content.html?untid="+ele_data['untid'])
@@ -151,15 +129,10 @@ var Found={
         }
         return true;
     },
-    struBlogCont:function(){
-        if(this.contInfo && this.domList["continfo"])
-        {
-            console.log("has blog cont")
-        }else{
-            console.log("no blog cont")
-            return false;
-        }
-        let ci=this.domList['continfo']
+    struBlogCont:function(dom,contdata){
+
+        let ci=dom
+        this.contInfo=contdata
 
         var contdiv=document.createElement("div")
         ci.append(contdiv)
