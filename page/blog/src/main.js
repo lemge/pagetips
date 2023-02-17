@@ -1,69 +1,86 @@
 var Found={
-    fillData:[],
-    blogListData:[],
-    contInfo:{},
-    domList:{},
+    cdomList:[],//存储博客配置
+    domList:[],//存储动态内容配置
+    sorFunc:{
+      },
     run:function (){
         this.initDomList();
+        this.sorFunc={
+            "data/tags.json":this.struTags,
+        }
       this.initFillData();
 
     },
     initFillData:function (){
         var self=this;
 
+        for(let i=0;i<this.domList.length;i++){
+            let sor=this.domList[i]["sor"]
+            let sorDom=this.domList[i]['dom']
+            let sorFunc=this.sorFunc[sor]
+            axios.get(sor)
+                .then(function (response) {
+                    sorFunc(sorDom,response.data)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+
         //载入博客配置
         axios.get('data/config.json')
             .then(function (response) {
-                self.fillData.push(response.data)
-                self.fillCont();//填充博客配置内容
+                self.fillCont(response.data);//填充博客配置内容
             })
             .catch(function (error) {
                 console.log(error);
             });
 
-        //载入博客文章列表
+        // //载入博客文章列表
+        //
+        // axios.get('data/list.json')
+        //     .then(function (response) {
+        //         self.blogListData=response.data;
+        //         self.struBlogList();//填充博客列表
+        //     })
+        //     .catch(function (error) {
+        //         console.log(error);
+        //     });
+        //
+        // //载入博客文章
+        // axios.get('data/cont.json')
+        //     .then(function (response) {
+        //         self.contInfo=response.data;
+        //         self.struBlogCont();//填充博客文章。
+        //     })
+        //     .catch(function (error) {
+        //         console.log(error);
+        //     });
 
-        axios.get('data/list.json')
-            .then(function (response) {
-                self.blogListData=response.data;
-                self.struBlogList();//填充博客列表
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
 
-        //载入博客文章
-        axios.get('data/cont.json')
-            .then(function (response) {
-                self.contInfo=response.data;
-                self.struBlogCont();//填充博客文章。
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-        //载入标签内容
-        axios.get('data/tags.json')
-            .then(
-                function (response) {
-                    self.struTags(response.data)
-                }
-            )
-            .catch(
-                function (error) {
-                    console.log(error)
-
-                }
-            );
         return true;
     },
     initDomList:function (){
+
+        let dlc=document.querySelectorAll(".jss-c")
+        for(let i=0;i<dlc.length;i++){
+            this.cdomList[dlc[i].dataset.sor]=dlc[i]
+
+        }
+
+
         let dl=document.querySelectorAll(".jss")
         for(let i=0;i<dl.length;i++){
-            this.domList[dl[i].dataset.sor]=dl[i]
+            this.domList.push(
+                {
+                    "sor":dl[i].dataset.sor,
+                    "dom":dl[i]
+                }
+            )
         }
     },
-    struTags:function (tagData){
-        var tagsbox=this.domList["Tags"];
+    struTags:function (dom,tagData){
+        var tagsbox=dom;
 
         for(let i=0;i<tagData.length;i++){
             var taglabel=document.createElement("label")
@@ -180,18 +197,17 @@ var Found={
 
 
     },
-    fillCont:function (){
-        for(let i=0;i<this.fillData.length;i++){
-            let tmpDict=this.fillData[i]
+    fillCont:function (cdata){
+            let tmpDict=cdata
             for(var key in tmpDict){
                 if(key =="naviList"){
-                    this.struLinkList(tmpDict[key],this.domList[key])
+                    this.struLinkList(tmpDict[key],this.cdomList[key])
                 }
                 else{
-                    this.domList[key].innerHTML=tmpDict[key]
+                    this.cdomList[key].innerHTML=tmpDict[key]
                 }
             }
-        }
+
     }
 }
 window.onload=function (){
