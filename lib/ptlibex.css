@@ -3783,6 +3783,7 @@ ul ul {
   display: none;
 }
 .pt-list-icon-h ul li a .list-img {
+  background-color: #e4e4e7;
   margin: 6px;
   width: 68px;
   height: 68px;
