@@ -10,6 +10,7 @@ var Found={
             "data/tags.json":this.struTags,
             "data/list.json":this.struBlogList,
             "data/cont.json":this.struBlogCont,
+            "data/notice.json":this.struNotice,
         }
       this.initFillData();
 
@@ -61,6 +62,13 @@ var Found={
                     "dom":dl[i]
                 }
             )
+        }
+    },
+    struNotice:function (dom,d){
+        for(let i=0;i<d.length;i++){
+            var dbox=document.createElement("div")
+            dbox.innerHTML=d[i]['body'];
+            dom.append(dbox)
         }
     },
     struTags:function (dom,tagData){
