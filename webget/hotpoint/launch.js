@@ -7,7 +7,7 @@ const ToutiaoHot="./hot.json";
 //使用 puppeteer.launch 启动 Chrome
 (async () => {
     const browser = await puppeteer.launch({
-        headless: false, //有浏览器界面启动
+        headless: true, //有浏览器界面启动
         slowMo: 100, //放慢浏览器执行速度，方便测试观察
         defaultViewport: { width: 1400, height: 900 },
         args: [
@@ -49,13 +49,14 @@ function Comp(newCont){
     // console.log(newdataList);
     newdataList=newdataList['data']
     for(let i=0;i<newdataList.length;i++){
-        let nowHot=newdataList[i]["Title"]+"#"+newdataList[i]["QueryWord"];
-        if(dataList.indexOf(nowHot)>0){
+        let nowHot=newdataList[i]["Title"]+"---"+newdataList[i]["QueryWord"];
+        if(dataList.indexOf(nowHot)>=0){
             // console.log(nowHot+"【在榜单中】\n")
         }else{
-            console.log("-----新热点-----\n",nowHot,"\n-----------\n")
+            console.log("-----新热点-----\n",dataList.indexOf(nowHot),"\n",nowHot,"\n-----------\n")
         }
     }
+    SaveBand(newCont)
     return true;
 }
 
@@ -67,7 +68,7 @@ function ReadOldBand(){
     var dataList=[];
     let dj=dataJson['data']
     for(let i=0;i<dj.length;i++){
-        dataList.push(dj[i]["Title"]+"#"+dj[i]["QueryWord"])
+        dataList.push(dj[i]["Title"]+"---"+dj[i]["QueryWord"])
     }
     return dataList;
 }
