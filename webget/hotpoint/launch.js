@@ -48,13 +48,21 @@ function Comp(newCont){
     let newdataList=JSON.parse(newCont)
     // console.log(newdataList);
     newdataList=newdataList['data']
+    console.log("正在检测新热点....")
+    let hot=0
     for(let i=0;i<newdataList.length;i++){
         let nowHot=newdataList[i]["Title"]+"---"+newdataList[i]["QueryWord"];
         if(dataList.indexOf(nowHot)>=0){
             // console.log(nowHot+"【在榜单中】\n")
         }else{
             console.log("-----新热点-----\n",dataList.indexOf(nowHot),"\n",nowHot,"\n-----------\n")
+            hot=hot+1
         }
+    }
+    if(hot>0){
+        console.log("发现热点： ",hot," 个")
+    }else{
+        console.log("没有新热点..")
     }
     SaveBand(newCont)
     return true;
