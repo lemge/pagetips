@@ -56,6 +56,7 @@ function Comp(newCont){
             // console.log(nowHot+"【在榜单中】\n")
         }else{
             console.log("-----新热点-----\n",dataList.indexOf(nowHot),"\n",nowHot,"\n-----------\n")
+            console.log("\n地址参考：",newdataList[i]["Url"])
             hot=hot+1
         }
     }
